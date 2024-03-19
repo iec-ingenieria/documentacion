@@ -1,0 +1,1274 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../preparacion/">
+      
+      
+        <link rel="next" href="../dxftoedb1/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>Configuración - DXFTOEDB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuracion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="DXFTOEDB" class="md-header__button md-logo" aria-label="DXFTOEDB" data-md-component="logo">
+      
+  <img src="../images/logo_iec.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DXFTOEDB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuración
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo oscuro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo claro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DXFTOEDB" class="md-nav__button md-logo" aria-label="DXFTOEDB" data-md-component="logo">
+      
+  <img src="../images/logo_iec.png" alt="logo">
+
+    </a>
+    DXFTOEDB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preparacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configuración
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Configuración
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inicio" class="md-nav__link">
+    Inicio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secciones-project_settings" class="md-nav__link">
+    Secciones project_settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Secciones project_settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version_etabs" class="md-nav__link">
+    Version_etabs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project_information" class="md-nav__link">
+    Project_Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#varios-diafragmas" class="md-nav__link">
+    Varios diafragmas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-de-elasticidad-dinamico" class="md-nav__link">
+    Módulo de elasticidad dinámico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-de-elasticidad-estatico" class="md-nav__link">
+    Módulo de elasticidad estático
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorias" class="md-nav__link">
+    Categorías
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zonas" class="md-nav__link">
+    Zonas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suelos" class="md-nav__link">
+    Suelos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    Materials
+  </a>
+  
+    <nav class="md-nav" aria-label="Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concrete" class="md-nav__link">
+    Concrete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebar" class="md-nav__link">
+    Rebar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steel" class="md-nav__link">
+    Steel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stories" class="md-nav__link">
+    Stories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_patterns" class="md-nav__link">
+    Load_Patterns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargas" class="md-nav__link">
+    Cargas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modal_case" class="md-nav__link">
+    Modal_Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_combinations" class="md-nav__link">
+    Load_Combinations
+  </a>
+  
+    <nav class="md-nav" aria-label="Load_Combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lrfd" class="md-nav__link">
+    LRFD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asd" class="md-nav__link">
+    ASD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fundaciones" class="md-nav__link">
+    fundaciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entidades" class="md-nav__link">
+    Entidades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dxftoedb1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dxftoedb1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dxftoedb2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dxftoedb2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dxftoedb3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dxftoedb3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dxftoedb4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dxftoedb4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problemas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problemas Frecuentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comandos-autocad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comandos Autocad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ideas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inicio" class="md-nav__link">
+    Inicio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secciones-project_settings" class="md-nav__link">
+    Secciones project_settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Secciones project_settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version_etabs" class="md-nav__link">
+    Version_etabs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project_information" class="md-nav__link">
+    Project_Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#varios-diafragmas" class="md-nav__link">
+    Varios diafragmas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-de-elasticidad-dinamico" class="md-nav__link">
+    Módulo de elasticidad dinámico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-de-elasticidad-estatico" class="md-nav__link">
+    Módulo de elasticidad estático
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorias" class="md-nav__link">
+    Categorías
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zonas" class="md-nav__link">
+    Zonas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suelos" class="md-nav__link">
+    Suelos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    Materials
+  </a>
+  
+    <nav class="md-nav" aria-label="Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concrete" class="md-nav__link">
+    Concrete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebar" class="md-nav__link">
+    Rebar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steel" class="md-nav__link">
+    Steel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stories" class="md-nav__link">
+    Stories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_patterns" class="md-nav__link">
+    Load_Patterns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargas" class="md-nav__link">
+    Cargas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modal_case" class="md-nav__link">
+    Modal_Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_combinations" class="md-nav__link">
+    Load_Combinations
+  </a>
+  
+    <nav class="md-nav" aria-label="Load_Combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lrfd" class="md-nav__link">
+    LRFD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asd" class="md-nav__link">
+    ASD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fundaciones" class="md-nav__link">
+    fundaciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entidades" class="md-nav__link">
+    Entidades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="configuracion">Configuración</h1>
+<h2 id="inicio">Inicio</h2>
+<p style="text-align: justify;">
+  La aplicación requiere de un archivo de configuración para el proyecto, de manera de poder transmitir a Etabs las distintas opciones disponibles para cada parámetro requerido.<br>
+</p>
+
+<p style="text-align: justify;">
+Se debe crear un archivo en el directorio de trabajo <strong><em>project_settings.toml</em></strong>.
+</p>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Se debe respetar totalmente el nombre de los parámetros (mayúsculas, minúsculas, guiones, comillas, etc, mostrado en los ejemplos).</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="k">[Version_etabs]</span>
+<span class="w">  </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;v21&quot;</span>
+
+<span class="k">[Project_Information]</span>
+<span class="w">  </span><span class="n">Client_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MGV Ingeniería&quot;</span>
+<span class="w">  </span><span class="n">Project_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Proyecto de Prueba&quot;</span>
+<span class="w">  </span><span class="n">Project_Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;R9999&quot;</span>
+<span class="w">  </span><span class="n">Company_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;IEC Ingenieria SA&quot;</span>
+<span class="w">  </span><span class="n">Engineer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MGV&quot;</span>
+<span class="w">  </span><span class="n">Checker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;LRM&quot;</span>
+<span class="w">  </span><span class="n">Supervisor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MGB&quot;</span>
+<span class="w">  </span><span class="n">Model_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;R9999&quot;</span>
+<span class="w">  </span><span class="n">Model_Description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Este es un edificio de pruebas de dxftoedb&quot;</span>
+
+<span class="k">[Data]</span>
+<span class="w">  </span><span class="n">Diaphragms</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;D1&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="n">Modulo_Dinamico</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="n">Categoria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;II&quot;</span>
+<span class="w">  </span><span class="n">Zona</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">  </span><span class="n">Suelo</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;B&quot;</span>
+
+<span class="k">[Materials]</span>
+<span class="w">  </span><span class="n">Concrete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;G30&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G40&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="n">Steel</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="n">Rebar</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;A630-420H&quot;</span><span class="p">]</span>
+
+<span class="k">[Stories]</span>
+<span class="w">  </span><span class="n">BaseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="mf">.5</span>
+<span class="w">  </span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="s">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G30&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="k">[&quot;p02&quot;, 2.5, &quot;02&quot;, &quot;G30&quot;]</span>
+<span class="w">  </span><span class="p">]</span>
+
+<span class="k">[Load_Patterns]</span>
+<span class="w">  </span><span class="n">D</span><span class="w">   </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Carga Permanente</span>
+<span class="w">  </span><span class="n">Di</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Peso del Hielo</span>
+<span class="w">  </span><span class="n">CM</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Carga Permanente Adicional</span>
+<span class="w">  </span><span class="n">L</span><span class="w">   </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Carga de uso según NCh 1537</span>
+<span class="w">  </span><span class="n">Lr</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de uso de techo según NCh 1537</span>
+<span class="w">  </span><span class="n">S</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de nieve según NCh 431</span>
+<span class="w">  </span><span class="n">R</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de lluvia según ASCE/SEI 07, capítulo 8</span>
+<span class="w">  </span><span class="n">Wxp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de viento según NCh 432, en dirección X+</span>
+<span class="w">  </span><span class="n">Wxn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de viento según NCh 432, en dirección X-</span>
+<span class="w">  </span><span class="n">Wyp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de viento según NCh 432, en dirección Y+</span>
+<span class="w">  </span><span class="n">Wyn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de viento según NCh 432, en dirección Y-</span>
+<span class="w">  </span><span class="n">TAX</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Torsión Accidental para sismo X</span>
+<span class="w">  </span><span class="n">TAY</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Torsión Accidental para sismo Y</span>
+
+<span class="k">[cargas]</span>
+<span class="w">  </span><span class="n">estacionamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.10</span><span class="p">,</span><span class="w"> </span><span class="mf">0.50</span><span class="p">]</span>
+<span class="w">  </span><span class="n">habitacion</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.15</span><span class="p">,</span><span class="w"> </span><span class="mf">0.20</span><span class="p">]</span>
+<span class="w">  </span><span class="n">pasillo</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.15</span><span class="p">,</span><span class="w"> </span><span class="mf">0.40</span><span class="p">]</span>
+
+<span class="k">[Modal_Case]</span>
+<span class="w">  </span><span class="n">ModalCaseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;modal&quot;</span>
+<span class="w">  </span><span class="n">EigenOrRitz</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Eigen&quot;</span>
+<span class="w">  </span><span class="n">MinModes</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span>
+<span class="w">  </span><span class="n">MaxModes</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span>
+
+<span class="k">[Load_Combinations]</span>
+<span class="w">  </span><span class="n">LRFD</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="n">ASD</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="n">fundaciones</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+
+
+<span class="k">[entidades]</span>
+<span class="w">  </span><span class="k">[entidades.LINEAS_DE_EJES]</span>
+<span class="w">    </span><span class="n">Layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_EJES]</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID-IDEN&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.LINEAS_DE_VIGAS]</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_VIGAS]</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM-IDEN&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.LINEAS_DE_MUROS]</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_MUROS]</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL-IDEN&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.LINEAS_DE_COLUMNAS]</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;COLUMNAS&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_COLUMNAS]</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TEXTOS&quot;</span>
+</code></pre></div>
+<h2 id="secciones-project_settings">Secciones project_settings</h2>
+<h3 id="version_etabs">Version_etabs</h3>
+<p>La aplicación funciona para dos versiones de Etabs, 19 y 21</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Version_etabs]</span>
+<span class="w">  </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;v21&quot;</span>
+</code></pre></div>
+<h3 id="project_information">Project_Information</h3>
+<p>En esta sección se configuran los metadatos del proyecto.
+Los campos que se deben configurar son los mostrados a continuación:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Project_Information]</span>
+<span class="w">  </span><span class="n">Client_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MGV Ingeniería&quot;</span>
+<span class="w">  </span><span class="n">Project_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Proyecto de Prueba&quot;</span>
+<span class="w">  </span><span class="n">Project_Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;R9999&quot;</span>
+<span class="w">  </span><span class="n">Company_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;IEC Ingenieria SA&quot;</span>
+<span class="w">  </span><span class="n">Engineer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MGV&quot;</span>
+<span class="w">  </span><span class="n">Checker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;LRM&quot;</span>
+<span class="w">  </span><span class="n">Supervisor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MGB&quot;</span>
+<span class="w">  </span><span class="n">Model_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;R9999&quot;</span>
+<span class="w">  </span><span class="n">Model_Description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Este es un edificio de pruebas de dxftoedb&quot;</span>
+</code></pre></div>
+<p align="center">
+  <img src="../images/conf1.png" style="max-width:100%;">
+</p>
+
+<h3 id="data">Data</h3>
+<p>En esta sección se configuran parámetros generales del proyecto.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Data]</span>
+<span class="w">  </span><span class="n">Diaphragms</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;D1&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="n">Modulo_Dinamico</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="n">Categoria</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;II&quot;</span>
+<span class="w">  </span><span class="n">Zona</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">  </span><span class="n">Suelo</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;D&quot;</span>
+</code></pre></div>
+<h4 id="varios-diafragmas">Varios diafragmas</h4>
+<div class="highlight"><pre><span></span><code><span class="k">[Data]</span>
+<span class="w">  </span><span class="n">Diaphragms</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;D1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D3&quot;</span><span class="p">]</span>
+</code></pre></div>
+<h4 id="modulo-de-elasticidad-dinamico">Módulo de elasticidad dinámico</h4>
+<div class="highlight"><pre><span></span><code><span class="k">[Data]</span>
+<span class="w">  </span><span class="n">Modulo_Dinamico</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</code></pre></div>
+<h4 id="modulo-de-elasticidad-estatico">Módulo de elasticidad estático</h4>
+<div class="highlight"><pre><span></span><code><span class="k">[Data]</span>
+<span class="w">  </span><span class="n">Modulo_Dinamico</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</code></pre></div>
+<h4 id="categorias">Categorías</h4>
+<p>Se admiten las categorías "I", "II", "III" y "IV" para la generación automática del espectro de respuesta elástico de la norma NCh433.</p>
+<h4 id="zonas">Zonas</h4>
+<p>Se admiten las zonas 1, 2 y 3 para la generación automática del espectro de respuesta elástico de la norma NCh433.</p>
+<h4 id="suelos">Suelos</h4>
+<p>Se admiten las suelos "A", "B", "C", "D" y "E" para la generación automática del espectro de respuesta elástico de la norma NCh433.</p>
+<h3 id="materials">Materials</h3>
+<p>En esta sección se configura lo relacionado con los materiales.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Materials]</span>
+<span class="w">  </span><span class="n">Concrete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;G30&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G40&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="n">Rebar</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;A630-420H&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="n">Steel</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+</code></pre></div>
+<h4 id="concrete">Concrete</h4>
+<p>Es posible definir todos los tipos de hormigones necesarios para el proyecto de entre los de la siguiente imagen, tanto en la nomenclatura "GXX" como "HXX". Se considera una densidad para todos los hormigones de 2.5 ton/m3.</p>
+<p align="center">
+  <img src="../images/conf2.png" style="max-width:100%;">
+</p>
+
+<h4 id="rebar">Rebar</h4>
+<p>Es posible definir todos los tipos de calidad de acero de refuerzo necesarios para el proyecto de entre "A630-420H" y "A440-280H". Se considera una densidad para todos los aceros de 7.85 ton/m3.</p>
+<h4 id="steel">Steel</h4>
+<p>EN DESARROLLO ...</p>
+<h3 id="stories">Stories</h3>
+<p>En esta sección se proporciona la información necesaria para definir los pisos de la estructura.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Stories]</span>
+<span class="w">  </span><span class="n">BaseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="mf">.5</span>
+<span class="w">  </span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="s">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G30&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="k">[&quot;p02&quot;, 2.5, &quot;02&quot;, &quot;G30&quot;]</span>
+<span class="w">  </span><span class="p">]</span>
+</code></pre></div>
+<div>
+  <ul>
+    <li>El parámetro 'BaseElevation' representa la cota de empotramiento de la estructura.</li>
+    <li> El parámetro 'Data' corresponde a una lista de listas, donde cada una de las listas representa la información requerida de cada piso. Para cada piso se necesitan 4 datos.
+      <ol>
+        <li>Nombre que llevará el piso en Etabs.</li>
+        <li>Altura entre piso.</li>
+        <li>Nombre del plano dxf del que se rescata la información respectiva.</li>
+        <li>Tipo de hormigón de la losa en la nomenclatura "GXX"</li>
+      </ol>
+    </li>
+  </ul>
+</div>
+
+<h3 id="load_patterns">Load_Patterns</h3>
+<p>En esta sección se definen los Load Patterns (Patrones de carga) que llegarán a Etabs.
+El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' lo contrario.</p>
+<ul>
+<li>
+<p>Los patrones de carga D, Di, CM, L, Lr, S, R, Wxp, Wxn, Wyp, Wyn, TAX y Tay, son los patrones de carga por defecto, no es necesario que estén presentes, pero para que sea posible generar las combinaciones de carga de manera automática es necesario que se llamen exactamente de esta manera. Se recomienda no eliminar estos estados de carga por defecto, sino que simplemente cambiar al valor 'false' en caso que el estado de carga respectivo no esté presente.</p>
+</li>
+<li>
+<p>Está permitido agregar estados de carga adicionales después de los estados de carga por defecto, estos estados de carga se agregarán de manera automática en Etabs, pero será responsabilidad del usuario incorporarlos en las combinaciones de carga.</p>
+</li>
+<li>
+<p>Se ha intentado homologar el nombre de los patrones de carga a los que aparecen en la norma NCh3171.</p>
+</li>
+<li>
+<p>Se ha incorporado un estado de carga no normativo "CM", ya que es una práctica común desacoplar el peso propio de las cargas muertas adicionales.</p>
+</li>
+<li>
+<p>La nomenclatura Wxp, Wxn, Wyp y Wyn se traduce como viento en dirección X positivo, dirección X negativo, dirección Y positivo y dirección Y negativo.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">[Load_Patterns]</span>
+<span class="w">  </span><span class="n">D</span><span class="w">   </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Carga Permanente</span>
+<span class="w">  </span><span class="n">Di</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Peso del Hielo</span>
+<span class="w">  </span><span class="n">CM</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Carga Permanente Adicional</span>
+<span class="w">  </span><span class="n">L</span><span class="w">   </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Carga de uso según NCh 1537</span>
+<span class="w">  </span><span class="n">Lr</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de uso de techo según NCh 1537</span>
+<span class="w">  </span><span class="n">S</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de nieve según NCh 431</span>
+<span class="w">  </span><span class="n">R</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de lluvia según ASCE/SEI 07, capítulo 8</span>
+<span class="w">  </span><span class="n">Wxp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de viento según NCh 432, en dirección X+</span>
+<span class="w">  </span><span class="n">Wxn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de viento según NCh 432, en dirección X-</span>
+<span class="w">  </span><span class="n">Wyp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de viento según NCh 432, en dirección Y+</span>
+<span class="w">  </span><span class="n">Wyn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">false</span><span class="w">  </span><span class="c1"># Carga de viento según NCh 432, en dirección Y-</span>
+<span class="w">  </span><span class="n">TAX</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Torsión Accidental para sismo X</span>
+<span class="w">  </span><span class="n">TAY</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Torsión Accidental para sismo Y</span>
+</code></pre></div>
+<h3 id="cargas">Cargas</h3>
+<p>En esta sección se configura el valor de las cargas estáticas en ton/m2 que se aplicarán sobre las losas de la estructura. Se debe agregar un valor por cada patrón de carga marcado como 'true' entre Di, CM, L, Lr, S, R.</p>
+<p>Se debe asignar un nombre a cada carga, la cual se debe tener una correlación con un load pattern estático de la sección anterior.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[cargas]</span>
+<span class="w">  </span><span class="n">estacionamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.10</span><span class="p">,</span><span class="w"> </span><span class="mf">0.50</span><span class="p">]</span>
+<span class="w">  </span><span class="n">habitacion</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.15</span><span class="p">,</span><span class="w"> </span><span class="mf">0.20</span><span class="p">]</span>
+<span class="w">  </span><span class="n">pasillo</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.15</span><span class="p">,</span><span class="w"> </span><span class="mf">0.40</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="modal_case">Modal_Case</h3>
+<p>Esta sección es para definir las características del caso modal.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Modal_Case]</span>
+<span class="w">  </span><span class="n">ModalCaseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;modal&quot;</span>
+<span class="w">  </span><span class="n">EigenOrRitz</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Eigen&quot;</span>
+<span class="w">  </span><span class="n">MinModes</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span>
+<span class="w">  </span><span class="n">MaxModes</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span>
+</code></pre></div>
+<h3 id="load_combinations">Load_Combinations</h3>
+<p>Esta sección es para indicar que combinaciones de carga se desea generar automáticamente a partir de los patrones de carga existentes.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Load_Combinations]</span>
+<span class="w">  </span><span class="n">LRFD</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="n">ASD</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="n">fundaciones</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</code></pre></div>
+<h4 id="lrfd">LRFD</h4>
+<p>Corresponde a las combinaciones utilizando el método de diseño por resistencia. Valor 'true' para generación automática. La imagen siguiente extraida de la norma NCh3171,muestra las combinaciones que se generan automaticamente.</p>
+<p align="center">
+  <img src="../images/conf3.png" style="max-width:100%;">
+</p>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>No se considera la modificación a las ecuaciones de combinación de carga producto de las excepciones que la misma norma indica en este mismo punto 9.1.1.</p>
+</div>
+<h4 id="asd">ASD</h4>
+<p>Corresponde a las combinaciones utilizando el método de tensiones admisibles. Valor 'true' para generación automática. La imagen siguiente extraida de la norma NCh3171,muestra las combinaciones que se generan automaticamente.</p>
+<p align="center">
+  <img src="../images/conf4.png" style="max-width:100%;">
+</p>
+
+<h4 id="fundaciones">fundaciones</h4>
+<p>Corresponde a las combinaciones utilizando el método de tensiones admisibles para la generación de combinaciones no lineales basada en la metodología mediante la cual se representan las cargas sísmicas sobre las fundaciones a través de los modos más representativos. Valor 'true' para generación automática.</p>
+<ul>
+<li>Estas combinaciones no son las "definitivas", puesto que para obtener la versión final es necesario realizar un proceso para obtener los modos predominantes.</li>
+<li>Para las combinaciones de carga al sismo X siempre se aplicará el modo 1, mientras que para sismo Y siempre se aplicará el modo 2, esto DEBE ser editado por el usuario una vez realizado el análisis.</li>
+<li>El factor de amplificación aplicado a la forma modal se deja en un valor exagerado 999, esto DEBE ser editado por el usuario una vez realizado el análisis.</li>
+</ul>
+<p align="center">
+  <img src="../images/conf5.png" style="max-width:100%;">
+</p>
+
+<h3 id="entidades">Entidades</h3>
+<p>En esta parte del archivo de configuración se indican las capas (layers) existentes en los planos y que representan a los ejes, vigas, muros y columnas. Cada entidad está definida por un nombre y un color.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[entidades]</span>
+<span class="w">  </span><span class="k">[entidades.LINEAS_DE_EJES]</span>
+<span class="w">    </span><span class="n">Color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
+<span class="w">    </span><span class="n">Layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_EJES]</span>
+<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID-IDEN&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.LINEAS_DE_VIGAS]</span>
+<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_VIGAS]</span>
+<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM-IDEN&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.LINEAS_DE_MUROS]</span>
+<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_MUROS]</span>
+<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL-IDEN&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.LINEAS_DE_COLUMNAS]</span>
+<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;COLUMNAS&quot;</span>
+
+<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_COLUMNAS]</span>
+<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
+<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TEXTOS&quot;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Tomar nota del nombre de los layers en la etapa anterior de preparación de planos.</p>
+</div>
+<p>En la imagen siguiente se pueden observar el nombre de las capas en BricsCad.</p>
+<p align="center">
+  <img src="../images/conf6.png" style="max-width:100%;">
+</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
