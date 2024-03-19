@@ -1,0 +1,49 @@
+# Instalar localmente con pip en modo editable: python -m pip install -e .
+[project]
+name = "documentacion"
+dynamic=["version"]
+description = "Documentación para usuario y desarrolladores de IEC Ingeniería SA"
+requires-python = ">=3.11"
+keywords = ["python", "engineering", "structural engineering", "seismic", "structural design", "command line application", "cli"]
+authors = [
+    {name = "Matías Glasner", email = "mglasner@iec.cl"},
+]
+urls = {source = "https://github.com/iec-ingenieria/documentacion"}
+
+# Generar requiremens.txt con: python -m piptools compile -o requirements.txt pyproject.toml
+dependencies = [
+    "mkdocs-material==9.5.14"
+]
+
+[tool.curlylint.rules]
+image_alt = true
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+fix = true
+select = [
+  # Pyflakes
+  "F",
+  # Pycodestyle
+  "E",
+  "W",
+  # isort
+  "I001",
+  # flake8-bugbear
+  "B",
+  # flake8-quotes
+  "Q",
+]
+
+ignore = ["D100", "D101", "D102", "D103", "D104", "D105", "D107", "F841"]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.ruff.mccabe]
+# Flag errors (`C901`) whenever the complexity level exceeds 5.
+max-complexity = 5
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120

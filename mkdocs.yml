@@ -1,0 +1,56 @@
+site_name: DXFTOEDB
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: "white"
+      accent: "deep orange"
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar al modo oscuro
+
+    - scheme: slate
+      primary: "white"
+      accent: "deep orange"
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar al modo claro
+  language: es
+  logo: images/logo_iec.png
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+  icon:
+    annotation: material/arrow-right-circle
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Inicio: index.md
+  - Instalación: instalacion.md
+  - Preparación: preparacion.md
+  - Configuración: configuracion.md
+  - Dxftoedb1: dxftoedb1.md
+  - Dxftoedb2: dxftoedb2.md
+  - Dxftoedb3: dxftoedb3.md
+  - Dxftoedb4: dxftoedb4.md
+  - Problemas Frecuentes: problemas.md
+  - Comandos Autocad: comandos-autocad.md
+  - Ideas: ideas.md
