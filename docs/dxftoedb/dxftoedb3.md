@@ -21,3 +21,7 @@ El resultado de la ejecución de dxftoedb3 es un archivo en formato JSON con los
 !!! warning
 
     El archivo JSON puede ser modificado y los cambios se reflejarán en el modelo, sin embargo no tendrá respaldo en planos.
+
+<div style="text-align: center;">
+  <a href="../dxftoedb4/" style="display: inline-block; background-color: #EF7701; color: white; padding: 5px 10px; text-decoration: none; border-radius: 5px;">Siguiente: Dxftoedb4</a>
+</div>

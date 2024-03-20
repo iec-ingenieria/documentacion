@@ -387,3 +387,7 @@ En la imagen siguiente se pueden observar el nombre de las capas en BricsCad.
 <p align="center">
   <img src="../images/conf6.png" style="max-width:100%;">
 </p>
+
+<div style="text-align: center;">
+  <a href="../dxftoedb1/" style="display: inline-block; background-color: #EF7701; color: white; padding: 5px 10px; text-decoration: none; border-radius: 5px;">Siguiente: Dxftoedb1</a>
+</div>

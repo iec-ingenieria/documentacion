@@ -1,4 +1,4 @@
-# Preparación
+# Prepinchado
 
 <p style="text-align: justify;">
   El primer paso es la recepción y preparación del set de planos originales.
@@ -14,3 +14,7 @@
   <li>Verificar que todas las plantas tengan la misma capa (layer) asignada a ejes, muros, vigas, columnas, losas, textos de ejes y textos de vigas. <a href="/comandos-autocad/" target=”_blank”><em>(Resúmen comandos autocad).</em> 🔗</a></li>
   <li>Guardar planos en formato dxf en el directorio de trabajo escogido.</li>
 </ul>
+
+<div style="text-align: center;">
+  <a href="../configuracion/" style="display: inline-block; background-color: #EF7701; color: white; padding: 5px 10px; text-decoration: none; border-radius: 5px;">Siguiente: Configuración</a>
+</div>

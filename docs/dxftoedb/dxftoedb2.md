@@ -72,3 +72,7 @@ A cada plano se le ha incorporado una tabla de propiedades y cargas como la sigu
 <p align="center">
   <img src="../images/dxftoedb2b.gif" style="max-width:100%;">
 </p>
+
+<div style="text-align: center;">
+  <a href="../dxftoedb3/" style="display: inline-block; background-color: #EF7701; color: white; padding: 5px 10px; text-decoration: none; border-radius: 5px;">Siguiente: Dxftoedb3</a>
+</div>

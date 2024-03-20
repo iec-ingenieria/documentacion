@@ -1,4 +1,4 @@
-site_name: DXFTOEDB
+site_name: Documentación Software IEC
 
 theme:
   name: material
@@ -43,14 +43,27 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Inicio: index.md
-  - Instalación: instalacion.md
-  - Preparación: preparacion.md
-  - Configuración: configuracion.md
-  - Dxftoedb1: dxftoedb1.md
-  - Dxftoedb2: dxftoedb2.md
-  - Dxftoedb3: dxftoedb3.md
-  - Dxftoedb4: dxftoedb4.md
-  - Problemas Frecuentes: problemas.md
+  - 1️⃣ curva3d:
+      - Inicio: curva3d/index.md
+
+  - 2️⃣ dxftoedb:
+      - Introducción: dxftoedb/introduccion.md
+      - Instalación: dxftoedb/instalacion.md
+      - Prepinchado: dxftoedb/prepinchado.md
+      - Configuración: dxftoedb/configuracion.md
+      - Dxftoedb1:
+          - Dxftoedb1: dxftoedb/dxftoedb1.md
+          - Planos Grilla: dxftoedb/planos_grilla.md
+          - Grilla Excel: dxftoedb/grilla_excel.md
+      - Dxftoedb2: dxftoedb/dxftoedb2.md
+      - Dxftoedb3: dxftoedb/dxftoedb3.md
+      - Dxftoedb4: dxftoedb/dxftoedb4.md
+      - Problemas Frecuentes: dxftoedb/problemas.md
+      - Ideas: dxftoedb/ideas.md
+
+  - 3️⃣ etabs_sdk:
+      - Inicio: etabs_sdk/index.md
+
   - Comandos Autocad: comandos-autocad.md
-  - Ideas: ideas.md
+# http://127.0.0.1:8000/dxftoedb/dxftoedb1/planos_grilla.md
+# http://127.0.0.1:8000/dxftoedb/planos_grilla/

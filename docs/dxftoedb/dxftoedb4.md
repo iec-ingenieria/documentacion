@@ -17,3 +17,7 @@ Se debe ejecutar como cualquier script de python en la línea de comandos.
 ## Output
 
 El resultado de la ejecución de dxftoedb4 es un archivo edb "../[codigo_proyecto].edb".
+
+<div style="text-align: center;">
+  <a href="../problemas/" style="display: inline-block; background-color: #EF7701; color: white; padding: 5px 10px; text-decoration: none; border-radius: 5px;">Siguiente: Problemas</a>
+</div>
