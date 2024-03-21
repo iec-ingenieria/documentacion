@@ -43,12 +43,13 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
+  - 0️⃣ Instalación: instalacion.md
+
   - 1️⃣ curva3d:
       - Inicio: curva3d/index.md
 
   - 2️⃣ dxftoedb:
       - Introducción: dxftoedb/introduccion.md
-      - Instalación: dxftoedb/instalacion.md
       - Prepinchado: dxftoedb/prepinchado.md
       - Configuración: dxftoedb/configuracion.md
       - Dxftoedb1:
@@ -65,5 +66,3 @@ nav:
       - Inicio: etabs_sdk/index.md
 
   - Comandos Autocad: comandos-autocad.md
-# http://127.0.0.1:8000/dxftoedb/dxftoedb1/planos_grilla.md
-# http://127.0.0.1:8000/dxftoedb/planos_grilla/

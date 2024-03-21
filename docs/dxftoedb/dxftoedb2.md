@@ -7,12 +7,12 @@ Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos
 1. Planos "../planos_dxftoedb/[nombre_plano]\_grilla.dxf"
 2. Archivo "../grilla_RXXXX.xlsx"
 
-## ¿Como ejecutar dxftoedb2?
+## Uso
 
-Se debe ejecutar como cualquier script de python en la línea de comandos.
+Se debe ejecutar invocando el comando <code>dxftoedb2</code>
 
 <p align="center">
-  <img src="../images/dxftoedb2a.gif" style="max-width:100%;">
+  <img src="../images/dxftoedb2a.gif" style="max-width:100%;" alt="dxftoedb2">
 </p>
 
 ## Output

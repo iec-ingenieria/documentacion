@@ -16,5 +16,5 @@
 </p>
 
 <div style="text-align: center;">
-  <a href="../instalacion/" style="display: inline-block; background-color: #EF7701; color: white; padding: 5px 10px; text-decoration: none; border-radius: 5px;">Siguiente: Instalación</a>
+  <a href="../prepinchado/" style="display: inline-block; background-color: #EF7701; color: white; padding: 5px 10px; text-decoration: none; border-radius: 5px;">Siguiente: Instalación</a>
 </div>
