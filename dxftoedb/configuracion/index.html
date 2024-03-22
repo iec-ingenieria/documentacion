@@ -733,8 +733,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#entidades" class="md-nav__link">
-    Entidades
+  <a href="#entidades-opcional" class="md-nav__link">
+    Entidades (opcional)
   </a>
   
 </li>
@@ -946,6 +946,26 @@
   
   <span class="md-ellipsis">
     Ideas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versiones
   </span>
   
 
@@ -1268,8 +1288,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#entidades" class="md-nav__link">
-    Entidades
+  <a href="#entidades-opcional" class="md-nav__link">
+    Entidades (opcional)
   </a>
   
 </li>
@@ -1371,32 +1391,6 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
 <span class="w">  </span><span class="n">LRFD</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="n">ASD</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
 <span class="w">  </span><span class="n">fundaciones</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-
-
-<span class="k">[entidades]</span>
-<span class="w">  </span><span class="k">[entidades.LINEAS_DE_EJES]</span>
-<span class="w">    </span><span class="n">Layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_EJES]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID-IDEN&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.LINEAS_DE_VIGAS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_VIGAS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM-IDEN&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.LINEAS_DE_MUROS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_MUROS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL-IDEN&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.LINEAS_DE_COLUMNAS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;COLUMNAS&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_COLUMNAS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TEXTOS&quot;</span>
 </code></pre></div>
 <h2 id="secciones-project_settings">Secciones project_settings</h2>
 <h3 id="version_etabs">Version_etabs</h3>
@@ -1574,39 +1568,31 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
   <img src="../images/conf5.png" style="max-width:100%;">
 </p>
 
-<h3 id="entidades">Entidades</h3>
-<p>En esta parte del archivo de configuración se indican las capas (layers) existentes en los planos y que representan a los ejes, vigas, muros y columnas. Cada entidad está definida por un nombre y un color.</p>
+<h3 id="entidades-opcional">Entidades (opcional)</h3>
+<p>En esta parte del archivo de configuración se indican las capas (layers) existentes en los planos y que representan a los ejes, vigas, muros y columnas. Cada entidad está definida por un nombre.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[entidades]</span>
 <span class="w">  </span><span class="k">[entidades.LINEAS_DE_EJES]</span>
-<span class="w">    </span><span class="n">Color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
 <span class="w">    </span><span class="n">Layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID&quot;</span>
 
 <span class="w">  </span><span class="k">[entidades.TEXTOS_DE_EJES]</span>
-<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
 <span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID-IDEN&quot;</span>
 
 <span class="w">  </span><span class="k">[entidades.LINEAS_DE_VIGAS]</span>
-<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
 <span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM&quot;</span>
 
 <span class="w">  </span><span class="k">[entidades.TEXTOS_DE_VIGAS]</span>
-<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
 <span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM-IDEN&quot;</span>
 
 <span class="w">  </span><span class="k">[entidades.LINEAS_DE_MUROS]</span>
-<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
 <span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL&quot;</span>
 
 <span class="w">  </span><span class="k">[entidades.TEXTOS_DE_MUROS]</span>
-<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
 <span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL-IDEN&quot;</span>
 
 <span class="w">  </span><span class="k">[entidades.LINEAS_DE_COLUMNAS]</span>
-<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
 <span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;COLUMNAS&quot;</span>
 
 <span class="w">  </span><span class="k">[entidades.TEXTOS_DE_COLUMNAS]</span>
-<span class="w">    </span><span class="s">&quot;Color&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
 <span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TEXTOS&quot;</span>
 </code></pre></div>
 <div class="admonition tip">
@@ -1615,7 +1601,7 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
 </div>
 <p>En la imagen siguiente se pueden observar el nombre de las capas en BricsCad.</p>
 <p align="center">
-  <img src="../images/conf6.png" style="max-width:100%;">
+  <img src="../images/conf6.png" style="max-width:100%;" alt="layers">
 </p>
 
 
