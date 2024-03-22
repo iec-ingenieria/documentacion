@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../curva3d/">
+        <link rel="prev" href="../introduccion/">
       
       
-        <link rel="next" href="../input/">
+        <link rel="next" href="../output/">
       
       
       <link rel="icon" href="../../images/logo_iec.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Introducción - Documentación Software IEC</title>
+        <title>Input - Documentación Software IEC</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#edbtopre" class="md-skip">
+        <a href="#input" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introducción
+              Input
             
           </span>
         </div>
@@ -344,6 +344,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -355,28 +375,18 @@
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   <span class="md-ellipsis">
-    Introducción
+    Input
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../input/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -385,6 +395,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#matriz-de-combinacion" class="md-nav__link">
+    Matriz de combinación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-etabs" class="md-nav__link">
+    Modelo ETABS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estados-de-carga" class="md-nav__link">
+    Estados de carga
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -859,6 +910,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#matriz-de-combinacion" class="md-nav__link">
+    Matriz de combinación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-etabs" class="md-nav__link">
+    Modelo ETABS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estados-de-carga" class="md-nav__link">
+    Estados de carga
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -872,11 +952,48 @@
                   
 
 
-<h1 id="edbtopre">EDBTOPRE</h1>
-<p><img alt="dxftoedb" src="../images/index1.png" style="display: block; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" /></p>
-<p><em>Generación de archivos para post procesdores</em></p>
-<hr />
-<p>Edbtopre es una aplicación de línea de comandos para generar los arhivos necesarios para los post procesadores de tensiones, esfuerzos y armaduras. Los datos son extraídos directamente desde los modelos ETABS.</p>
+<h1 id="input">Input</h1>
+<h2 id="matriz-de-combinacion">Matriz de combinación</h2>
+<p>El primer paso es definir la matriz de combinación para los estados de carga del proyecto.</p>
+<p>En la primera línea se colocan los estados de carga separados por ",". A continuación van las filas de los coeficientes por los que se multiplica el estado de carga en la combinación respectiva.</p>
+<p>Una vez definida la matriz se debe cargar indicando la ruta al archivo.</p>
+<p>Por ejemplo <code>matriz.set</code>:</p>
+<div class="highlight"><pre><span></span><code>PP,     CM,    SC,     SX,     SY,    TAX,    TAY
+1.2    1.2    1.6     0.0     0.0     0.0     0.0
+1.4    1.4    0.0     0.0     0.0     0.0     0.0
+1.2    1.2    1.0     1.4     0.0     1.4     0.0
+1.2    1.2    1.0     1.4     0.0    -1.4     0.0
+1.2    1.2    1.0    -1.4     0.0     1.4     0.0
+1.2    1.2    1.0    -1.4     0.0    -1.4     0.0
+1.2    1.2    1.0     0.0     1.4     0.0     1.4
+1.2    1.2    1.0     0.0     1.4     0.0    -1.4
+1.2    1.2    1.0     0.0    -1.4     0.0     1.4
+1.2    1.2    1.0     0.0    -1.4     0.0    -1.4
+0.9    0.9    0.0     1.4     0.0     1.4     0.0
+0.9    0.9    0.0     1.4     0.0    -1.4     0.0
+0.9    0.9    0.0    -1.4     0.0     1.4     0.0
+0.9    0.9    0.0    -1.4     0.0    -1.4     0.0
+0.9    0.9    0.0     0.0     1.4     0.0     1.4
+0.9    0.9    0.0     0.0     1.4     0.0    -1.4
+0.9    0.9    0.0     0.0    -1.4     0.0     1.4
+0.9    0.9    0.0     0.0    -1.4     0.0    -1.4
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Se debe respetar el formato del archivo comletamente</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Puedes venir a hacer copy/paste a esta página para tener el formato correcto</p>
+</div>
+<h2 id="modelo-etabs">Modelo ETABS</h2>
+<p>Se debe ingresar la ruta a cada uno de los models ETABS desde lo que se extraerán los estados de carga respectivos</p>
+<h2 id="estados-de-carga">Estados de carga</h2>
+<p>Finalmente se deben indicar los estados de carga que se extraerán de cada modelo. Deben ir separados por espacio y los nombres deben coincidir exactamente con los del modelo.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Es necesario que estén ejecutados solo los estados de carga que se extraerán de los modelos</p>
+</div>
 
 
 
@@ -904,7 +1021,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../../curva3d/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Inicio" rel="prev">
+          <a href="../introduccion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introducción" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -914,20 +1031,20 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Inicio
+                Introducción
               </div>
             </div>
           </a>
         
         
           
-          <a href="../input/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Input" rel="next">
+          <a href="../output/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Output" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                Input
+                Output
               </div>
             </div>
             <div class="md-footer__button md-icon">
