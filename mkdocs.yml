@@ -18,6 +18,7 @@ theme:
         name: Cambiar al modo claro
   language: es
   logo: images/logo_iec.png
+  favicon: images/logo_iec.png
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -35,6 +36,14 @@ theme:
     - navigation.footer
   icon:
     annotation: material/arrow-right-circle
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://cl.linkedin.com/company/iec-ingenier-a-s.a.
+    - icon: fontawesome/brands/github
+      link: https://github.com/iec-ingenieria
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<iec@iec.cl>
 
 markdown_extensions:
   - attr_list
@@ -52,6 +61,8 @@ nav:
 
   - 2️⃣ edbtopre:
       - Introducción: edbtopre/introduccion.md
+      - Input: edbtopre/input.md
+      - Output: edbtopre/output.md
       - Versiones: edbtopre/versiones.md
 
   - 3️⃣ dxftoedb:
@@ -72,3 +83,4 @@ nav:
       - Inicio: etabs_sdk/index.md
 
   - 📐 Comandos Autocad: comandos-autocad.md
+  - 📁 Directorios: directorios.md
