@@ -79,31 +79,6 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
   ASD         = false
   fundaciones = true
 
-
-[entidades]
-  [entidades.LINEAS_DE_EJES]
-    Layer = "S-GRID"
-
-  [entidades.TEXTOS_DE_EJES]
-    "Layer" = "S-GRID-IDEN"
-
-  [entidades.LINEAS_DE_VIGAS]
-    "Layer" = "S-BEAM"
-
-  [entidades.TEXTOS_DE_VIGAS]
-    "Layer" = "S-BEAM-IDEN"
-
-  [entidades.LINEAS_DE_MUROS]
-    "Layer" = "A-WALL"
-
-  [entidades.TEXTOS_DE_MUROS]
-    "Layer" = "A-WALL-IDEN"
-
-  [entidades.LINEAS_DE_COLUMNAS]
-    "Layer" = "COLUMNAS"
-
-  [entidades.TEXTOS_DE_COLUMNAS]
-    "Layer" = "TEXTOS"
 ```
 
 ## Secciones project_settings
@@ -339,42 +314,34 @@ Corresponde a las combinaciones utilizando el método de tensiones admisibles pa
   <img src="../images/conf5.png" style="max-width:100%;">
 </p>
 
-### Entidades
+### Entidades (opcional)
 
-En esta parte del archivo de configuración se indican las capas (layers) existentes en los planos y que representan a los ejes, vigas, muros y columnas. Cada entidad está definida por un nombre y un color.
+En esta parte del archivo de configuración se indican las capas (layers) existentes en los planos y que representan a los ejes, vigas, muros y columnas. Cada entidad está definida por un nombre.
 
 ```toml
 [entidades]
   [entidades.LINEAS_DE_EJES]
-    Color = 256
     Layer = "S-GRID"
 
   [entidades.TEXTOS_DE_EJES]
-    "Color" = 256
     "Layer" = "S-GRID-IDEN"
 
   [entidades.LINEAS_DE_VIGAS]
-    "Color" = 256
     "Layer" = "S-BEAM"
 
   [entidades.TEXTOS_DE_VIGAS]
-    "Color" = 256
     "Layer" = "S-BEAM-IDEN"
 
   [entidades.LINEAS_DE_MUROS]
-    "Color" = 256
     "Layer" = "A-WALL"
 
   [entidades.TEXTOS_DE_MUROS]
-    "Color" = 256
     "Layer" = "A-WALL-IDEN"
 
   [entidades.LINEAS_DE_COLUMNAS]
-    "Color" = 256
     "Layer" = "COLUMNAS"
 
   [entidades.TEXTOS_DE_COLUMNAS]
-    "Color" = 256
     "Layer" = "TEXTOS"
 ```
 
@@ -385,7 +352,5 @@ En esta parte del archivo de configuración se indican las capas (layers) existe
 En la imagen siguiente se pueden observar el nombre de las capas en BricsCad.
 
 <p align="center">
-  <img src="../images/conf6.png" style="max-width:100%;">
+  <img src="../images/conf6.png" style="max-width:100%;" alt="layers">
 </p>
-
-

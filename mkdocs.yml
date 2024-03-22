@@ -78,6 +78,7 @@ nav:
       - Dxftoedb4: dxftoedb/dxftoedb4.md
       - Problemas Frecuentes: dxftoedb/problemas.md
       - Ideas: dxftoedb/ideas.md
+      - Versiones: dxftoedb/versiones.md
 
   - 4️⃣ etabs_sdk:
       - Inicio: etabs_sdk/index.md
