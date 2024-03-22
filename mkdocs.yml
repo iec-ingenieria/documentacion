@@ -48,7 +48,11 @@ nav:
   - 1️⃣ curva3d:
       - Inicio: curva3d/index.md
 
-  - 2️⃣ dxftoedb:
+  - 2️⃣ edbtopre:
+      - Introducción: edbtopre/introduccion.md
+      - Versiones: edbtopre/versiones.md
+
+  - 3️⃣ dxftoedb:
       - Introducción: dxftoedb/introduccion.md
       - Prepinchado: dxftoedb/prepinchado.md
       - Configuración: dxftoedb/configuracion.md
@@ -62,7 +66,7 @@ nav:
       - Problemas Frecuentes: dxftoedb/problemas.md
       - Ideas: dxftoedb/ideas.md
 
-  - 3️⃣ etabs_sdk:
+  - 3️4️⃣ etabs_sdk:
       - Inicio: etabs_sdk/index.md
 
   - Comandos Autocad: comandos-autocad.md
