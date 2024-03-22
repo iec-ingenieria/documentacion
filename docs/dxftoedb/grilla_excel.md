@@ -30,7 +30,3 @@ Solución: Editar la celda correspondiente asignando el nombre correcto al eje m
 ### Eje no detectado
 
 Solución: Agregar una fila adicional al archivo excel con las coordenadas del eje no detectado (usar distancia pelota = 0).
-
-<div style="text-align: center;">
-  <a href="../dxftoedb2/" style="display: inline-block; background-color: #EF7701; color: white; padding: 5px 10px; text-decoration: none; border-radius: 5px;">Siguiente: Dxftoedb2</a>
-</div>

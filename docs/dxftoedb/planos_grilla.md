@@ -5,7 +5,3 @@ Dentro del directorio "planos_dxftoedb" estará un nuevo set de planos "limpios"
 <p align="center">
   <img src="../images/dxftoedb1c.png" style="max-width:100%;" alt="">
 </p>
-
-<div style="text-align: center;">
-  <a href="../grilla_excel/" style="display: inline-block; background-color: #EF7701; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Siguiente: Grilla Excel</a>
-</div>
