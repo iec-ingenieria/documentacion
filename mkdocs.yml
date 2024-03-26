@@ -81,7 +81,7 @@ nav:
       - Versiones: edbtopre/versiones.md
 
   - 3️⃣ pretovh:
-      - Inicio: pretovh/introduccion.md
+      - Introducción: pretovh/introduccion.md
       - Input: pretovh/input.md
       - Output: pretovh/output.md
       - Versiones: pretovh/versiones.md
