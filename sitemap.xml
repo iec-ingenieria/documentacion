@@ -21,11 +21,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://iec-ingenieria.github.io/documentacion/curva3d/</loc>
-         <lastmod>2024-03-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://iec-ingenieria.github.io/documentacion/dxftoedb/configuracion/</loc>
          <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
@@ -106,7 +101,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://iec-ingenieria.github.io/documentacion/etabs_sdk/</loc>
+         <loc>https://iec-ingenieria.github.io/documentacion/pretovh/input/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://iec-ingenieria.github.io/documentacion/pretovh/introduccion/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://iec-ingenieria.github.io/documentacion/pretovh/output/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://iec-ingenieria.github.io/documentacion/pretovh/versiones/</loc>
          <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
