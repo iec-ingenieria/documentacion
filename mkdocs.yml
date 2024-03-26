@@ -59,16 +59,7 @@ nav:
 
   - 💾 Instalación: instalacion.md
 
-  - 1️⃣ curva3d:
-      - Inicio: curva3d/index.md
-
-  - 2️⃣ edbtopre:
-      - Introducción: edbtopre/introduccion.md
-      - Input: edbtopre/input.md
-      - Output: edbtopre/output.md
-      - Versiones: edbtopre/versiones.md
-
-  - 3️⃣ dxftoedb:
+  - 1️⃣ dxftoedb:
       - Introducción: dxftoedb/introduccion.md
       - Prepinchado: dxftoedb/prepinchado.md
       - Configuración: dxftoedb/configuracion.md
@@ -83,8 +74,17 @@ nav:
       - Ideas: dxftoedb/ideas.md
       - Versiones: dxftoedb/versiones.md
 
-  - 4️⃣ etabs_sdk:
-      - Inicio: etabs_sdk/index.md
+  - 2️⃣ edbtopre:
+      - Introducción: edbtopre/introduccion.md
+      - Input: edbtopre/input.md
+      - Output: edbtopre/output.md
+      - Versiones: edbtopre/versiones.md
+
+  - 3️⃣ pretovh:
+      - Inicio: pretovh/introduccion.md
+      - Input: pretovh/input.md
+      - Output: pretovh/output.md
+      - Versiones: pretovh/versiones.md
 
   - 📐 Comandos Autocad: comandos-autocad.md
   - 📁 Directorios: directorios.md
