@@ -1,4 +1,5 @@
 site_name: Documentación Software IEC
+site_url: https://iec-ingenieria.github.io/documentacion/
 
 theme:
   name: material
@@ -54,6 +55,8 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
+  - 🏠 Inicio: index.md
+
   - 💾 Instalación: instalacion.md
 
   - 1️⃣ curva3d:

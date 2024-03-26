@@ -8,9 +8,9 @@
 <ul style="text-align: justify;">
   <li>Recepción de planos originales en formato dwg.</li>
   <li>Dejar una planta por archivo (puede ser piso tipo).</li>
-  <li>Explotar todos los elementos del dibujo 3 veces. <a href="/comandos-autocad/" target=”_blank”><em>(Resúmen comandos autocad).</em> 🔗</a></li>
+  <li>Explotar todos los elementos del dibujo 3 veces. <a href="../../comandos-autocad/" target=”_blank”><em>(Resúmen comandos autocad).</em> 🔗</a></li>
   <li>Dejar la unidad de medida de los planos en centímetros.</li>
-  <li>Definición y actualización de los planos para <a href="/ajuste-coordenadas/" target=”_blank”>asignar un origen de coordenadas común. 🔗</a></li>
-  <li>Verificar que todas las plantas tengan la misma capa (layer) asignada a ejes, muros, vigas, columnas, losas, textos de ejes y textos de vigas. <a href="/comandos-autocad/" target=”_blank”><em>(Resúmen comandos autocad).</em> 🔗</a></li>
+  <li>Definición y actualización de los planos para asignar un origen de coordenadas común.</li>
+  <li>Verificar que todas las plantas tengan la misma capa (layer) asignada a ejes, muros, vigas, columnas, losas, textos de ejes y textos de vigas. <a href="../../comandos-autocad/" target=”_blank”><em>(Resúmen comandos autocad).</em> 🔗</a></li>
   <li>Guardar planos en formato dxf en el directorio de trabajo escogido.</li>
 </ul>
