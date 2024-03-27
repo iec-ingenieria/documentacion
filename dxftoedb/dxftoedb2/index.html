@@ -1087,7 +1087,7 @@
 
 
 <h1 id="dxftoedb2">Dxftoedb2</h1>
-<p>Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos generados del paso anterior para encontrar los elementos estructurales y representarlos mediante una línea caracteristica que pasa por el eje de coordenadas correspondiente. En esta etapa también se genera la tabla de p propiedades y cargas de las losas.</p>
+<p>Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos generados del paso anterior para encontrar los elementos estructurales y representarlos mediante una línea característica que pasa por el eje de coordenadas correspondiente. En esta etapa también se genera la tabla de propiedades y cargas de las losas.</p>
 <h2 id="input">Input</h2>
 <ol>
 <li>Planos "../planos_dxftoedb/[nombre_plano]_grilla.dxf"</li>
@@ -1095,62 +1095,38 @@
 </ol>
 <h2 id="uso">Uso</h2>
 <p>Se debe ejecutar invocando el comando <code>dxftoedb2</code></p>
-<p align="center">
-  <img src="../images/dxftoedb2a.gif" style="max-width:100%;" alt="dxftoedb2">
-</p>
-
+<p><img alt="dxftoedb2" src="../images/dxftoedb2a.gif" /></p>
 <h2 id="output">Output</h2>
-<p>El resultado de la ejecución de dxftoedb2 es la generación de los planos "../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf". Estos son planos de trabajo, en los que se debe ajustar los elementos estrucurales y cargas que finalmente llegarán al modelo Etabs.</p>
-<p align="center">
-  <img src="../images/dxftoedb2a.png" style="max-width:100%;">
-</p>
-
-<h3 id="elementos-estructurales">Elementos estructurales</h3>
-<p>Los elementos estructurales en el plano están representado por líneas y un texto representativo de la sección.</p>
-<ul>
-<li>
-<p>El usuario debe ajustar el inicio y fin de las líneas para determinar las dimensiones de los elementos estructurales.</p>
-</li>
-<li>
-<p>El usuario debe ajustar el texto de la sección para representar adecuadamente la sección transversal.</p>
-</li>
-</ul>
+<p>El resultado de la ejecución de dxftoedb2 es la generación de los planos "../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf". Estos son planos de trabajo, en los que se debe ajustar los elementos estructurales y cargas que finalmente llegarán al modelo Etabs.</p>
+<p><img alt="dxftoedb2" src="../images/dxftoedb2a.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>El texto de la sección debe tocar la línea del elemento correspondiente y estar dentro del tercio central de la extensión de la línea.</p>
+<p>Al editar un plano, se debe guardar en formato <strong>Autocad 2010 ASCI DXF (.dxf)</strong></p>
+<p><img alt="dxftoedb2" src="../images/save_as.png" /></p>
 </div>
+<h3 id="elementos-estructurales">Elementos estructurales</h3>
+<p>Los elementos estructurales en el plano están representados por líneas y un texto representativo de la sección.</p>
+<ul>
+<li>El usuario debe ajustar el inicio y fin de las líneas para determinar las dimensiones de los elementos estructurales.</li>
+<li>El usuario debe ajustar el texto de la sección para representar adecuadamente la sección transversal.</li>
+</ul>
 <h4 id="muros">Muros</h4>
 <p>Los muros son líneas en la capa "MUROS_etabs" de color calipso.</p>
-<p align="center">
-  <img src="../images/dxftoedb2b.png" style="max-width:100%;">
-</p>
-
+<p><img alt="Muros" src="../images/dxftoedb2b.png" /></p>
 <h4 id="vigas">Vigas</h4>
 <p>Las vigas son líneas en la capa "VIGAS_etabs" de color amarillo.</p>
-<p align="center">
-  <img src="../images/dxftoedb2c.png" style="max-width:100%;">
-</p>
-
+<p><img alt="Vigas" src="../images/dxftoedb2c.png" /></p>
 <h4 id="columnas">Columnas</h4>
 <p>EN DESARROLLO ...</p>
 <h3 id="losas-y-cargas">Losas y cargas</h3>
-<p>Las losas y cargas están directamente relacionadas ya que en un mismo procedimiento de agrean tanto las losas como las cargas.</p>
+<p>Las losas y cargas están directamente relacionadas ya que en un mismo procedimiento se agregan tanto las losas como las cargas.</p>
 <p>A cada plano se le ha incorporado una tabla de propiedades y cargas como la siguiente.</p>
-<p align="center">
-  <img src="../images/dxftoedb2d.png" style="max-width:100%;">
-</p>
-
+<p><img alt="Propiedades y Cargas" src="../images/dxftoedb2d.png" /></p>
 <ul>
-<li>
-<p>En el plano correspondiente el usuario debe identificar las distintas losas existentes y modificar sus propiedades de acuerdo a sus caracteristicas.</p>
-</li>
-<li>
-<p>El usuario debe dibujar elementos tipo "hatch" y asignarle al elemento el color correspondiente de la tabla.</p>
-</li>
+<li>En el plano correspondiente, el usuario debe identificar las distintas losas existentes y modificar sus propiedades de acuerdo a sus características.</li>
+<li>El usuario debe dibujar elementos tipo "hatch" y asignarle al elemento el color correspondiente de la tabla.</li>
 </ul>
-<p align="center">
-  <img src="../images/dxftoedb2b.gif" style="max-width:100%;">
-</p>
+<p><img alt="Losas y Cargas" src="../images/dxftoedb2b.gif" /></p>
 
 
 
