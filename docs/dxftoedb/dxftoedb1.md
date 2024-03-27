@@ -13,9 +13,7 @@ Se debe ejecutar invocando el comando <code>dxftoedb1</code>
 
 Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde están los planos preparados en dxf y el archivo de configuración project_settings.toml.
 
-<p align="center">
-  <img src="../images/dxftoedb1a.gif" style="max-width:100%;", alt="dxftoedb1">
-</p>
+![dxftoedb1](../images/dxftoedb1a.gif)
 
 ## Output
 

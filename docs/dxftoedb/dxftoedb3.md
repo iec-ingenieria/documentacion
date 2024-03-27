@@ -10,9 +10,9 @@ Dxftoedb3 es el tercer script de la aplicación. Su función es rescatar los dat
 
 Se debe ejecutar invocando el comando <code>dxftoedb3</code>
 
-<p align="center">
-  <img src="../images/dxftoedb3.gif" style="max-width:100%;" alt="dxftoedb3">
-</p>
+Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.
+
+![dxftoedb3](../images/dxftoedb3.gif)
 
 ## Output
 
@@ -21,5 +21,3 @@ El resultado de la ejecución de dxftoedb3 es un archivo en formato JSON con los
 !!! warning
 
     El archivo JSON puede ser modificado y los cambios se reflejarán en el modelo, sin embargo no tendrá respaldo en planos.
-
-
