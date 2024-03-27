@@ -1,5 +1,12 @@
 # Versiones Dxftoedb
 
+## V1.0.2
+
+### Novedades
+
+- Corrección de errores:
+    - Error que no permitía agregar nuevos load patterns además de los por defecto
+
 ## V1.0.1
 
 ### Novedades

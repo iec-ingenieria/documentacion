@@ -225,7 +225,7 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
 
 - Los patrones de carga D, Di, CM, L, Lr, S, R, Wxp, Wxn, Wyp, Wyn, TAX y Tay, son los patrones de carga por defecto, no es necesario que estén presentes, pero para que sea posible generar las combinaciones de carga de manera automática es necesario que se llamen exactamente de esta manera. Se recomienda no eliminar estos estados de carga por defecto, sino que simplemente cambiar al valor 'false' en caso que el estado de carga respectivo no esté presente.
 
-- Está permitido agregar estados de carga adicionales después de los estados de carga por defecto, estos estados de carga se agregarán de manera automática en Etabs, pero será responsabilidad del usuario incorporarlos en las combinaciones de carga.
+- Está permitido agregar estados de carga adicionales después de los estados de carga por defecto, estos estados de carga se agregarán de manera automática en Etabs y **siempre serán de tipo Dead**, pero será **responsabilidad del usuario** incorporarlos en las combinaciones de carga.
 
 - Se ha intentado homologar el nombre de los patrones de carga a los que aparecen en la norma NCh3171.
 
