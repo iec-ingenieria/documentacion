@@ -14,6 +14,10 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
 
     Se debe respetar totalmente el nombre de los parámetros (mayúsculas, minúsculas, guiones, comillas, etc, mostrado en los ejemplos).
 
+!!! tip
+
+    Si estás usando vscode puedes instalar la extensión **Even Better TOML** para que tu archivo de configuración tenga resaltado de sintaxis.
+
 ```toml
 [Version_etabs]
   version = "v21"
