@@ -1475,7 +1475,7 @@ Las siguientes secciones son las mínimas para todo proyecto.</p>
 <span class="w">  </span><span class="n">Model_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;R9999&quot;</span>
 <span class="w">  </span><span class="n">Model_Description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Este es un edificio de pruebas de dxftoedb&quot;</span>
 </code></pre></div>
-<p><img alt="configuracion" src="../images/conf1.png" /></p>
+<p><img alt="configuracion" src="../../images/dxftoedb/conf1.png" /></p>
 <h3 id="stories">Stories</h3>
 <p>En esta sección se proporciona la información necesaria para definir los pisos de la estructura y algunas de sus propiedades.</p>
 <p>Se debe indicar la cota de la base y luego un listado por piso con:</p>
@@ -1534,7 +1534,7 @@ Las siguientes secciones son las mínimas para todo proyecto.</p>
 </code></pre></div>
 <h4 id="concrete">Concrete</h4>
 <p>Es posible definir todos los tipos de hormigones necesarios para el proyecto de entre los de la siguiente imagen, tanto en la nomenclatura "GXX" como "HXX". Se considera una densidad para todos los hormigones de 2.5 ton/m3.</p>
-<p><img alt="configuracion" src="../images/conf2.png" /></p>
+<p><img alt="configuracion" src="../../images/dxftoedb/conf2.png" /></p>
 <h4 id="rebar">Rebar</h4>
 <p>Es posible definir todos los tipos de calidad de acero de refuerzo necesarios para el proyecto de entre "A630-420H" y "A440-280H". Se considera una densidad para todos los aceros de 7.85 ton/m3.</p>
 <h4 id="steel">Steel</h4>
@@ -1599,20 +1599,14 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
 </code></pre></div>
 <h4 id="lrfd">LRFD</h4>
 <p>Corresponde a las combinaciones utilizando el método de diseño por resistencia. Valor 'true' para generación automática. La imagen siguiente extraida de la norma NCh3171,muestra las combinaciones que se generan automaticamente.</p>
-<p align="center">
-  <img src="../images/conf3.png" style="max-width:100%;">
-</p>
-
+<p><img alt="combinaciones" src="../../images/dxftoedb/conf3.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>No se considera la modificación a las ecuaciones de combinación de carga producto de las excepciones que la misma norma indica en este mismo punto 9.1.1.</p>
 </div>
 <h4 id="asd">ASD</h4>
 <p>Corresponde a las combinaciones utilizando el método de tensiones admisibles. Valor 'true' para generación automática. La imagen siguiente extraida de la norma NCh3171,muestra las combinaciones que se generan automaticamente.</p>
-<p align="center">
-  <img src="../images/conf4.png" style="max-width:100%;">
-</p>
-
+<p><img alt="combinaciones" src="../../images/dxftoedb/conf4.png" /></p>
 <h4 id="fundaciones">fundaciones</h4>
 <p>Corresponde a las combinaciones utilizando el método de tensiones admisibles para la generación de combinaciones no lineales basada en la metodología mediante la cual se representan las cargas sísmicas sobre las fundaciones a través de los modos más representativos. Valor 'true' para generación automática.</p>
 <ul>
@@ -1620,9 +1614,7 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
 <li>Para las combinaciones de carga al sismo X siempre se aplicará el modo 1, mientras que para sismo Y siempre se aplicará el modo 2, esto DEBE ser editado por el usuario una vez realizado el análisis.</li>
 <li>El factor de amplificación aplicado a la forma modal se deja en un valor exagerado 999, esto DEBE ser editado por el usuario una vez realizado el análisis.</li>
 </ul>
-<p align="center">
-  <img src="../images/conf5.png" style="max-width:100%;">
-</p>
+<p><img alt="combinaciones" src="../../images/dxftoedb/conf5.png" /></p>
 
 
 
