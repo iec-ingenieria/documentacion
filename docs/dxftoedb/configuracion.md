@@ -2,13 +2,9 @@
 
 ## Inicio
 
-<p style="text-align: justify;">
-  La aplicación requiere de un archivo de configuración para el proyecto, de manera de poder transmitir a Etabs las distintas opciones disponibles para cada parámetro requerido.<br>
-</p>
+La aplicación requiere de un archivo de configuración para el proyecto, de manera de poder transmitir a Etabs las distintas opciones disponibles para cada parámetro requerido.
 
-<p style="text-align: justify;">
-Se debe crear un archivo en el directorio de trabajo <strong><em>project_settings.toml</em></strong>.
-</p>
+Se debe crear un archivo en el directorio de trabajo **project_settings.toml**.
 
 !!! warning
 
@@ -19,9 +15,6 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
     Si estás usando vscode puedes instalar la extensión **Even Better TOML** para que tu archivo de configuración tenga resaltado de sintaxis.
 
 ```toml
-[Version_etabs]
-  version = "v21"
-
 [Project_Information]
   Client_Name = "MGV Ingeniería"
   Project_Name = "Proyecto de Prueba"
@@ -32,6 +25,16 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
   Supervisor = "MGB"
   Model_Name = "R9999"
   Model_Description = "Este es un edificio de pruebas de dxftoedb"
+
+[Stories]
+  BaseElevation = -1.5
+  Data = [
+    ["p01", 2.5, "01", "G30"],
+    ["p02", 2.5, "02", "G30"]
+  ]
+
+[Version_etabs]
+  version = "v21"
 
 [Data]
   Diaphragms      = ["D1"]
@@ -44,13 +47,6 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
   Concrete = ["G30", "G40"]
   Steel    = []
   Rebar    = ["A630-420H"]
-
-[Stories]
-  BaseElevation = -1.5
-  Data = [
-    ["p01", 2.5, "01", "G30"],
-    ["p02", 2.5, "02", "G30"]
-  ]
 
 [Load_Patterns]
   D   =  true  # Carga Permanente
@@ -87,19 +83,10 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
 
 ## Secciones project_settings
 
-### Version_etabs
-
-La aplicación funciona para dos versiones de Etabs, 19 y 21
-
-```toml
-[Version_etabs]
-  version = "v21"
-```
-
 ### Project_Information
 
 En esta sección se configuran los metadatos del proyecto.
-Los campos que se deben configurar son los mostrados a continuación:
+Las siguientes secciones son las mínimas para todo proyecto.
 
 ```toml
 [Project_Information]
@@ -114,9 +101,36 @@ Los campos que se deben configurar son los mostrados a continuación:
   Model_Description = "Este es un edificio de pruebas de dxftoedb"
 ```
 
-<p align="center">
-  <img src="../images/conf1.png" style="max-width:100%;">
-</p>
+![configuracion](../images/conf1.png)
+
+### Stories
+
+En esta sección se proporciona la información necesaria para definir los pisos de la estructura y algunas de sus propiedades.
+
+Se debe indicar la cota de la base y luego un listado por piso con:
+
+- Nombre que queremos dar al piso en etabs
+- Altura entrepiso en metros
+- Nombre del plano desde el que se rescatarán los elementos de ese piso
+- Calidad del hormigón de la losa y los elementos del piso
+
+```toml
+[Stories]
+  BaseElevation = -1.5
+  Data = [
+    ["p01", 2.5, "01", "G30"],
+    ["p02", 2.5, "02", "G30"]
+  ]
+```
+
+### Version_etabs
+
+La aplicación funciona para dos versiones de Etabs, 19 y 21
+
+```toml
+[Version_etabs]
+  version = "v21"
+```
 
 ### Data
 
@@ -181,9 +195,7 @@ En esta sección se configura lo relacionado con los materiales.
 
 Es posible definir todos los tipos de hormigones necesarios para el proyecto de entre los de la siguiente imagen, tanto en la nomenclatura "GXX" como "HXX". Se considera una densidad para todos los hormigones de 2.5 ton/m3.
 
-<p align="center">
-  <img src="../images/conf2.png" style="max-width:100%;">
-</p>
+![configuracion](../images/conf2.png)
 
 #### Rebar
 
@@ -192,33 +204,6 @@ Es posible definir todos los tipos de calidad de acero de refuerzo necesarios pa
 #### Steel
 
 EN DESARROLLO ...
-
-### Stories
-
-En esta sección se proporciona la información necesaria para definir los pisos de la estructura.
-
-```toml
-[Stories]
-  BaseElevation = -1.5
-  Data = [
-    ["p01", 2.5, "01", "G30"],
-    ["p02", 2.5, "02", "G30"]
-  ]
-```
-
-<div>
-  <ul>
-    <li>El parámetro 'BaseElevation' representa la cota de empotramiento de la estructura.</li>
-    <li> El parámetro 'Data' corresponde a una lista de listas, donde cada una de las listas representa la información requerida de cada piso. Para cada piso se necesitan 4 datos.
-      <ol>
-        <li>Nombre que llevará el piso en Etabs.</li>
-        <li>Altura entre piso.</li>
-        <li>Nombre del plano dxf del que se rescata la información respectiva.</li>
-        <li>Tipo de hormigón de la losa en la nomenclatura "GXX"</li>
-      </ol>
-    </li>
-  </ul>
-</div>
 
 ### Load_Patterns
 
@@ -272,7 +257,7 @@ Esta sección es para definir las características del caso modal.
 ```toml
 [Modal_Case]
   ModalCaseName = "modal"
-  EigenOrRitz   = "Eigen"
+  EigenOrRitz   = "Eigen"  # Valores admitidos Eigen o Ritz
   MinModes      = 36
   MaxModes      = 36
 ```
@@ -318,45 +303,4 @@ Corresponde a las combinaciones utilizando el método de tensiones admisibles pa
 
 <p align="center">
   <img src="../images/conf5.png" style="max-width:100%;">
-</p>
-
-### Entidades (opcional)
-
-En esta parte del archivo de configuración se indican las capas (layers) existentes en los planos y que representan a los ejes, vigas, muros y columnas. Cada entidad está definida por un nombre.
-
-```toml
-[entidades]
-  [entidades.LINEAS_DE_EJES]
-    Layer = "S-GRID"
-
-  [entidades.TEXTOS_DE_EJES]
-    "Layer" = "S-GRID-IDEN"
-
-  [entidades.LINEAS_DE_VIGAS]
-    "Layer" = "S-BEAM"
-
-  [entidades.TEXTOS_DE_VIGAS]
-    "Layer" = "S-BEAM-IDEN"
-
-  [entidades.LINEAS_DE_MUROS]
-    "Layer" = "A-WALL"
-
-  [entidades.TEXTOS_DE_MUROS]
-    "Layer" = "A-WALL-IDEN"
-
-  [entidades.LINEAS_DE_COLUMNAS]
-    "Layer" = "COLUMNAS"
-
-  [entidades.TEXTOS_DE_COLUMNAS]
-    "Layer" = "TEXTOS"
-```
-
-!!! tip
-
-    Tomar nota del nombre de los layers en la etapa anterior de preparación de planos.
-
-En la imagen siguiente se pueden observar el nombre de las capas en BricsCad.
-
-<p align="center">
-  <img src="../images/conf6.png" style="max-width:100%;" alt="layers">
 </p>

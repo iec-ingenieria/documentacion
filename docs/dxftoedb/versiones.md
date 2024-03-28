@@ -4,12 +4,15 @@
 
 ### Novedades
 
-- Corrección de errores:
-    - Error que no permitía agregar nuevos load patterns además de los por defecto
-
+- Se fusionan los scripts dxftoedb3 y dxftoedb4 en uno solo llamado dxftoedb4
+- Se divide el script dxftoedb2 en dxftoedb2 (para elementos estructurales) y dxftoedb3 (para losas y cargas)
 - Mensaje de error a usuario cuando se indica un material no soportado
 - Mensaje de advertencia a usuario cuando se indica suelo tipo F
 - Hormigón indicado en project_settings.toml para cada piso se está inyectando en la tabla de cargas de los planos '_dxftoedb' en la planta correspondiente
+- Documentación para configuración básica y avanzada
+
+- Corrección de errores:
+    - Error que no permitía agregar nuevos load patterns además de los por defecto
 
 ## V1.0.1
 

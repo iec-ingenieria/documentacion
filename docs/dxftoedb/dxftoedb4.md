@@ -1,18 +1,18 @@
 # Dxftoedb4
 
-Dxftoedb4 es el cuarto script de la aplicación. Su función es generar el modelo Etabs.
+Dxftoedb4 es el cuarto script de la aplicación. Su función es rescatar los datos desde los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf" y generar el modelo Etabs.
 
 ## Input
 
-1. "../[codigo_proyecto].json"
+1. "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf"
 
 ## Uso
 
-Se debe ejecutar invocando el comando <code>dxftoedb3</code>
+Se debe ejecutar invocando el comando <code>dxftoedb4</code>
 
-<p align="center">
-  <img src="../images/dxftoedb4.gif" style="max-width:100%;" alt="dxftoedb4">
-</p>
+Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.
+
+![dxftoedb4](../images/dxftoedb4.gif)
 
 ## Output
 

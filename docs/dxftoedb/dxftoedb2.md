@@ -1,6 +1,6 @@
 # Dxftoedb2
 
-Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos generados del paso anterior para encontrar los elementos estructurales y representarlos mediante una línea característica que pasa por el eje de coordenadas correspondiente. En esta etapa también se genera la tabla de propiedades y cargas de las losas.
+Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos generados del paso anterior para encontrar los elementos estructurales y representarlos mediante una línea característica que pasa por el eje de coordenadas correspondiente.
 
 ## Input
 
@@ -9,15 +9,17 @@ Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos
 
 ## Uso
 
-Se debe ejecutar invocando el comando `dxftoedb2`
+Se debe ejecutar invocando el comando <code>dxftoedb2</code>
+
+Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.
 
 ![dxftoedb2](../images/dxftoedb2a.gif)
 
 ## Output
 
-El resultado de la ejecución de dxftoedb2 es la generación de los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf". Estos son planos de trabajo, en los que se debe ajustar los elementos estructurales y cargas que finalmente llegarán al modelo Etabs.
+El resultado de la ejecución de dxftoedb2 es la generación de los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf". Estos son planos de trabajo, en los que se debe ajustar los elementos estructurales.
 
-![dxftoedb2](../images/dxftoedb2a.png)
+![dxftoedb2](../images/dxftoedb2_output.png)
 
 !!! warning
 
@@ -31,7 +33,10 @@ El resultado de la ejecución de dxftoedb2 es la generación de los planos "../p
 Los elementos estructurales en el plano están representados por líneas y un texto representativo de la sección.
 
 - El usuario debe ajustar el inicio y fin de las líneas para determinar las dimensiones de los elementos estructurales.
-- El usuario debe ajustar el texto de la sección para representar adecuadamente la sección transversal.
+
+- El usuario debe ajustar el texto de la sección para representar adecuadamente la sección transversal. Para que sea correctamente reconocido debe coumplir con:
+    - El texto debe tocar la línea que representa al elemento estructural
+    - El punto de contacto debe estar en el tercio central de la línea
 
 #### Muros
 
@@ -48,16 +53,3 @@ Las vigas son líneas en la capa "VIGAS_etabs" de color amarillo.
 #### Columnas
 
 EN DESARROLLO ...
-
-### Losas y cargas
-
-Las losas y cargas están directamente relacionadas ya que en un mismo procedimiento se agregan tanto las losas como las cargas.
-
-A cada plano se le ha incorporado una tabla de propiedades y cargas como la siguiente.
-
-![Propiedades y Cargas](../images/dxftoedb2d.png)
-
-- En el plano correspondiente, el usuario debe identificar las distintas losas existentes y modificar sus propiedades de acuerdo a sus características.
-- El usuario debe dibujar elementos tipo "hatch" y asignarle al elemento el color correspondiente de la tabla.
-
-![Losas y Cargas](../images/dxftoedb2b.gif)

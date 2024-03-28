@@ -62,7 +62,9 @@ nav:
   - 1️⃣ dxftoedb:
       - Introducción: dxftoedb/introduccion.md
       - Prepinchado: dxftoedb/prepinchado.md
-      - Configuración: dxftoedb/configuracion.md
+      - Configuración:
+          - Básica: dxftoedb/configuracion.md
+          - Avanzada: dxftoedb/configuracion_avanzada.md
       - Dxftoedb1:
           - Dxftoedb1: dxftoedb/dxftoedb1.md
           - Planos Grilla: dxftoedb/planos_grilla.md
