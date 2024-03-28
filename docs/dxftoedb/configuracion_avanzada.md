@@ -43,7 +43,7 @@ En esta parte del archivo de configuración se indican las capas (layers) existe
 
 En la imagen siguiente se pueden observar el nombre de las capas en BricsCad.
 
-![configuracion](../images/conf6.png)
+![configuracion](../images/dxftoedb/conf6.png)
 
 ### Concrete Frames Modifiers
 

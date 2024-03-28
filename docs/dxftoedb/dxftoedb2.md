@@ -13,20 +13,20 @@ Se debe ejecutar invocando el comando <code>dxftoedb2</code>
 
 Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.
 
-![dxftoedb2](../images/dxftoedb2a.gif)
+![dxftoedb2](../images/dxftoedb/dxftoedb2a.gif)
 
 ## Output
 
 El resultado de la ejecución de dxftoedb2 es la generación de los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf". Estos son planos de trabajo, en los que se debe ajustar los elementos estructurales.
 
-![dxftoedb2](../images/dxftoedb2_output.png)
+![output](../images/dxftoedb/dxftoedb2_output.png)
 
 !!! warning
 
     Al editar un plano, se debe guardar en formato **Autocad 2010 ASCI DXF (.dxf)**
 
 
-    ![dxftoedb2](../images/save_as.png)
+    ![save as](../images/dxftoedb/save_as.png)
 
 ### Elementos estructurales
 
@@ -42,13 +42,13 @@ Los elementos estructurales en el plano están representados por líneas y un te
 
 Los muros son líneas en la capa "MUROS_etabs" de color calipso.
 
-![Muros](../images/dxftoedb2b.png)
+![Muros](../images/dxftoedb/dxftoedb2b.png)
 
 #### Vigas
 
 Las vigas son líneas en la capa "VIGAS_etabs" de color amarillo.
 
-![Vigas](../images/dxftoedb2c.png)
+![Vigas](../images/dxftoedb/dxftoedb2c.png)
 
 #### Columnas
 

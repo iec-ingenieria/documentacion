@@ -1,9 +1,5 @@
-<h1 align="center">DOCUMENTACIÓN SOFTWARE IEC</h1>
+# DOCUMENTACIÓN SOFTWARE IEC
 
-<p align="center">
-  <em>Documentación para todo el software de IEC</em>
-</p>
+**Documentación para todo el software de IEC**
 
 ---
-
-<p style="text-align: justify;"></p>

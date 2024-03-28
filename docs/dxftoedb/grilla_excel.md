@@ -11,9 +11,7 @@ Para facilitar la visualización y la detección de inconsistencias se han incor
 - Los ejes que han sido detectados con igual nombre y distinta coordenadas están pintados en un mismo color.
 - Se ha incorporado una columna "distancia pelota", que representa la distancia encontrada entra el borde de una línea de eje y una pelota de eje. Cuando esta distancia es menor a 15cm o mayor a 70cm, se pintará la celda de color para indicar un eje "sospechoso" que se sugiere revisar.
 
-<p align="center">
-  <img src="../images/dxftoedb1d.png" style="max-width:100%;">
-</p>
+![excel](../images/dxftoedb/dxftoedb1_excel.png)
 
 ## Problemas con ejes
 

@@ -1,7 +1,6 @@
 # PRETOVH
 
-![pretovh](../images/index1.png){: style="display: block; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" }
-
+![pretovh](../images/pretovh/index1.png)
 _Revisión de tensiones y armaduras de corte_
 
 ---

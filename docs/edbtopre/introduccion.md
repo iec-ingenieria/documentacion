@@ -1,6 +1,6 @@
 # EDBTOPRE
 
-![edbtopre](../images/index1.png){: style="display: block; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" }
+![edbtopre](../images/edbtopre/index1.png)
 
 _Generación de archivos para post procesdores_
 

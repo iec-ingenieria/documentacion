@@ -101,7 +101,7 @@ Las siguientes secciones son las mínimas para todo proyecto.
   Model_Description = "Este es un edificio de pruebas de dxftoedb"
 ```
 
-![configuracion](../images/conf1.png)
+![configuracion](../images/dxftoedb/conf1.png)
 
 ### Stories
 
@@ -195,7 +195,7 @@ En esta sección se configura lo relacionado con los materiales.
 
 Es posible definir todos los tipos de hormigones necesarios para el proyecto de entre los de la siguiente imagen, tanto en la nomenclatura "GXX" como "HXX". Se considera una densidad para todos los hormigones de 2.5 ton/m3.
 
-![configuracion](../images/conf2.png)
+![configuracion](../images/dxftoedb/conf2.png)
 
 #### Rebar
 
@@ -277,9 +277,7 @@ Esta sección es para indicar que combinaciones de carga se desea generar autom�
 
 Corresponde a las combinaciones utilizando el método de diseño por resistencia. Valor 'true' para generación automática. La imagen siguiente extraida de la norma NCh3171,muestra las combinaciones que se generan automaticamente.
 
-<p align="center">
-  <img src="../images/conf3.png" style="max-width:100%;">
-</p>
+![combinaciones](../images/dxftoedb/conf3.png)
 
 !!! warning
 
@@ -289,9 +287,7 @@ Corresponde a las combinaciones utilizando el método de diseño por resistencia
 
 Corresponde a las combinaciones utilizando el método de tensiones admisibles. Valor 'true' para generación automática. La imagen siguiente extraida de la norma NCh3171,muestra las combinaciones que se generan automaticamente.
 
-<p align="center">
-  <img src="../images/conf4.png" style="max-width:100%;">
-</p>
+![combinaciones](../images/dxftoedb/conf4.png)
 
 #### fundaciones
 
@@ -301,6 +297,4 @@ Corresponde a las combinaciones utilizando el método de tensiones admisibles pa
 - Para las combinaciones de carga al sismo X siempre se aplicará el modo 1, mientras que para sismo Y siempre se aplicará el modo 2, esto DEBE ser editado por el usuario una vez realizado el análisis.
 - El factor de amplificación aplicado a la forma modal se deja en un valor exagerado 999, esto DEBE ser editado por el usuario una vez realizado el análisis.
 
-<p align="center">
-  <img src="../images/conf5.png" style="max-width:100%;">
-</p>
+![combinaciones](../images/dxftoedb/conf5.png)

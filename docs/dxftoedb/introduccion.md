@@ -1,6 +1,6 @@
 # DXFTOEDB
 
-![dxftoedb](../images/index1.png){: style="display: block; margin: auto; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" }
+![dxftoedb](../images/dxftoedb/index1.png)
 
 _Generación automatizada de modelos ETABS a partir de planos en formato DXF_
 

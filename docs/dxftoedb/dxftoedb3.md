@@ -12,20 +12,20 @@ Se debe ejecutar invocando el comando <code>dxftoedb3</code>
 
 Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.
 
-![dxftoedb3](../images/dxftoedb3.gif)
+![dxftoedb3](../images/dxftoedb/dxftoedb3.gif)
 
 ## Output
 
 El resultado de la ejecución de dxftoedb3 son los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf" con las tablas de losas y cargas necesaria para definir las zonas de carga.
 
-![dxftoedb3](../images/dxftoedb3_output.png)
+![dxftoedb3](../images/dxftoedb/dxftoedb3_output.png)
 
 !!! warning
 
     Al editar un plano, se debe guardar en formato **Autocad 2010 ASCI DXF (.dxf)**
 
 
-    ![dxftoedb3](../images/save_as.png)
+    ![dxftoedb3](../images/dxftoedb/save_as.png)
 
 ### Losas y cargas
 
@@ -36,8 +36,8 @@ Las losas y cargas están directamente relacionadas ya que en un mismo procedimi
 
 #### Método 1
 
-![dxftoedb3](../images/dxftoedb3_hatch1.gif)
+![dxftoedb3](../images/dxftoedb/dxftoedb3_hatch1.gif)
 
 #### Método 2
 
-![dxftoedb3](../images/dxftoedb3_hatch2.gif)
+![dxftoedb3](../images/dxftoedb/dxftoedb3_hatch2.gif)
