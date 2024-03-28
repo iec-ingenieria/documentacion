@@ -7,6 +7,10 @@
 - Corrección de errores:
     - Error que no permitía agregar nuevos load patterns además de los por defecto
 
+- Mensaje de error a usuario cuando se indica un material no soportado
+- Mensaje de advertencia a usuario cuando se indica suelo tipo F
+- Hormigón indicado en project_settings.toml para cada piso se está inyectando en la tabla de cargas de los planos '_dxftoedb' en la planta correspondiente
+
 ## V1.0.1
 
 ### Novedades

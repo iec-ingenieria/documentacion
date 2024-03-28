@@ -164,6 +164,8 @@ Se admiten las zonas 1, 2 y 3 para la generación automática del espectro de re
 
 Se admiten las suelos "A", "B", "C", "D" y "E" para la generación automática del espectro de respuesta elástico de la norma NCh433.
 
+Si se indica suelo F, el espectro de respuesta elástico se debe configurar directamente en ETABS.
+
 ### Materials
 
 En esta sección se configura lo relacionado con los materiales.
