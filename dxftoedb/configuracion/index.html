@@ -14,7 +14,7 @@
         <link rel="prev" href="../prepinchado/">
       
       
-        <link rel="next" href="../dxftoedb1/">
+        <link rel="next" href="../configuracion_avanzada/">
       
       
       <link rel="icon" href="../../images/logo_iec.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Configuración - Documentación Software IEC</title>
+        <title>Básica - Documentación Software IEC</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuración
+              Básica
             
           </span>
         </div>
@@ -347,6 +347,42 @@
     
   
   
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuración
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configuración
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -359,7 +395,7 @@
           
   
   <span class="md-ellipsis">
-    Configuración
+    Básica
   </span>
   
 
@@ -370,7 +406,7 @@
         
   
   <span class="md-ellipsis">
-    Configuración
+    Básica
   </span>
   
 
@@ -407,15 +443,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#version_etabs" class="md-nav__link">
-    Version_etabs
+  <a href="#project_information" class="md-nav__link">
+    Project_Information
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#project_information" class="md-nav__link">
-    Project_Information
+  <a href="#stories" class="md-nav__link">
+    Stories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version_etabs" class="md-nav__link">
+    Version_etabs
   </a>
   
 </li>
@@ -510,13 +553,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#stories" class="md-nav__link">
-    Stories
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#load_patterns" class="md-nav__link">
     Load_Patterns
   </a>
@@ -571,13 +607,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#entidades-opcional" class="md-nav__link">
-    Entidades (opcional)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -586,6 +615,34 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion_avanzada/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avanzada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1143,15 +1200,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#version_etabs" class="md-nav__link">
-    Version_etabs
+  <a href="#project_information" class="md-nav__link">
+    Project_Information
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#project_information" class="md-nav__link">
-    Project_Information
+  <a href="#stories" class="md-nav__link">
+    Stories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version_etabs" class="md-nav__link">
+    Version_etabs
   </a>
   
 </li>
@@ -1246,13 +1310,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#stories" class="md-nav__link">
-    Stories
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#load_patterns" class="md-nav__link">
     Load_Patterns
   </a>
@@ -1307,13 +1364,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#entidades-opcional" class="md-nav__link">
-    Entidades (opcional)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1336,14 +1386,8 @@
 
 <h1 id="configuracion">Configuración</h1>
 <h2 id="inicio">Inicio</h2>
-<p style="text-align: justify;">
-  La aplicación requiere de un archivo de configuración para el proyecto, de manera de poder transmitir a Etabs las distintas opciones disponibles para cada parámetro requerido.<br>
-</p>
-
-<p style="text-align: justify;">
-Se debe crear un archivo en el directorio de trabajo <strong><em>project_settings.toml</em></strong>.
-</p>
-
+<p>La aplicación requiere de un archivo de configuración para el proyecto, de manera de poder transmitir a Etabs las distintas opciones disponibles para cada parámetro requerido.</p>
+<p>Se debe crear un archivo en el directorio de trabajo <strong>project_settings.toml</strong>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Se debe respetar totalmente el nombre de los parámetros (mayúsculas, minúsculas, guiones, comillas, etc, mostrado en los ejemplos).</p>
@@ -1352,10 +1396,7 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
 <p class="admonition-title">Tip</p>
 <p>Si estás usando vscode puedes instalar la extensión <strong>Even Better TOML</strong> para que tu archivo de configuración tenga resaltado de sintaxis.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="k">[Version_etabs]</span>
-<span class="w">  </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;v21&quot;</span>
-
-<span class="k">[Project_Information]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[Project_Information]</span>
 <span class="w">  </span><span class="n">Client_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MGV Ingeniería&quot;</span>
 <span class="w">  </span><span class="n">Project_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Proyecto de Prueba&quot;</span>
 <span class="w">  </span><span class="n">Project_Number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;R9999&quot;</span>
@@ -1365,6 +1406,16 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
 <span class="w">  </span><span class="n">Supervisor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MGB&quot;</span>
 <span class="w">  </span><span class="n">Model_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;R9999&quot;</span>
 <span class="w">  </span><span class="n">Model_Description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Este es un edificio de pruebas de dxftoedb&quot;</span>
+
+<span class="k">[Stories]</span>
+<span class="w">  </span><span class="n">BaseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="mf">.5</span>
+<span class="w">  </span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="s">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G30&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="k">[&quot;p02&quot;, 2.5, &quot;02&quot;, &quot;G30&quot;]</span>
+<span class="w">  </span><span class="p">]</span>
+
+<span class="k">[Version_etabs]</span>
+<span class="w">  </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;v21&quot;</span>
 
 <span class="k">[Data]</span>
 <span class="w">  </span><span class="n">Diaphragms</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;D1&quot;</span><span class="p">]</span>
@@ -1377,13 +1428,6 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
 <span class="w">  </span><span class="n">Concrete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;G30&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G40&quot;</span><span class="p">]</span>
 <span class="w">  </span><span class="n">Steel</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
 <span class="w">  </span><span class="n">Rebar</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;A630-420H&quot;</span><span class="p">]</span>
-
-<span class="k">[Stories]</span>
-<span class="w">  </span><span class="n">BaseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="mf">.5</span>
-<span class="w">  </span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">[</span><span class="s">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G30&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="k">[&quot;p02&quot;, 2.5, &quot;02&quot;, &quot;G30&quot;]</span>
-<span class="w">  </span><span class="p">]</span>
 
 <span class="k">[Load_Patterns]</span>
 <span class="w">  </span><span class="n">D</span><span class="w">   </span><span class="o">=</span><span class="w">  </span><span class="n">true</span><span class="w">  </span><span class="c1"># Carga Permanente</span>
@@ -1417,14 +1461,9 @@ Se debe crear un archivo en el directorio de trabajo <strong><em>project_setting
 <span class="w">  </span><span class="n">fundaciones</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 </code></pre></div>
 <h2 id="secciones-project_settings">Secciones project_settings</h2>
-<h3 id="version_etabs">Version_etabs</h3>
-<p>La aplicación funciona para dos versiones de Etabs, 19 y 21</p>
-<div class="highlight"><pre><span></span><code><span class="k">[Version_etabs]</span>
-<span class="w">  </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;v21&quot;</span>
-</code></pre></div>
 <h3 id="project_information">Project_Information</h3>
 <p>En esta sección se configuran los metadatos del proyecto.
-Los campos que se deben configurar son los mostrados a continuación:</p>
+Las siguientes secciones son las mínimas para todo proyecto.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[Project_Information]</span>
 <span class="w">  </span><span class="n">Client_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MGV Ingeniería&quot;</span>
 <span class="w">  </span><span class="n">Project_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Proyecto de Prueba&quot;</span>
@@ -1436,10 +1475,28 @@ Los campos que se deben configurar son los mostrados a continuación:</p>
 <span class="w">  </span><span class="n">Model_Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;R9999&quot;</span>
 <span class="w">  </span><span class="n">Model_Description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Este es un edificio de pruebas de dxftoedb&quot;</span>
 </code></pre></div>
-<p align="center">
-  <img src="../images/conf1.png" style="max-width:100%;">
-</p>
-
+<p><img alt="configuracion" src="../images/conf1.png" /></p>
+<h3 id="stories">Stories</h3>
+<p>En esta sección se proporciona la información necesaria para definir los pisos de la estructura y algunas de sus propiedades.</p>
+<p>Se debe indicar la cota de la base y luego un listado por piso con:</p>
+<ul>
+<li>Nombre que queremos dar al piso en etabs</li>
+<li>Altura entrepiso en metros</li>
+<li>Nombre del plano desde el que se rescatarán los elementos de ese piso</li>
+<li>Calidad del hormigón de la losa y los elementos del piso</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">[Stories]</span>
+<span class="w">  </span><span class="n">BaseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="mf">.5</span>
+<span class="w">  </span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="s">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G30&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="k">[&quot;p02&quot;, 2.5, &quot;02&quot;, &quot;G30&quot;]</span>
+<span class="w">  </span><span class="p">]</span>
+</code></pre></div>
+<h3 id="version_etabs">Version_etabs</h3>
+<p>La aplicación funciona para dos versiones de Etabs, 19 y 21</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Version_etabs]</span>
+<span class="w">  </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;v21&quot;</span>
+</code></pre></div>
 <h3 id="data">Data</h3>
 <p>En esta sección se configuran parámetros generales del proyecto.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[Data]</span>
@@ -1467,6 +1524,7 @@ Los campos que se deben configurar son los mostrados a continuación:</p>
 <p>Se admiten las zonas 1, 2 y 3 para la generación automática del espectro de respuesta elástico de la norma NCh433.</p>
 <h4 id="suelos">Suelos</h4>
 <p>Se admiten las suelos "A", "B", "C", "D" y "E" para la generación automática del espectro de respuesta elástico de la norma NCh433.</p>
+<p>Si se indica suelo F, el espectro de respuesta elástico se debe configurar directamente en ETABS.</p>
 <h3 id="materials">Materials</h3>
 <p>En esta sección se configura lo relacionado con los materiales.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[Materials]</span>
@@ -1476,37 +1534,11 @@ Los campos que se deben configurar son los mostrados a continuación:</p>
 </code></pre></div>
 <h4 id="concrete">Concrete</h4>
 <p>Es posible definir todos los tipos de hormigones necesarios para el proyecto de entre los de la siguiente imagen, tanto en la nomenclatura "GXX" como "HXX". Se considera una densidad para todos los hormigones de 2.5 ton/m3.</p>
-<p align="center">
-  <img src="../images/conf2.png" style="max-width:100%;">
-</p>
-
+<p><img alt="configuracion" src="../images/conf2.png" /></p>
 <h4 id="rebar">Rebar</h4>
 <p>Es posible definir todos los tipos de calidad de acero de refuerzo necesarios para el proyecto de entre "A630-420H" y "A440-280H". Se considera una densidad para todos los aceros de 7.85 ton/m3.</p>
 <h4 id="steel">Steel</h4>
 <p>EN DESARROLLO ...</p>
-<h3 id="stories">Stories</h3>
-<p>En esta sección se proporciona la información necesaria para definir los pisos de la estructura.</p>
-<div class="highlight"><pre><span></span><code><span class="k">[Stories]</span>
-<span class="w">  </span><span class="n">BaseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="mf">.5</span>
-<span class="w">  </span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">[</span><span class="s">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G30&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="k">[&quot;p02&quot;, 2.5, &quot;02&quot;, &quot;G30&quot;]</span>
-<span class="w">  </span><span class="p">]</span>
-</code></pre></div>
-<div>
-  <ul>
-    <li>El parámetro 'BaseElevation' representa la cota de empotramiento de la estructura.</li>
-    <li> El parámetro 'Data' corresponde a una lista de listas, donde cada una de las listas representa la información requerida de cada piso. Para cada piso se necesitan 4 datos.
-      <ol>
-        <li>Nombre que llevará el piso en Etabs.</li>
-        <li>Altura entre piso.</li>
-        <li>Nombre del plano dxf del que se rescata la información respectiva.</li>
-        <li>Tipo de hormigón de la losa en la nomenclatura "GXX"</li>
-      </ol>
-    </li>
-  </ul>
-</div>
-
 <h3 id="load_patterns">Load_Patterns</h3>
 <p>En esta sección se definen los Load Patterns (Patrones de carga) que llegarán a Etabs.
 El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' lo contrario.</p>
@@ -1515,7 +1547,7 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
 <p>Los patrones de carga D, Di, CM, L, Lr, S, R, Wxp, Wxn, Wyp, Wyn, TAX y Tay, son los patrones de carga por defecto, no es necesario que estén presentes, pero para que sea posible generar las combinaciones de carga de manera automática es necesario que se llamen exactamente de esta manera. Se recomienda no eliminar estos estados de carga por defecto, sino que simplemente cambiar al valor 'false' en caso que el estado de carga respectivo no esté presente.</p>
 </li>
 <li>
-<p>Está permitido agregar estados de carga adicionales después de los estados de carga por defecto, estos estados de carga se agregarán de manera automática en Etabs, pero será responsabilidad del usuario incorporarlos en las combinaciones de carga.</p>
+<p>Está permitido agregar estados de carga adicionales después de los estados de carga por defecto, estos estados de carga se agregarán de manera automática en Etabs y <strong>siempre serán de tipo Dead</strong>, pero será <strong>responsabilidad del usuario</strong> incorporarlos en las combinaciones de carga.</p>
 </li>
 <li>
 <p>Se ha intentado homologar el nombre de los patrones de carga a los que aparecen en la norma NCh3171.</p>
@@ -1554,7 +1586,7 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
 <p>Esta sección es para definir las características del caso modal.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[Modal_Case]</span>
 <span class="w">  </span><span class="n">ModalCaseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;modal&quot;</span>
-<span class="w">  </span><span class="n">EigenOrRitz</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Eigen&quot;</span>
+<span class="w">  </span><span class="n">EigenOrRitz</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Eigen&quot;</span><span class="w">  </span><span class="c1"># Valores admitidos Eigen o Ritz</span>
 <span class="w">  </span><span class="n">MinModes</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span>
 <span class="w">  </span><span class="n">MaxModes</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span>
 </code></pre></div>
@@ -1590,42 +1622,6 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
 </ul>
 <p align="center">
   <img src="../images/conf5.png" style="max-width:100%;">
-</p>
-
-<h3 id="entidades-opcional">Entidades (opcional)</h3>
-<p>En esta parte del archivo de configuración se indican las capas (layers) existentes en los planos y que representan a los ejes, vigas, muros y columnas. Cada entidad está definida por un nombre.</p>
-<div class="highlight"><pre><span></span><code><span class="k">[entidades]</span>
-<span class="w">  </span><span class="k">[entidades.LINEAS_DE_EJES]</span>
-<span class="w">    </span><span class="n">Layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_EJES]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-GRID-IDEN&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.LINEAS_DE_VIGAS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_VIGAS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-BEAM-IDEN&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.LINEAS_DE_MUROS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_MUROS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A-WALL-IDEN&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.LINEAS_DE_COLUMNAS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;COLUMNAS&quot;</span>
-
-<span class="w">  </span><span class="k">[entidades.TEXTOS_DE_COLUMNAS]</span>
-<span class="w">    </span><span class="s">&quot;Layer&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;TEXTOS&quot;</span>
-</code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Tomar nota del nombre de los layers en la etapa anterior de preparación de planos.</p>
-</div>
-<p>En la imagen siguiente se pueden observar el nombre de las capas en BricsCad.</p>
-<p align="center">
-  <img src="../images/conf6.png" style="max-width:100%;" alt="layers">
 </p>
 
 
@@ -1671,13 +1667,13 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
         
         
           
-          <a href="../dxftoedb1/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Dxftoedb1" rel="next">
+          <a href="../configuracion_avanzada/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Avanzada" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                Dxftoedb1
+                Avanzada
               </div>
             </div>
             <div class="md-footer__button md-icon">

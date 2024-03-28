@@ -345,16 +345,78 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../configuracion/" class="md-nav__link">
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Configuración
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configuración
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Básica
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion_avanzada/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avanzada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -993,17 +1055,15 @@
 
 
 <h1 id="dxftoedb4">Dxftoedb4</h1>
-<p>Dxftoedb4 es el cuarto script de la aplicación. Su función es generar el modelo Etabs.</p>
+<p>Dxftoedb4 es el cuarto script de la aplicación. Su función es rescatar los datos desde los planos "../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf" y generar el modelo Etabs.</p>
 <h2 id="input">Input</h2>
 <ol>
-<li>"../[codigo_proyecto].json"</li>
+<li>"../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf"</li>
 </ol>
 <h2 id="uso">Uso</h2>
-<p>Se debe ejecutar invocando el comando <code>dxftoedb3</code></p>
-<p align="center">
-  <img src="../images/dxftoedb4.gif" style="max-width:100%;" alt="dxftoedb4">
-</p>
-
+<p>Se debe ejecutar invocando el comando <code>dxftoedb4</code></p>
+<p>Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.</p>
+<p><img alt="dxftoedb4" src="../images/dxftoedb4.gif" /></p>
 <h2 id="output">Output</h2>
 <p>El resultado de la ejecución de dxftoedb4 es un archivo edb "../[codigo_proyecto].edb".</p>
 

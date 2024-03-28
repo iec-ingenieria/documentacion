@@ -345,16 +345,78 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../configuracion/" class="md-nav__link">
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Configuración
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configuración
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Básica
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion_avanzada/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avanzada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -566,13 +628,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#losas-y-cargas" class="md-nav__link">
-    Losas y cargas
-  </a>
   
 </li>
         
@@ -1059,13 +1114,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#losas-y-cargas" class="md-nav__link">
-    Losas y cargas
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1087,7 +1135,7 @@
 
 
 <h1 id="dxftoedb2">Dxftoedb2</h1>
-<p>Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos generados del paso anterior para encontrar los elementos estructurales y representarlos mediante una línea característica que pasa por el eje de coordenadas correspondiente. En esta etapa también se genera la tabla de propiedades y cargas de las losas.</p>
+<p>Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos generados del paso anterior para encontrar los elementos estructurales y representarlos mediante una línea característica que pasa por el eje de coordenadas correspondiente.</p>
 <h2 id="input">Input</h2>
 <ol>
 <li>Planos "../planos_dxftoedb/[nombre_plano]_grilla.dxf"</li>
@@ -1095,10 +1143,11 @@
 </ol>
 <h2 id="uso">Uso</h2>
 <p>Se debe ejecutar invocando el comando <code>dxftoedb2</code></p>
+<p>Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.</p>
 <p><img alt="dxftoedb2" src="../images/dxftoedb2a.gif" /></p>
 <h2 id="output">Output</h2>
-<p>El resultado de la ejecución de dxftoedb2 es la generación de los planos "../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf". Estos son planos de trabajo, en los que se debe ajustar los elementos estructurales y cargas que finalmente llegarán al modelo Etabs.</p>
-<p><img alt="dxftoedb2" src="../images/dxftoedb2a.png" /></p>
+<p>El resultado de la ejecución de dxftoedb2 es la generación de los planos "../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf". Estos son planos de trabajo, en los que se debe ajustar los elementos estructurales.</p>
+<p><img alt="dxftoedb2" src="../images/dxftoedb2_output.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Al editar un plano, se debe guardar en formato <strong>Autocad 2010 ASCI DXF (.dxf)</strong></p>
@@ -1107,8 +1156,16 @@
 <h3 id="elementos-estructurales">Elementos estructurales</h3>
 <p>Los elementos estructurales en el plano están representados por líneas y un texto representativo de la sección.</p>
 <ul>
-<li>El usuario debe ajustar el inicio y fin de las líneas para determinar las dimensiones de los elementos estructurales.</li>
-<li>El usuario debe ajustar el texto de la sección para representar adecuadamente la sección transversal.</li>
+<li>
+<p>El usuario debe ajustar el inicio y fin de las líneas para determinar las dimensiones de los elementos estructurales.</p>
+</li>
+<li>
+<p>El usuario debe ajustar el texto de la sección para representar adecuadamente la sección transversal. Para que sea correctamente reconocido debe coumplir con:</p>
+<ul>
+<li>El texto debe tocar la línea que representa al elemento estructural</li>
+<li>El punto de contacto debe estar en el tercio central de la línea</li>
+</ul>
+</li>
 </ul>
 <h4 id="muros">Muros</h4>
 <p>Los muros son líneas en la capa "MUROS_etabs" de color calipso.</p>
@@ -1118,15 +1175,6 @@
 <p><img alt="Vigas" src="../images/dxftoedb2c.png" /></p>
 <h4 id="columnas">Columnas</h4>
 <p>EN DESARROLLO ...</p>
-<h3 id="losas-y-cargas">Losas y cargas</h3>
-<p>Las losas y cargas están directamente relacionadas ya que en un mismo procedimiento se agregan tanto las losas como las cargas.</p>
-<p>A cada plano se le ha incorporado una tabla de propiedades y cargas como la siguiente.</p>
-<p><img alt="Propiedades y Cargas" src="../images/dxftoedb2d.png" /></p>
-<ul>
-<li>En el plano correspondiente, el usuario debe identificar las distintas losas existentes y modificar sus propiedades de acuerdo a sus características.</li>
-<li>El usuario debe dibujar elementos tipo "hatch" y asignarle al elemento el color correspondiente de la tabla.</li>
-</ul>
-<p><img alt="Losas y Cargas" src="../images/dxftoedb2b.gif" /></p>
 
 
 

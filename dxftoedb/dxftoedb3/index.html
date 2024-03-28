@@ -345,16 +345,78 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../configuracion/" class="md-nav__link">
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Configuración
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configuración
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Básica
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion_avanzada/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avanzada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -551,6 +613,39 @@
   <a href="#output" class="md-nav__link">
     Output
   </a>
+  
+    <nav class="md-nav" aria-label="Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#losas-y-cargas" class="md-nav__link">
+    Losas y cargas
+  </a>
+  
+    <nav class="md-nav" aria-label="Losas y cargas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-1" class="md-nav__link">
+    Método 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-2" class="md-nav__link">
+    Método 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -975,6 +1070,39 @@
     Output
   </a>
   
+    <nav class="md-nav" aria-label="Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#losas-y-cargas" class="md-nav__link">
+    Losas y cargas
+  </a>
+  
+    <nav class="md-nav" aria-label="Losas y cargas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-1" class="md-nav__link">
+    Método 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-2" class="md-nav__link">
+    Método 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -993,7 +1121,7 @@
 
 
 <h1 id="dxftoedb3">Dxftoedb3</h1>
-<p>Dxftoedb3 es el tercer script de la aplicación. Su función es rescatar los datos desde los planos "../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf" y prepararlos para el último script que generará el modelo Etabs.</p>
+<p>Dxftoedb3 es el tercer script de la aplicación. Su función inyectar en los planos "../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf" la tabla de losas y cargas con sus respectivas propiedades.</p>
 <h2 id="input">Input</h2>
 <ol>
 <li>"../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf"</li>
@@ -1003,11 +1131,23 @@
 <p>Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.</p>
 <p><img alt="dxftoedb3" src="../images/dxftoedb3.gif" /></p>
 <h2 id="output">Output</h2>
-<p>El resultado de la ejecución de dxftoedb3 es un archivo en formato JSON con los datos rescatados "../[codigo_proyecto].json".</p>
+<p>El resultado de la ejecución de dxftoedb3 son los planos "../planos_dxftoedb/[nombre_plano]_dxftoedb.dxf" con las tablas de losas y cargas necesaria para definir las zonas de carga.</p>
+<p><img alt="dxftoedb3" src="../images/dxftoedb3_output.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>El archivo JSON puede ser modificado y los cambios se reflejarán en el modelo, sin embargo no tendrá respaldo en planos.</p>
+<p>Al editar un plano, se debe guardar en formato <strong>Autocad 2010 ASCI DXF (.dxf)</strong></p>
+<p><img alt="dxftoedb3" src="../images/save_as.png" /></p>
 </div>
+<h3 id="losas-y-cargas">Losas y cargas</h3>
+<p>Las losas y cargas están directamente relacionadas ya que en un mismo procedimiento se agregan tanto las losas como las cargas.</p>
+<ul>
+<li>En el plano correspondiente, el usuario debe identificar las distintas losas existentes y modificar sus propiedades de acuerdo a sus características.</li>
+<li>El usuario debe dibujar elementos tipo "hatch" y asignarle al elemento el color correspondiente de la tabla.</li>
+</ul>
+<h4 id="metodo-1">Método 1</h4>
+<p><img alt="dxftoedb3" src="../images/dxftoedb3_hatch1.gif" /></p>
+<h4 id="metodo-2">Método 2</h4>
+<p><img alt="dxftoedb3" src="../images/dxftoedb3_hatch2.gif" /></p>
 
 
 
