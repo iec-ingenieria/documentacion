@@ -10,7 +10,7 @@ Dxftoedb4 es el cuarto script de la aplicación. Su función es rescatar los dat
 
 Se debe ejecutar invocando el comando <code>dxftoedb4</code>
 
-Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.
+Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está el archivo de configuración project_settings.toml.
 
 ![dxftoedb4](../images/dxftoedb/dxftoedb4.gif)
 

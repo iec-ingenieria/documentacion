@@ -193,13 +193,13 @@ En esta sección se configura lo relacionado con los materiales.
 
 #### Concrete
 
-Es posible definir todos los tipos de hormigones necesarios para el proyecto de entre los de la siguiente imagen, tanto en la nomenclatura "GXX" como "HXX". Se considera una densidad para todos los hormigones de 2.5 ton/m3.
+Es posible definir todos los tipos de hormigones necesarios para el proyecto de entre los de la siguiente imagen, tanto en la nomenclatura "GXX" como "HXX". Se considera una densidad para todos los hormigones de 2.5 ton/m³.
 
 ![configuracion](../images/dxftoedb/conf2.png)
 
 #### Rebar
 
-Es posible definir todos los tipos de calidad de acero de refuerzo necesarios para el proyecto de entre "A630-420H" y "A440-280H". Se considera una densidad para todos los aceros de 7.85 ton/m3.
+Es posible definir todos los tipos de calidad de acero de refuerzo necesarios para el proyecto de entre "A630-420H" y "A440-280H". Se considera una densidad para todos los aceros de 7.85 ton/m³.
 
 #### Steel
 
@@ -239,7 +239,7 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
 
 ### Cargas
 
-En esta sección se configura el valor de las cargas estáticas en ton/m2 que se aplicarán sobre las losas de la estructura. Se debe agregar un valor por cada patrón de carga marcado como 'true' entre Di, CM, L, Lr, S, R.
+En esta sección se configura el valor de las cargas estáticas en ton/m² que se aplicarán sobre las losas de la estructura. Se debe agregar un valor por cada patrón de carga marcado como 'true' entre Di, CM, L, Lr, S, R.
 
 Se debe asignar un nombre a cada carga, la cual se debe tener una correlación con un load pattern estático de la sección anterior.
 

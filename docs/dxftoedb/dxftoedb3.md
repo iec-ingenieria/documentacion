@@ -1,6 +1,6 @@
 # Dxftoedb3
 
-Dxftoedb3 es el tercer script de la aplicación. Su función inyectar en los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf" la tabla de losas y cargas con sus respectivas propiedades.
+Dxftoedb3 es el tercer script de la aplicación. Su función es inyectar en los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf" la tabla de losas y cargas con sus respectivas propiedades.
 
 ## Input
 
@@ -10,7 +10,7 @@ Dxftoedb3 es el tercer script de la aplicación. Su función inyectar en los pla
 
 Se debe ejecutar invocando el comando <code>dxftoedb3</code>
 
-Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.
+Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está el archivo de configuración project_settings.toml.
 
 ![dxftoedb3](../images/dxftoedb/dxftoedb3.gif)
 
