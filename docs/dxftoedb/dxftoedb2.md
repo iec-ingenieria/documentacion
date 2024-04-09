@@ -11,7 +11,7 @@ Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos
 
 Se debe ejecutar invocando el comando <code>dxftoedb2</code>
 
-Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está archivo de configuración project_settings.toml.
+Luego de la ejecución se solicitará al usuario seleccionar la carpeta de trabajo. La carpeta de trabajo es donde está el archivo de configuración project_settings.toml.
 
 ![dxftoedb2](../images/dxftoedb/dxftoedb2a.gif)
 
@@ -34,7 +34,7 @@ Los elementos estructurales en el plano están representados por líneas y un te
 
 - El usuario debe ajustar el inicio y fin de las líneas para determinar las dimensiones de los elementos estructurales.
 
-- El usuario debe ajustar el texto de la sección para representar adecuadamente la sección transversal. Para que sea correctamente reconocido debe coumplir con:
+- El usuario debe ajustar el texto de la sección para representar adecuadamente la sección transversal. Para que sea correctamente reconocido debe cumplir con:
     - El texto debe tocar la línea que representa al elemento estructural
     - El punto de contacto debe estar en el tercio central de la línea
 
