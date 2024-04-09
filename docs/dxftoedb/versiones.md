@@ -1,5 +1,11 @@
 # Versiones Dxftoedb
 
+## V1.0.3 (En Desarrollo)
+
+### Novedades
+
+- Valor por defecto para el factor de forma de Largo/Alto de las vigas igual a 2. Este valor se utiliza para definir si una viga se modela como Shell o como Frame.
+
 ## V1.0.2
 
 ### Novedades
