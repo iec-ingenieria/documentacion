@@ -1532,8 +1532,8 @@
 <span class="k">[Stories]</span>
 <span class="w">  </span><span class="n">BaseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-1.5</span>
 <span class="w">  </span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p02&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;02&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p02&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;02&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.16</span><span class="p">]</span>
 <span class="w">  </span><span class="p">]</span>
 
 <span class="k">[Version_etabs]</span>
@@ -1607,13 +1607,19 @@ Las siguientes secciones son las mínimas para todo proyecto.</p>
 <li>Nombre del plano desde el que se rescatarán los elementos de ese piso</li>
 <li>Calidad del hormigón de la losa y los elementos del piso</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">[Stories]</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># [Nombre del piso en etabs, Altura entre piso, Nombre del plano dxf, Hormigón del piso, Espesor de losa tipo del piso]</span>
+<span class="k">[Stories]</span>
 <span class="w">  </span><span class="n">BaseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-1.5</span>
 <span class="w">  </span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p02&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;02&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p02&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;02&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.16</span><span class="p">]</span>
 <span class="w">  </span><span class="p">]</span>
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<pre><code>  Para pisos tipo: Tanto el hormigón y el espesor se considerarán el del piso superior
+</code></pre>
+</div>
 <h3 id="version_etabs">Version_etabs</h3>
 <p>La aplicación funciona para dos versiones de Etabs, 19 y 21</p>
 <div class="highlight"><pre><span></span><code><span class="k">[Version_etabs]</span>
@@ -1699,7 +1705,7 @@ El valor 'true' significa que se creará ese patrón de carga en Etabs, 'false' 
 <h3 id="cargas">Cargas</h3>
 <p>En esta sección se configura el valor de las cargas estáticas en ton/m² que se aplicarán sobre las losas de la estructura. Se debe agregar un valor por cada patrón de carga marcado como 'true' entre Di, CM, L, Lr, S, R.</p>
 <p>Se debe asignar un nombre a cada carga, la cual se debe tener una correlación con un load pattern estático de la sección anterior.</p>
-<div class="highlight"><pre><span></span><code><span class="k">[cargas]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[Cargas]</span>
 <span class="w">  </span><span class="n">estacionamiento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.10</span><span class="p">,</span><span class="w"> </span><span class="mf">0.50</span><span class="p">]</span>
 <span class="w">  </span><span class="n">habitacion</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.15</span><span class="p">,</span><span class="w"> </span><span class="mf">0.20</span><span class="p">]</span>
 <span class="w">  </span><span class="n">pasillo</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.15</span><span class="p">,</span><span class="w"> </span><span class="mf">0.40</span><span class="p">]</span>

@@ -1238,11 +1238,13 @@
 <h2 id="v110">V1.1.0</h2>
 <h3 id="novedades">Novedades</h3>
 <ul>
+<li>Corrección de errores menores.</li>
+<li>Valor por defecto para el factor de forma de Largo/Alto de las vigas igual a 2. Este valor se utiliza para definir si una viga se modela como Shell o como Frame.</li>
 <li>Se incorporan la visualización de arranques en los planos de estructura, necesarios para referencia de vigas.</li>
 <li>Nuevo proceso adicional para la búsqueda de espesor de muros, resuelve problema de muros T.</li>
 <li>Nuevas carpetas para agrupar los planos en cada etapa del proceso</li>
 <li>Cambio en project_settings.toml:<ul>
-<li>Cambio en project_settings.toml: nombre de llave [cargas] ahora [Cargas]
+<li>Nombre de llave [cargas] ahora [Cargas]
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">[Cargas]</span>
 </code></pre></div></li>
 <li>Se agrega espesor de losa tipo por piso en [Stories][Data]</li>
@@ -1256,11 +1258,6 @@
 <span class="w">        </span><span class="p">[</span><span class="s2">&quot;p02&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;02&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">,</span><span class="mf">0.16</span><span class="p">],</span>
 <span class="w">      </span><span class="p">]</span>
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<pre><code>  Para pisos tipo: Tanto el hormigón y el espesor se considerarán el del piso superior
-</code></pre>
-</div>
 <h2 id="v102">V1.0.2</h2>
 <h3 id="novedades_1">Novedades</h3>
 <ul>
