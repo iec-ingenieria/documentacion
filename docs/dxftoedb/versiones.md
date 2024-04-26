@@ -1,20 +1,15 @@
 # Versiones Dxftoedb
 
-## V1.0.3 (En Desarrollo)
-
-### Novedades
-
-- Valor por defecto para el factor de forma de Largo/Alto de las vigas igual a 2. Este valor se utiliza para definir si una viga se modela como Shell o como Frame.
-
 ## V1.1.0
 
 ### Novedades
-
+- Corrección de errores menores.
+- Valor por defecto para el factor de forma de Largo/Alto de las vigas igual a 2. Este valor se utiliza para definir si una viga se modela como Shell o como Frame.
 - Se incorporan la visualización de arranques en los planos de estructura, necesarios para referencia de vigas.
 - Nuevo proceso adicional para la búsqueda de espesor de muros, resuelve problema de muros T.
 - Nuevas carpetas para agrupar los planos en cada etapa del proceso
 - Cambio en project_settings.toml:
-    * Cambio en project_settings.toml: nombre de llave [cargas] ahora [Cargas]
+    * Nombre de llave [cargas] ahora [Cargas]
 ```toml
   [Cargas]
 ```
@@ -28,9 +23,6 @@
         ["p02", 2.5, "02", "G30",0.16],
       ]
 ```
-
-!!! warning
-          Para pisos tipo: Tanto el hormigón y el espesor se considerarán el del piso superior
 
 
 ## V1.0.2

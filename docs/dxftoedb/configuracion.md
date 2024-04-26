@@ -29,8 +29,8 @@ Se debe crear un archivo en el directorio de trabajo **project_settings.toml**.
 [Stories]
   BaseElevation = -1.5
   Data = [
-    ["p01", 2.5, "01", "G30"],
-    ["p02", 2.5, "02", "G30"]
+    ["p01", 2.5, "01", "G30", 0.15],
+    ["p02", 2.5, "02", "G30", 0.16]
   ]
 
 [Version_etabs]
@@ -115,13 +115,16 @@ Se debe indicar la cota de la base y luego un listado por piso con:
 - Calidad del hormigón de la losa y los elementos del piso
 
 ```toml
+# [Nombre del piso en etabs, Altura entre piso, Nombre del plano dxf, Hormigón del piso, Espesor de losa tipo del piso]
 [Stories]
   BaseElevation = -1.5
   Data = [
-    ["p01", 2.5, "01", "G30"],
-    ["p02", 2.5, "02", "G30"]
+    ["p01", 2.5, "01", "G30", 0.15],
+    ["p02", 2.5, "02", "G30", 0.16]
   ]
 ```
+!!! warning
+          Para pisos tipo: Tanto el hormigón y el espesor se considerarán el del piso superior
 
 ### Version_etabs
 
@@ -244,7 +247,7 @@ En esta sección se configura el valor de las cargas estáticas en ton/m² que s
 Se debe asignar un nombre a cada carga, la cual se debe tener una correlación con un load pattern estático de la sección anterior.
 
 ```toml
-[cargas]
+[Cargas]
   estacionamiento = [0.10, 0.50]
   habitacion      = [0.15, 0.20]
   pasillo         = [0.15, 0.40]
