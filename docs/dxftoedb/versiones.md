@@ -1,5 +1,32 @@
 # Versiones Dxftoedb
 
+## V1.1.0
+
+### Novedades
+
+- Se incorporan la visualización de arranques en los planos de estructura, necesarios para referencia de vigas.
+- Nuevo proceso adicional para la búsqueda de espesor de muros, resuelve problema de muros T.
+- Nuevas carpetas para agrupar los planos en cada etapa del proceso
+- Cambio en project_settings.toml:
+    * Cambio en project_settings.toml: nombre de llave [cargas] ahora [Cargas]
+```toml
+  [Cargas]
+```
+    * Se agrega espesor de losa tipo por piso en [Stories][Data]
+
+```toml
+     [Stories]
+        BaseElevation = -1.5
+        Data = [
+        ["p01", 2.5, "01", "G30",0.15],
+        ["p02", 2.5, "02", "G30",0.16],
+      ]
+```
+
+!!! warning
+          Para pisos tipo: Tanto el hormigón y el espesor se considerarán el del piso superior
+
+
 ## V1.0.2
 
 ### Novedades

@@ -30,6 +30,9 @@ En esta parte del archivo de configuración se indican las capas (layers) existe
   [entidades.TEXTOS_DE_MUROS]
     "Layer" = "A-WALL-IDEN"
 
+  [entidades.LINEAS_DE_ARRANQUES]
+    "Layer" = "ARRANQUES"
+
   [entidades.LINEAS_DE_COLUMNAS]
     "Layer" = "COLUMNAS"
 

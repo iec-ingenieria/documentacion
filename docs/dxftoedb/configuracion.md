@@ -63,7 +63,7 @@ Se debe crear un archivo en el directorio de trabajo **project_settings.toml**.
   TAX =  true  # Torsión Accidental para sismo X
   TAY =  true  # Torsión Accidental para sismo Y
 
-[cargas]
+[Cargas]
   estacionamiento = [0.10, 0.50]
   habitacion      = [0.15, 0.20]
   pasillo         = [0.15, 0.40]
