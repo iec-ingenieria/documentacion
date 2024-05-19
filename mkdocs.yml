@@ -88,9 +88,9 @@ nav:
       - Output: pretovh/output.md
       - Versiones: pretovh/versiones.md
 
-  - 4️⃣ industrial:
-      - Introducción: industrial/introduccion.md
-      - Anclajes:  industrial/anclajes.md
+  - 4️⃣ anclajes:
+      - Introducción: anclajes/introduccion.md
+      - Momento Grande:  anclajes/large_moments.md
 
 
 
