@@ -2,10 +2,36 @@
 
 ## V1.2.0
 
+  - Corrección Bug que provocaba en algunos computadores la interrupción del script en dxftoedb4.
+  - Actualizaciónm documentación para las nuevas rutas a los planos generados.
+  - Se elimina la posibilidad de indicar los modificadores de rigidez para frames desde project_setting (configuración avanzada).
+
+## V1.1.0
+
 ### Novedades
 
+- Corrección de errores menores.
 - Valor por defecto para el factor de forma de Largo/Alto de las vigas igual a 2. Este valor se utiliza para definir si una viga se modela como Shell o como Frame.
-- Nueva estructura de directorios con las subcarpetas grilla, dxftoedb y cargas
+- Se incorporan la visualización de arranques en los planos de estructura, necesarios para referencia de vigas.
+- Nuevo proceso adicional para la búsqueda de espesor de muros, resuelve problema de muros T.
+- Nuevas carpetas para agrupar los planos en cada etapa del proceso
+- Cambio en project_settings.toml:
+    - Nombre de llave [cargas] ahora [Cargas]
+
+```toml
+  [Cargas]
+```
+
+    * Se agrega espesor de losa tipo por piso en [Stories][Data]
+
+```toml
+     [Stories]
+        BaseElevation = -1.5
+        Data = [
+        ["p01", 2.5, "01", "G30",0.15],
+        ["p02", 2.5, "02", "G30",0.16],
+      ]
+```
 
 ## V1.0.2
 
