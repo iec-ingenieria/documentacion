@@ -54,6 +54,10 @@ Este parámetro controla los modificadores de rigidez de los elemenetos frame de
   modificadores = [1, 1, 1, 0, 1, 1, 1, 1]
 ```
 
+!!! warning
+
+    Esta opción fue retirada de la versión 1.2.0 por razones técnicas en el uso de la API de etabs. Los frames se crean sin rigidez torsional, con modificadores por defecto <code>[1, 1, 1, 0, 1, 1, 1, 1]</code>
+
 ### Wall Modifiers
 
 Este parámetro controla los modificadores de rigidez de los elementos área del modelo. El valor por defecto es <code>modificadores = [1, 1, 1, 1, 1, 1, 1, 1]</code>.

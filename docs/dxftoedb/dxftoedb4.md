@@ -1,10 +1,10 @@
 # Dxftoedb4
 
-Dxftoedb4 es el cuarto script de la aplicación. Su función es rescatar los datos desde los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf" y generar el modelo Etabs.
+Dxftoedb4 es el cuarto script de la aplicación. Su función es rescatar los datos desde los planos "../planos_dxftoedb/cargas/[nombre_plano]\_cargas.dxf" y generar el modelo Etabs.
 
 ## Input
 
-1. "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf"
+1. "../planos_dxftoedb/cargas/[nombre_plano]\_cargas.dxf"
 
 ## Uso
 

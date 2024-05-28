@@ -4,7 +4,7 @@ Dxftoedb2 es el segundo script de la aplicación. Su función es leer los planos
 
 ## Input
 
-1. Planos "../planos_dxftoedb/[nombre_plano]\_grilla.dxf"
+1. Planos "../planos_dxftoedb/grilla/[nombre_plano]\_grilla.dxf"
 2. Archivo "../grilla_RXXXX.xlsx"
 
 ## Uso
@@ -17,7 +17,7 @@ Luego de la ejecución se solicitará al usuario seleccionar la carpeta de traba
 
 ## Output
 
-El resultado de la ejecución de dxftoedb2 es la generación de los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf". Estos son planos de trabajo, en los que se debe ajustar los elementos estructurales.
+El resultado de la ejecución de dxftoedb2 es la generación de los planos "../planos_dxftoedb/dxftoedb/[nombre_plano]\_dxftoedb.dxf". Estos son planos de trabajo, en los que se debe ajustar los elementos estructurales.
 
 ![output](../images/dxftoedb/dxftoedb2_output.png)
 
