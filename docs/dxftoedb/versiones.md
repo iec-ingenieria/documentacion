@@ -1,5 +1,9 @@
 # Versiones Dxftoedb
 
+## V1.2.1
+
+  - Actualización de dependencias para ser consistente con el resto del software IEC
+
 ## V1.2.0
 
   - Corrección Bug que provocaba en algunos computadores la interrupción del script en dxftoedb4.
