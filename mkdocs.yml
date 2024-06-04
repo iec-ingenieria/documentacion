@@ -90,9 +90,11 @@ nav:
 
   - 4️⃣ industrial:
       - Introducción: industrial/introduccion.md
-      - Anclajes:  industrial/anclajes.md
+      - Anclajes: industrial/anclajes.md
 
-
+  - 5️⃣ curvaw:
+      - Introducción: curvaw/introduccion.md
+      - Versiones: curvaw/anclajes.md
 
   - 📐 Comandos Autocad: comandos-autocad.md
   - 📁 Directorios: directorios.md
