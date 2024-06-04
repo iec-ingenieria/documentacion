@@ -96,6 +96,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://iec-ingenieria.github.io/documentacion/edbtoinf/introduccion/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://iec-ingenieria.github.io/documentacion/edbtoinf/versiones/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://iec-ingenieria.github.io/documentacion/edbtopre/input/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
