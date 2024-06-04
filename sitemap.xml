@@ -136,6 +136,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://iec-ingenieria.github.io/documentacion/pretoda9/introduccion/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://iec-ingenieria.github.io/documentacion/pretoda9/versiones/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://iec-ingenieria.github.io/documentacion/pretovh/input/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
@@ -152,6 +162,16 @@
     </url>
     <url>
          <loc>https://iec-ingenieria.github.io/documentacion/pretovh/versiones/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://iec-ingenieria.github.io/documentacion/tatoedb/introduccion/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://iec-ingenieria.github.io/documentacion/tatoedb/versiones/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
