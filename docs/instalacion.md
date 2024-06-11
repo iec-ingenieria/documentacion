@@ -40,10 +40,13 @@
     Descarga la última versión del instalador de nuestro software desde aquí: <a href="https://drive.google.com/drive/folders/11jUxoF3O19u1abogZqwjrhSJzv9Ax_AS?usp=sharing" target="_blank">Descargar Instalador</a> 👈 (archivo con extensión <code>.whl</code>)
   </li>
   <li>
-    Dentro de la carpeta <code>dist</code>, busca el archivo que tenga el número de versión más reciente y termine con la extensión <code>.whl</code>. Por ejemplo, <code>dxftoedb-1.0.0.post0-py3-none-any.whl</code>.
+    Dentro de la carpeta <code>apps</code>, busca el archivo que tenga el número de versión más reciente y termine con la extensión <code>.whl</code>. Por ejemplo, <code>dxftoedb-1.0.0.post0-py3-none-any.whl</code>.
   </li>
   <li>
-    Haz clic sobre el nombre del archivo. En la siguiente página, busca y haz clic en el botón <strong>"Download"</strong> o <strong>"Descargar archivo sin procesar"</strong> para descargar el archivo directamente a tu dispositivo.
+    Descarga el archivo
+  </li>
+  <li>
+    Si no tienes acceso a la carpeta solicitalo al administrador con tu cuenta @iec.cl
   </li>
   <li>
     Abre una terminal o línea de comandos.
