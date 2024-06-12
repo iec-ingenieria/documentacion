@@ -91,7 +91,8 @@ nav:
   - 4️⃣ anclajes:
       - Introducción: anclajes/introduccion.md
       - Compresión Axial:  anclajes/compresion_axial.md
-      - Momento Grande:  anclajes/large_moments.md
+      - Small Moments:  anclajes/small_moments.md
+      - Large Moments:  anclajes/large_moments.md
 
 
   - 📐 Comandos Autocad: comandos-autocad.md

@@ -1,3 +1,3 @@
-# Section 3.4 Base Plates Large Moments
+# Section 3.4 Design of Column Base Plates with Large Moments
 
 
