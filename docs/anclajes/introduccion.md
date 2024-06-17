@@ -1,13 +1,15 @@
 # ANCLAJES
 
-**Documentación para todo el software de Anclajes**
+# Introducción
 
-_Desarrollo de diseño de anclajes en base a Steel Design Guide 01 y AISC 360 specification for structural steel buildings_
+## Descripción general
 
-3.0 Design of column base plate connections
+**anclajes_asd** es una herramienta de escritorio intuitiva diseñada para ingenieros del área industrial. Esta aplicación facilita la gestión de tareas relacionadas con la verificación de las dimensiones y la resistencia de los elementos en la conexión típica de placa base de columnas en edificios.
 
-Esta sección de la Guía de diseño proporciona los requisitos de diseño para
-conexiones típicas de placa base de columna en edificios, como la que se
-muestra en la Figura
+La aplicación ofrece una interfaz gráfica de usuario (GUI) amigable que permite a los usuarios agregar, editar y eliminar tareas de manera eficiente, además de realizar cálculos y verificaciones estructurales. Entre sus funciones adicionales se incluyen recordatorios y categorización de tareas
 
-![anclajes](../images/anclajes/Column base connection components.png)
+**anclajes_asd** está basada en las directrices de la sección 3.0 (_Design of column base plate connections_) de la **Design Guide 01**, asegurando que los cálculos y verificaciones sean precisos y cumplan con los requerimientos.
+
+![Componentes de conexión de base de columna](../images/anclajes/Column base connection components.png)
+
+*Figura 1: Componentes de conexión de base de columna*

@@ -90,6 +90,7 @@ nav:
 
   - 4️⃣ anclajes:
       - Introducción: anclajes/introduccion.md
+      - Datos iniciales:  anclajes/datos_iniciales.md
       - Compresión Axial:  anclajes/compresion_axial.md
       - Small Moments:  anclajes/small_moments.md
       - Large Moments:  anclajes/large_moments.md
