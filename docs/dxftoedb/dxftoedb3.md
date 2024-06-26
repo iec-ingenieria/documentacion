@@ -4,7 +4,7 @@ Dxftoedb3 es el tercer script de la aplicación. Su función es inyectar en los 
 
 ## Input
 
-1. "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf"
+1. "../planos_dxftoedb/dxftoedb/[nombre_plano]\_dxftoedb.dxf"
 
 ## Uso
 
@@ -16,7 +16,7 @@ Luego de la ejecución se solicitará al usuario seleccionar la carpeta de traba
 
 ## Output
 
-El resultado de la ejecución de dxftoedb3 son los planos "../planos_dxftoedb/[nombre_plano]\_dxftoedb.dxf" con las tablas de losas y cargas necesaria para definir las zonas de carga.
+El resultado de la ejecución de dxftoedb3 son los planos "../planos_dxftoedb/cargas/[nombre_plano]\_cargas.dxf" con las tablas de losas y cargas necesaria para definir las zonas de carga.
 
 ![dxftoedb3](../images/dxftoedb/dxftoedb3_output.png)
 
