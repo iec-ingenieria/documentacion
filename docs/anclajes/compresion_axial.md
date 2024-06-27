@@ -6,12 +6,12 @@ resistir las fuerzas de soporte transferidas desde la placa base (límite de
 carga del hormigón) y la placa base debe tener un espesor suficiente
 (límite de fluencia).
 
-##Estado de carga
+## Estado de carga
 Para este estado de carga la aplicación verificará el aplastamiento del hormigón y el espesor de la placa base
 
 ![compresion_axial_esfuerzos](../images/anclajes/compresion_axial_esfuerzos.png)
 
-##Verificación del aplastamiento del hormigón
+## Verificación del aplastamiento del hormigón
 
 ![aplastamiento_hormigon_verificacion](../images/anclajes/aplastamiento_hormigon_verificacion.png)
 
@@ -25,7 +25,7 @@ La tensión en placa provocada por el estado de carga está dado por la carga ax
 
 ![tension_en_placa](../images/anclajes/tension_en_placa.png)
 
-##Verificación del espesor de la placa de base
+## Verificación del espesor de la placa base
 
 ![verificacion_placa_compresion_axial](../images/anclajes/verificacion_placa_compresion_axial.png)
 
@@ -63,7 +63,7 @@ Finalmente el espesor mínimo se calcula con la siguiente fórmula:
 
 donde:
 
-l es el valor máximo entre las distancias críticas m,n y λn'
+_l_ es el valor máximo entre las distancias críticas m,n y λn'
 
 ![omega_1.67](../images/anclajes/omega_1.67.png)
 
