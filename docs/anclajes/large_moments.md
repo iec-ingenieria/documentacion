@@ -52,6 +52,16 @@ donde m es la distancia crítica de bending lines
 
 ![traccion_large_moment](../images/anclajes/traccion_large_moment.png)
 
+![formula_espesor_placa_base_traccion_large_moment](../images/anclajes/formula_espesor_placa_base_traccion_large_moment.png)
+
+![valor_x_traccion_large_moment](../images/anclajes/valor_x_traccion_large_moment.png)
+
+
+## Número de pernos
+
+![formulas_numero_de_pernos](../images/anclajes/formulas_numero_de_pernos.png)
+
+
 
 
 
