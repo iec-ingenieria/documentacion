@@ -19,7 +19,7 @@ La tensión de soporte máximo del hormigon armado para el diseño de tensión a
 
 ![tension_soporte_maximo_asd_ha](../images/anclajes/tension_soporte_maximo_asd_ha.png)
 
-![omega_2.5](../images/anclajes/omega_2.5.png)
+![omega_c_2.31](../images/anclajes/omega_c_2.31.png)
 
 La tensión en placa provocada por el estado de carga está dado por la carga axial dividida por el área de la placa:
 
@@ -55,8 +55,6 @@ donde:
 
 ![x_para_lamba](../images/anclajes/x_para_lamba.png)
 
-![omega_c_2.5](../images/anclajes/omega_c_2.5.png)
-
 Finalmente el espesor mínimo se calcula con la siguiente fórmula:
 
 ![espesor_min_placa_compresion_axial](../images/anclajes/espesor_min_placa_compresion_axial.png)
@@ -65,7 +63,7 @@ donde:
 
 _l_ es el valor máximo entre las distancias críticas m,n y λn'
 
-![omega_1.67](../images/anclajes/omega_1.67.png)
+![omega_b_1.67](../images/anclajes/omega_b_1.67.png)
 
 
 
