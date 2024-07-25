@@ -92,9 +92,10 @@ nav:
       - Introducción: anclajes/introduccion.md
       - Datos iniciales:  anclajes/datos_iniciales.md
       - Resultados iniciales:  anclajes/resultados_iniciales.md
-      - Compresión Axial:  anclajes/compresion_axial.md
-      - Small Moments:  anclajes/small_moments.md
-      - Large Moments:  anclajes/large_moments.md
+      - Compresión:  anclajes/compresion.md
+      - Tracción:  anclajes/traccion.md
+      - Momento Pequeño con Compresión Axial:  anclajes/small_moment_cax.md
+      - Momento Grande con Compresión Axial:  anclajes/large_moment_cax.md
       - Versiones: anclajes/versiones.md
 
   - 5️⃣ curvaw:

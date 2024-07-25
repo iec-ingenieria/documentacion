@@ -1,10 +1,6 @@
-# Section 3.1 Concentric Compressive Axial Loads
+# Compresión
 
-Cuando la base de una columna resiste sólo cargas axiales de compresión
-de la columna, el pedestal debe ser lo suficientemente grande para
-resistir las fuerzas de soporte transferidas desde la placa base (límite de
-carga del hormigón) y la placa base debe tener un espesor suficiente
-(límite de fluencia).
+Cuando la base de una columna resiste sólo carga axial de compresión, el pedestal debe ser lo suficientemente grande para resistir las fuerzas de soporte transferidas desde la placa base (límite de carga del hormigón) y la placa base debe tener un espesor suficiente (límite de fluencia).
 
 ## Estado de carga
 Para este estado de carga la aplicación verificará el aplastamiento del hormigón y el espesor de la placa base
@@ -18,8 +14,6 @@ Para este estado de carga la aplicación verificará el aplastamiento del hormig
 La tensión de soporte máximo del hormigon armado para el diseño de tensión admisible (ASD) está dado por:
 
 ![tension_soporte_maximo_asd_ha](../images/anclajes/tension_soporte_maximo_asd_ha.png)
-
-![omega_c_2.31](../images/anclajes/omega_c_2.31.png)
 
 La tensión en placa provocada por el estado de carga está dado por la carga axial dividida por el área de la placa:
 
@@ -63,7 +57,6 @@ donde:
 
 _l_ es el valor máximo entre las distancias críticas m,n y λn'
 
-![omega_b_1.67](../images/anclajes/omega_b_1.67.png)
 
 
 

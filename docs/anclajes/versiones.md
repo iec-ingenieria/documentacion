@@ -1,5 +1,13 @@
 # Versiones anclajes
 
+## V2.0.0
+
+### Novedades
+
+- Se incorporan los estados de carga, permitiendo la opción de ingresar tracciones.
+- Permite al usuario modificar los Ω (Omega) según su elección. Por defecto, se utilizan los valores de la edición 2 de Design Guide 1.
+
+
 ## V1.0.2
 
 ### Novedades

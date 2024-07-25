@@ -24,18 +24,18 @@ Se calcula la resistencia nominal de soporte (Pp) y la tensión de soporte máxi
 
 ![aplastamiento](../images/anclajes/aplastamiento_hormigon_nominal.png)
 
-_Resitencia Nominal de soporte de hormigón armado:_
-
-![resist_nom_sop_ha](../images/anclajes/resistencia_nominal_de_soporte_ha.png)
-
 _Tensión de Soporte Máximo de hormigón armado y factor de áreas:_
 
 ![tens_sop_max](../images/anclajes/tension_soporte_maximo_ha.png)
 
 ![razon_de_area](../images/anclajes/razon_areas.png)
 
+_Resitencia Nominal de soporte de hormigón armado:_
 
-Además con el ingreso de los esfuerzos carga axial y de momento resultante del proceso de cálculo, se calcula la excentricidad provocada por estos.
+![resist_nom_sop_ha](../images/anclajes/resistencia_nominal_de_soporte_ha.png)
+
+
+A partir de los esfuerzos de carga axial y el momento resultante del proceso de cálculo, se determina la excentricidad provocada por estos.
 
 ![excentricidad_esfuerzos](../images/anclajes/resultados_esfuerzos.png)
 

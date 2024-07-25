@@ -34,6 +34,9 @@ Adicional a la calidad del material del pedestal de hormigón ya ingresada se re
 
 Adicional a la calidad del material de los pernos, se requiere ingresar la cantidad de pernos en la linea de pernos, la distancia del centro del perno al borde de la placa y su diametro.
 
+!!! warning
+    - En todo el programa se considera una sola línea de pernos. El número de pernos se refiere exclusivamente a los pernos en esa única línea.
+
 ![placa](../images/anclajes/datos_pernos.png)
 
 ## Cargas (Esfuerzos)
@@ -42,6 +45,12 @@ Finalmente se necesita indicar la carga axial y de momento resultante del proces
 
 !!! warning
     - Carga axial positiva para compresión.
-    - Momento siempre positivo.
 
 ![cargas](../images/anclajes/datos_esfuerzos.png)
+
+## Omegas (ASD)
+
+Los factores de reducción Ω (Omega) inicialmente son los indicados en la Design Guide 01, edición 2.
+
+![omegas](../images/anclajes/datos_omegas.png)
+

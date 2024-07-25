@@ -1,6 +1,6 @@
-# Section 3.4 Design of Column Base Plates with Large Moments
+# Momento Grande con Compresión Axial
 
-Cuando la base de una columna resiste cargas axiales y momento, se debe analizar si es un momento pequeño o grande, esto se realiza con la excentricidad crítica, cuando el momento es grande se debe verificar la condición de placa mínima, el espesor de placa y se calcula el número de pernos necesarios para soportar las tracciones.
+Cuando la base de una columna resiste cargas axiales de compresión y momento, se debe analizar si es un momento pequeño o grande, esto se realiza con la excentricidad crítica, cuando el momento es grande se debe verificar la condición de placa mínima, el espesor de placa y la resistencia de los pernos.
 
 ## Categorización de Momento
 
@@ -24,7 +24,7 @@ N = largo de la placa
 
 Pr = Pa (+ compresión)
 
-## Modelo Large Moment
+## Modelo Momento Grande con Compresión Axial
 
 ![modelo_large_moment](../images/anclajes/modelo_large_moment.png)
 
@@ -56,10 +56,11 @@ donde m es la distancia crítica de bending lines
 
 ![valor_x_traccion_large_moment](../images/anclajes/valor_x_traccion_large_moment.png)
 
+## Resistencia pernos
 
-## Número de pernos
+![resistencia_pernos_lm_cax](../images/anclajes/resistencia_pernos_lm_cax.png)
 
-![formulas_numero_de_pernos](../images/anclajes/formulas_numero_de_pernos.png)
+![formulas_resistencia_pernos](../images/anclajes/formulas_resistencia_pernos.png)
 
 
 
