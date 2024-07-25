@@ -32,7 +32,7 @@ Adicional a la calidad del material del pedestal de hormigón ya ingresada se re
 
 ## Pernos
 
-Adicional a la calidad del material de los pernos, se requiere ingresar la distancia del centro del perno al borde exterior de la placa y su diametro.
+Adicional a la calidad del material de los pernos, se requiere ingresar la cantidad de pernos en la linea de pernos, la distancia del centro del perno al borde de la placa y su diametro.
 
 ![placa](../images/anclajes/datos_pernos.png)
 
