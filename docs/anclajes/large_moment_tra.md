@@ -1,40 +1,27 @@
-# Momento Grande con Compresión
+# Momento Grande con Tracción
 
-Cuando la base de una columna resiste cargas axiales de compresión y momento, se debe analizar si es un momento pequeño o grande, esto se realiza con la excentricidad crítica, cuando el momento es grande se debe verificar la condición de placa mínima, el espesor de placa y la resistencia de los pernos.
+Cuando la base de una columna resiste cargas axiales de tracción y momento, se debe analizar si es un momento pequeño o grande, cuando el momento es grande se debe verificar la condición de placa mínima, el espesor de placa y la resistencia de los pernos.
+## Estado de carga
+
+![momento_grande_con_traccion_esfuerzos](../images/anclajes/momento_grande_con_traccion_esfuerzos.png)
 
 ## Categorización de Momento
 
-![categoriza_momento_large_moment](../images/anclajes/categoriza_momento_large_moment.png)
+Cuando la excentricidad es mayor a la distancia f entonces es un Momento Grande.
 
-La fuerza resultante máxima se obtiene de:
+![categoriza_lm_moment_tra](../images/anclajes/categoriza_lm_moment_tra.png)
 
-![q_max_fuerza_resultante_maxima](../images/anclajes/q_max_fuerza_resultante_maxima.png)
+![distancia_f](../images/anclajes/distancia_f.png)
 
-donde:
+## Modelo Momento Grande con Tracción
 
-B = ancho de la placa
-
-La excentricidad crítica se obtiene de:
-
-![excentricidad_critica](../images/anclajes/excentricidad_critica.png)
-
-donde:
-
-N = largo de la placa
-
-Pr = Pa (+ compresión)
-
-## Modelo Momento Grande con Compresión Axial
-
-![modelo_large_moment](../images/anclajes/modelo_large_moment.png)
+![modelo_large_moment_tra](../images/anclajes/modelo_large_moment_tra.png)
 
 ## Verificación de dimensión mínima de la placa base
 
 Primero se debe verificar si la dimensión de la placa puede geometricamente recibir las cargas solicitadas
 
 ![condicion_placa_minima](../images/anclajes/condicion_placa_minima.png)
-
-![distancia_f](../images/anclajes/distancia_f.png)
 
 ![verif_placa_min](../images/anclajes/verif_placa_min.png)
 

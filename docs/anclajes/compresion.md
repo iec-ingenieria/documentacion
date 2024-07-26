@@ -55,7 +55,7 @@ Finalmente el espesor mínimo se calcula con la siguiente fórmula:
 
 donde:
 
-_l_ es el valor máximo entre las distancias críticas m,n y λn'
+_l_ es el valor máximo entre las distancias críticas m, n y λn'
 
 
 

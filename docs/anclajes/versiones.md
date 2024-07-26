@@ -1,5 +1,17 @@
 # Versiones anclajes
 
+## V2.0.2
+
+### Novedades
+
+- Correcciones de etiquetas.
+
+## V2.0.1
+
+### Novedades
+
+- Correcciones de imagenes.
+
 ## V2.0.0
 
 ### Novedades

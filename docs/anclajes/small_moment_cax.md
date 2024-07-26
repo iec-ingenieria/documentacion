@@ -1,4 +1,4 @@
-# Momento Pequeño con Compresión Axial
+# Momento Pequeño con Compresión
 
 Cuando la base de una columna resiste cargas axiales de compresión y momento, se debe analizar si es un momento pequeño o grande, esto se realiza con la excentricidad crítica, cuando el momento es pequeño la fuerza axial es resistida por aplastamiento y no hay tendencia a volcarse, no requiriendo pernos para la tracción.
 

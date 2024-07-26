@@ -94,8 +94,10 @@ nav:
       - Resultados iniciales:  anclajes/resultados_iniciales.md
       - Compresión:  anclajes/compresion.md
       - Tracción:  anclajes/traccion.md
-      - Momento Pequeño con Compresión Axial:  anclajes/small_moment_cax.md
-      - Momento Grande con Compresión Axial:  anclajes/large_moment_cax.md
+      - Momento Pequeño con Compresión:  anclajes/small_moment_cax.md
+      - Momento Grande con Compresión:  anclajes/large_moment_cax.md
+      - Momento Pequeño con Tracción:  anclajes/small_moment_tra.md
+      - Momento Grande con Tracción:  anclajes/large_moment_tra.md
       - Versiones: anclajes/versiones.md
 
   - 5️⃣ curvaw:
