@@ -1083,6 +1083,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#omegas-asd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omegas (ASD)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1120,11 +1129,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../compresion_axial/" class="md-nav__link">
+      <a href="../compresion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Compresión Axial
+    Compresión
   </span>
   
 
@@ -1141,11 +1150,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../small_moments/" class="md-nav__link">
+      <a href="../traccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Small Moments
+    Tracción
   </span>
   
 
@@ -1162,11 +1171,74 @@
   
   
     <li class="md-nav__item">
-      <a href="../large_moments/" class="md-nav__link">
+      <a href="../small_moment_cax/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Large Moments
+    Momento Pequeño con Compresión
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../large_moment_cax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Momento Grande con Compresión
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../small_moment_tra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Momento Pequeño con Tracción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../large_moment_tra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Momento Grande con Tracción
   </span>
   
 
@@ -1660,6 +1732,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#omegas-asd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omegas (ASD)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1692,7 +1773,13 @@
 <p>Adicional a la calidad del material del pedestal de hormigón ya ingresada se requieren tambien su geometría de largo y ancho.</p>
 <p><img alt="placa" src="../../images/anclajes/datos_pedestal.png" /></p>
 <h2 id="pernos">Pernos</h2>
-<p>Adicional a la calidad del material de los pernos, se requiere ingresar la distancia del centro del perno al borde exterior de la placa y su diametro.</p>
+<p>Adicional a la calidad del material de los pernos, se requiere ingresar la cantidad de pernos en la linea de pernos, la distancia del centro del perno al borde de la placa y su diametro.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>En todo el programa se considera una sola línea de pernos. El número de pernos se refiere exclusivamente a los pernos en esa única línea.</li>
+</ul>
+</div>
 <p><img alt="placa" src="../../images/anclajes/datos_pernos.png" /></p>
 <h2 id="cargas-esfuerzos">Cargas (Esfuerzos)</h2>
 <p>Finalmente se necesita indicar la carga axial y de momento resultante del proceso de cálculo.</p>
@@ -1700,10 +1787,12 @@
 <p class="admonition-title">Warning</p>
 <ul>
 <li>Carga axial positiva para compresión.</li>
-<li>Momento siempre positivo.</li>
 </ul>
 </div>
 <p><img alt="cargas" src="../../images/anclajes/datos_esfuerzos.png" /></p>
+<h2 id="omegas-asd">Omegas (ASD)</h2>
+<p>Los factores de reducción Ω (Omega) inicialmente son los indicados en la Design Guide 01, edición 2.</p>
+<p><img alt="omegas" src="../../images/anclajes/datos_omegas.png" /></p>
 
 
 

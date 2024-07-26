@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://iec-ingenieria.github.io/documentacion/anclajes/large_moments/">
+        <link rel="canonical" href="https://iec-ingenieria.github.io/documentacion/anclajes/large_moment_tra/">
       
       
-        <link rel="prev" href="../small_moments/">
+        <link rel="prev" href="../small_moment_tra/">
       
       
         <link rel="next" href="../versiones/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Large Moments - Documentación Software IEC</title>
+        <title>Momento Grande con Tracción - Documentación Software IEC</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#section-34-design-of-column-base-plates-with-large-moments" class="md-skip">
+        <a href="#momento-grande-con-traccion" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Large Moments
+              Momento Grande con Tracción
             
           </span>
         </div>
@@ -1026,11 +1026,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../compresion_axial/" class="md-nav__link">
+      <a href="../compresion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Compresión Axial
+    Compresión
   </span>
   
 
@@ -1047,11 +1047,74 @@
   
   
     <li class="md-nav__item">
-      <a href="../small_moments/" class="md-nav__link">
+      <a href="../traccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Small Moments
+    Tracción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../small_moment_cax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Momento Pequeño con Compresión
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../large_moment_cax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Momento Grande con Compresión
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../small_moment_tra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Momento Pequeño con Tracción
   </span>
   
 
@@ -1081,7 +1144,7 @@
           
   
   <span class="md-ellipsis">
-    Large Moments
+    Momento Grande con Tracción
   </span>
   
 
@@ -1092,7 +1155,7 @@
         
   
   <span class="md-ellipsis">
-    Large Moments
+    Momento Grande con Tracción
   </span>
   
 
@@ -1114,6 +1177,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#estado-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado de carga
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#categorizacion-de-momento" class="md-nav__link">
     <span class="md-ellipsis">
       Categorización de Momento
@@ -1123,9 +1195,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modelo-large-moment" class="md-nav__link">
+  <a href="#modelo-momento-grande-con-traccion" class="md-nav__link">
     <span class="md-ellipsis">
-      Modelo Large Moment
+      Modelo Momento Grande con Tracción
     </span>
   </a>
   
@@ -1159,9 +1231,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#numero-de-pernos" class="md-nav__link">
+  <a href="#resistencia-pernos" class="md-nav__link">
     <span class="md-ellipsis">
-      Número de pernos
+      Resistencia pernos
     </span>
   </a>
   
@@ -1607,6 +1679,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#estado-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado de carga
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#categorizacion-de-momento" class="md-nav__link">
     <span class="md-ellipsis">
       Categorización de Momento
@@ -1616,9 +1697,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modelo-large-moment" class="md-nav__link">
+  <a href="#modelo-momento-grande-con-traccion" class="md-nav__link">
     <span class="md-ellipsis">
-      Modelo Large Moment
+      Modelo Momento Grande con Tracción
     </span>
   </a>
   
@@ -1652,9 +1733,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#numero-de-pernos" class="md-nav__link">
+  <a href="#resistencia-pernos" class="md-nav__link">
     <span class="md-ellipsis">
-      Número de pernos
+      Resistencia pernos
     </span>
   </a>
   
@@ -1675,25 +1756,20 @@
                   
 
 
-<h1 id="section-34-design-of-column-base-plates-with-large-moments">Section 3.4 Design of Column Base Plates with Large Moments</h1>
-<p>Cuando la base de una columna resiste cargas axiales y momento, se debe analizar si es un momento pequeño o grande, esto se realiza con la excentricidad crítica, cuando el momento es grande se debe verificar la condición de placa mínima, el espesor de placa y se calcula el número de pernos necesarios para soportar las tracciones.</p>
+<h1 id="momento-grande-con-traccion">Momento Grande con Tracción</h1>
+<p>Cuando la base de una columna resiste cargas axiales de tracción y momento, se debe analizar si es un momento pequeño o grande, cuando el momento es grande se debe verificar la condición de placa mínima, el espesor de placa y la resistencia de los pernos.</p>
+<h2 id="estado-de-carga">Estado de carga</h2>
+<p><img alt="momento_grande_con_traccion_esfuerzos" src="../../images/anclajes/momento_grande_con_traccion_esfuerzos.png" /></p>
 <h2 id="categorizacion-de-momento">Categorización de Momento</h2>
-<p><img alt="categoriza_momento_large_moment" src="../../images/anclajes/categoriza_momento_large_moment.png" /></p>
-<p>La fuerza resultante máxima se obtiene de:</p>
-<p><img alt="q_max_fuerza_resultante_maxima" src="../../images/anclajes/q_max_fuerza_resultante_maxima.png" /></p>
-<p>donde:</p>
-<p>B = ancho de la placa</p>
-<p>La excentricidad crítica se obtiene de:</p>
-<p><img alt="excentricidad_critica" src="../../images/anclajes/excentricidad_critica.png" /></p>
-<p>donde:</p>
-<p>N = largo de la placa</p>
-<p>Pr = Pa (+ compresión)</p>
-<h2 id="modelo-large-moment">Modelo Large Moment</h2>
-<p><img alt="modelo_large_moment" src="../../images/anclajes/modelo_large_moment.png" /></p>
+<p>Cuando la excentricidad es mayor a la distancia f entonces es un Momento Grande.</p>
+<p><img alt="categoriza_lm_moment_tra" src="../../images/anclajes/categoriza_lm_moment_tra.png" /></p>
+<p><img alt="distancia_f" src="../../images/anclajes/distancia_f.png" /></p>
+<h2 id="modelo-momento-grande-con-traccion">Modelo Momento Grande con Tracción</h2>
+<p><img alt="modelo_large_moment_tra" src="../../images/anclajes/modelo_large_moment_tra.png" /></p>
 <h2 id="verificacion-de-dimension-minima-de-la-placa-base">Verificación de dimensión mínima de la placa base</h2>
 <p>Primero se debe verificar si la dimensión de la placa puede geometricamente recibir las cargas solicitadas</p>
 <p><img alt="condicion_placa_minima" src="../../images/anclajes/condicion_placa_minima.png" /></p>
-<p><img alt="distancia_f_large_moment" src="../../images/anclajes/distancia_f_large_moment.png" /></p>
+<p><img alt="verif_placa_min" src="../../images/anclajes/verif_placa_min.png" /></p>
 <h2 id="espesor-de-la-placa-base-por-aplastamiento">Espesor de la placa base por Aplastamiento</h2>
 <p><img alt="espesor_placa_base_aplastamiento_large_moment" src="../../images/anclajes/espesor_placa_base_aplastamiento_large_moment.png" /></p>
 <p><img alt="largo_de_aplastamiento_large_moment" src="../../images/anclajes/largo_de_aplastamiento_large_moment.png" /></p>
@@ -1704,8 +1780,9 @@
 <p><img alt="traccion_large_moment" src="../../images/anclajes/traccion_large_moment.png" /></p>
 <p><img alt="formula_espesor_placa_base_traccion_large_moment" src="../../images/anclajes/formula_espesor_placa_base_traccion_large_moment.png" /></p>
 <p><img alt="valor_x_traccion_large_moment" src="../../images/anclajes/valor_x_traccion_large_moment.png" /></p>
-<h2 id="numero-de-pernos">Número de pernos</h2>
-<p><img alt="formulas_numero_de_pernos" src="../../images/anclajes/formulas_numero_de_pernos.png" /></p>
+<h2 id="resistencia-pernos">Resistencia pernos</h2>
+<p><img alt="resistencia_pernos_lm_cax" src="../../images/anclajes/resistencia_pernos_lm_cax.png" /></p>
+<p><img alt="formulas_resistencia_pernos" src="../../images/anclajes/formulas_resistencia_pernos.png" /></p>
 
 
 
@@ -1741,7 +1818,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../small_moments/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Small Moments">
+          <a href="../small_moment_tra/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Momento Pequeño con Tracción">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1751,7 +1828,7 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Small Moments
+                Momento Pequeño con Tracción
               </div>
             </div>
           </a>
