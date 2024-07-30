@@ -1,41 +1,41 @@
-# Versiones anclajes
+# **Versiones anclajes**
 
-## V2.0.2
+## **V2.0.2**
 
-### Novedades
+### **Novedades**
 
 - Correcciones de etiquetas.
 
-## V2.0.1
+## **V2.0.1**
 
-### Novedades
+### **Novedades**
 
 - Correcciones de imagenes.
 
-## V2.0.0
+## **V2.0.0**
 
-### Novedades
+### **Novedades**
 
 - Se incorporan los estados de carga, permitiendo la opción de ingresar tracciones.
 - Permite al usuario modificar los Ω (Omega) según su elección. Por defecto, se utilizan los valores de la edición 2 de Design Guide 1.
 
 
-## V1.0.2
+## **V1.0.2**
 
-### Novedades
+### **Novedades**
 
 - Se solicita el número de pernos como input, para calcular la resistencia Nominal (Rn) para el esfuerzo de tracción provocado
 - Se añade pestañas en la ventana para dividir los procesos iniciales con los de análisis de carga
 
-## V1.0.1
+## **V1.0.1**
 
-### Novedades
+### **Novedades**
 
 - Corrección espesor de placa base para estado de carga Compresión Axial
 - Nuevos valores de Omega (Design guide 3era edición)
 
-## V1.0.0
+## **V1.0.0**
 
-### Novedades
+### **Novedades**
 
 - Primera versión para pruebas
