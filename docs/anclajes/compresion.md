@@ -1,29 +1,30 @@
-# Compresión
+# **Compresión**
 
-Cuando la base de una columna resiste sólo carga axial de compresión, el pedestal debe ser lo suficientemente grande para resistir las fuerzas de soporte transferidas desde la placa base (límite de carga del hormigón) y la placa base debe tener un espesor suficiente (límite de fluencia).
+Cuando la base de una columna resiste únicamente carga axial de compresión, el pedestal debe ser lo suficientemente grande para soportar las fuerzas transferidas desde la placa base, considerando el límite de carga del hormigón. Además, la placa base debe tener un espesor adecuado para cumplir con el límite de fluencia.
 
-## Estado de carga
-Para este estado de carga la aplicación verificará el aplastamiento del hormigón y el espesor de la placa base
+## **Estado de carga**
+
+Para este estado de carga, la aplicación verificará tanto el aplastamiento del hormigón como el espesor de la placa base.
 
 ![compresion_axial_esfuerzos](../images/anclajes/compresion_axial_esfuerzos.png)
 
-## Verificación del aplastamiento del hormigón
+## **Verificación del aplastamiento del hormigón**
 
 ![aplastamiento_hormigon_verificacion](../images/anclajes/aplastamiento_hormigon_verificacion.png)
 
-La tensión de soporte máximo del hormigon armado para el diseño de tensión admisible (ASD) está dado por:
+La tensión de soporte máxima del hormigón armado para el diseño de tensión admisible (ASD) está dada por:
 
 ![tension_soporte_maximo_asd_ha](../images/anclajes/tension_soporte_maximo_asd_ha.png)
 
-La tensión en placa provocada por el estado de carga está dado por la carga axial dividida por el área de la placa:
+La tensión en la placa base provocada por el estado de carga está dada por la carga axial dividida por el área de la placa:
 
 ![tension_en_placa](../images/anclajes/tension_en_placa.png)
 
-## Verificación del espesor de la placa base
+## **Verificación del espesor de la placa base**
 
 ![verificacion_placa_compresion_axial](../images/anclajes/verificacion_placa_compresion_axial.png)
 
-La presión de apoyo provoca la flexión de la placa base en secciones críticas, dependiendo del tipo de columna (En la imagen superior se muestran las secciones y distancias críticas para una columna tipo W-Shapes), para calcular el espesor mínimo requerido se deben calcular estas distancias críticas.
+La presión de apoyo provoca la flexión de la placa base en secciones críticas, dependiendo del tipo de columna. (En la imagen superior se muestran las secciones y distancias críticas para una columna tipo W-Shapes). Para calcular el espesor mínimo requerido, se deben determinar estas distancias críticas.
 
 ![distancia_critica_m](../images/anclajes/distancia_critica_m.png)
 

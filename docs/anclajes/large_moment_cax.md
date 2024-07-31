@@ -1,8 +1,8 @@
-# Momento Grande con Compresión
+# **Momento Grande con Compresión**
 
 Cuando la base de una columna resiste cargas axiales de compresión y momento, se debe analizar si es un momento pequeño o grande, esto se realiza con la excentricidad crítica, cuando el momento es grande se debe verificar la condición de placa mínima, el espesor de placa y la resistencia de los pernos.
 
-## Categorización de Momento
+## **Categorización de Momento**
 
 ![categoriza_momento_large_moment](../images/anclajes/categoriza_momento_large_moment.png)
 
@@ -24,11 +24,11 @@ N = largo de la placa
 
 Pr = Pa (+ compresión)
 
-## Modelo Momento Grande con Compresión Axial
+## **Modelo Momento Grande con Compresión Axial**
 
 ![modelo_large_moment](../images/anclajes/modelo_large_moment.png)
 
-## Verificación de dimensión mínima de la placa base
+## **Verificación de dimensión mínima de la placa base**
 
 Primero se debe verificar si la dimensión de la placa puede geometricamente recibir las cargas solicitadas
 
@@ -38,7 +38,7 @@ Primero se debe verificar si la dimensión de la placa puede geometricamente rec
 
 ![verif_placa_min](../images/anclajes/verif_placa_min.png)
 
-## Espesor de la placa base por Aplastamiento
+## **Espesor de la placa base por Aplastamiento**
 
 ![espesor_placa_base_aplastamiento_large_moment](../images/anclajes/espesor_placa_base_aplastamiento_large_moment.png)
 
@@ -48,7 +48,7 @@ Primero se debe verificar si la dimensión de la placa puede geometricamente rec
 
 donde m es la distancia crítica de bending lines
 
-## Espesor de la placa base por Tracción
+## **Espesor de la placa base por Tracción**
 
 ![espesor_placa_base_traccion_large_moment](../images/anclajes/espesor_placa_base_traccion_large_moment.png)
 
@@ -58,7 +58,7 @@ donde m es la distancia crítica de bending lines
 
 ![valor_x_traccion_large_moment](../images/anclajes/valor_x_traccion_large_moment.png)
 
-## Resistencia pernos
+## **Resistencia pernos**
 
 ![resistencia_pernos_lm_cax](../images/anclajes/resistencia_pernos_lm_cax.png)
 

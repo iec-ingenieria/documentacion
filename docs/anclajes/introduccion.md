@@ -14,4 +14,4 @@ Los cálculos de **anclajes** se desarrollan siguiendo el diseño de tensión ad
 
 ![Componentes de conexión de base de columna](../images/anclajes/Column base connection components.png)
 
-*Figura 1: Conexión típica de base de columna.*
+_Figura 1: Conexión típica de base de columna._
