@@ -1,5 +1,11 @@
 # **Versiones anclajes**
 
+## **V2.1.0**
+
+### **Novedades**
+
+- Nueva verificación de espesor de placa para el estado de carga Momento pequeño con tracción.
+
 ## **V2.0.2**
 
 ### **Novedades**
