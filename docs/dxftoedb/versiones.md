@@ -1,8 +1,12 @@
 # Versiones Dxftoedb
 
+## V1.2.2
+
+  - Fix: Corrección de error de lectura de Hatch, evitando interrupción de la ejecución cuando Hatch es del tipo "EdgePath". Hatch válidos son de tipo "PolylinePath".
+
 ## V1.2.1
 
-  - Actualización de dependencias para ser consistente con el resto del software IEC
+  - Actualización de dependencias para ser consistente con el resto del software IEC.
 
 ## V1.2.0
 
@@ -18,7 +22,7 @@
 - Valor por defecto para el factor de forma de Largo/Alto de las vigas igual a 2. Este valor se utiliza para definir si una viga se modela como Shell o como Frame.
 - Se incorporan la visualización de arranques en los planos de estructura, necesarios para referencia de vigas.
 - Nuevo proceso adicional para la búsqueda de espesor de muros, resuelve problema de muros T.
-- Nuevas carpetas para agrupar los planos en cada etapa del proceso
+- Nuevas carpetas para agrupar los planos en cada etapa del proceso.
 - Cambio en project_settings.toml:
     - Nombre de llave [cargas] ahora [Cargas]
 
