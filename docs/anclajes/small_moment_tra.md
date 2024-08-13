@@ -1,6 +1,6 @@
 # **Momento Pequeño con Tracción**
 
-Cuando la base de una columna resiste cargas axiales de tracción y momento, se debe analizar si es un momento pequeño o grande,cuando el momento es pequeño solo se debe verificar la resistencia de los pernos.
+Cuando la base de una columna resiste cargas axiales de tracción y momento, se debe analizar si el momento es pequeño o grande. Cuando el momento es pequeño, se debe verificar el espesor de la placa base y la resistencia de los pernos.
 
 ## **Estado de carga**
 
@@ -17,6 +17,14 @@ Cuando la excentricidad es menor a la distancia f entonces es un Momento Pequeñ
 ## **Modelo Momento Pequeño con Tracción**
 
 ![modelo_small_moment_tra](../images/anclajes/modelo_small_moment_tra.png)
+
+## **Espesor de la placa base por Tracción**
+
+![espesor_placa_base_traccion](../images/anclajes/espesor_placa_base_traccion.png)
+
+![formula_espesor_placa_base_traccion_large_moment](../images/anclajes/formula_espesor_placa_base_traccion_large_moment.png)
+
+![valor_x_traccion_large_moment](../images/anclajes/valor_x_traccion_large_moment.png)
 
 ## **Resistencia pernos**
 

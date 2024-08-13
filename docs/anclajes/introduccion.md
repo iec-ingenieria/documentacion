@@ -4,7 +4,7 @@
 
 ## **Descripción general**
 
-**anclajes** es una herramienta de escritorio intuitiva diseñada principalmente para ingenieros del área industrial. Esta aplicación facilita la gestión de tareas relacionadas con la verificación de las dimensiones y la resistencia de los elementos en la conexión típica de placas base de columnas en edificios y/o equipos.
+**anclajes** es una herramienta de escritorio intuitiva diseñada principalmente para ingenieros del área industrial. Esta aplicación facilita la gestión de tareas relacionadas con la verificación de las dimensiones y la resistencia de anclajes de acero en elementos de hormigón.
 
 La aplicación ofrece una interfaz gráfica de usuario (GUI) amigable que permite a los usuarios agregar, editar, eliminar y guardar tareas de manera eficiente, además de realizar cálculos y verificaciones estructurales. Entre sus funciones adicionales se incluyen recordatorios y categorización de tareas.
 
