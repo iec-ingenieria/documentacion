@@ -1,5 +1,11 @@
 # Versiones Edbtopre
 
+## V1.1.0
+
+### Novedades
+
+  - Capacidad para seleccionar el tipo de elemento que se desea rescatar entre piers, spandrels, columns, beams y braces.
+
 ## V1.0.2
 
 ### Novedades
