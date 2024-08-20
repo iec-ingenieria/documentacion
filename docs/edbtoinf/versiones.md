@@ -1,5 +1,12 @@
 # Versiones EDBTOINF
 
+## V1.0.4
+
+### Novedades
+
+- Corrección error en que porcentaje de corte basal respecto del peso sísmico estaba mal calculado para dirección Y.
+- Corrección error en que para edificios controlados por corte máximo, no se consideraba adecuadamente el coeficiente de importancia en el reporte.
+
 ## V1.0.3
 
 ### Novedades
