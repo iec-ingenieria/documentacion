@@ -1,5 +1,11 @@
 # Versiones EDBTOINF
 
+## V1.0.5
+
+### Novedades
+
+- Corrección error en calculo de drift cuando estados dinámicos se llama Ex y Ey en vez de Sx y Sy.
+
 ## V1.0.4
 
 ### Novedades
