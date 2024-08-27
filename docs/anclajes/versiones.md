@@ -1,5 +1,11 @@
 # **Versiones anclajes**
 
+## **V3.0.0**
+
+### **Novedades**
+
+- Permite ingresar múltiples estados de carga para la verificación de un anclaje.
+
 ## **V2.1.0**
 
 ### **Novedades**
