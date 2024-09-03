@@ -1,5 +1,18 @@
 # **Versiones anclajes**
 
+## **V3.0.1**
+
+### **Novedades**
+
+- Correccion error en V3.0.0
+- Actualiza dependencias del proyecto.
+
+## **V3.0.0**
+
+### **Novedades**
+
+- Permite ingresar múltiples estados de carga para la verificación de un anclaje.
+
 ## **V2.1.0**
 
 ### **Novedades**
