@@ -1,5 +1,11 @@
 # Versiones Dxftoedb
 
+## V1.2.3
+
+  - Manejo de errores respecto de los colores de los hatch. Cuando no se detecta un color, no se dibuja esa losa.
+  - Se ha modificado la categorización de vigas: cuando una viga tiene el estado 'warning 99.9/99.9', no será categorizada automáticamente para evitar su conversión a shell. En su lugar, deberá ser revisada manualmente en el modelo.
+  - Se elimina el archivo de salida .log.
+
 ## V1.2.2
 
   - Fix: Corrección de error de lectura de Hatch, evitando interrupción de la ejecución cuando Hatch es del tipo "EdgePath". Hatch válidos son de tipo "PolylinePath".
