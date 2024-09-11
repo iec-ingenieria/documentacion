@@ -1,5 +1,11 @@
 # Versiones Edbtopre
 
+## V1.1.1
+
+### Novedades
+
+  - Correción de error que en el cual no se rescataban los esfuerzos desde el modelo estático.
+
 ## V1.1.0
 
 ### Novedades
