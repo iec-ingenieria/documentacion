@@ -1,5 +1,9 @@
 # Versiones Dxftoedb
 
+## V1.2.4
+
+  - Corrección de errores relacionados con los hatch de cargas.
+
 ## V1.2.3
 
   - Manejo de errores respecto de los colores de los hatch. Cuando no se detecta un color, no se dibuja esa losa.
