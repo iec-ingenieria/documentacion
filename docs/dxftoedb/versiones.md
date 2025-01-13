@@ -1,5 +1,9 @@
 # Versiones Dxftoedb
 
+## V1.2.5
+
+  - Mejoramiento de presición en intersección de elementos.
+
 ## V1.2.4
 
   - Corrección de errores relacionados con los hatch de cargas.
