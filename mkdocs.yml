@@ -90,15 +90,15 @@ nav:
 
   - 4️⃣ anclajes:
       - Introducción: anclajes/introduccion.md
-      - Datos iniciales:  anclajes/datos_iniciales.md
-      - Resultados iniciales:  anclajes/resultados_iniciales.md
-      - Compresión:  anclajes/compresion.md
-      - Tracción:  anclajes/traccion.md
-      - Momento Pequeño con Compresión:  anclajes/small_moment_cax.md
-      - Momento Grande con Compresión:  anclajes/large_moment_cax.md
-      - Momento Pequeño con Tracción:  anclajes/small_moment_tra.md
-      - Momento Grande con Tracción:  anclajes/large_moment_tra.md
-      - Ingreso Cargas XLSX:  anclajes/ingreso_xlsx.md
+      - Datos iniciales: anclajes/datos_iniciales.md
+      - Resultados iniciales: anclajes/resultados_iniciales.md
+      - Compresión: anclajes/compresion.md
+      - Tracción: anclajes/traccion.md
+      - Momento Pequeño con Compresión: anclajes/small_moment_cax.md
+      - Momento Grande con Compresión: anclajes/large_moment_cax.md
+      - Momento Pequeño con Tracción: anclajes/small_moment_tra.md
+      - Momento Grande con Tracción: anclajes/large_moment_tra.md
+      - Ingreso Cargas XLSX: anclajes/ingreso_xlsx.md
       - Versiones: anclajes/versiones.md
 
   - 5️⃣ curvaw:
