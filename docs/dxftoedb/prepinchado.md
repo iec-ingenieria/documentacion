@@ -14,7 +14,7 @@ o En épocas de alta demanda cuando no se conoce el ingeniero destinatario, debe
   - líneas de columnas → "_IEC_COLUMNAS"
 
 Resto de los layers NO es necesario modificarlos
-![prepinchado](../images/dxftoedb/prepinchado_01.png)
+![dxftoedb](../images/dxftoedb/prepinchado_01.png)
 
 - Eliminar Layers de Arquitectura, por limpieza.
 - Mover las entidades a los layers, resto ignorar y no borrar.
