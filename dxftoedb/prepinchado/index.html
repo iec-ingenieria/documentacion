@@ -335,6 +335,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Prepinchado
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -344,6 +355,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia-de-prepinchado-para-etabs" class="md-nav__link">
+    Metodología de Prepinchado para Etabs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1546,6 +1583,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia-de-prepinchado-para-etabs" class="md-nav__link">
+    Metodología de Prepinchado para Etabs
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1560,19 +1612,78 @@
 
 
 <h1 id="prepinchado">Prepinchado</h1>
-<p style="text-align: justify;">
-  El primer paso es la recepción y preparación del set de planos originales.
-  Normalmente se recibirán planos en formato DWG, por lo que será necesario realizar un proceso de 'prepinchado', este proceso consta normalmente de las siguientes etapas:
-</p>
-
-<ul style="text-align: justify;">
-  <li>Recepción de planos originales en formato dwg.</li>
-  <li>Dejar una planta por archivo (puede ser piso tipo).</li>
-  <li>Explotar todos los elementos del dibujo 3 veces. <a href="../../comandos-autocad/" target=”_blank”><em>(Resúmen comandos autocad).</em> 🔗</a></li>
-  <li>Dejar la unidad de medida de los planos en centímetros.</li>
-  <li>Definición y actualización de los planos para asignar un origen de coordenadas común.</li>
-  <li>Verificar que todas las plantas tengan la misma capa (layer) asignada a ejes, muros, vigas, columnas, losas, textos de ejes y textos de vigas. <a href="../../comandos-autocad/" target=”_blank”><em>(Resúmen comandos autocad).</em> 🔗</a></li>
-  <li>Guardar planos en formato dxf en el directorio de trabajo escogido.</li>
+<h2 id="metodologia-de-prepinchado-para-etabs">Metodología de Prepinchado para Etabs</h2>
+<ul>
+<li>Se reciben los planos en formato DWG.</li>
+<li>Se envían al Ingeniero (a) para que defina los elementos a considerar en el prepinchado
+o En épocas de alta demanda cuando no se conoce el ingeniero destinatario, deberá existir un responsable de apoyar el proceso de criterios de pre-pinchado.</li>
+<li>Se insertan todas las plantas en una hoja base de bricscad.</li>
+<li>Se editan o se crean layer y cambiar tipo de líneas a continous, se requiere renombrar solo</li>
+<li>Ejes →   "_IEC_EJES"</li>
+<li>líneas de vigas →  "_IEC_VIGAS"</li>
+<li>líneas de muros → "_IEC_MUROS"</li>
+<li>Líneas de arranques → "_IEC_ARRANQUES"</li>
+<li>líneas de columnas → "_IEC_COLUMNAS"</li>
+</ul>
+<p>Resto de los layers NO es necesario modificarlos
+<img alt="prepinchado" src="../images/dxftoedb/prepinchado_01.png" /></p>
+<ul>
+<li>Eliminar Layers de Arquitectura, por limpieza.</li>
+<li>Mover las entidades a los layers, resto ignorar y no borrar.</li>
+<li>líneas de ejes                  → _IEC_EJES</li>
+<li>Pelotas de ejes                 → _IEC_EJES</li>
+<li>Textos de ejes                  → _IEC_EJES</li>
+<li>líneas de vigas                 → _IEC_VIGAS</li>
+<li>Textos de vigas                 → _IEC_VIGAS</li>
+<li>líneas de muros                 → _IEC_MUROS</li>
+<li>Textos de muros                 → _IEC_MUROS</li>
+<li>líneas de arranques             → _IEC_ARRANQUES</li>
+<li>Textos de arranques             → _IEC_ARRANQUES</li>
+<li>Achurado de arranques           → _IEC_ARRANQUES</li>
+<li>Líneas o polilíneas de columnas → _IEC_COLUMNAS</li>
+<li>
+<p>Textos de columnas              → _IEC_COLUMNAS</p>
+</li>
+<li>
+<p>Explotar polilíneas y MTEXT, excepto columnas y achurados de arranques.</p>
+</li>
+<li>Transformar a polilíneas las columnas</li>
+<li>Los elementos deben cumplir con:</li>
+<li>Cada línea de muro o viga define el elemento</li>
+<li>Se requiere un texto x línea en vigas</li>
+<li>El punto de inserción del texto debe ir en el tercio central de la línea</li>
+<li>En muros NO es necesario agregar textos, pero si un muro tiene texto debe ser un texto x línea</li>
+<li>Vigas anchas, deben cortarse frente a los muros</li>
+<li>Muros de espesores variables deben cortarse en los cambios de espesor</li>
+<li>No es necesario cortar las líneas de muros en las intersecciones con otros elementos.</li>
+<li>Mover nombre de ejes a final de línea por el tema de la grilla.</li>
+<li>Eliminar quiebres de ejes y reposicionar el nombre del eje en la línea principal.</li>
+<li>Revisar que todos los elementos (vigas, muros, etc.) tengan ejes y si no es así crear eje y nombrarlo con # + número correlativo, ej.: #1, #2, #3)</li>
+<li>Ejecutar el comando overkill para eliminar duplicados que no se ven (ejecutar tantas veces como sea necesario)</li>
+<li>Se genera una planta aparte con todos los ejes ya sean los existentes más los creados</li>
+<li>Se guardan en forma separada las plantas en formato dxf (AutoCAD 2010 ASCII DXF)</li>
+<li>Estandarizar el nombre de los archivos de planta para pre-pinchar</li>
+<li>Pisos<ul>
+<li>P01, P02, P10, P21, etc.</li>
+</ul>
+</li>
+<li>Subterráneos:<ul>
+<li>S01, S02, S10, etc.</li>
+</ul>
+</li>
+<li>Salas de máquina:<ul>
+<li>SM1, SM2, etc</li>
+</ul>
+</li>
+<li>
+<p>Para niveles en cotas especiales:</p>
+<ul>
+<li>N01, N05, etc</li>
+</ul>
+</li>
+<li>
+<p>Incorporar origen de coordenadas consistente entre todos los planos y guardar respetando el formato AutoCAD 2010 ASCII DXF</p>
+</li>
 </ul>
 
 
