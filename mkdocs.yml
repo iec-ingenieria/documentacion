@@ -72,6 +72,11 @@ nav:
       - Dxftoedb2: dxftoedb/dxftoedb2.md
       - Dxftoedb3: dxftoedb/dxftoedb3.md
       - Dxftoedb4: dxftoedb/dxftoedb4.md
+      - Herramientas LISP:
+          - Introduccion: dxftoedb/introduccion_lisp.md
+          - Instalación: dxftoedb/instalacion_lisp.md
+          - Prelosa: dxftoedb/prelosa.md
+          - Motes: dxftoedb/motes.md
       - Problemas Frecuentes: dxftoedb/problemas.md
       - Ideas: dxftoedb/ideas.md
       - Versiones: dxftoedb/versiones.md
