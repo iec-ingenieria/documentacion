@@ -33,11 +33,20 @@ En esta parte del archivo de configuración se indican las capas (layers) existe
   [entidades.LINEAS_DE_ARRANQUES]
     "Layer" = "ARRANQUES"
 
+  [entidades.TEXTOS_DE_ARRANQUES]
+    "Layer" = "ARRANQUES_TEXT"
+
   [entidades.LINEAS_DE_COLUMNAS]
     "Layer" = "COLUMNAS"
 
   [entidades.TEXTOS_DE_COLUMNAS]
     "Layer" = "TEXTOS"
+
+  [entidades.LINEAS_DE_BORDE_LOSA]
+    "Layer" = "IEC_BLOSA"
+
+  [entidades.LINEAS_DE_HOYOS]
+    "Layer" = "IEC_HOYOS"
 ```
 
 !!! tip
