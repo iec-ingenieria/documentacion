@@ -1,6 +1,24 @@
 # Versiones Dxftoedb
 
+## 📚 Índice
+
+- [V1.3.0](#v130)
+- [V1.2.5](#v125)
+- [V1.2.4](#v124)
+- [V1.2.3](#v123)
+- [V1.2.2](#v122)
+- [V1.2.1](#v121)
+- [V1.2.0](#v120)
+- [V1.1.0](#v110)
+- [V1.0.2](#v102)
+- [V1.0.1](#v101)
+- [V1.0.0](#v100)
+
+---
+
 ## V1.3.0
+
+### 🆕 Cambios principales
 
   - Mejoras en rescate de textos de vigas.
   - Combinaciones no lineales detectan automaticamente el estado de carga CM.
@@ -8,11 +26,11 @@
   - Generación automática de piers y spandrels usando un algorítmo básico.
   - Capacidad de ejecutar un análisis automático al terminar la generación del modelo.
 
-### Herramientas Lisp
+### 🛠️ Herramientas Lisp
 
-    - Nuevas herramientas complementarias para instalar en Bricscad.
-    - Motes: búsqueda de nodos cercanos.
-    - Prelosa: Generación de polilíneas para usar en zonas de carga.
+  - Nuevas herramientas complementarias para instalar en Bricscad.
+  - Motes: búsqueda de nodos cercanos.
+  - Prelosa: Generación de polilíneas para usar en zonas de carga.
 
 ## V1.2.5
 
