@@ -1,5 +1,19 @@
 # Versiones Dxftoedb
 
+## V1.3.0
+
+  - Mejoras en rescate de textos de vigas.
+  - Combinaciones no lineales detectan automaticamente el estado de carga CM.
+  - Bordes de losa, hoyos y vanos llegan al plano cargas para facilitar el pinchado de zonas de carga.
+  - Generación automática de piers y spandrels usando un algorítmo básico.
+  - Capacidad de ejecutar un análisis automático al terminar la generación del modelo.
+
+### Herramientas Lisp
+
+    - Nuevas herramientas complementarias para instalar en Bricscad.
+    - Motes: búsqueda de nodos cercanos.
+    - Prelosa: Generación de polilíneas para usar en zonas de carga.
+
 ## V1.2.5
 
   - Mejoramiento de presición en intersección de elementos.

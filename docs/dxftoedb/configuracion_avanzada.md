@@ -87,3 +87,10 @@ Este parámetro indica el límite de espesor para que el elemento de área sea d
 [ShellThinLimit]
   espesor_limite = 0.4
 ```
+
+### Primer análisis automático
+
+```toml
+[Analize]
+  run = true
+```
