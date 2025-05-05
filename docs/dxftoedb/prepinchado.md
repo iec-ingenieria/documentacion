@@ -35,9 +35,9 @@ Resto de los layers NO es necesario modificarlos
 - Transformar a polilíneas las columnas
 - Los elementos deben cumplir con:
 - Cada línea de muro o viga define el elemento
-- Se requiere un texto x línea en vigas
+- Se requiere un texto por línea en vigas
 - El punto de inserción del texto debe ir en el tercio central de la línea
-- En muros NO es necesario agregar textos, pero si un muro tiene texto debe ser un texto x línea
+- En muros NO es necesario agregar textos, pero si un muro tiene texto debe ser un texto por línea
 - Vigas anchas, deben cortarse frente a los muros
 - Muros de espesores variables deben cortarse en los cambios de espesor
 - No es necesario cortar las líneas de muros en las intersecciones con otros elementos.

@@ -66,35 +66,3 @@
   Sigue las instrucciones en pantalla para completar la instalación. Una vez finalizado, habrás instalado correctamente el software y estarás listo para comenzar a usarlo.
 </p>
 
-<h2>Reinstalación de Nuevas Versiones</h2>
-
-<p style="text-align: justify;">
-  Para garantizar que estás utilizando la versión más reciente y con mejoras de nuestro software, te recomendamos actualizar regularmente a la última versión disponible. Sigue estos pasos para desinstalar la versión anterior y realizar una instalación limpia de la nueva versión.
-</p>
-
-<h3>Desinstalación de la Versión Anterior</h3>
-
-<p style="text-align: justify;">
-  Antes de instalar una nueva versión, es importante desinstalar cualquier versión anterior del software para evitar conflictos. Aquí te mostramos cómo hacerlo de manera segura.
-</p>
-
-<ol style="text-align: justify;">
-  <li>Asegúrate de cerrar el software y cualquier proceso relacionado que pueda estar en ejecución.</li>
-  <li>Abre una terminal o línea de comandos.</li>
-  <li>Ejecuta el siguiente comando para listar todas las instalaciones de Python y localizar el software que deseas desinstalar:
-    <pre style="background-color: #f5f5f5; padding: 10px;"><code>python -m pip list</code></pre>
-  </li>
-  <li>Una vez que hayas identificado el nombre del software en la lista, utiliza el siguiente comando para desinstalarlo:
-    <pre style="background-color: #f5f5f5; padding: 10px;"><code>python -m pip uninstall nombre_del_software</code></pre>
-    Reemplaza <code>nombre_del_software</code> con el nombre exacto del software como aparece en la lista.
-  </li>
-  <li>Sigue las instrucciones en pantalla para completar la desinstalación.</li>
-</ol>
-
-<p style="text-align: justify;">
-  Con la versión anterior desinstalada, ahora puedes proceder a instalar la nueva versión del software siguiendo los pasos descritos en la sección <strong>"Paso 2: Instalación del Software"</strong> de este documento.
-</p>
-
-<p style="text-align: justify;">
-  Si experimentas cualquier inconveniente durante la desinstalación o instalación, por favor consulta la sección de soporte o contacta directamente a nuestro equipo de soporte técnico.
-</p>

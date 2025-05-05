@@ -113,6 +113,7 @@ Se debe indicar la cota de la base y luego un listado por piso con:
 - Altura entrepiso en metros
 - Nombre del plano desde el que se rescatarán los elementos de ese piso
 - Calidad del hormigón de la losa y los elementos del piso
+- Espesor de losa tipo del piso
 
 ```toml
 # [Nombre del piso en etabs, Altura entre piso, Nombre del plano dxf, Hormigón del piso, Espesor de losa tipo del piso]

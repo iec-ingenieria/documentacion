@@ -59,7 +59,7 @@ En la imagen siguiente se pueden observar el nombre de las capas en BricsCad.
 
 ### Concrete Frames Modifiers
 
-Este parámetro controla los modificadores de rigidez de los elemenetos frame del modelo. El valor por defecto es <code>modificadores = [1, 1, 1, 0, 1, 1, 1, 1]</code>, con valor 0 para la rigidez de torsión.
+Este parámetro controla los modificadores de rigidez de los elementos frame del modelo. El valor por defecto es <code>modificadores = [1, 1, 1, 0, 1, 1, 1, 1]</code>, con valor 0 para la rigidez de torsión.
 
 ```toml
 [Concrete_Frame_Modifiers]
