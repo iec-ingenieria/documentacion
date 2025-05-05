@@ -1,5 +1,11 @@
 # Versiones Edbtopre
 
+## V1.1.2
+
+### Novedades
+
+  - Correción de error en el cálculo de combinaciones en vigas de más de 10 metros de longitud.
+
 ## V1.1.1
 
 ### Novedades
