@@ -2,19 +2,34 @@
 
 ## 📚 Índice
 
-- [V1.3.0](#v130)
-- [V1.2.5](#v125)
-- [V1.2.4](#v124)
-- [V1.2.3](#v123)
-- [V1.2.2](#v122)
-- [V1.2.1](#v121)
-- [V1.2.0](#v120)
-- [V1.1.0](#v110)
-- [V1.0.2](#v102)
-- [V1.0.1](#v101)
-- [V1.0.0](#v100)
+- [Versiones Dxftoedb](#versiones-dxftoedb)
+  - [📚 Índice](#-índice)
+  - [V1.3.1](#v131)
+  - [V1.3.0](#v130)
+    - [🆕 Cambios principales](#-cambios-principales)
+    - [🛠️ Herramientas Lisp](#️-herramientas-lisp)
+  - [V1.2.5](#v125)
+  - [V1.2.4](#v124)
+  - [V1.2.3](#v123)
+  - [V1.2.2](#v122)
+  - [V1.2.1](#v121)
+  - [V1.2.0](#v120)
+  - [V1.1.0](#v110)
+    - [Novedades](#novedades)
+  - [V1.0.2](#v102)
+    - [Novedades](#novedades-1)
+  - [V1.0.1](#v101)
+    - [Novedades](#novedades-2)
+  - [V1.0.0](#v100)
+    - [Novedades](#novedades-3)
 
 ---
+
+## V1.3.1
+
+
+  - Valor por defecto para bending de losas en tabla de planos de cargas 0.25.
+
 
 ## V1.3.0
 
