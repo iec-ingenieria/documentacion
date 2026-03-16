@@ -4,6 +4,7 @@
 
 - [Versiones Dxftoedb](#versiones-dxftoedb)
   - [📚 Índice](#-índice)
+  - [V1.4.0](#v140)
   - [V1.3.1](#v131)
   - [V1.3.0](#v130)
     - [🆕 Cambios principales](#-cambios-principales)
@@ -24,6 +25,28 @@
     - [Novedades](#novedades-3)
 
 ---
+
+## V1.4.0
+
+### 🆕 Cambios principales
+
+  - Migración de gestión de proyecto a `uv`.
+  - Reemplazo de `print()` por logging estructurado en todos los módulos.
+  - Simplificación y limpieza general del código: extracción de constantes, helpers reutilizables y eliminación de código muerto.
+
+### 🐛 Correcciones
+
+  - Fix: error de división por cero en función `busqueda_de_texto` al procesar ecuación de la recta.
+  - Fix: condiciones de viento en generación de combinaciones verificaban variable incorrecta.
+  - Fix: comparación de coordenadas por string reemplazada por `math.isclose` con tolerancia.
+  - Fix: typo "Masorry" corregido a "Masonry" en códigos de materiales.
+
+### 🛠️ Mejoras internas
+
+  - Centralización de validación de settings en función compartida `validar_llaves_settings`.
+  - Constantes de materiales y secciones extraídas a nivel de módulo para mejor mantenimiento.
+  - Versionado corregido: esquema `guess-next-dev`, archivo `_version.py` removido del repositorio.
+  - 42 tests nuevos cubriendo las mejoras implementadas.
 
 ## V1.3.1
 
