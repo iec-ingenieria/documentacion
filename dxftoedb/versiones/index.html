@@ -830,6 +830,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v140" class="md-nav__link">
+    <span class="md-ellipsis">
+      V1.4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V1.4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆕 Cambios principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Correcciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mejoras-internas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Mejoras internas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v131" class="md-nav__link">
     <span class="md-ellipsis">
       V1.3.1
@@ -849,7 +891,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cambios-principales" class="md-nav__link">
+  <a href="#cambios-principales_1" class="md-nav__link">
     <span class="md-ellipsis">
       🆕 Cambios principales
     </span>
@@ -1974,6 +2016,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v140" class="md-nav__link">
+    <span class="md-ellipsis">
+      V1.4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V1.4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆕 Cambios principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Correcciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mejoras-internas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Mejoras internas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v131" class="md-nav__link">
     <span class="md-ellipsis">
       V1.3.1
@@ -1993,7 +2077,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cambios-principales" class="md-nav__link">
+  <a href="#cambios-principales_1" class="md-nav__link">
     <span class="md-ellipsis">
       🆕 Cambios principales
     </span>
@@ -2185,6 +2269,7 @@
 <ul>
 <li><a href="#versiones-dxftoedb">Versiones Dxftoedb</a></li>
 <li><a href="#-índice">📚 Índice</a></li>
+<li><a href="#v140">V1.4.0</a></li>
 <li><a href="#v131">V1.3.1</a></li>
 <li><a href="#v130">V1.3.0</a><ul>
 <li><a href="#-cambios-principales">🆕 Cambios principales</a></li>
@@ -2215,12 +2300,33 @@
 </li>
 </ul>
 <hr />
+<h2 id="v140">V1.4.0</h2>
+<h3 id="cambios-principales">🆕 Cambios principales</h3>
+<ul>
+<li>Migración de gestión de proyecto a <code>uv</code>.</li>
+<li>Reemplazo de <code>print()</code> por logging estructurado en todos los módulos.</li>
+<li>Simplificación y limpieza general del código: extracción de constantes, helpers reutilizables y eliminación de código muerto.</li>
+</ul>
+<h3 id="correcciones">🐛 Correcciones</h3>
+<ul>
+<li>Fix: error de división por cero en función <code>busqueda_de_texto</code> al procesar ecuación de la recta.</li>
+<li>Fix: condiciones de viento en generación de combinaciones verificaban variable incorrecta.</li>
+<li>Fix: comparación de coordenadas por string reemplazada por <code>math.isclose</code> con tolerancia.</li>
+<li>Fix: typo "Masorry" corregido a "Masonry" en códigos de materiales.</li>
+</ul>
+<h3 id="mejoras-internas">🛠️ Mejoras internas</h3>
+<ul>
+<li>Centralización de validación de settings en función compartida <code>validar_llaves_settings</code>.</li>
+<li>Constantes de materiales y secciones extraídas a nivel de módulo para mejor mantenimiento.</li>
+<li>Versionado corregido: esquema <code>guess-next-dev</code>, archivo <code>_version.py</code> removido del repositorio.</li>
+<li>42 tests nuevos cubriendo las mejoras implementadas.</li>
+</ul>
 <h2 id="v131">V1.3.1</h2>
 <ul>
 <li>Valor por defecto para bending de losas en tabla de planos de cargas 0.25.</li>
 </ul>
 <h2 id="v130">V1.3.0</h2>
-<h3 id="cambios-principales">🆕 Cambios principales</h3>
+<h3 id="cambios-principales_1">🆕 Cambios principales</h3>
 <ul>
 <li>Mejoras en rescate de textos de vigas.</li>
 <li>Combinaciones no lineales detectan automaticamente el estado de carga CM.</li>
