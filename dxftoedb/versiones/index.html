@@ -830,13 +830,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#v140" class="md-nav__link">
+  <a href="#v150" class="md-nav__link">
     <span class="md-ellipsis">
-      V1.4.0
+      V1.5.0
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="V1.4.0">
+    <nav class="md-nav" aria-label="V1.5.0">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -872,6 +872,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v140" class="md-nav__link">
+    <span class="md-ellipsis">
+      V1.4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V1.4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-principales_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆕 Cambios principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Correcciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mejoras-internas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Mejoras internas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v131" class="md-nav__link">
     <span class="md-ellipsis">
       V1.3.1
@@ -891,7 +933,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cambios-principales_1" class="md-nav__link">
+  <a href="#cambios-principales_2" class="md-nav__link">
     <span class="md-ellipsis">
       🆕 Cambios principales
     </span>
@@ -2016,13 +2058,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#v140" class="md-nav__link">
+  <a href="#v150" class="md-nav__link">
     <span class="md-ellipsis">
-      V1.4.0
+      V1.5.0
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="V1.4.0">
+    <nav class="md-nav" aria-label="V1.5.0">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2058,6 +2100,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v140" class="md-nav__link">
+    <span class="md-ellipsis">
+      V1.4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V1.4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambios-principales_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆕 Cambios principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcciones_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Correcciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mejoras-internas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Mejoras internas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v131" class="md-nav__link">
     <span class="md-ellipsis">
       V1.3.1
@@ -2077,7 +2161,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cambios-principales_1" class="md-nav__link">
+  <a href="#cambios-principales_2" class="md-nav__link">
     <span class="md-ellipsis">
       🆕 Cambios principales
     </span>
@@ -2269,6 +2353,7 @@
 <ul>
 <li><a href="#versiones-dxftoedb">Versiones Dxftoedb</a></li>
 <li><a href="#-índice">📚 Índice</a></li>
+<li><a href="#v150">V1.5.0</a></li>
 <li><a href="#v140">V1.4.0</a></li>
 <li><a href="#v131">V1.3.1</a></li>
 <li><a href="#v130">V1.3.0</a><ul>
@@ -2300,21 +2385,53 @@
 </li>
 </ul>
 <hr />
-<h2 id="v140">V1.4.0</h2>
+<h2 id="v150">V1.5.0</h2>
 <h3 id="cambios-principales">🆕 Cambios principales</h3>
+<ul>
+<li><strong>Plano PEJES dedicado para ejes</strong>: nuevo campo <code>Stories.archivo_ejes</code> en <code>project_settings.toml</code>. Cuando se define (ej: <code>archivo_ejes = "PEJES"</code>), <code>dxftoedb1</code> extrae los ejes solo desde ese plano y genera el Excel de grilla en una sola corrida. Elimina el flujo manual previo de doble ejecución de <code>dxftoedb1</code> y renombrado del Excel.</li>
+<li><strong>Conectividad estructural en T-junctions</strong>: muros y vigas se dividen automáticamente en cada cruce con elementos perpendiculares, generando nodos compartidos para que los elementos queden estructuralmente conectados en ETABS.</li>
+<li><strong>Extensión a intersecciones</strong>: muros y vigas se extienden hasta la intersección con elementos perpendiculares cercanos (tolerancia configurable vía <code>Estructura.tol_extension_interseccion</code>, default 25 cm). Cierra gaps entre elementos que en el dibujo terminaban antes del cruce.</li>
+<li><strong>Empalme automático muro–viga</strong>: cuando un muro y una viga adyacentes del mismo eje terminan en posiciones distintas (gap &lt; 15 cm), la viga se ajusta al endpoint del muro. El muro define la frontera real (viene de las caras DXF) y la viga lo respeta. Elimina los traslapes visibles en muro→viga→muro.</li>
+<li><strong>Filtro eje-más-cercano</strong>: cuando hay ejes paralelos cercanos (ej: ejes N y N1), cada cara de muro/viga se asigna solo al eje más próximo. Evita la duplicación de elementos cuando dos ejes paralelos compiten por las mismas caras.</li>
+<li><strong>Snap automático de nodos</strong>: endpoints de muros/vigas de ejes distintos que convergen al mismo punto se unifican (tolerancia 5 cm) para garantizar nodos compartidos en el DXF y ETABS.</li>
+</ul>
+<h3 id="correcciones">🐛 Correcciones</h3>
+<ul>
+<li><strong>Pisos compartidos</strong>: pisos que apuntan al mismo DXF (ej: P01 y P02 con <code>P01Y02.dxf</code>) ya no pierden uno de los pisos en la generación del modelo.</li>
+<li><strong>Muros fantasma en ejes diagonales</strong>: nuevo filtro de distancia perpendicular al eje (50 cm) evita que un muro sea capturado por un eje vecino diagonal de ángulo similar.</li>
+<li><strong>MUROS_sin_espesor</strong>: muros cuyo espesor no se puede medir ya no se dibujan (eran falsos positivos en zonas con ejes diagonales).</li>
+<li><strong>Tapas de muros perpendiculares</strong>: filtro de largo mínimo (40 cm) descarta segmentos espurios provenientes de tapas paralelas a ejes diagonales.</li>
+<li><strong>Retornos geométricos</strong>: caras cortas (&lt;80 cm) sin contraparte en muros se descartan como retornos geométricos en lugar de procesarse como muros reales.</li>
+<li><strong>Segmentos cortos post-split</strong>: artefactos de ~46 cm creados por la diferencia entre <code>ajuste_por_eje</code> y el split en intersecciones reales se absorben en su vecino collineal del mismo eje.</li>
+<li><strong>Alineación al centro de tapas</strong>: muros y vigas ahora se ubican exactamente en el centro de sus tapas (antes quedaban ~0.7 cm desplazados con tapas verticales sobre ejes diagonales).</li>
+<li><strong>Rótulos de ejes quebrados</strong>: matching bipartito recupera los rótulos perdidos en ejes con vértices compartidos.</li>
+<li><strong>Coordenadas en Excel de grilla</strong>: ahora se escriben como números con 2 decimales (antes eran strings, rompiendo filtros y ordenamiento).</li>
+<li><strong>Pier/spandrel</strong>: tolerancia relajada (1e-3 m) para que la asignación funcione correctamente con la imprecisión float de la conversión cm→m.</li>
+<li><strong>Tabla de cargas dxftoedb3</strong>: corregidos <code>ZeroDivisionError</code>, <code>IndexError</code> silencioso, y refactorizado de O(n²) a O(n) en <code>encuentra_max_x_y_max_y</code>.</li>
+</ul>
+<h3 id="mejoras-internas">🛠️ Mejoras internas</h3>
+<ul>
+<li><strong>Pipeline paralelo path-based</strong>: todos los stages (cambio_capa, ejes, grilla_corregida, estructura) procesan plantas en paralelo via <code>ProcessPoolExecutor</code>, pasando paths entre stages en vez de objetos <code>Drawing</code>. Elimina I/O duplicado.</li>
+<li><strong>dxftojson optimizado</strong>: regex precompilados, índice espacial para búsqueda de textos en O(1), construcción de índice y dicts por layer en una sola pasada.</li>
+<li><strong>Refactor de <code>analisis.py</code></strong>: complejidad McCabe reducida a ≤5 mediante extracción de helpers (<code>_fusion_colineal</code>, <code>_fusion_por_extremo</code>, etc.). Comparaciones con distancia² evitan <code>sqrt()</code> en hot paths.</li>
+<li><strong>Nuevos utilitarios</strong>: <code>procesar_en_paralelo</code> (wrapper de ProcessPool con fallback secuencial), <code>IndiceEspacialTextos</code> (búsqueda grid-based), <code>distancia_al_cuadrado_entre_dos_puntos</code>.</li>
+<li><strong>Tests de integración</strong>: cobertura completa del pipeline <code>dxftoedb1→3</code> en R3707 y R4447 (ortogonal y diagonal), incluyendo verificaciones específicas de las correcciones aplicadas.</li>
+</ul>
+<h2 id="v140">V1.4.0</h2>
+<h3 id="cambios-principales_1">🆕 Cambios principales</h3>
 <ul>
 <li>Migración de gestión de proyecto a <code>uv</code>.</li>
 <li>Reemplazo de <code>print()</code> por logging estructurado en todos los módulos.</li>
 <li>Simplificación y limpieza general del código: extracción de constantes, helpers reutilizables y eliminación de código muerto.</li>
 </ul>
-<h3 id="correcciones">🐛 Correcciones</h3>
+<h3 id="correcciones_1">🐛 Correcciones</h3>
 <ul>
 <li>Fix: error de división por cero en función <code>busqueda_de_texto</code> al procesar ecuación de la recta.</li>
 <li>Fix: condiciones de viento en generación de combinaciones verificaban variable incorrecta.</li>
 <li>Fix: comparación de coordenadas por string reemplazada por <code>math.isclose</code> con tolerancia.</li>
 <li>Fix: typo "Masorry" corregido a "Masonry" en códigos de materiales.</li>
 </ul>
-<h3 id="mejoras-internas">🛠️ Mejoras internas</h3>
+<h3 id="mejoras-internas_1">🛠️ Mejoras internas</h3>
 <ul>
 <li>Centralización de validación de settings en función compartida <code>validar_llaves_settings</code>.</li>
 <li>Constantes de materiales y secciones extraídas a nivel de módulo para mejor mantenimiento.</li>
@@ -2326,7 +2443,7 @@
 <li>Valor por defecto para bending de losas en tabla de planos de cargas 0.25.</li>
 </ul>
 <h2 id="v130">V1.3.0</h2>
-<h3 id="cambios-principales_1">🆕 Cambios principales</h3>
+<h3 id="cambios-principales_2">🆕 Cambios principales</h3>
 <ul>
 <li>Mejoras en rescate de textos de vigas.</li>
 <li>Combinaciones no lineales detectan automaticamente el estado de carga CM.</li>

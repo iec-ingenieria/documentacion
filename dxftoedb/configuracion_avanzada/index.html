@@ -510,6 +510,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#tolerancia-de-extension-a-intersecciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tolerancia de extensión a intersecciones
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1880,6 +1889,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#tolerancia-de-extension-a-intersecciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tolerancia de extensión a intersecciones
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1972,6 +1990,21 @@
 <div class="highlight"><pre><span></span><code><span class="k">[Analize]</span>
 <span class="w">  </span><span class="n">run</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 </code></pre></div>
+<h3 id="tolerancia-de-extension-a-intersecciones">Tolerancia de extensión a intersecciones</h3>
+<p>Este parámetro controla la distancia máxima a la que se extiende el endpoint de un muro o viga para alcanzar la intersección con otro elemento perpendicular cercano.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Estructura]</span>
+<span class="w">  </span><span class="n">tol_extension_interseccion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25.0</span>
+</code></pre></div>
+<p>El valor está en centímetros. Default: <code>25.0</code>.</p>
+<ul>
+<li>Cuando un muro/viga termina antes de su intersección geométrica con otro elemento perpendicular (por imprecisiones del dibujo o por convenciones de tapas), el pipeline lo extiende automáticamente hasta el punto de cruce real.</li>
+<li>Solo se extiende hacia afuera (hacia el elemento perpendicular), nunca hacia adentro del segmento.</li>
+<li>Valores típicos: 20–30 cm cubren la mayoría de muros (espesores hasta ~40 cm) y vigas.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Subir este valor solo si se observan gaps visibles entre muros y vigas perpendiculares en el plano <code>_dxftoedb.dxf</code>. Valores muy altos (&gt;50 cm) pueden producir extensiones espurias en zonas con muchos elementos cercanos.</p>
+</div>
 
 
 

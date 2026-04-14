@@ -469,6 +469,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Stories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivo_ejes-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      archivo_ejes (opcional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2031,6 +2046,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Stories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivo_ejes-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      archivo_ejes (opcional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2356,6 +2386,25 @@ Las siguientes secciones son las mínimas para todo proyecto.</p>
 <p class="admonition-title">Warning</p>
 <pre><code>  Para pisos tipo: Tanto el hormigón y el espesor se considerarán el del piso superior
 </code></pre>
+</div>
+<h4 id="archivo_ejes-opcional">archivo_ejes (opcional)</h4>
+<p>Cuando existe un plano dedicado que consolida todos los ejes del edificio (típicamente preparado para resolver inconsistencias entre plantas), este parámetro indica el nombre de ese plano sin la extensión <code>.dxf</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Stories]</span>
+<span class="w">  </span><span class="n">BaseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-1.5</span>
+<span class="w">  </span><span class="n">archivo_ejes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;PEJES&quot;</span>
+<span class="w">  </span><span class="n">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p01&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;01&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="s2">&quot;p02&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;02&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G30&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.16</span><span class="p">]</span>
+<span class="w">  </span><span class="p">]</span>
+</code></pre></div>
+<p>Cuando se define <code>archivo_ejes</code>, <code>dxftoedb1</code> extrae los ejes y genera el Excel de grilla <strong>solo</strong> desde ese plano, mientras que el cambio de capas sigue procesando todos los planos listados en <code>Data</code> (más el plano de ejes).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Esto reemplaza el flujo manual previo de doble ejecución de <code>dxftoedb1</code> (una solo con el plano de ejes para generar el Excel, otra con todos los pisos) y renombrado del Excel intermedio. Con <code>archivo_ejes</code> definido todo se hace en una sola corrida.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>El plano indicado en <code>archivo_ejes</code> debe contener únicamente los ejes (líneas y rótulos en la capa correspondiente). Si no existe el archivo, <code>dxftoedb1</code> falla con <code>FileNotFoundError</code>. Si el campo no se define, el comportamiento es el tradicional: los ejes se extraen de todos los planos listados en <code>Data</code>.</p>
 </div>
 <h3 id="version_etabs">Version_etabs</h3>
 <p>La aplicación funciona para dos versiones de Etabs, 19 y 21</p>
