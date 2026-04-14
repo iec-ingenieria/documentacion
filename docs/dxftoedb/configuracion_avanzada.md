@@ -94,3 +94,22 @@ Este parámetro indica el límite de espesor para que el elemento de área sea d
 [Analize]
   run = true
 ```
+
+### Tolerancia de extensión a intersecciones
+
+Este parámetro controla la distancia máxima a la que se extiende el endpoint de un muro o viga para alcanzar la intersección con otro elemento perpendicular cercano.
+
+```toml
+[Estructura]
+  tol_extension_interseccion = 25.0
+```
+
+El valor está en centímetros. Default: `25.0`.
+
+- Cuando un muro/viga termina antes de su intersección geométrica con otro elemento perpendicular (por imprecisiones del dibujo o por convenciones de tapas), el pipeline lo extiende automáticamente hasta el punto de cruce real.
+- Solo se extiende hacia afuera (hacia el elemento perpendicular), nunca hacia adentro del segmento.
+- Valores típicos: 20–30 cm cubren la mayoría de muros (espesores hasta ~40 cm) y vigas.
+
+!!! tip
+
+    Subir este valor solo si se observan gaps visibles entre muros y vigas perpendiculares en el plano `_dxftoedb.dxf`. Valores muy altos (>50 cm) pueden producir extensiones espurias en zonas con muchos elementos cercanos.

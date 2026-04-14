@@ -127,6 +127,30 @@ Se debe indicar la cota de la base y luego un listado por piso con:
 !!! warning
           Para pisos tipo: Tanto el hormigón y el espesor se considerarán el del piso superior
 
+#### archivo_ejes (opcional)
+
+Cuando existe un plano dedicado que consolida todos los ejes del edificio (típicamente preparado para resolver inconsistencias entre plantas), este parámetro indica el nombre de ese plano sin la extensión `.dxf`.
+
+```toml
+[Stories]
+  BaseElevation = -1.5
+  archivo_ejes = "PEJES"
+  Data = [
+    ["p01", 2.5, "01", "G30", 0.15],
+    ["p02", 2.5, "02", "G30", 0.16]
+  ]
+```
+
+Cuando se define `archivo_ejes`, `dxftoedb1` extrae los ejes y genera el Excel de grilla **solo** desde ese plano, mientras que el cambio de capas sigue procesando todos los planos listados en `Data` (más el plano de ejes).
+
+!!! tip
+
+    Esto reemplaza el flujo manual previo de doble ejecución de `dxftoedb1` (una solo con el plano de ejes para generar el Excel, otra con todos los pisos) y renombrado del Excel intermedio. Con `archivo_ejes` definido todo se hace en una sola corrida.
+
+!!! warning
+
+    El plano indicado en `archivo_ejes` debe contener únicamente los ejes (líneas y rótulos en la capa correspondiente). Si no existe el archivo, `dxftoedb1` falla con `FileNotFoundError`. Si el campo no se define, el comportamiento es el tradicional: los ejes se extraen de todos los planos listados en `Data`.
+
 ### Version_etabs
 
 La aplicación funciona para dos versiones de Etabs, 19 y 21
