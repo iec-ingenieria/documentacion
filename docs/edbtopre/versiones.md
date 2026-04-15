@@ -1,5 +1,21 @@
 # Versiones Edbtopre
 
+## V1.2.0
+
+### Novedades
+
+  - Corrección de bug crítico en la asignación de ejes a piers y
+    spandrels: ETABS v21 devuelve las columnas de
+    `GetTableForDisplayArray` en su orden interno, ignorando el
+    `field_key_list` solicitado. El código anterior asumía que el
+    orden devuelto era el pedido, lo que producía desalineamiento
+    silencioso en `ejes_pier` y dejaba a los muros cayendo en eje
+    `"#"`. Los esfuerzos y las armaduras calculadas no se ven
+    afectadas: solo la etiqueta de eje en el archivo `.geo`.
+  - Nueva CLI sin tkinter en `edbtopre.src.cli` para facilitar
+    automatización del pipeline. Uso:
+    `uv run python -m edbtopre.src.cli --set ... --estatico ... --dinamico ...`.
+
 ## V1.1.3
 
 ### Novedades
