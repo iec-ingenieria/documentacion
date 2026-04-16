@@ -35,6 +35,8 @@
   - **Conectividad estructural en T-junctions**: muros y vigas se dividen automáticamente en cada cruce con elementos perpendiculares, generando nodos compartidos para que los elementos queden estructuralmente conectados en ETABS.
   - **Extensión a intersecciones**: muros y vigas se extienden hasta la intersección con elementos perpendiculares cercanos (tolerancia configurable vía `Estructura.tol_extension_interseccion`, default 25 cm). Cierra gaps entre elementos que en el dibujo terminaban antes del cruce.
   - **Empalme automático muro–viga**: cuando un muro y una viga adyacentes del mismo eje terminan en posiciones distintas (gap < 15 cm), la viga se ajusta al endpoint del muro. El muro define la frontera real (viene de las caras DXF) y la viga lo respeta. Elimina los traslapes visibles en muro→viga→muro.
+  - **Vigas recortadas por muros superpuestos**: cuando una viga y un muro coexisten en el mismo eje (ej: cambio de elevación de losa), la viga se recorta para no superponerse. El muro prevalece; los trozos de viga < 30 cm post-resta se descartan.
+  - **Reconstrucción de vigas partidas por achura**: cuando el calculista rompe una viga en el dibujo para representar un cambio de espesor de losa, las tapas cortas se filtran y dejan caras sin par. Si la cara sobreviviente toca a los muros/vigas contiguos, se reconstruye un par virtual interpolando la cara faltante para obtener una viga continua.
   - **Filtro eje-más-cercano**: cuando hay ejes paralelos cercanos (ej: ejes N y N1), cada cara de muro/viga se asigna solo al eje más próximo. Evita la duplicación de elementos cuando dos ejes paralelos compiten por las mismas caras.
   - **Snap automático de nodos**: endpoints de muros/vigas de ejes distintos que convergen al mismo punto se unifican (tolerancia 5 cm) para garantizar nodos compartidos en el DXF y ETABS.
 
@@ -47,6 +49,9 @@
   - **Retornos geométricos**: caras cortas (<80 cm) sin contraparte en muros se descartan como retornos geométricos en lugar de procesarse como muros reales.
   - **Segmentos cortos post-split**: artefactos de ~46 cm creados por la diferencia entre `ajuste_por_eje` y el split en intersecciones reales se absorben en su vecino collineal del mismo eje.
   - **Alineación al centro de tapas**: muros y vigas ahora se ubican exactamente en el centro de sus tapas (antes quedaban ~0.7 cm desplazados con tapas verticales sobre ejes diagonales).
+  - **Muros que sobrepasan sus tapas**: el algoritmo de reconstrucción de vigas partidas ya no conecta elementos separados por un vano (la reconstrucción solo aplica cuando la cara sin par toca físicamente a los vecinos, gap ≈ 0).
+  - **Generación con `archivo_ejes`**: con el campo definido, ahora se guardan todos los `_grilla.dxf` (no solo el del PEJES), para que `dxftoedb2` encuentre el plano de cada piso.
+  - **Compatibilidad ezdxf Cython**: funciones de intersección 2D (`intersection_line_line_2d`) reciben `Vec2` explícitos. Versiones con aceleración Cython rechazaban `Vec3` con `TypeError`.
   - **Rótulos de ejes quebrados**: matching bipartito recupera los rótulos perdidos en ejes con vértices compartidos.
   - **Coordenadas en Excel de grilla**: ahora se escriben como números con 2 decimales (antes eran strings, rompiendo filtros y ordenamiento).
   - **Pier/spandrel**: tolerancia relajada (1e-3 m) para que la asignación funcione correctamente con la imprecisión float de la conversión cm→m.
@@ -57,8 +62,9 @@
   - **Pipeline paralelo path-based**: todos los stages (cambio_capa, ejes, grilla_corregida, estructura) procesan plantas en paralelo via `ProcessPoolExecutor`, pasando paths entre stages en vez de objetos `Drawing`. Elimina I/O duplicado.
   - **dxftojson optimizado**: regex precompilados, índice espacial para búsqueda de textos en O(1), construcción de índice y dicts por layer en una sola pasada.
   - **Refactor de `analisis.py`**: complejidad McCabe reducida a ≤5 mediante extracción de helpers (`_fusion_colineal`, `_fusion_por_extremo`, etc.). Comparaciones con distancia² evitan `sqrt()` en hot paths.
+  - **Tolerancias documentadas**: cada constante `_TOL_*`/`_MIN_*` en `analisis.py` tiene docstring explicando el valor elegido, el caso típico que cubre y los riesgos de subir/bajar.
   - **Nuevos utilitarios**: `procesar_en_paralelo` (wrapper de ProcessPool con fallback secuencial), `IndiceEspacialTextos` (búsqueda grid-based), `distancia_al_cuadrado_entre_dos_puntos`.
-  - **Tests de integración**: cobertura completa del pipeline `dxftoedb1→3` en R3707 y R4447 (ortogonal y diagonal), incluyendo verificaciones específicas de las correcciones aplicadas.
+  - **Tests de integración**: cobertura completa del pipeline `dxftoedb1→3` en R3707 y R4447 (ortogonal y diagonal), incluyendo verificaciones específicas de las correcciones aplicadas (viga sobre muro, viga partida por achura, puente no conecta muros separados).
 
 ## V1.4.0
 
