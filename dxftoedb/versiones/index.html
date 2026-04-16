@@ -2392,6 +2392,8 @@
 <li><strong>Conectividad estructural en T-junctions</strong>: muros y vigas se dividen automáticamente en cada cruce con elementos perpendiculares, generando nodos compartidos para que los elementos queden estructuralmente conectados en ETABS.</li>
 <li><strong>Extensión a intersecciones</strong>: muros y vigas se extienden hasta la intersección con elementos perpendiculares cercanos (tolerancia configurable vía <code>Estructura.tol_extension_interseccion</code>, default 25 cm). Cierra gaps entre elementos que en el dibujo terminaban antes del cruce.</li>
 <li><strong>Empalme automático muro–viga</strong>: cuando un muro y una viga adyacentes del mismo eje terminan en posiciones distintas (gap &lt; 15 cm), la viga se ajusta al endpoint del muro. El muro define la frontera real (viene de las caras DXF) y la viga lo respeta. Elimina los traslapes visibles en muro→viga→muro.</li>
+<li><strong>Vigas recortadas por muros superpuestos</strong>: cuando una viga y un muro coexisten en el mismo eje (ej: cambio de elevación de losa), la viga se recorta para no superponerse. El muro prevalece; los trozos de viga &lt; 30 cm post-resta se descartan.</li>
+<li><strong>Reconstrucción de vigas partidas por achura</strong>: cuando el calculista rompe una viga en el dibujo para representar un cambio de espesor de losa, las tapas cortas se filtran y dejan caras sin par. Si la cara sobreviviente toca a los muros/vigas contiguos, se reconstruye un par virtual interpolando la cara faltante para obtener una viga continua.</li>
 <li><strong>Filtro eje-más-cercano</strong>: cuando hay ejes paralelos cercanos (ej: ejes N y N1), cada cara de muro/viga se asigna solo al eje más próximo. Evita la duplicación de elementos cuando dos ejes paralelos compiten por las mismas caras.</li>
 <li><strong>Snap automático de nodos</strong>: endpoints de muros/vigas de ejes distintos que convergen al mismo punto se unifican (tolerancia 5 cm) para garantizar nodos compartidos en el DXF y ETABS.</li>
 </ul>
@@ -2404,6 +2406,9 @@
 <li><strong>Retornos geométricos</strong>: caras cortas (&lt;80 cm) sin contraparte en muros se descartan como retornos geométricos en lugar de procesarse como muros reales.</li>
 <li><strong>Segmentos cortos post-split</strong>: artefactos de ~46 cm creados por la diferencia entre <code>ajuste_por_eje</code> y el split en intersecciones reales se absorben en su vecino collineal del mismo eje.</li>
 <li><strong>Alineación al centro de tapas</strong>: muros y vigas ahora se ubican exactamente en el centro de sus tapas (antes quedaban ~0.7 cm desplazados con tapas verticales sobre ejes diagonales).</li>
+<li><strong>Muros que sobrepasan sus tapas</strong>: el algoritmo de reconstrucción de vigas partidas ya no conecta elementos separados por un vano (la reconstrucción solo aplica cuando la cara sin par toca físicamente a los vecinos, gap ≈ 0).</li>
+<li><strong>Generación con <code>archivo_ejes</code></strong>: con el campo definido, ahora se guardan todos los <code>_grilla.dxf</code> (no solo el del PEJES), para que <code>dxftoedb2</code> encuentre el plano de cada piso.</li>
+<li><strong>Compatibilidad ezdxf Cython</strong>: funciones de intersección 2D (<code>intersection_line_line_2d</code>) reciben <code>Vec2</code> explícitos. Versiones con aceleración Cython rechazaban <code>Vec3</code> con <code>TypeError</code>.</li>
 <li><strong>Rótulos de ejes quebrados</strong>: matching bipartito recupera los rótulos perdidos en ejes con vértices compartidos.</li>
 <li><strong>Coordenadas en Excel de grilla</strong>: ahora se escriben como números con 2 decimales (antes eran strings, rompiendo filtros y ordenamiento).</li>
 <li><strong>Pier/spandrel</strong>: tolerancia relajada (1e-3 m) para que la asignación funcione correctamente con la imprecisión float de la conversión cm→m.</li>
@@ -2414,8 +2419,9 @@
 <li><strong>Pipeline paralelo path-based</strong>: todos los stages (cambio_capa, ejes, grilla_corregida, estructura) procesan plantas en paralelo via <code>ProcessPoolExecutor</code>, pasando paths entre stages en vez de objetos <code>Drawing</code>. Elimina I/O duplicado.</li>
 <li><strong>dxftojson optimizado</strong>: regex precompilados, índice espacial para búsqueda de textos en O(1), construcción de índice y dicts por layer en una sola pasada.</li>
 <li><strong>Refactor de <code>analisis.py</code></strong>: complejidad McCabe reducida a ≤5 mediante extracción de helpers (<code>_fusion_colineal</code>, <code>_fusion_por_extremo</code>, etc.). Comparaciones con distancia² evitan <code>sqrt()</code> en hot paths.</li>
+<li><strong>Tolerancias documentadas</strong>: cada constante <code>_TOL_*</code>/<code>_MIN_*</code> en <code>analisis.py</code> tiene docstring explicando el valor elegido, el caso típico que cubre y los riesgos de subir/bajar.</li>
 <li><strong>Nuevos utilitarios</strong>: <code>procesar_en_paralelo</code> (wrapper de ProcessPool con fallback secuencial), <code>IndiceEspacialTextos</code> (búsqueda grid-based), <code>distancia_al_cuadrado_entre_dos_puntos</code>.</li>
-<li><strong>Tests de integración</strong>: cobertura completa del pipeline <code>dxftoedb1→3</code> en R3707 y R4447 (ortogonal y diagonal), incluyendo verificaciones específicas de las correcciones aplicadas.</li>
+<li><strong>Tests de integración</strong>: cobertura completa del pipeline <code>dxftoedb1→3</code> en R3707 y R4447 (ortogonal y diagonal), incluyendo verificaciones específicas de las correcciones aplicadas (viga sobre muro, viga partida por achura, puente no conecta muros separados).</li>
 </ul>
 <h2 id="v140">V1.4.0</h2>
 <h3 id="cambios-principales_1">🆕 Cambios principales</h3>
