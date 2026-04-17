@@ -50,6 +50,7 @@
   - **Segmentos cortos post-split**: artefactos de ~46 cm creados por la diferencia entre `ajuste_por_eje` y el split en intersecciones reales se absorben en su vecino collineal del mismo eje.
   - **Alineación al centro de tapas**: muros y vigas ahora se ubican exactamente en el centro de sus tapas (antes quedaban ~0.7 cm desplazados con tapas verticales sobre ejes diagonales).
   - **Muros que sobrepasan sus tapas**: el algoritmo de reconstrucción de vigas partidas ya no conecta elementos separados por un vano (la reconstrucción solo aplica cuando la cara sin par toca físicamente a los vecinos, gap ≈ 0).
+  - **Muro en extremo de ejes diagonales convergentes**: el filtro eje‑más‑cercano ya no compite con la recta extendida de un eje vecino fuera de su segmento real. En zonas donde dos ejes diagonales se conectan extremo con extremo (ej: ejes `#6`/`#7` del R3707), el muro cercano al nodo de convergencia ya no se descarta por error.
   - **Generación con `archivo_ejes`**: con el campo definido, ahora se guardan todos los `_grilla.dxf` (no solo el del PEJES), para que `dxftoedb2` encuentre el plano de cada piso.
   - **Compatibilidad ezdxf Cython**: funciones de intersección 2D (`intersection_line_line_2d`) reciben `Vec2` explícitos. Versiones con aceleración Cython rechazaban `Vec3` con `TypeError`.
   - **Rótulos de ejes quebrados**: matching bipartito recupera los rótulos perdidos en ejes con vértices compartidos.
@@ -64,7 +65,9 @@
   - **Refactor de `analisis.py`**: complejidad McCabe reducida a ≤5 mediante extracción de helpers (`_fusion_colineal`, `_fusion_por_extremo`, etc.). Comparaciones con distancia² evitan `sqrt()` en hot paths.
   - **Tolerancias documentadas**: cada constante `_TOL_*`/`_MIN_*` en `analisis.py` tiene docstring explicando el valor elegido, el caso típico que cubre y los riesgos de subir/bajar.
   - **Nuevos utilitarios**: `procesar_en_paralelo` (wrapper de ProcessPool con fallback secuencial), `IndiceEspacialTextos` (búsqueda grid-based), `distancia_al_cuadrado_entre_dos_puntos`.
-  - **Tests de integración**: cobertura completa del pipeline `dxftoedb1→3` en R3707 y R4447 (ortogonal y diagonal), incluyendo verificaciones específicas de las correcciones aplicadas (viga sobre muro, viga partida por achura, puente no conecta muros separados).
+  - **Tests de integración**: cobertura completa del pipeline `dxftoedb1→3` en R3707 y R4447 (ortogonal y diagonal), incluyendo verificaciones específicas de las correcciones aplicadas (viga sobre muro, viga partida por achura, puente no conecta muros separados, muro en extremo de eje diagonal convergente).
+  - **Barras de progreso limpias**: el nivel de logging por defecto baja a `WARNING`, evitando que los mensajes informativos de `comtypes`/ETABS se mezclen con las barras `tqdm`. Las advertencias reales (errores de tabla ETABS, load names no encontrados, etc.) siguen visibles. Para modo debug, setear `DXFTOEDB_VERBOSE=1` en el ambiente.
+  - **Dependencias actualizadas**: `comtypes 1.4.16`, `ezdxf 1.4.3` (trae `numpy` y `fonttools` como sub-deps), `openpyxl 3.1.5`, `tqdm 4.67.3`. Dev: `pytest 9`, `ruff 0.15`, `mypy 1.20`. Limpieza de tipos (21 anotaciones pre-existentes).
 
 ## V1.4.0
 
@@ -90,9 +93,7 @@
 
 ## V1.3.1
 
-
   - Valor por defecto para bending de losas en tabla de planos de cargas 0.25.
-
 
 ## V1.3.0
 
