@@ -1,5 +1,22 @@
 # Versiones Edbtopre
 
+## V1.2.1
+
+### Novedades
+
+  - Corrección de error que impedía ejecutar el pipeline en modelos
+    que no tenían secciones circulares de hormigón definidas. La
+    tabla vacía de la base de datos de ETABS hacía que el rescate
+    de secciones frame abortara con un `KeyError`. Regresión
+    introducida en la V1.2.0.
+  - Corrección en el rescate de ejes cuando el sistema de grilla
+    de ETABS está rotado o trasladado respecto al origen: las
+    rectas de los ejes ahora se comparan en coordenadas globales,
+    evitando que piers y frames queden con eje `"#"` en modelos
+    con grillas no alineadas.
+  - Actualización de la dependencia `comtypes` a 1.4.16 para
+    consistencia con el resto del software IEC.
+
 ## V1.2.0
 
 ### Novedades
