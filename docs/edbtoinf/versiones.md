@@ -11,11 +11,6 @@
 - Tooltips explicativos en cada parámetro y marcas (*) en los campos obligatorios.
 - Validación en vivo: warning visible apenas faltan campos obligatorios al elegir suelo F.
 
-#### Correcciones de drift y corte máximo
-
-- Corrección importante: el drift ahora usa R1 cuando corte máximo controla (NCh433 5.9.2). Antes usaba R\*\* y subestimaba el drift.
-- Eliminado bug de doble corrección en desplazamientos cuando corte_max controlaba.
-
 #### Rediseño UX/UI
 
 - Interfaz tipo wizard en 3 tabs (Modelo / Parámetros / Niveles).
