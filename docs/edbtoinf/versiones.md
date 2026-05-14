@@ -50,13 +50,9 @@
 - `stdout` y `stderr` van solo al tab Log (no se duplica a la consola).
 - Salto de línea entre prints para mejor legibilidad.
 
-#### Bugs corregidos
+#### Estabilidad
 
-- `_cargar_params`: los overrides de suelo F no se recargaban porque los entries en `disabled` ignoraban `delete`/`insert` programáticos. Ahora se hacen 2 pasadas: combos primero (que disparan los handlers para habilitar) y luego los entries.
-- Detección de caso sísmico: `endswith("x")` excluía `ExE` por terminar en "e". Corregido a listas explícitas en orden de preferencia.
-- Restauración del setup de output ETABS al final de la propuesta de líneas (antes dejaba estado inválido y rompía el rescate posterior con `could not convert string to float: 'Ex'`).
-- `nombres_funciones_espectro`: tomaba `LoadName` (`U1`) en vez del nombre real del espectro (`FuncName`).
-- Tolerancia numérica en validación de amplificación modal.
+- Tolerancia numérica en validación de amplificación modal: estructuras rígidas (T<0.1s) con factores ~0 en ambas direcciones ya no fallan al validar.
 
 #### Build y dependencias
 
