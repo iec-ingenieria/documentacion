@@ -1,5 +1,51 @@
 # Versiones EDBTOINF
 
+## V1.1.1
+
+### Novedades
+
+#### CLI headless `edbtoinf-cli`
+
+- Nuevo comando `edbtoinf-cli` para generar el informe ejecutivo sin GUI
+  (uso desde scripts, CI, agentes IA). Recibe el `.edb` posicional, un
+  archivo `.drift` con el mapeo de niveles, y todos los parámetros
+  NCh433/perfil como flags (`--categoria`, `--zona`, `--suelo`,
+  `--sistema`, `--material`, `--h0`, `--lineas-x`, `--lineas-y`, etc).
+- Soporte completo para suelo F via `--override-s`, `--override-t0`,
+  `--override-tprima`, `--override-n`, `--override-p`, `--override-a0`,
+  `--espectro-sa`, `--espectro-sde`.
+- `edbtoinf-cli --help` lista todos los flags disponibles.
+
+#### Performance — CQC
+
+- La matriz de correlación CQC (NxN, depende solo de los períodos) se
+  pre-computa una sola vez por análisis y se reusa en cada nudo. Antes
+  se recalculaba en cada llamada. Mejora notable en edificios con
+  muchos nudos.
+
+#### Estabilidad — verificación de casos espectrales
+
+- Nuevo chequeo automático: aborta el rescate si un caso Response
+  Spectrum tiene reacción basal idénticamente cero (síntoma de archivo
+  de espectro inaccesible, scale factor cero, masa nula). ETABS no
+  avisa de estos casos y antes el informe se generaba con drift = 0
+  silencioso.
+
+#### Robustez — validaciones
+
+- Todos los `assert ...` migrados a `raise ValueError(...)` con
+  mensajes descriptivos. Antes, ejecutar bajo `python -O` desactivaba
+  validaciones críticas (categoría/zona/suelo desconocidos, peso
+  negativo, períodos inválidos, etc).
+- `conectar_modelo` ahora tolera diferencias de mayúsculas/minúsculas
+  en la extensión del path (`.EDB` vs `.edb`).
+
+#### Build y dependencias
+
+- Versión 1.1.0 fue la primera con `uv.lock` versionado y
+  `version_scheme = "guess-next-dev"` homologado con `dxftoedb` y
+  `edbtopre`.
+
 ## V1.1.0
 
 ### Novedades
