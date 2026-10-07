@@ -1,0 +1,5707 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iec-ingenieria.github.io/documentacion/curvaw/corte/">
+      
+      
+        <link rel="prev" href="../confinamiento_ds60/">
+      
+      
+        <link rel="next" href="../tensiones/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo_iec.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Revisión de corte - Documentación Software IEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#revision-de-corte-aci-318s-08" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Documentación Software IEC" class="md-header__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación Software IEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Revisión de corte
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/iec-ingenieria/iec-apps" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentación Software IEC" class="md-nav__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    Documentación Software IEC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/iec-ingenieria/iec-apps" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🆕 Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1️⃣ dxftoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1️⃣ dxftoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prepinchado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prepinchado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuración
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Básica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion_avanzada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avanzada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dxftoedb1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/planos_grilla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planos Grilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/grilla_excel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grilla Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herramientas LISP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Herramientas LISP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/instalacion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prelosa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prelosa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/motes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/problemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problemas Frecuentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/ideas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2️⃣ edbtopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2️⃣ edbtopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3️⃣ pretovh
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3️⃣ pretovh
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4️⃣ edbtoinf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4️⃣ edbtoinf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/uso_gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/parametros_sismicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros sísmicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/parametros_geometricos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros geométricos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/control_desplazamientos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control de desplazamientos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/drift_centro_masa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drift del centro de masa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/multitorre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos multi-torre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/derivas_html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte HTML de derivas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/formato_drift/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .drift
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5️⃣ tatoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5️⃣ tatoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/salidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Salidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6️⃣ curvaw
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6️⃣ curvaw
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formato_da9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .da9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orientacion_planta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientación en planta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../factor_utilizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factor de utilización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recorrido_eje_neutro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recorrido del eje neutro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../confinamiento_ds60/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confinamiento DS60
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisión de corte
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisión de corte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#los-cuatro-casos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Los cuatro casos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-calcula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se calcula
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo se calcula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-seccion-de-cada-direccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La sección de cada dirección
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las fórmulas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-maximo-por-posicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El máximo por posición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-con-el-vh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencias deliberadas con el VH
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-armadura-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La armadura transversal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La armadura transversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-posicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por posición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armadura-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La armadura por defecto y su origen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origen-por-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un set con orígenes mezclados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armado-masivo-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Armado masivo de la armadura transversal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Armado masivo de la armadura transversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prellenado-planos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desde los planos anotados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué no se pisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caida-al-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sin dato, rige el default
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informe-prellenado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El informe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armado-filtro-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre el filtro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coeficiente-alfa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El coeficiente α de 21.9.4.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chequeos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chequeos de armadura diagonal y cuantía 2 ‰
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-panel-de-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El panel de Corte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El panel de Corte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abrir-y-cerrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abrir y cerrar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-arriba-abajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De arriba abajo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editar-la-armadura-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editar la armadura transversal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalle-por-posicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalle por posición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aceptar-y-cancelar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aceptar y Cancelar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dibujo-en-la-seccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El dibujo en la sección
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El dibujo en la sección">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leyenda-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La leyenda de la armadura transversal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafico-corte-por-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El gráfico de corte por carga
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El gráfico de corte por carga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-muestra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué muestra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-leerlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo leerlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover-y-clic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hover y clic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-se-actualiza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo se actualiza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitos y cuándo no se calcula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alcance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alcance y pendientes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tensiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtro por tensiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor_seccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor de sección
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visor_dxf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visores de planos DXF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI (modo batch)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7️⃣ pretoda9
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7️⃣ pretoda9
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8️⃣ pritopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    8️⃣ pritopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9️⃣ edbtodxf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    9️⃣ edbtodxf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtodxf/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtodxf/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⌨️ CLIs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⌨️ CLIs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso headless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/normas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primitivas de norma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/autoupdate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auto-update
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧰 Otras herramientas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧰 Otras herramientas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_14_1" id="__nav_14_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    anclajes (externa)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    anclajes (externa)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/datos_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/resultados_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/compresion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/traccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/ingreso_xlsx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ingreso Cargas XLSX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎤 Presentaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comandos-autocad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📐 Comandos Autocad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../directorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📁 Directorios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#los-cuatro-casos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Los cuatro casos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-calcula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se calcula
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo se calcula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-seccion-de-cada-direccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La sección de cada dirección
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las fórmulas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-maximo-por-posicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El máximo por posición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-con-el-vh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencias deliberadas con el VH
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-armadura-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La armadura transversal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La armadura transversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-posicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por posición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armadura-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La armadura por defecto y su origen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origen-por-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un set con orígenes mezclados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armado-masivo-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Armado masivo de la armadura transversal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Armado masivo de la armadura transversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prellenado-planos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desde los planos anotados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué no se pisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caida-al-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sin dato, rige el default
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informe-prellenado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El informe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armado-filtro-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre el filtro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coeficiente-alfa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El coeficiente α de 21.9.4.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chequeos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chequeos de armadura diagonal y cuantía 2 ‰
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-panel-de-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El panel de Corte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El panel de Corte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abrir-y-cerrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abrir y cerrar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-arriba-abajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De arriba abajo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editar-la-armadura-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editar la armadura transversal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalle-por-posicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalle por posición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aceptar-y-cancelar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aceptar y Cancelar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dibujo-en-la-seccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El dibujo en la sección
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El dibujo en la sección">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leyenda-transversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La leyenda de la armadura transversal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafico-corte-por-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El gráfico de corte por carga
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El gráfico de corte por carga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-muestra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué muestra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-leerlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo leerlo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hover-y-clic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hover y clic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-se-actualiza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo se actualiza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitos y cuándo no se calcula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alcance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alcance y pendientes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    🏠 Inicio
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../introduccion/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    6️⃣ curvaw
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/iec-ingenieria/iec-apps/edit/main/docs/curvaw/corte.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/iec-ingenieria/iec-apps/raw/main/docs/curvaw/corte.md" title="Ver código fuente de esta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="revision-de-corte-aci-318s-08">Revisión de corte (ACI 318S-08)</h1>
+<p>curvaw revisa el <strong>corte</strong> de cada elemento según <strong>ACI 318S-08</strong> en la misma
+pasada en que revisa la flexo-compresión y el confinamiento. Sirve para revisar
+cada elemento <strong>completo, en una sola pasada por los planos</strong>: la armadura
+longitudinal y el confinamiento ya estaban a la vista, y ahora también la
+armadura transversal, sin volver a los mismos planos con la planilla de corte.
+La revisión se abre con el botón <strong>◫ Corte</strong> de la barra inferior.</p>
+<div class="admonition note">
+<p class="admonition-title">La planilla VH de pretovh no cambia</p>
+<p>pretovh sigue generando la planilla <code>VH1..VH6</code> exactamente igual que siempre.
+curvaw <strong>replica el cálculo</strong> de las hojas VH1..VH4 (ver
+<a href="#como-se-calcula">Cómo se calcula</a>), pero no las reemplaza: no lee ni escribe
+el Excel. La armadura transversal que se declara en curvaw queda en el
+<a href="../formato_da9/#armadura-transversal-para-el-corte-opcional"><code>.da9</code></a>.</p>
+</div>
+<h2 id="los-cuatro-casos">Los cuatro casos</h2>
+<p>Cada posición del elemento se revisa en los cuatro casos de las hojas VH1..VH4:</p>
+<table>
+<thead>
+<tr>
+<th>Caso</th>
+<th>Corte</th>
+<th>Momento</th>
+<th>φ</th>
+<th>Hoja del VH</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V2 en el plano</td>
+<td>V2</td>
+<td>M3</td>
+<td>0.60</td>
+<td>VH1</td>
+</tr>
+<tr>
+<td>V2 en el plano</td>
+<td>V2</td>
+<td>M3</td>
+<td>0.75</td>
+<td>VH2</td>
+</tr>
+<tr>
+<td>V3 fuera del plano</td>
+<td>V3</td>
+<td>M2</td>
+<td>0.60</td>
+<td>VH3</td>
+</tr>
+<tr>
+<td>V3 fuera del plano</td>
+<td>V3</td>
+<td>M2</td>
+<td>0.75</td>
+<td>VH4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>V2</strong> es el corte en el plano del elemento (según el eje local 2, el alto de la
+sección) y <strong>V3</strong> el corte fuera del plano. Cada uno se revisa con el momento que
+flecta en su mismo plano: V2 con M3 y V3 con M2 (el momento solo entra en el Vc de
+muros y machones, 11.9). Los cuatro casos incluyen el <strong>esfuerzo axial</strong> de cada
+carga, con P positivo en compresión como en el resto de curvaw; VH5 y VH6, sin
+axial, no se replican.</p>
+<p>Los dos φ se calculan siempre. <strong>φ 0.60 es el que juzga el elemento</strong>: manda el
+veredicto de la cabecera y el punto rojo del botón. φ 0.75 se muestra al lado en
+el resumen, para ver cuánto cambia, y el selector del detalle deja ver la tabla
+con cualquiera de los dos.</p>
+<h2 id="como-se-calcula">Cómo se calcula</h2>
+<p>Para cada posición, dirección y φ, curvaw recorre las cargas visibles (las que
+pasan el filtro Comb/Pos) y resuelve lo mismo que las hojas VH1..VH4. El cálculo
+está comprobado carga por carga contra las funciones de pretovh, salvo las
+<a href="#diferencias-con-el-vh">diferencias deliberadas</a> que se listan más abajo.</p>
+<h3 id="la-seccion-de-cada-direccion">La sección de cada dirección</h3>
+<p>La sección es la del <code>.da9</code>, que en el caso normal es la del modelo: en un
+rectángulo, el ancho y el alto del contorno; en un círculo, el diámetro <code>D</code> en
+ambas dimensiones y el área del círculo exacto; en una sección poligonal, el
+rectángulo equivalente del modelo (ver <a href="#alcance">Alcance y pendientes</a>). El
+<code>f'c</code> y el <code>fy</code> también salen del <code>.da9</code>. El <strong>ancho</strong> es la dimensión según el
+eje local 3 (el espesor de un muro) y el <strong>alto</strong> la dimensión según el eje
+local 2. Fuera del plano se intercambian, como hace el VH:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>V2 (en el plano)</th>
+<th>V3 (fuera del plano)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Espesor del alma <code>bw</code></td>
+<td>ancho</td>
+<td>alto</td>
+</tr>
+<tr>
+<td>Largo <code>lw</code></td>
+<td>alto</td>
+<td>ancho</td>
+</tr>
+<tr>
+<td>Momento que acompaña</td>
+<td>M3</td>
+<td>M2</td>
+</tr>
+</tbody>
+</table>
+<p>Con las dimensiones intercambiadas, el As mín de V3 de una viga de 0.30 x 0.60 m se
+calcula con <code>bw</code> = 0.60 m (5.0 cm²/m con <code>f'c</code> = 25 MPa, el doble que en V2) y su
+altura útil sale sobre el ancho: es lo que hace el VH.</p>
+<p>El tipo del elemento en el <code>.da9</code> decide qué fórmulas se usan. Los verticales
+llevan el subtipo que les calculó pretoda9 según su razón de aspecto (ver
+<a href="../../pretovh/output/#clasificacion-automatica-de-elementos">Clasificación automática</a>):</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Vc</th>
+<th>As de 21.9.4.1</th>
+<th>Altura útil <code>d</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>muro</code></td>
+<td>11.9</td>
+<td>sí</td>
+<td><code>0.8·lw</code> (11.9.4)</td>
+</tr>
+<tr>
+<td><code>machón</code></td>
+<td>11.9</td>
+<td>sí</td>
+<td>ecuación general</td>
+</tr>
+<tr>
+<td><code>columna</code>, vigas, spandrels y demás</td>
+<td>11.2</td>
+<td>no</td>
+<td>ecuación general</td>
+</tr>
+</tbody>
+</table>
+<h3 id="las-formulas">Las fórmulas</h3>
+<div class="highlight"><pre><span></span><code>Vu, Mu    valores absolutos de la carga (P positivo = compresión)
+
+d         muro:   0.8·lw                                     (11.9.4)
+          resto:  lw − mín(0.03 + lw/40 ; 0.2·lw ; 0.2)
+
+Vc 11.2   0.17·√f'c·bw·d, con la corrección por axial de 11.2.1.2
+          (compresión) u 11.2.2.3 (tracción); no baja de 0
+Vc 11.9   el menor entre 11-27 y 11-28; solo 11-27 si Mu/Vu − lw/2 ≤ 0
+          11-27:  0.27·√f'c·bw·d + Pu·d/(4·lw)               (11.9.6)
+          11-28:  [0.05·√f'c + lw·(0.1·√f'c + 0.2·Pu/(lw·bw))
+                   / (Mu/Vu − lw/2)]·bw·d
+
+Vs        Vu/φ − Vc, no menor que 0
+As mín    máx(0.062·√f'c ; 0.35 MPa)·bw / fy   [cm²/m]       (11.4.6.3)
+As 11     Vs / (fy·d)                          [cm²/m]
+As 21     (Vu/(φ·Acv) − α·√f'c) / fy · bw      [cm²/m]       (21.9.4.1)
+          (no menor que 0)
+Sep máx   Vs &lt; 0.33·√f'c·bw·d :  mín(d/2 ; 60 cm)            (11.4.5)
+          si no               :  mín(d/4 ; 30 cm)
+FU sec    Vs / (0.66·√f'c·bw·d)                              (11.4.7.9)
+FU As     máx(As mín, As 11, As 21) / Adis
+</code></pre></div>
+<p><code>Acv</code> es el área bruta de la sección y <code>Adis</code> la armadura transversal provista en
+la dirección (ver <a href="#la-armadura-transversal">La armadura transversal</a>). Las
+fórmulas se leen con <code>f'c</code> en MPa; curvaw trabaja en m, tonf y tonf/m² y convierte
+como el VH (1 MPa como 100 tonf/m²), así que un cálculo a mano con 101.97 puede
+diferir en el orden de 1 a 2 %. <strong>As mín</strong> es cero en un muro fuera del plano (VH3
+y VH4). <strong>As 21</strong> solo existe en muros y machones.</p>
+<h3 id="el-maximo-por-posicion">El máximo por posición</h3>
+<p>Para cada posición se recorren las cargas visibles y se conserva:</p>
+<ul>
+<li>el <strong>mayor As 11</strong> y, de esa misma carga, la separación máxima, el FU de sección
+  y la combinación que gobierna (<code>Comb gob</code>);</li>
+<li>el <strong>mayor As 21</strong>, con su propia combinación (la muestra el tooltip de la
+  celda <code>As21</code>);</li>
+<li>el <strong>As mín</strong>, que no depende de la carga.</li>
+</ul>
+<p>El <strong>FU de armadura</strong> de la posición es el mayor entre As mín, As 11 y As 21
+dividido por el <code>Adis</code> provisto: cumple si es ≤ 1. Sin armadura en la dirección y
+con demanda, el FU es infinito (<code>∞</code>, y la tarjeta del resumen dice «sin armadura»;
+el VH muestra <code>#DIV/0!</code>). El
+<strong>FU de sección</strong> no depende de la armadura: si supera 1, hay que cambiar la
+sección, no la armadura. Una posición sin cargas visibles no produce filas.</p>
+<h3 id="diferencias-con-el-vh">Diferencias deliberadas con el VH</h3>
+<ul>
+<li><strong>Separación máxima sin demanda.</strong> Si ninguna carga pide As 11 &gt; 0, el VH deja
+  la separación en 0 y <code>As min</code> como combinación, y un 0 se lee como «estribos a
+  0 cm». curvaw muestra la separación que exige la norma con <code>Vs = 0</code>
+  (<code>mín(d/2 ; 60 cm)</code>), deja «As mín» en <code>Comb gob</code> y el FU de sección en 0.</li>
+<li><strong>π en vez de 3.14.</strong> El área de la barra es <code>π/4·ø²</code>; el VH usa 3.14. La
+  diferencia es de 0.05 %.</li>
+<li><strong>As 21 solo para el α en uso.</strong> El VH calcula α de 0.17 a 0.25 y muestra 0.17
+  (las demás columnas van ocultas). curvaw calcula el α vigente del elemento, ver
+  <a href="#coeficiente-alfa">El coeficiente α</a>.</li>
+<li><strong>Armadura por defecto en V3 de muros y machones.</strong> El <code>D 8 @25</code> del VH vale en
+  las dos direcciones; en curvaw la malla solo aporta a V2, así que en V3 el
+  equivalente son 2 trabas ø8 @25. El <code>Adis</code> es el mismo, ver
+  <a href="#armadura-por-defecto">La armadura por defecto</a>.</li>
+</ul>
+<p>Además, en el VH el estribo de V2 (VH1) y el de V3 (VH3) se llenan por separado;
+en curvaw un solo set de mallas, estribo y trabas alimenta las dos direcciones.</p>
+<h2 id="la-armadura-transversal">La armadura transversal</h2>
+<p>curvaw cuenta la armadura transversal <strong>por ramas</strong>, el mismo modelo del panel de
+<a href="../confinamiento_ds60/#armadura-provista-vs-requerida">Confinamiento</a>: se cuentan
+las barras que cruzan cada dirección, sin las letras de tabla del VH (<code>D</code>, <code>T</code>,
+<code>C</code>...).</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Qué es</th>
+<th>Aporta a</th>
+<th>Ramas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mallas</strong></td>
+<td>Barras horizontales de un muro o machón: número de mallas, ø y @</td>
+<td>Solo V2</td>
+<td>una por malla</td>
+</tr>
+<tr>
+<td><strong>Estribo</strong></td>
+<td>Estribo perimetral: ø y @</td>
+<td>V2 y V3</td>
+<td>2 por dirección (estribo simple)</td>
+</tr>
+<tr>
+<td><strong>Trabas</strong></td>
+<td>Grupo de trabas iguales: cantidad, ø y @, en V2 o en V3</td>
+<td>La dirección del grupo</td>
+<td>una por traba</td>
+</tr>
+</tbody>
+</table>
+<p>Una malla simple es <strong>una malla</strong> y una doble malla son <strong>dos mallas</strong>. Las mallas
+aportan solo a V2 porque son las barras que trabajan como estribos del corte en el
+plano; fuera del plano aportan el estribo y las trabas. Estribo y trabas se cuentan
+tal cual: una traba es una rama más, no «media malla».</p>
+<div class="highlight"><pre><span></span><code>Adis(dirección) = Σ ramas · Ab / @            [cm²/m]
+Ab = π/4 · ø²                                 [cm²]   (ø en cm, @ en m)
+
+Muro: dos mallas ø10 @20 y 2 trabas ø8 @20 en V3
+    V2   2 · 0.785 / 0.20  =  7.85 cm²/m
+    V3   2 · 0.503 / 0.20  =  5.03 cm²/m
+
+Viga: estribo ø10 @15 y 1 traba ø10 @15 en V2
+    V2  (2 + 1) · 0.785 / 0.15  =  15.71 cm²/m
+    V3   2 · 0.785 / 0.15       =  10.47 cm²/m
+</code></pre></div>
+<h3 id="por-posicion">Por posición</h3>
+<p>Un <strong>set general</strong> vale en todas las posiciones. Una posición puede tener su
+<strong>propio set</strong>, que <strong>reemplaza</strong> al general en esa posición: no se suma. Sirve
+sobre todo en vigas, donde el estribo de los apoyos (<code>p1</code>, <code>p5</code>) suele ir más junto
+que el del centro. Con un estribo general ø8 @20 y otro ø10 @10 en <code>p1</code>, en <code>p1</code>
+vale solo el ø10 @10. En muros y machones las posiciones son <code>Top</code> y <code>Bottom</code>, y
+en spandrels <code>Left</code> y <code>Right</code>.</p>
+<p>Un set de una posición que el elemento <strong>ya no tiene</strong> (por ejemplo <code>p9</code> después de
+regenerar el <code>.iecdb</code>) no rige en ningún lado: el panel avisa que no se usa. Al
+<a href="../editor_seccion/#descomponer-por-posicion-boton">descomponer</a> el elemento (⫽) ese
+set <strong>se descarta</strong>, en vez de impedir la descomposición, y un aviso al terminar dice
+qué posiciones se descartaron; el set general y el α van a todas las partes como siempre.</p>
+<h3 id="armadura-por-defecto">La armadura por defecto y su origen</h3>
+<p>Sin dato para una posición (ni propio ni general), la revisión usa una armadura
+por defecto:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>V2</th>
+<th>V3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Muros y machones</td>
+<td>doble malla ø8 @25</td>
+<td>2 trabas ø8 @25</td>
+</tr>
+<tr>
+<td>Columnas, vigas, spandrels y demás</td>
+<td>estribo ø8 @25</td>
+<td>estribo ø8 @25</td>
+</tr>
+</tbody>
+</table>
+<p>Es el <code>D 8 @25</code> que la planilla VH propone en cada dirección cuando no hay dato de
+los planos: un <strong>supuesto conservador</strong>, no un dato. Da 4.02 cm²/m en cada
+dirección. No se intenta estimarla a partir de otros elementos, porque eso
+desinflaría el FU y podría esconder una deficiencia.</p>
+<p>Cada set lleva su <strong>origen</strong>:</p>
+<ul>
+<li><code>default</code>: la armadura por defecto. El panel la marca «(por defecto)» y la
+  sección la dibuja punteada.</li>
+<li><code>manual</code>: toda armadura que se edita en curvaw queda <code>manual</code>.</li>
+<li>Las categorías de la columna Origen de la planilla VH (<code>directo</code>, <code>cercano</code>,
+  <code>linea</code>, <code>idem-cielo</code>, <code>pier-inferior</code>, <code>hereda-centro</code>, <code>conservador</code>): las
+  puede traer un <code>.da9</code> (ver <a href="../formato_da9/#armadura-transversal-para-el-corte-opcional">formato <code>.da9</code></a>).
+  El panel las muestra en «origen: …» y las conserva mientras el set no se edite.</li>
+</ul>
+<p>Además del set, <strong>cada componente puede llevar su origen</strong>: ver
+<a href="#origen-por-componente">Un set con orígenes mezclados</a>.</p>
+<h3 id="origen-por-componente">Un set con orígenes mezclados</h3>
+<p>Un mismo set puede traer componentes de distinta fuente. El caso típico es un muro
+cuyo plano da solo la malla horizontal: la malla sale con el origen que dio el plano
+(<code>directo</code>, <code>linea</code>...) y, en el mismo <strong>set general</strong>, rigen por defecto las trabas
+de V3.</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Origen</th>
+<th>Aporta a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dos mallas ø10 @20</td>
+<td><code>directo</code></td>
+<td>V2</td>
+</tr>
+<tr>
+<td>2 trabas ø8 @25</td>
+<td><code>default</code></td>
+<td>V3</td>
+</tr>
+</tbody>
+</table>
+<p>El <strong>origen del set</strong> es el del dato principal: <code>default</code> solo si <strong>todos</strong> sus
+componentes lo son; si no, el de la primera malla, estribo o traba que no lo es (en
+el ejemplo, <code>directo</code>). Así <code>default</code> sigue diciendo «todo este set es el supuesto
+sin dato», y un set que mezcla nunca lo es.</p>
+<p>La marca <strong>«(por defecto)»</strong> va entonces <strong>por componente</strong>, y solo si el set mezcla:</p>
+<ul>
+<li><strong>Resumen por dirección</strong>: V2 «doble malla ø10 @20»; V3 «2 trabas ø8 @25 (por
+  defecto)».</li>
+<li><strong>Línea de origen</strong>: «Set general · origen: directo · trabas V3 por defecto». Un
+  componente de otro origen dice el suyo («estribo: linea»). Va en una sola línea: lo
+  que no cabe termina en «…» y el texto completo va en su tooltip.</li>
+<li><strong>Sección</strong>: cada componente se dibuja con el estilo de <strong>su</strong> origen. La malla del
+  plano, continua; las trabas por defecto, punteadas y tenues. La leyenda lo sigue
+  (ver <a href="#leyenda-transversal">La leyenda</a>).</li>
+<li><strong>Gráfico de corte</strong>: el escalón de una dirección va punteado si su <code>Adis</code> sale
+  <strong>solo</strong> de componentes por defecto: en el ejemplo, V3 sí y V2 no.</li>
+</ul>
+<p>Con todo el set por defecto se rotula como siempre, con una sola marca para el
+conjunto. Editar la armadura en curvaw deja <strong>todo</strong> el set <code>manual</code>, también lo que
+no se tocó: guardar es declarar a mano lo que muestran los campos.</p>
+<h2 id="armado-masivo-transversal">Armado masivo de la armadura transversal</h2>
+<p>Declarar a mano la armadura de cada elemento no rinde en un proyecto de miles.
+curvaw la da de a muchos de dos maneras, y en las dos vale lo mismo: escribe el
+bloque <code>^</code> del <code>.da9</code> en <strong>una sola pasada</strong>, apila <strong>su propio punto</strong> del
+<a href="../editor_seccion/#deshacer-armado">↺ Deshacer</a>, deja al día el punto rojo, el
+panel de Corte, la sección y el gráfico por carga, y <strong>nunca pisa lo que se puso
+a mano</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Cómo</th>
+<th>Dónde</th>
+<th>Qué da</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desde los planos</td>
+<td>Parte de corte de <a href="../editor_seccion/#plantilla-corte-planos">Plantilla por tipo</a></td>
+<td>La armadura que dibujó el calculista, a muros, machones y vigas de todo el modelo</td>
+</tr>
+<tr>
+<td>Sobre el filtro</td>
+<td>Bloque transversal de <a href="../editor_seccion/#armar-filtro-transversal">Armar el filtro</a></td>
+<td>Un set que tipeas, como set general <code>manual</code>, a los elementos del filtro</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prellenado-planos">Desde los planos anotados</h3>
+<p>Lee los planos de elevaciones <strong>ya anotados</strong> (<code>planos-cli anotar-elevaciones</code>) con
+el extractor de
+<a href="../../edbtodxf/cli/#planos-cli-armaduras-corte"><code>planos-cli armaduras-corte</code></a> y
+traduce lo que leyó a sets del <code>.da9</code>. Cada elemento del plano se empareja con el
+del <code>.da9</code> por <strong>nombre y piso</strong>, sin el eje (el <code>.da9</code> escribe <code>#</code> en muchas vigas).</p>
+<p><strong>Muros y machones</strong> (<code>pier|piso</code>). Con dato del plano, el elemento recibe un
+<strong>set general</strong> con la malla que leyó el extractor más trabas por defecto en V3,
+que los planos no traen:</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Valor</th>
+<th>Origen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mallas</td>
+<td>Las del plano: número de mallas, ø y @</td>
+<td>El del plano: <code>directo</code>, <code>cercano</code>, <code>linea</code>, <code>idem-cielo</code> o <code>pier-inferior</code></td>
+</tr>
+<tr>
+<td>Trabas V3</td>
+<td>2 trabas ø8 @25</td>
+<td><code>default</code></td>
+</tr>
+</tbody>
+</table>
+<p>Es el caso de <a href="#origen-por-componente">un set con orígenes mezclados</a>: el origen
+del set es el de la malla, y solo las trabas van «(por defecto)». Los orígenes
+dicen cómo se leyó la malla:</p>
+<table>
+<thead>
+<tr>
+<th>Origen</th>
+<th>Qué significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>directo</code></td>
+<td>El paño del plano cae dentro de la región del elemento</td>
+</tr>
+<tr>
+<td><code>cercano</code></td>
+<td>Solo por proximidad: evidencia débil, conviene mirarla</td>
+</tr>
+<tr>
+<td><code>linea</code></td>
+<td>Hereda por una flecha en la línea de muro</td>
+</tr>
+<tr>
+<td><code>idem-cielo</code></td>
+<td>Dice «IDEM CIELO PISO N»</td>
+</tr>
+<tr>
+<td><code>pier-inferior</code></td>
+<td>Es la del mismo pier en el piso de abajo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vigas</strong> (<code>nombre|piso</code>). El extractor lee el <strong>estribo de cada una de las cinco
+posiciones</strong> (<code>p1</code>..<code>p5</code>: apoyo inicial, centro, apoyo final) y las trabas se
+ignoran, por criterio del ingeniero. Si los cinco estribos son iguales (ø, @,
+ramas y origen) la viga recibe <strong>un set general</strong>; si no, <strong>un set por posición</strong>.
+Cada estribo lleva el origen con que se leyó: <code>directo</code>, <code>hereda-centro</code> (el apoyo
+sin rótulo toma el centro) o <code>conservador</code> (había dos rótulos distintos en la
+franja y se tomó el de menos armadura). Solo se escribe la viga que el extractor
+leyó (<code>directo</code>): las que no tienen estribo legible, las que tienen un rótulo que
+la notación no entiende y las que no son de hormigón quedan en el default.</p>
+<p><strong>Partes descompuestas.</strong> Las partes de ⫽ Descomponer (<code>V101/p1p2</code>, <code>M7/Top</code>) se
+emparejan por el nombre de su elemento base, y cada una lleva <strong>solo los estribos
+de sus posiciones</strong>: si son iguales entre sí, un set general; si no, uno por
+posición.</p>
+<p><strong>Lo que no se toca.</strong> Columnas, braces, spandrels y demás; y los elementos con
+error de lectura o sección variable, cuya armadura no se puede escribir a ciegas.
+Un pier que el <code>.da9</code> clasifica como <strong>columna</strong> por su razón de aspecto (en R2868,
+<code>2_01</code> y <code>2_03</code>) no se toca aunque el plano traiga su malla: el informe lo lista
+aparte.</p>
+<h3 id="proteccion-manual">Qué no se pisa</h3>
+<p>Un set cuyo origen —o el de alguno de sus componentes— es <code>manual</code> lo escribió una
+persona, y <strong>el armado masivo no lo reemplaza ni lo quita nunca</strong>. Los demás
+(<code>directo</code>, <code>linea</code>, <code>default</code>...) son automáticos: una corrida nueva los reemplaza
+por lo que dicen ahora los planos, o los quita si ya no hay dato.</p>
+<ul>
+<li>El <strong>set general</strong> está protegido si es manual.</li>
+<li>Una <strong>posición</strong> está protegida si su set propio es manual, o si no tiene set propio
+  y el general es manual. Una posición con un set propio automático se repone aunque
+  el general sea manual.</li>
+<li>Se escribe <strong>solo lo no protegido</strong>. Lo protegido se cuenta en el informe.</li>
+<li>En un muro, los sets por posición no se miran. El α y su altura no se tocan nunca.</li>
+</ul>
+<p>Aplicar dos veces da lo mismo que aplicar una.</p>
+<h3 id="caida-al-default">Sin dato, rige el default</h3>
+<p>El prellenado <strong>depende de los planos</strong>: lo que no dicen, o lo que no se pudo leer,
+queda en el default ø8 @25, y un set automático que el elemento traiga de una
+corrida anterior se <strong>quita</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>El plano no dice la malla de un muro, o la viga no tiene estribo legible</td>
+<td>El elemento queda en el default; se le quita su set automático anterior</td>
+</tr>
+<tr>
+<td>El elemento no aparece en los planos</td>
+<td>Igual</td>
+</tr>
+<tr>
+<td>El plano trae un valor que no se puede escribir (un ø o un @ en cero, una malla sin barras)</td>
+<td>No aborta el armado de los demás: ese elemento queda sin dato, igual que los anteriores, y el informe lo nombra con el motivo</td>
+</tr>
+<tr>
+<td>Un eje no se puede leer (un DXF que no abre, anotaciones ilegibles o de otro esquema, un plano que falta)</td>
+<td>No aborta: ese eje queda con su motivo en el informe y sus elementos, sin dato</td>
+</tr>
+<tr>
+<td>Falla global: no hay <code>elevaciones-anotadas</code>, ni <code>anotaciones/</code>, ni un eje legible</td>
+<td>No se aplica nada de corte y un modal explica por qué</td>
+</tr>
+</tbody>
+</table>
+<p>Los sets <code>manual</code>, jamás.</p>
+<h3 id="informe-prellenado">El informe</h3>
+<p>Al terminar se abre un informe compacto, con scroll si es largo:</p>
+<ul>
+<li><strong>Muros y machones</strong> con dato, por origen, y sin dato; y los machones con un
+  rótulo de estribo que el extractor no puede leer (hay que verlos en el plano).</li>
+<li><strong>Vigas</strong> por estado del plano y estribos por origen, cuántas quedaron con un set
+  general y cuántas con uno por posición.</li>
+<li>Los elementos <strong>protegidos</strong> por tener un set manual donde el plano traía dato, y
+  los que <strong>volvieron al default</strong> por tener un set automático y ya no tener dato.</li>
+<li>Los <strong>datos del plano que no se pudieron aplicar</strong> (un ø o un @ en cero): cada
+  elemento con su motivo.</li>
+<li>Los <strong>ejes que no se pudieron leer</strong>, con su motivo.</li>
+<li>Lo que está <strong>en los planos y no en el <code>.da9</code></strong> (y los piers del plano que el
+  <code>.da9</code> tiene como columnas). Un elemento con error de lectura o sección variable
+  sigue estando en el <code>.da9</code>: no se cuenta como ausente.</li>
+<li>Si el <code>.da9</code> cambió mientras se leían los planos, cuántos elementos ya no estaban:
+  no se les aplicó nada y se recargó el archivo.</li>
+<li>Los <strong>avisos</strong> de la lectura (por ejemplo un plano leído sin filtro de clip) y el
+  <strong>tiempo</strong> que tardó.</li>
+</ul>
+<h3 id="armado-filtro-transversal">Sobre el filtro</h3>
+<p>El bloque «Armadura transversal (opcional)» de <strong>Armar el filtro</strong> da un set que
+tipeas como <strong>set general <code>manual</code></strong> a los elementos filtrados. Usa las mismas
+cuatro filas y la misma validación del <a href="#editar-la-armadura-transversal">editor del panel</a>.
+Vacío no toca nada; «Reemplazar el set general existente (también los manuales)»
+decide si pisa el que ya tengan (por defecto, solo entra donde rige el default); los
+sets por posición no se tocan. Como lo escribe una persona, el prellenado desde los planos tampoco lo toca
+después. Ver <a href="../editor_seccion/#armar-filtro-transversal">el detalle</a>.</p>
+<p>Con «Reemplazar…» marcada se reemplaza también un set general <strong>manual</strong>: es la
+elección explícita de quien marca la casilla (el prellenado desde los planos, en
+cambio, no lo toca nunca). Como ese set lo escribió una persona, el mensaje final
+<strong>dice cuántos de los reemplazados eran manuales</strong> («2 elementos tenían un set
+general manual y se reemplazaron porque marcaste…»), y <a href="../editor_seccion/#deshacer-armado">↺ Deshacer</a>
+lo devuelve como estaba.</p>
+<h2 id="coeficiente-alfa">El coeficiente α de 21.9.4.1</h2>
+<p>En muros y machones, la armadura de 21.9.4.1 depende de <code>αc</code>, que sale de la
+esbeltez del muro:</p>
+<div class="highlight"><pre><span></span><code>αc = 0.25                                  si hw/lw ≤ 1.5
+αc = 0.25 − 0.08 · (hw/lw − 1.5) / 0.5     si 1.5 &lt; hw/lw &lt; 2.0
+αc = 0.17                                  si hw/lw ≥ 2.0
+</code></pre></div>
+<p>Por defecto la revisión usa <strong>α = 0.17</strong>, el más exigente y el que muestra la
+planilla VH. El α solo rige el corte <strong>en el plano (V2)</strong> de muros y machones;
+fuera del plano (V3) se usa siempre 0.17.</p>
+<p>La <strong>línea del α</strong> cierra la sección de la armadura transversal y está siempre. A la
+izquierda rotula el α vigente, «α = 0.17 (por defecto)» o «α = 0.21 (calculado con
+H = 3.50 m)», y a la derecha tiene dos botones, también siempre presentes:</p>
+<ul>
+<li><strong>Calcular α…</strong> (solo en muros y machones) abre la calculadora, una ventana
+  aparte, «Calcular α (ACI 318S-08 21.9.4.1)»: pide la altura <code>H</code> del muro y muestra
+  en vivo <code>lw</code>, <code>hw/lw</code> y <code>αc</code>, con un aviso fijo de que esa <code>H</code> no es el <code>hw</code> del
+  confinamiento. <strong>Usar α</strong> (o Enter) guarda el α y la <code>H</code> con que se calculó (queda
+  de trazabilidad) en el <code>.da9</code>, revisa el corte con él y cierra la ventana; se
+  deshabilita si la <code>H</code> no es un número mayor que 0. <strong>Cancelar</strong>, Escape o la X
+  cierran sin guardar nada. El α se guarda con <strong>4 decimales</strong> y la <code>H</code> con <strong>2</strong>
+  (0.2133 y 12.35 m, por ejemplo): es lo que el <code>.da9</code> escribe y vuelve a leer igual,
+  así que repetir «Usar α» con la misma <code>H</code> no reescribe el archivo.</li>
+<li><strong>Volver a 0.17</strong> quita el α guardado; está deshabilitado mientras no haya uno.</li>
+</ul>
+<p>Donde el α no aplica la línea sigue ahí, con sus dos botones deshabilitados:
+«α: no aplica (solo muros y machones)» en vigas, columnas y demás, y «α: sin
+cálculo» cuando el elemento no se calcula. Un muro de 2.0 m de largo y 3.5 m de alto
+tiene <code>hw/lw</code> = 1.75 y da α = 0.21.</p>
+<ul>
+<li><strong><code>H</code> propuesto</strong>: la <strong>altura total del muro</strong>, desde la base del pier en su
+  piso más bajo hasta su tope, medida en la elevación que está en pantalla. Sin
+  elevación del elemento (no hay <code>.iecdb</code> con la geometría del eje, o todavía no se
+  dibuja) el campo queda vacío y se ingresa a mano.</li>
+<li><strong><code>lw</code></strong>: el largo del elemento en su plano, el alto de su sección. Como no supera
+  el largo del muro entero, el <code>hw/lw</code> resulta igual o mayor que el que pide
+  21.9.4.2 (el mayor entre el del muro completo y el del tramo). Un <code>hw/lw</code> mayor
+  da un α menor o igual y más armadura: del lado seguro.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Este H no es el hw del confinamiento</p>
+<p>El <code>hw</code> del <a href="../confinamiento_ds60/">Confinamiento DS60</a> se mide desde la
+sección en estudio hasta el tope del muro. La <code>H</code> del α es la altura <strong>total</strong>
+del muro, desde su base. Son dos números distintos y se guardan por separado:
+cambiar uno no cambia el otro.</p>
+</div>
+<h2 id="chequeos">Chequeos de armadura diagonal y cuantía 2 ‰</h2>
+<p>Junto al corte, el panel repite por posición dos chequeos de la hoja VH0:</p>
+<table>
+<thead>
+<tr>
+<th>Chequeo</th>
+<th>Aplica a</th>
+<th>Criterio</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Armadura diagonal</strong> (21.9.7)</td>
+<td>Vigas y spandrels con <code>lflex/alto &lt; 2</code></td>
+<td><code>τ ≥ 0.33·√f'c</code> [MPa]</td>
+<td>«requiere (FU)» si el cociente llega a 1</td>
+</tr>
+<tr>
+<td><strong>Cuantía 2 ‰</strong> (21.9.2.1)</td>
+<td>Elementos verticales (pier o columna)</td>
+<td><code>τ2</code> y <code>τ3</code> bajo <code>0.083·√f'c</code> [MPa]</td>
+<td>«permitida (FU)»: se puede bajar la cuantía horizontal del 2.5 al 2 por mil</td>
+</tr>
+</tbody>
+</table>
+<p><code>τ = |V|/área</code> es el máximo de las cargas visibles de la posición (en secciones
+poligonales, sobre el rectángulo equivalente). El tooltip del nombre de la posición
+da <code>τ2</code> y <code>τ3</code> máximos con su combinación. Donde el chequeo no corresponde, el
+panel dice «no aplica»; sin la luz de flexión del modelo tampoco se puede decidir
+la armadura diagonal.</p>
+<h2 id="el-panel-de-corte">El panel de Corte</h2>
+<p>En la práctica, el recorrido por un elemento es este:</p>
+<ol>
+<li>Se navega hasta el elemento (←/→, o un clic en la planta o la elevación) y se
+   mira el <strong>punto rojo</strong> junto al botón <strong>◫ Corte</strong>.</li>
+<li>Se abre el panel. La cabecera dice si el elemento cumple con φ 0.60 y el
+   resumen, en qué dirección y con qué armadura.</li>
+<li>Se declara la armadura transversal que dicen los planos (mallas, estribo,
+   trabas), en todas las posiciones o en una sola. Mientras se escribe, el panel
+   muestra el resultado que daría.</li>
+<li>Se guarda con Enter o con <strong>Guardar</strong>, se pasa al elemento siguiente y, al
+   terminar, <strong>✓ Aceptar</strong>.</li>
+</ol>
+<h3 id="abrir-y-cerrar">Abrir y cerrar</h3>
+<p>El botón <strong>◫ Corte</strong> de la barra inferior, a la derecha de ◧ Confinamiento, abre el
+panel, que <strong>reemplaza la celda del FU 3D</strong> en su celda (1,1). Es la misma celda
+«comodín» que usan el <a href="../confinamiento_ds60/">Confinamiento</a> y el
+<a href="../editor_seccion/">armado por reglas</a>: uno a la vez. Abrir Corte cierra el
+Confinamiento y cancela el armado ⚙ si estaba abierto; el ⚙, al revés, aparta el
+panel de Corte y lo devuelve al cerrarse. El resto de la ventana no cambia: la
+planta, la elevación y la sección siguen a la vista.</p>
+<p>El botón queda <strong>resaltado</strong> mientras el panel está abierto, y un segundo clic lo
+cierra sin guardar ni revertir nada. El panel respeta el filtro Comb/Pos y se
+refresca al navegar entre elementos.</p>
+<p>Un <strong>punto rojo</strong> ● junto al botón avisa, con el panel abierto o cerrado, que <strong>con
+φ 0.60 y las cargas visibles algún FU del elemento supera 1</strong>: el de armadura o el
+de sección, en cualquier posición o dirección. Se actualiza al navegar, al cambiar
+el filtro y al editar la armadura. Sin cálculo posible no hay punto.</p>
+<h3 id="de-arriba-abajo">De arriba abajo</h3>
+<p>El panel <strong>no cambia de forma</strong>. Todo lo que hay sobre el detalle mide lo mismo y
+está siempre en el mismo lugar, sea el elemento un muro, un machón, una viga o una
+columna, haya algo tipeado o no, un α guardado o no. Lo que no aplica al elemento
+(las mallas de una viga, el α de una columna) queda en su sitio, deshabilitado y
+atenuado. Cada línea de texto reserva su alto aunque esté vacía y, si lo que dice
+no cabe, termina en «…» y el texto completo va en su tooltip. Solo lo de alto
+variable (el detalle, los chequeos y los avisos) va al final.</p>
+<ul>
+<li><strong>Cabecera fija</strong>: el título y, a la derecha, el <strong>veredicto</strong> <code>FU máx x.xx ✓/✗</code>:
+  el mayor entre el FU de armadura y el de sección con φ 0.60, en verde si cumple y
+  en rojo si no. Es el mismo criterio del punto rojo. Sin cálculo, dice «Sin
+  cálculo» y debajo el <a href="#requisitos">motivo</a>, que agranda la cabecera y baja el
+  cuerpo entero lo que ocupa.</li>
+<li><strong>Resumen por dirección</strong>: una tarjeta para <strong>V2 · en el plano</strong> y otra para
+  <strong>V3 · fuera del plano</strong>, con <strong>φ 0.60 y φ 0.75 lado a lado</strong>. Cada una muestra
+  la armadura de la posición que gobierna con φ 0.60 tal como aporta en esa
+  dirección (con «(por defecto)» si es el supuesto, o solo en el componente que lo
+  es si el set <a href="#origen-por-componente">mezcla orígenes</a>; en dos líneas como máximo), su
+  <code>Adis</code>, qué posición gobierna y las filas <strong>FU armadura</strong> y <strong>FU sección</strong> de
+  cada φ, con ✓ o ✗ y en rojo si no cumplen. Sin cálculo no se oculta: muestra «—»
+  en cada valor, con el mismo alto.</li>
+<li><strong>Armadura transversal</strong>: el editor, con la línea del α al final; ver abajo.</li>
+<li><strong>Detalle por posición</strong>: la tabla, con el selector de φ (0.60 | 0.75) a la
+  derecha del título. El selector solo cambia esta tabla; el veredicto y el punto
+  rojo usan siempre φ 0.60.</li>
+<li><strong>Chequeos por posición</strong>: la armadura diagonal y la cuantía 2 ‰.</li>
+<li><strong>Avisos</strong> en amarillo, por ejemplo cuando la sección poligonal se revisa con el
+  rectángulo equivalente, o cuando el <code>.da9</code> trae armadura para una posición que el
+  elemento no tiene (no se usa).</li>
+</ul>
+<p>Una botonera fija al pie cierra el formulario: <strong>✓ Aceptar</strong> y <strong>Cancelar</strong>.</p>
+<h3 id="editar-la-armadura-transversal">Editar la armadura transversal</h3>
+<p>Bajo <strong>Armadura transversal</strong> se elige a qué se aplica lo que se edita, con el
+selector <strong>Aplicar a</strong>: <strong>Todas</strong> (el set general) o una posición (<code>p1</code>..<code>p5</code>,
+<code>Top</code>, <code>Bottom</code>...). Con más de siete opciones el selector pasa a ser un
+desplegable. Los campos parten de lo que <strong>rige</strong> en esa posición (su set, el
+general o el por defecto), para que lo que se ve sea lo que se calcula. La sección
+transversal dibuja lo mismo que muestran los campos: ver
+<a href="#dibujo-en-la-seccion">El dibujo en la sección</a>.</p>
+<p>Bajo el selector va la <strong>línea de origen</strong>, que dice qué set se está viendo y de
+dónde sale: «Set general · origen: manual», «p1: ajuste propio · origen: manual»,
+«p3: rige el set general · origen: directo», «p3: rige la armadura por defecto».
+Si el set <a href="#origen-por-componente">mezcla orígenes</a> lo agrega al final: «Set general
+· origen: directo · trabas V3 por defecto». A su derecha está el botón <strong>Quitar ajuste</strong>, que no desaparece nunca: se habilita
+solo si hay algo que quitar (en una posición, su set propio; en «Todas», el set
+general) y, si no, queda deshabilitado en su lugar.</p>
+<p>Las cuatro filas comparten las mismas tres columnas: <strong>cantidad</strong> (mallas, ramas o
+trabas), <strong>ø</strong> y <strong>@</strong>. Están siempre las cuatro. En lo que no es muro ni machón la
+fila de <strong>Mallas</strong> queda en su lugar con los campos deshabilitados y vacíos y los
+textos atenuados; su tooltip dice que las mallas solo aportan en muros y machones.</p>
+<table>
+<thead>
+<tr>
+<th>Fila</th>
+<th>Campos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mallas</strong> (solo muros y machones)</td>
+<td>número de mallas, ø [mm], @ [cm]</td>
+</tr>
+<tr>
+<td><strong>Estribo</strong></td>
+<td>ramas (opcional; 2 si se omite), ø [mm], @ [cm]</td>
+</tr>
+<tr>
+<td><strong>Trabas V2</strong></td>
+<td>cantidad, ø [mm], @ [cm]</td>
+</tr>
+<tr>
+<td><strong>Trabas V3</strong></td>
+<td>cantidad, ø [mm], @ [cm]</td>
+</tr>
+</tbody>
+</table>
+<p>Una fila con todos sus campos vacíos no existe: vaciar una fila la quita del set.
+Un campo con algo que no es un número mayor que 0 se marca en rojo; una fila a
+medias avisa «Completa …: le faltan datos.».</p>
+<p>Bajo los campos va la <strong>línea de estado</strong>, con el botón <strong>Guardar</strong> a la derecha, y
+al final la línea del α (ver <a href="#coeficiente-alfa">El coeficiente α</a>). La línea de
+estado reserva su lugar aunque no diga nada: lo que dice (la pista de qué falta o
+que hay una vista previa) aparece y desaparece sin mover los campos ni los botones.</p>
+<ul>
+<li><strong>Vista previa.</strong> Al escribir, el panel recalcula con lo tipeado (tras una pausa
+  breve) y lo marca con «· vista previa» en el veredicto y «Vista previa sin
+  guardar.» en la línea de estado. La sección repinta la armadura tipeada, con
+  «· vista previa» en su leyenda. No toca el <code>.da9</code>. Con un campo inválido, o sin
+  cambios, vuelve al resultado guardado, y la sección también.</li>
+<li><strong>Guardar.</strong> El botón <strong>Guardar</strong> (se habilita cuando hay cambios válidos), Enter o
+  salir del campo dejan la armadura en el <code>.da9</code> de inmediato, con origen <code>manual</code>.
+  Se guarda el set completo que muestran los campos, también lo que no se tocó de la
+  armadura por defecto o de un set que <a href="#origen-por-componente">mezcla orígenes</a>: todo
+  queda <code>manual</code>. Se guarda al momento y no al cerrar: por eso <strong>Cancelar</strong> la
+  revierte reescribiendo el archivo.</li>
+<li><strong>Quitar ajuste.</strong> Quita el set de la posición elegida y vuelve a regir el general
+  (o la armadura por defecto); en «Todas» quita el general.</li>
+<li><strong>Lo que queda sin guardar.</strong> Cambiar de posición guarda antes lo pendiente de la
+  posición que se deja, si es válido. Navegar a otro elemento o cerrar con el propio
+  botón <strong>◫ Corte</strong> <strong>descarta</strong> lo que siga como «Vista previa sin guardar», y
+  navegar además vuelve el selector a «Todas»: para conservarlo, Enter, <strong>Guardar</strong>
+  o <strong>✓ Aceptar</strong>.</li>
+</ul>
+<h3 id="detalle-por-posicion">Detalle por posición</h3>
+<p>La tabla muestra el detalle del φ elegido en el selector de su título (φ 0.60 al
+abrir), con dos líneas por posición y dirección:</p>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Comb gob</code></td>
+<td>Combinación que gobierna el As 11 (la de mayor Vs); «As mín» si ninguna pide As 11 &gt; 0</td>
+</tr>
+<tr>
+<td><code>d [m]</code></td>
+<td>Altura útil</td>
+</tr>
+<tr>
+<td><code>Sep máx [cm]</code></td>
+<td>Separación máxima (11.4.5) para la carga que gobierna</td>
+</tr>
+<tr>
+<td><code>@ prov [cm]</code></td>
+<td>Mayor @ provisto en la dirección; rojo si excede la separación máxima</td>
+</tr>
+<tr>
+<td><code>FU sec</code></td>
+<td>FU de sección de la carga que gobierna; rojo si supera 1</td>
+</tr>
+<tr>
+<td><code>As mín</code>, <code>As11</code>, <code>As21</code></td>
+<td>Las tres demandas [cm²/m]</td>
+</tr>
+<tr>
+<td><code>Adis</code></td>
+<td>Armadura transversal provista en la dirección [cm²/m]</td>
+</tr>
+<tr>
+<td><code>FU As</code></td>
+<td>Mayor demanda dividida por <code>Adis</code>; rojo si supera 1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">El @ provisto sobre la separación máxima no entra al veredicto</p>
+<p>Un <code>@ prov</code> en rojo avisa que la separación provista supera la máxima de norma,
+pero <strong>no cambia el FU ni enciende el punto rojo</strong>: la cuantía <code>As/s</code> puede
+alcanzar con barras gruesas muy separadas y aun así no cumplir 11.4.5. Conviene
+mirar esa columna aunque el veredicto esté en verde.</p>
+</div>
+<h3 id="aceptar-y-cancelar">Aceptar y Cancelar</h3>
+<ul>
+<li><strong>✓ Aceptar</strong> guarda lo que esté pendiente y cierra. Si lo pendiente no es válido
+  (un campo en rojo, una fila a medias) no cierra y avisa «Datos inválidos», para
+  no perder en silencio lo tipeado.</li>
+<li><strong>Cancelar</strong> devuelve el elemento en pantalla a como estaba cuando el panel entró
+  a él (al abrirse, o al navegar hasta él con el panel abierto): descarta lo que
+  quedó sin guardar y revierte lo ya guardado desde entonces, el α incluido,
+  reescribiendo el <code>.da9</code>. Lo guardado en otros elementos durante la sesión no se
+  toca. Si el <code>.da9</code> no se puede escribir (está abierto en otro programa, por
+  ejemplo), avisa «No se pudo revertir» y <strong>no cierra</strong>: el panel sigue a la vista
+  para reintentar.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">↺ Deshacer</p>
+<p>Guardar la armadura escribe el <code>.da9</code> fuera de la pila de ↺ Deshacer, que
+restaura el archivo entero. Si se deshace un armado anterior, la armadura
+guardada después se pierde; curvaw lo avisa antes («Hay cambios posteriores»).</p>
+</div>
+<h2 id="dibujo-en-la-seccion">El dibujo en la sección</h2>
+<p>La celda de <strong>Sección Transversal</strong> dibuja la armadura transversal: <strong>estribo,
+mallas y trabas</strong>, sobre el relleno y bajo las barras, en líneas de color
+violeta claro que ninguna otra capa de la celda usa. La leyenda fija la rotula.
+Se dibuja con el panel de Corte abierto o cerrado, con la misma orientación que
+las barras (canónica o <a href="../orientacion_planta/">en planta</a>); no se dibuja con el
+panel de Confinamiento abierto, que oculta las barras, ni durante el armado ⚙ de
+la celda.</p>
+<ul>
+<li><strong>Estilo.</strong> Las líneas son gruesas y opacas, para que se vean entre los puntos
+  de las barras. Las <strong>trabas</strong> van un poco más gruesas que las <strong>mallas</strong>: en un
+  muro cruzan de una malla a la otra en los extremos y, con el mismo trazo, el
+  conjunto parecería un estribo cerrado. Línea <strong>continua</strong> si la armadura sale
+  de un dato; <strong>punteada y algo más tenue</strong> si es la armadura por defecto: se ve,
+  pero no se confunde con un dato de los planos. El estilo es <strong>de cada
+  componente</strong>: en un set que <a href="#origen-por-componente">mezcla orígenes</a>, la malla
+  del plano va continua y las trabas por defecto, punteadas.</li>
+<li><strong>Qué se dibuja con el panel cerrado.</strong> La armadura de la posición de la carga
+  activa: la carga marcada con un clic en las curvas o, si no hay ninguna, la
+  crítica del FU 3D; sin cargas, la primera posición del elemento. Al cambiar de
+  carga cambia el dibujo si las posiciones tienen sets distintos.</li>
+<li><strong>Qué se dibuja con el panel abierto.</strong> La sección <strong>sigue al editor</strong> y
+  muestra exactamente lo que muestran sus campos: la armadura que rige en la
+  posición elegida en <strong>Aplicar a</strong> (con <strong>Todas</strong>, el set general o, sin él, el
+  por defecto) y, mientras hay una <strong>vista previa</strong> válida, el set tipeado. Se
+  repinta al elegir otra posición y tras la pausa breve de la vista previa, no en
+  cada tecla; al guardar, quitar el ajuste, cancelar o aceptar muestra lo que
+  quedó guardado, y al cerrar el panel vuelve a la posición de la carga activa.</li>
+<li><strong>Es lo que se calcula.</strong> Lo que se dibuja es la armadura con que se revisa esa
+  posición. Solo la ubicación de las trabas es del dibujo y no entra en ningún
+  cálculo.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Cómo se dibuja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Estribo</strong></td>
+<td>Rectángulo por los centros de las barras extremas, corrido hacia afuera medio diámetro de la barra más gruesa de cada lado más medio diámetro del estribo, para que las abrace. En una sección circular, el círculo concéntrico que abraza a la barra más lejana.</td>
+</tr>
+<tr>
+<td><strong>Mallas</strong></td>
+<td>Líneas a lo largo del alto, entre las barras extremas: una malla va al centro del espesor; dos o más, repartidas parejo entre las dos caras. Solo secciones rectangulares.</td>
+</tr>
+<tr>
+<td><strong>Trabas</strong></td>
+<td>Segmentos esquemáticos y parejos, caigan o no sobre una barra: las de V2 paralelas al alto, repartidas a lo ancho; las de V3 paralelas al ancho (a través del espesor), repartidas a lo alto.</td>
+</tr>
+</tbody>
+</table>
+<p>La ubicación de las trabas es una <strong>propuesta esquemática y pareja</strong>: no
+depende de dónde estén las barras. Sobre el rectángulo por los centros de las
+barras extremas, <code>N</code> trabas V3 son <code>N</code> segmentos horizontales de una cara a la
+otra, a <code>1/(N+1)</code>, <code>2/(N+1)</code>... del alto (una va al medio; dos, a un tercio y a
+dos tercios), y <code>N</code> trabas V2 son <code>N</code> segmentos verticales repartidos igual a lo
+ancho. Ninguna cae sobre el perímetro, donde el estribo ya pone su rama. En un
+muro, las de V3 cruzan el espesor de una malla a la otra. En una sección
+circular son cuerdas parejas del círculo por los centros de las barras. Si el
+set tiene varios grupos de trabas en una dirección (solo con un <code>.da9</code> editado a
+mano), se reparte el total y cada grupo toma sus posiciones en orden, sin
+encimarse. Si el <code>.da9</code> trae la ubicación guardada, manda esa y no entra en el
+reparto.</p>
+<p>En una <strong>sección poligonal</strong> (L, T, C...) no se dibujan el estribo ni las mallas,
+porque no se define el contorno del estribo ni por dónde corre la malla; las trabas
+solo si traen ubicación guardada. Sin barras longitudinales no se dibuja nada que se
+apoye en ellas. Lo que no se puede dibujar sale en la leyenda como «Sin dibujar»
+(ver <a href="#leyenda-transversal">más abajo</a>): el cálculo no depende del dibujo.</p>
+<h3 id="leyenda-transversal">La leyenda de la armadura transversal</h3>
+<p>Con el panel cerrado es <strong>una sola entrada</strong>, para no cargar la vista de
+flexo-compresión: <strong>Arm. transversal</strong>, o <strong>Arm. transversal (por defecto)</strong> con
+su línea punteada. Si el set <a href="#origen-por-componente">mezcla orígenes</a> y el dibujo
+tiene los dos estilos, son <strong>dos entradas</strong>, una continua y otra punteada, para que
+cada estilo tenga la suya. Con el panel abierto, que es cuando se está editando esa
+armadura, la leyenda la describe componente por componente, debajo de los
+diámetros de las barras:</p>
+<table>
+<thead>
+<tr>
+<th>Entrada</th>
+<th>Qué dice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Encabezado</strong> (sin línea, en el violeta del dibujo)</td>
+<td>«Arm. transversal», más «(por defecto)» si TODO el set es el supuesto, «· p1» (la posición) o «· todas» (el set general) y «· vista previa» si es lo tipeado sin guardar</td>
+</tr>
+<tr>
+<td><strong>Un componente dibujado</strong></td>
+<td>Con el estilo de línea de su origen y el texto que se lee en los planos: «Estribo ø10 @15», «Doble malla ø8 @25», «2 trabas ø8 @25 (V3)»; si el set mezcla orígenes, el componente por defecto lleva además su «(por defecto)»</td>
+</tr>
+<tr>
+<td><strong>Un componente sin dibujar</strong></td>
+<td>Al final, atenuada y sin línea: «Sin dibujar: 1 traba ø10 @15 (V2)»</td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo, tras tipear un estribo y una traba en una viga de cuatro barras de
+esquina, la leyenda dice:</p>
+<div class="highlight"><pre><span></span><code>Arm. transversal · p1 · vista previa
+Estribo ø10 @15
+1 traba ø10 @15 (V2)
+</code></pre></div>
+<p>La traba se dibuja al medio del ancho. En una sección poligonal, en cambio, ese
+mismo set sale como «Sin dibujar: estribo ø10 @15» y «Sin dibujar: 1 traba
+ø10 @15 (V2)».</p>
+<p>La de un muro con la malla del plano y trabas por defecto, cuyo dibujo lleva la
+malla continua y las trabas punteadas, dice:</p>
+<div class="highlight"><pre><span></span><code>Arm. transversal · todas
+Doble malla ø10 @20
+2 trabas ø8 @25 (V3) (por defecto)
+</code></pre></div>
+<p>El encabezado no dice «(por defecto)» porque no todo el set lo es; la marca va en el
+componente que sí.</p>
+<p>Lo que no se puede dibujar no se esconde: sale en la leyenda como «Sin dibujar».
+Una sección rectangular o circular con barras dibuja siempre todas sus trabas
+(una traba V2 en una viga con barras solo en las esquinas va al medio del
+ancho). Queda sin dibujar lo que depende de lo que no hay: en una sección
+poligonal, el estribo, las mallas y las trabas sin ubicación guardada; y en una
+sección sin barras longitudinales, o con todas sobre una línea, lo que se apoya
+en ellas. Un grupo de trabas del que se dibuja solo una parte (una sección
+poligonal con menos ubicaciones guardadas que trabas) se rotula entero y,
+aparte, las que faltan («3 trabas ø8 @15 (V3)» y «Sin dibujar: 2 trabas ø8 @15
+(V3)»), para leer cuántas hay y cuántas se ven. El cálculo cuenta siempre todas
+las del set.</p>
+<div class="admonition note">
+<p class="admonition-title">Leyenda en celdas chicas</p>
+<p>La leyenda va anclada arriba a la izquierda de la celda, sobre el dibujo y
+semitransparente, sin desplazarlo. Con el panel abierto tiene más líneas que
+con el cerrado: en una ventana chica puede cubrir parte de la esquina
+superior izquierda de la sección. Con la rueda del mouse (zoom) y el botón
+medio (desplazar) se corre el dibujo de debajo de la leyenda.</p>
+</div>
+<h2 id="grafico-corte-por-carga">El gráfico de corte por carga</h2>
+<p>El panel resume cada posición por la carga que gobierna. Para ver <strong>todas las
+cargas a la vez</strong> contra la armadura provista, la celda <strong>Curva 3D</strong> tiene un
+tercer modo: el selector de su título pasa a <strong>3D | Slice | Corte</strong> y la celda se
+titula «Corte por carga». Es solo una vista: no cambia ningún cálculo ni el
+veredicto, y usa los mismos datos, el mismo α y el mismo filtro Comb/Pos que el
+panel.</p>
+<h3 id="que-muestra">Qué muestra</h3>
+<p>Dos paneles, <strong>V2 · en el plano</strong> y <strong>V3 · fuera del plano</strong>, con φ 0.60 (el del
+veredicto y el punto rojo). Cada uno tiene una <strong>columna por posición</strong>, en el
+orden en que aparecen en el elemento (<code>p1</code>..<code>p5</code>, <code>Top</code> y <code>Bottom</code>...), y en ella
+<strong>un punto por carga</strong>. La altura del punto es la <strong>armadura que esa carga
+requiere</strong> [cm²/m]: la mayor entre As mín, As 11 y As 21, que es el numerador del
+FU de armadura. La línea de arriba lo dice: «φ 0.60 · As requerida por carga vs
+provista».</p>
+<table>
+<thead>
+<tr>
+<th>Marca</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Punto <strong>verde</strong></td>
+<td>La armadura provista en su posición cubre lo que la carga requiere (FU As ≤ 1)</td>
+</tr>
+<tr>
+<td>Punto <strong>rojo</strong></td>
+<td>No lo cubre (FU As &gt; 1)</td>
+</tr>
+<tr>
+<td><strong>×</strong> blanca sobre un punto</td>
+<td>Además falla por sección (FU sección &gt; 1): el puntal de hormigón no da, y eso no se arregla con armadura</td>
+</tr>
+<tr>
+<td><strong>Escalón violeta</strong></td>
+<td>La armadura provista en esa posición, a la altura de su <code>Adis</code>; punteado si ese <code>Adis</code> sale solo de componentes por defecto (<a href="#armadura-por-defecto">armadura por defecto</a>), igual que en la sección. Con un set que <a href="#origen-por-componente">mezcla orígenes</a> cada dirección lleva el suyo: en un muro con la malla del plano y trabas por defecto, continuo en V2 y punteado en V3</td>
+</tr>
+<tr>
+<td>Tinte rojo sobre el escalón</td>
+<td>Lo que queda arriba es lo que esa armadura no cubre</td>
+</tr>
+<tr>
+<td>Línea gris punteada</td>
+<td>El As mín, con su valor a la izquierda; no hay en un muro fuera del plano</td>
+</tr>
+</tbody>
+</table>
+<p>Dentro de la columna las cargas se reparten a lo ancho <strong>por axial</strong>: tracción a
+la izquierda y compresión a la derecha, con el <strong>mismo rango de P en todas las
+columnas</strong>, el de todas las cargas del elemento (también las que el filtro
+oculta). Un mismo P cae siempre en la misma posición relativa de su columna, y
+filtrar esconde puntos pero no mueve los que quedan. El eje de As de cada panel
+va de 0 a 1.15 veces lo mayor entre lo requerido y lo provisto, con su propia
+escala.</p>
+<h3 id="como-leerlo">Cómo leerlo</h3>
+<ul>
+<li>Una posición <strong>cumple</strong> si todos los puntos de su columna quedan bajo el
+  escalón. Los rojos, sobre él, son las cargas que la armadura no cubre, y la
+  distancia al escalón es cuánta armadura les falta.</li>
+<li>El título de cada panel lleva, a la derecha, cuántas cargas superan lo
+  provisto: «16/98 ✗» en rojo si alguna lo supera, «0/98 ✓» en verde si no. Si
+  además alguna falla por sección (las que llevan ×), un «× 3» blanco lo advierte
+  junto al conteo; si ninguna, no aparece.</li>
+<li>Los puntos que se alinean sobre la línea del As mín son cargas que no piden más
+  que el mínimo.</li>
+<li>Un escalón a altura 0 es una posición <strong>sin armadura en esa dirección</strong> (por
+  ejemplo, con solo mallas, que no aportan a V3): toda carga con demanda queda
+  sobre él.</li>
+</ul>
+<h3 id="hover-y-clic">Hover y clic</h3>
+<ul>
+<li><strong>Pasar el mouse</strong> por un punto muestra su tarjeta: combinación, posición, P, el
+  corte de su dirección con el momento que lo acompaña (V2 con M3, V3 con M2), las
+  tres demandas (As mín, As 11 y As 21, con ◄ la que manda), la <code>Adis</code> provista y
+  qué armadura es (con «(por defecto)» si es el supuesto, o en el componente que lo
+  es si el set <a href="#origen-por-componente">mezcla orígenes</a>) y los dos FU, el de
+  armadura y el de sección. Con varios puntos casi encima, muestra el más cercano
+  al cursor.</li>
+<li><strong>Clic</strong> sobre un punto: esa carga pasa a ser la <strong>carga activa</strong>, como con un
+  clic en las curvas o en el Slice. Se marca en los dos paneles con el anillo y la
+  X, el recorrido (P, θ) la sigue y la sección dibuja su eje neutro y la armadura
+  transversal de su posición. Un clic en vacío dentro de un panel la suelta.</li>
+</ul>
+<h3 id="cuando-se-actualiza">Cuándo se actualiza</h3>
+<p>Se calcula y se dibuja <strong>solo con el modo Corte activo</strong>, y se actualiza al:</p>
+<ul>
+<li>navegar a otro elemento (los ejes no se mueven: cambian los datos, no el
+  gráfico);</li>
+<li>cambiar el filtro Comb/Pos;</li>
+<li>guardar o quitar la armadura transversal, o cambiar el α;</li>
+<li><strong>escribir en el panel de Corte</strong>: con una vista previa válida el gráfico usa la
+  armadura tipeada, la misma candidata que revisa el panel y dibuja la sección. El
+  escalón se mueve y los puntos cambian de color mientras se escribe (tras la
+  pausa breve de la vista previa, no en cada tecla), sin guardar nada. Al guardar
+  queda lo guardado y, al descartar o cerrar el panel, vuelve a lo que había.</li>
+</ul>
+<p>En este modo no se muestran los sliders de P y θ, que no aplican al gráfico, y los
+botones <strong>⌖ FU</strong> y <strong>⌖ Pu</strong> quedan deshabilitados. La rueda del mouse hace zoom en
+el panel bajo el cursor y el botón medio lo desplaza, como en las otras celdas.</p>
+<p>El gráfico <strong>no depende de la curva 3D</strong>: se dibuja aunque el barrido angular no
+esté calculado y aunque el elemento no tenga armadura longitudinal o su
+flexo-compresión haya dado error. Cuando no se puede calcular el corte (los mismos
+<a href="#requisitos">requisitos</a> del panel: sin cortes del <code>.iecdb</code>, <code>f'c</code>
+desconocido...), la celda dice «Sin cálculo» y, debajo, el motivo, centrado.</p>
+<h2 id="requisitos">Requisitos y cuándo no se calcula</h2>
+<p>La revisión necesita, de cada elemento:</p>
+<ul>
+<li><strong>Los esfuerzos del <code>.iecdb</code></strong>: P, V2, V3, M2 y M3 de cada combinación y posición,
+  recombinados desde los casos de carga elemental sin abrir ETABS. Es la <strong>única
+  fuente que trae V2 y V3</strong>: los esfuerzos embebidos en un <code>.da9</code> histórico y los
+  del <code>.pre</code>, que está deprecado, no los llevan. Ver
+  <a href="../introduccion/#fuentes-de-esfuerzos">Fuentes de esfuerzos</a>. Las partes que
+  crea ⫽ (<a href="../editor_seccion/#descomponer-por-posicion-boton">Descomponer</a>, como
+  <code>V101/p1p2</code>) son la excepción: con un <code>.iecdb</code> resuelto toman siempre sus
+  esfuerzos de él, aunque traigan copia en el <code>.da9</code>.</li>
+<li><strong>La geometría del modelo</strong> que trae el <code>.iecdb</code> (tipo, ancho, alto, área, luz de
+  flexión y material): la usan las secciones poligonales, la esbeltez <code>lflex/alto</code>
+  de la armadura diagonal y la clasificación de vigas y verticales.</li>
+<li><strong><code>f'c</code> y <code>fy</code> válidos en el <code>.da9</code>.</strong></li>
+</ul>
+<p>Que el elemento no tenga armadura longitudinal, o que su flexo-compresión haya
+dado error de cálculo, <strong>no impide</strong> revisar el corte. Cuando algo falta, el panel
+no calcula, dice «Sin cálculo» en la cabecera y da el motivo:</p>
+<table>
+<thead>
+<tr>
+<th>Motivo</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sin cortes V2/V3: la revisión de corte requiere los esfuerzos del .iecdb (el .pre y los esfuerzos del .da9 no los traen)</td>
+<td>Los esfuerzos del elemento salen del <code>.da9</code> o del <code>.pre</code>. Hay que abrir el <code>.da9</code> limpio, con el <code>.iecdb</code> del proyecto y sin un <code>.pre</code> que cubra al elemento.</td>
+</tr>
+<tr>
+<td>Los cortes no coinciden fila a fila con los esfuerzos del elemento</td>
+<td>V2 y V3 no calzan con las combinaciones y posiciones: se rechaza, porque se leería el corte de una carga junto al momento de otra.</td>
+</tr>
+<tr>
+<td>El elemento no tiene esfuerzos cargados</td>
+<td>Ninguna fuente le puso esfuerzos.</td>
+</tr>
+<tr>
+<td>Ninguna carga cumple el filtro de combinación/posición</td>
+<td>El filtro Comb/Pos lo dejó sin cargas visibles.</td>
+</tr>
+<tr>
+<td>f'c desconocido en el .da9</td>
+<td>El grado de hormigón no está en el catálogo (pretoda9 escribe <code>f'c = 1</code>). Sin <code>f'c</code> no hay Vc; pretovh omite igual el elemento.</td>
+</tr>
+<tr>
+<td>fy inválido en el .da9</td>
+<td><code>fy</code> ausente o no positivo.</td>
+</tr>
+<tr>
+<td>Sección variable (no prismática)</td>
+<td>No hay una sección que revisar.</td>
+</tr>
+<tr>
+<td>Error de lectura del elemento en el .da9</td>
+<td>El parser rechazó el elemento; el detalle del error se ve en la celda de la curva.</td>
+</tr>
+<tr>
+<td>Sección poligonal sin la geometría del modelo</td>
+<td>Falta el <code>.iecdb</code>, de donde sale el rectángulo equivalente.</td>
+</tr>
+<tr>
+<td>El elemento no tiene sección, o no tiene dimensiones válidas</td>
+<td>Sin sección no hay nada que revisar.</td>
+</tr>
+</tbody>
+</table>
+<p>Con error de lectura o sección variable el editor de la armadura tampoco se ofrece;
+con los demás motivos se puede declarar la armadura aunque todavía no haya cálculo.</p>
+<h2 id="alcance">Alcance y pendientes</h2>
+<p>La revisión replica el VH, incluidas algunas elecciones suyas que ACI 318-08 no
+respalda del todo o que el equipo aún no define. Se mantienen tal cual para que
+curvaw y la planilla den lo mismo, hasta que se decida:</p>
+<ul>
+<li><strong>V3 en muros y machones.</strong> Fuera del plano, el VH usa 11.9 y 21.9.4.1 con las
+  dimensiones intercambiadas (<code>bw</code> = alto, <code>lw</code> = ancho); ACI 318-08 11.9.1 manda
+  ese corte a las disposiciones de losas (11.11 → 11.2). Un efecto visible: con <code>d</code>
+  calculado sobre el espesor, la separación máxima de V3 sale muy chica (8 cm en un
+  muro de 0.20 m) y el <code>@ prov</code> aparece en rojo con frecuencia.</li>
+<li><strong>FU de sección en muros.</strong> El VH usa 11.4.7.9, el límite de las vigas sobre
+  <code>Vs</code>; para muros aplican 11.9.3 y 21.9.4.4, sobre <code>Vn</code>.</li>
+<li><strong>Secciones compuestas (L, T, C...).</strong> Se revisan con el rectángulo equivalente
+  del modelo (<code>ancho</code>, <code>alto</code> y <code>área</code> del <code>.iecdb</code>, lo mismo que usa el VH), y el
+  panel lo avisa. Falta definir qué alma toma cada dirección.</li>
+<li><strong>Trabas sin edición con clic.</strong> Su ubicación es la propuesta o la guardada en el
+  <code>.da9</code>: todavía no se mueven con el mouse en la sección.</li>
+<li><strong>Columnas y piers que el <code>.da9</code> tiene como columna, sin prellenado.</strong> La armadura
+  desde los planos cubre muros, machones y vigas. Un pier que el <code>.da9</code> clasifica
+  como columna por su razón de aspecto no la recibe aunque el plano traiga su malla
+  (el informe lo lista), y los estribos de las columnas no salen de los planos.</li>
+<li><strong>Solo en la GUI.</strong> <code>curvaw-batch</code> y el reporte HTML aún no incluyen el corte, ni
+  hay filtro por FU de corte ni coloreo en la planta y la elevación. Tampoco hay
+  todavía un CLI que aplique la armadura desde los planos al <code>.da9</code>: hoy se hace
+  desde «Plantilla por tipo».</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../confinamiento_ds60/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Confinamiento DS60">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Confinamiento DS60
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../tensiones/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Filtro por tensiones">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Filtro por tensiones
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Parte de esta documentación fue redactada con asistencia de IA y puede contener errores. Ante cualquier duda, prevalece el comportamiento real del software y el criterio del ingeniero.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://cl.linkedin.com/company/iec-ingenier-a-s.a." target="_blank" rel="noopener" title="cl.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iec-ingenieria" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<iec@iec.cl>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.path", "navigation.top", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tabs.sticky", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

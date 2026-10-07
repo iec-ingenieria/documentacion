@@ -1,0 +1,5394 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iec-ingenieria.github.io/documentacion/edbtodxf/cli/">
+      
+      
+        <link rel="prev" href="../introduccion/">
+      
+      
+        <link rel="next" href="../../clis/introduccion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo_iec.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>CLI - Documentación Software IEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cli" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Documentación Software IEC" class="md-header__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación Software IEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CLI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/iec-ingenieria/iec-apps" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentación Software IEC" class="md-nav__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    Documentación Software IEC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/iec-ingenieria/iec-apps" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🆕 Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1️⃣ dxftoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1️⃣ dxftoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prepinchado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prepinchado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuración
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Básica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion_avanzada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avanzada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dxftoedb1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/planos_grilla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planos Grilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/grilla_excel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grilla Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herramientas LISP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Herramientas LISP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/instalacion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prelosa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prelosa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/motes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/problemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problemas Frecuentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/ideas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2️⃣ edbtopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2️⃣ edbtopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3️⃣ pretovh
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3️⃣ pretovh
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4️⃣ edbtoinf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4️⃣ edbtoinf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/uso_gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/parametros_sismicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros sísmicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/parametros_geometricos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros geométricos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/control_desplazamientos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control de desplazamientos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/drift_centro_masa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drift del centro de masa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/multitorre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos multi-torre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/derivas_html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte HTML de derivas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/formato_drift/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .drift
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5️⃣ tatoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5️⃣ tatoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/salidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Salidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6️⃣ curvaw
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6️⃣ curvaw
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/formato_da9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .da9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/orientacion_planta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientación en planta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/factor_utilizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factor de utilización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/recorrido_eje_neutro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recorrido del eje neutro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/confinamiento_ds60/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confinamiento DS60
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/corte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisión de corte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/tensiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtro por tensiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/editor_seccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor de sección
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/visor_dxf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visores de planos DXF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI (modo batch)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7️⃣ pretoda9
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7️⃣ pretoda9
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8️⃣ pritopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    8️⃣ pritopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9️⃣ edbtodxf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    9️⃣ edbtodxf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-anotar-elevaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli anotar-elevaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-anotar-plantas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli anotar-plantas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-separar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli separar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-mapaejes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli mapaejes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-mapaejes-plantas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli mapaejes-plantas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-armaduras-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli armaduras-corte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="planos-cli armaduras-corte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-lee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué lee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-escribe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué escribe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dialectos-de-dibujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dialectos de dibujo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventario-lo-que-el-dialecto-no-entiende" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventario: lo que el dialecto no entiende
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-falla-la-lectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si falla la lectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-lo-leido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Límites de lo leído
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-con-la-skill-prellenar-armaduras-vh1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencias con la skill prellenar-armaduras-vh1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paridad-con-la-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paridad con la skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-mallas-verticales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli mallas-verticales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="planos-cli mallas-verticales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-escribe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué escribe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-se-lee-un-rotulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se lee un rótulo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-falla-la-lectura_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si falla la lectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⌨️ CLIs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⌨️ CLIs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso headless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/normas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primitivas de norma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/autoupdate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auto-update
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧰 Otras herramientas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧰 Otras herramientas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_14_1" id="__nav_14_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    anclajes (externa)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    anclajes (externa)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/datos_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/resultados_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/compresion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/traccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/ingreso_xlsx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ingreso Cargas XLSX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎤 Presentaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comandos-autocad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📐 Comandos Autocad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../directorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📁 Directorios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-anotar-elevaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli anotar-elevaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-anotar-plantas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli anotar-plantas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-separar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli separar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-mapaejes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli mapaejes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-mapaejes-plantas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli mapaejes-plantas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-armaduras-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli armaduras-corte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="planos-cli armaduras-corte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-lee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué lee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-escribe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué escribe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dialectos-de-dibujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dialectos de dibujo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventario-lo-que-el-dialecto-no-entiende" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventario: lo que el dialecto no entiende
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-falla-la-lectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si falla la lectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-lo-leido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Límites de lo leído
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-con-la-skill-prellenar-armaduras-vh1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencias con la skill prellenar-armaduras-vh1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paridad-con-la-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paridad con la skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planos-cli-mallas-verticales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        planos-cli mallas-verticales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="planos-cli mallas-verticales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-escribe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué escribe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-se-lee-un-rotulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se lee un rótulo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-falla-la-lectura_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si falla la lectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    🏠 Inicio
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../introduccion/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    9️⃣ edbtodxf
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/iec-ingenieria/iec-apps/edit/main/docs/edbtodxf/cli.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/iec-ingenieria/iec-apps/raw/main/docs/edbtodxf/cli.md" title="Ver código fuente de esta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="cli">CLI</h1>
+<p>Un único ejecutable, <code>planos-cli</code>, con siete subcomandos. Sigue el
+<a href="../../clis/uso/">marco común de la suite</a>: <code>--json</code>, <code>--quiet</code>,
+<code>--verbose</code>, <code>--schema</code>, disciplina de streams y exit codes estándar
+(0 OK · 2 uso · 3 input · 4 ETABS · 5 negocio). Los flags globales van
+<strong>antes</strong> del subcomando; <code>planos-cli --schema</code> emite el contrato
+completo de todos los subcomandos.</p>
+<div class="admonition tip">
+<p class="admonition-title">Comodines en <code>--dxf</code></p>
+<p>En los subcomandos que reciben varios planos (<code>anotar-elevaciones</code>,
+<code>anotar-plantas</code>, <code>mapaejes</code>, <code>mapaejes-plantas</code>), <code>--dxf</code> acepta patrones con <code>*</code> y <code>?</code> en el
+nombre de archivo (<code>--dxf elevaciones/dxf/*.dxf</code>, <code>--dxf S_h?.dxf</code>) y los
+expande el propio CLI, con los calces ordenados. Hace falta porque
+<strong>PowerShell no expande comodines</strong> al invocar un ejecutable: pasa <code>*.dxf</code>
+literal, y antes eso terminaba en exit 3 («no existe el plano DXF: *.dxf»).
+En bash la shell ya los expande y el CLI no nota la diferencia. El
+directorio del patrón se toma literal (<code>"Planos [rev B]\*.dxf"</code> funciona)
+y de los calces solo cuentan archivos <code>.dxf</code> (<code>S_h*</code> no arrastra <code>.bak</code>,
+<code>.json</code> ni carpetas); un patrón que no deja ningún <code>.dxf</code> es exit 3, igual
+que un path literal inexistente. En Windows el patrón no distingue
+mayúsculas (<code>*.dxf</code> toma también <code>.DXF</code>). Un plano que entra dos veces (un
+literal más un patrón que lo cubre) se procesa una sola vez.</p>
+</div>
+<h2 id="planos-cli-anotar-elevaciones">planos-cli anotar-elevaciones</h2>
+<p>Anota planos DXF de elevaciones con la identidad del modelo (capa
+<code>IEC-LABELS</code>, apagable) y emite un JSON por eje.</p>
+<div class="highlight"><pre><span></span><code>planos-cli anotar-elevaciones --edb R4248.EDB --dxf S_h1.dxf S_h2.dxf --out-dir anotadas
+planos-cli anotar-elevaciones --modelo-json modelo.json --dxf N-R.dxf --ejes N R --out-dir anotadas
+planos-cli anotar-elevaciones --modelo-json modelo.json --dxf-dir elevaciones/dxf --workers 6 --out-dir anotadas
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dxf</code></td>
+<td>Planos DXF de elevaciones a anotar (uno o más; admite comodines, ver arriba).</td>
+</tr>
+<tr>
+<td><code>--dxf-dir</code></td>
+<td>Barrido de un directorio completo: agrupa los DXF por eje (hojas <code>_hN</code> juntas, archivos multi-eje solos) y procesa los grupos en paralelo. Mutuamente excluyente con <code>--dxf</code> (exactamente uno de los dos).</td>
+</tr>
+<tr>
+<td><code>--workers</code></td>
+<td>Workers del barrido <code>--dxf-dir</code> (default 6).</td>
+</tr>
+<tr>
+<td><code>--ejes</code></td>
+<td>Ejes a anotar. <code>auto</code> (default): todos los bloques <code>EJE &lt;X&gt;</code> presentes con grilla homónima en el modelo.</td>
+</tr>
+<tr>
+<td><code>--edb</code> / <code>--modelo-json</code></td>
+<td>Modelo ETABS, o foto JSON para correr offline.</td>
+</tr>
+<tr>
+<td><code>--dump-modelo</code></td>
+<td>Vuelca la foto del modelo (reutilizable con <code>--modelo-json</code>).</td>
+</tr>
+<tr>
+<td><code>--out-dir</code></td>
+<td>DXF anotados en la raíz; JSON por eje en <code>&lt;out-dir&gt;/anotaciones/</code>.</td>
+</tr>
+<tr>
+<td><code>--tol-plano</code></td>
+<td>Tolerancia (m) de pertenencia de un elemento al plano del eje (default 0.3).</td>
+</tr>
+<tr>
+<td><code>--max-lejos-pct</code></td>
+<td>Gate de verificación: % máximo de etiquetas lejos de geometría dibujada antes de fallar con exit 5 (default 20).</td>
+</tr>
+<tr>
+<td><code>--offset-cota</code></td>
+<td>Fija el <strong>offset cota→z del proyecto</strong> (elevación ETABS = cota del plano + offset) en vez de votarlo con las cotas de todas las hojas de la invocación (con <code>--dxf-dir</code>, de <strong>todo el directorio</strong>: se vota una vez antes de repartir los grupos, porque votado grupo por grupo los pisos tipo de paso constante empatan; el valor usado sale en <code>offset_proyecto</code> del <code>--json</code>). Solo lo heredan los ejes <strong>sin quórum propio</strong> (láminas de ejes menores, cuyas cotas son de sellos y entrepisos que no son pisos ETABS); un eje que sí junta quórum sigue usando su voto, y cada hoja acepta el offset heredado solo si al menos una cota suya lo respalda exacto. Sin él, un eje sin quórum queda sin calibración vertical.</td>
+</tr>
+<tr>
+<td><code>--sin-acad2013</code></td>
+<td>No convertir los DXF anotados a ACAD2013.</td>
+</tr>
+</tbody>
+</table>
+<p>Un plano <strong>sin bloques <code>EJE</code></strong> (Soler) se lee por sus viewports: cada
+viewport con título <code>ELEVACION POR EJE &lt;X&gt;</code> es la elevación de X. Los
+niveles salen de las cotas (<code>+2.73</code>) sobre su línea de nivel; las
+anclas, de las burbujas cuya línea de eje termina en el círculo; y las
+etiquetas se estampan en el model space, donde las muestra el viewport.
+Los muros dibujados como trama cuentan como geometría en toda su área.</p>
+<p>Una hoja con uno o dos niveles (ejes cortos: muros de subterráneo,
+remates) hereda la escala vertical de las hojas de la corrida que
+calibran solas, si sus niveles calzan con ella y alguno es piso del
+modelo. Sin eso queda sin calibración vertical, como antes.</p>
+<p>Con un solo eje transversal que calza con el modelo, el sentido de la
+elevación se vota contra el dibujo. Si el voto no concluye, decide el
+sentido con que el calculista dibuja esa familia de ejes (paralelos que
+avanzan en el mismo sentido), cuando al menos 3 hojas de la corrida lo
+fijan por anclas y todas coinciden; nunca contra un voto que lo
+contradiga ni sin elementos sobre el dibujo. El registro de la hoja lo
+marca con el modo <code>...-sentido-proyecto</code>. Con <code>--dxf-dir</code> se vota una
+vez con todas las hojas, como el offset (con <code>--offset-cota</code>, cada grupo
+lo saca de las suyas).</p>
+<p>La cobertura se reporta <strong>siempre</strong> (ubicados/total, <code>sin_ubicar</code>,
+<code>pct_lejos</code>). TODOS los DXF llegan a <code>--out-dir</code>, para no andar cambiando
+de carpeta: los que recibieron anotaciones se guardan anotados; los que
+no, se copian byte-fieles desde la fuente (con warning).</p>
+<p>En el barrido <code>--dxf-dir</code>, un grupo que falla el gate NO aborta el
+resto: los demás grupos quedan escritos igual y el exit global es 5 con
+el detalle por grupo en el reporte. Los grupos con gate fallido son el
+backlog conocido a revisar en CAD, no una falla del barrido.</p>
+<h2 id="planos-cli-anotar-plantas">planos-cli anotar-plantas</h2>
+<p>Anota planos DXF de plantas con la identidad del modelo: piers/muros y
+vigas del piso correspondiente, estampados en su posición (X, Y) del
+dibujo (capa <code>IEC-LABELS</code>) y un JSON por planta.</p>
+<div class="highlight"><pre><span></span><code>planos-cli anotar-plantas --modelo-json modelo.json --dxf-dir plantas/dxf --out-dir anotadas
+planos-cli anotar-plantas --modelo-json modelo.json --dxf AZOTEA.dxf --pisos P18 --out-dir anotadas
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dxf</code> / <code>--dxf-dir</code></td>
+<td>Planos DXF de plantas (se pueden combinar; al menos uno). <code>--dxf</code> admite comodines.</td>
+</tr>
+<tr>
+<td><code>--workers</code></td>
+<td>Procesos concurrentes para anotar varios planos (default 6); <code>1</code> corre secuencial en el proceso principal.</td>
+</tr>
+<tr>
+<td><code>--edb</code> / <code>--modelo-json</code></td>
+<td>Modelo ETABS, o foto JSON para correr offline (uno de los dos).</td>
+</tr>
+<tr>
+<td><code>--dump-modelo</code></td>
+<td>Vuelca la foto del modelo (reutilizable con <code>--modelo-json</code>).</td>
+</tr>
+<tr>
+<td><code>--out-dir</code></td>
+<td>DXF anotados en la raíz; JSON por planta en <code>&lt;out-dir&gt;/anotaciones/</code>.</td>
+</tr>
+<tr>
+<td><code>--pisos</code></td>
+<td>Fuerza el mapeo planta→piso (nombres de story del modelo). Requiere un solo plano de entrada.</td>
+</tr>
+<tr>
+<td><code>--max-lejos-pct</code></td>
+<td>Gate de verificación, igual que en elevaciones (default 20).</td>
+</tr>
+<tr>
+<td><code>--sin-acad2013</code></td>
+<td>No convertir los DXF anotados a ACAD2013.</td>
+</tr>
+</tbody>
+</table>
+<p>El piso se infiere del nombre del archivo contra los stories del
+modelo: <code>P01</code> → story <code>P01</code>/<code>P1</code>, rangos <code>P07aP13</code> (planta típica) por
+orden de elevación real. Una planta de cielo corresponde al story cuyo
+nivel superior dibuja (<code>PLANTA CIELO PISO N</code> → story <code>PN</code>). En archivos
+multi-piso los piers se agrupan a través de todos los pisos del rango
+(la etiqueta lleva el nombre del archivo y el JSON el detalle por
+piso); los elementos sin nombre de pier conservan su piso individual.
+Un archivo sin piso inferible (y sin <code>--pisos</code>) se copia sin anotar,
+con warning; si ningún archivo pudo mapearse a piso, exit 5.</p>
+<p>Con más de un plano de entrada y <code>--workers</code> &gt; 1, cada archivo se anota
+en un proceso aparte (offline; si el modelo vino de <code>--edb</code> se vuelca
+una vez a un JSON temporal para los procesos). Un archivo que falla no
+aborta el resto del barrido. La conversión a ACAD2013 corre UNA sola
+vez al final, sobre todos los DXF anotados.</p>
+<h2 id="planos-cli-separar">planos-cli separar</h2>
+<p>Separa los DWG de elevaciones de un proyecto (varios ejes por plano) en
+un archivo por eje, listo para visualización.</p>
+<div class="highlight"><pre><span></span><code>planos-cli separar --dir proyecto/planos/elevaciones
+planos-cli separar --dir proyecto/planos/elevaciones --solo-analizar
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dir</code></td>
+<td>Carpeta de elevaciones del proyecto. Los DWG originales de la raíz se mueven a <code>sin_separar/</code> (si ya existe, se usa como fuente: re-ejecutable).</td>
+</tr>
+<tr>
+<td><code>--solo-analizar</code></td>
+<td>Modo diagnóstico: reporta INSERTs, textos, extents y elevaciones por viewport de cada DXF sin escribir nada.</td>
+</tr>
+<tr>
+<td><code>--sin-acad2013</code></td>
+<td>Deja los DXF separados sin convertir a DWG ACAD2013.</td>
+</tr>
+</tbody>
+</table>
+<p>Reglas de separación: un bloque <code>EJE &lt;X&gt;</code> por elevación; el rótulo real
+se lee del MTEXT del bloque; ejes equivalentes (<code>4=7</code>) generan un
+archivo por eje con idéntico contenido; un eje listado solo en el
+nombre del archivo original (sin bloque propio ni <code>=</code> en ningún rótulo)
+también genera su archivo, duplicando el del eje que lo contiene;
+sufijos de hoja <code>_hN</code> no son
+equivalencias; INSERTs duplicados conservan el de menor X; la geometría
+queda desplazada cerca del origen.</p>
+<p>Un plano <strong>sin bloques <code>EJE</code></strong> (todo explotado en el model space, como
+las láminas de Soler) se separa por sus viewports: cada viewport del
+paperspace con el título <code>ELEVACION POR EJE &lt;X&gt;</code> bajo lo que muestra es
+una elevación, y su archivo lleva esa geometría, sus cotas y el título.
+Los viewports de cortes y detalles se ignoran. Un eje del nombre del
+archivo sin elevación en la lámina es warning (no se supone equivalente
+a otro), igual que un viewport sin título a la escala de las
+elevaciones.</p>
+<p>Un archivo sin elevaciones identificables es warning; exit 5 solo si no
+hay fuente DWG/DXF, ningún archivo produjo ejes, o falta ODA File
+Converter.</p>
+<p>El set separado es para <strong>visualización</strong>: la anotación usa siempre los
+originales de <code>sin_separar/</code> (el split pierde los xclips por hoja).</p>
+<h2 id="planos-cli-mapaejes">planos-cli mapaejes</h2>
+<p>Diagnostica nombres de grilla desactualizados en el modelo contra los
+planos. Solo reporte; exit 0 aunque haya renombres propuestos (el
+hallazgo es el producto).</p>
+<div class="highlight"><pre><span></span><code>planos-cli mapaejes --modelo-json modelo.json --dxf "elevaciones/dxf/*.dxf" --out mapa.json
+planos-cli mapaejes --modelo-json modelo.json --dxf S_h1.dxf S_h2.dxf --solo-bloques "19-18'" --out mapa.json
+</code></pre></div>
+<p><code>mapaejes</code> no tiene <code>--dxf-dir</code>: para pasar una carpeta completa se usa el
+comodín en <code>--dxf</code> (lo expande el CLI, también desde PowerShell; ver arriba).
+Para dejar fuera DXF que no son elevaciones (p. ej. <code>Corte *.dxf</code>), pasar la
+lista explícita —en PowerShell,
+<code>--dxf (Get-ChildItem "elevaciones\dxf\*.dxf" -Exclude "Corte*").FullName</code>.</p>
+<p>Un plano sin bloques <code>EJE</code> (Soler) aporta sus elevaciones por viewport,
+igual que en <code>anotar-elevaciones</code>: el "bloque" es el título del
+viewport (<code>G1+I</code> declara G1 e I). El offset cota→z y la escala vertical
+se votan con todas las hojas de la corrida y los heredan los bloques de
+ejes cortos, cuyas pocas cotas no juntan quórum solas.</p>
+<p>El calce por anclas necesita al menos 3 ejes transversales con el mismo
+nombre en el plano y en el modelo. Si el modelo nombra distinto la
+mayoría de las grillas (R4834: <code>01</code>, <code>12a</code>, <code>19a</code> en el modelo contra
+<code>1</code>, <code>12A</code>, <code>20</code> en los planos), casi ningún bloque calza: el mapa de
+nombres se saca de las plantas con <code>mapaejes-plantas</code>.</p>
+<p>Dos pasadas:</p>
+<ol>
+<li><strong>Calce por anclas</strong> (automática): por bloque de plano, calza cada
+   grilla candidata del modelo contra las anclas dibujadas y compara la
+   ganadora con los tokens del nombre del bloque →
+   <code>confirmado</code> / <code>renombre_propuesto</code> / <code>ambiguo</code> / <code>sin_calce</code>.</li>
+<li><strong>Evidencia por elementos</strong> (no dicta veredicto): para las grillas
+   del modelo que ningún bloque reclama y que tienen elementos, mide
+   presencia/control de sus muros proyectados sobre cada hoja ya
+   calibrada, con pista de quiebre en intersecciones (elevaciones
+   desarrolladas).</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dxf</code></td>
+<td>Planos DXF de elevaciones a analizar (admite comodines).</td>
+</tr>
+<tr>
+<td><code>--edb</code> / <code>--modelo-json</code> / <code>--dump-modelo</code></td>
+<td>Igual que en <code>anotar-elevaciones</code>.</td>
+</tr>
+<tr>
+<td><code>--out</code></td>
+<td>Reporte JSON completo (bloques, grillas huérfanas, resumen).</td>
+</tr>
+<tr>
+<td><code>--tol-plano</code></td>
+<td>Tolerancia (m) de pertenencia de un elemento al plano de una grilla (default 0.3).</td>
+</tr>
+<tr>
+<td><code>--tol-hit</code></td>
+<td>Distancia máxima (u de dibujo) para contar presencia sobre geometría dibujada (default 30).</td>
+</tr>
+<tr>
+<td><code>--dist-max-proyeccion</code></td>
+<td>Distancia perpendicular máxima (m) para proyectar una grilla sin dueño sobre otra hoja (default 3.0).</td>
+</tr>
+<tr>
+<td><code>--desvio-escala</code></td>
+<td>Gate de escala de la pasada 1 (default 0.01): descarta candidatas cuya escala horizontal se desvía de la vertical — separa la grilla correcta de familias casi-paralelas que el residuo no delata.</td>
+</tr>
+<tr>
+<td><code>--solo-bloques</code></td>
+<td>Restringe a estos bloques <code>EJE &lt;X&gt;</code> (nombres literales).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Empates de grillas paralelas</p>
+<p>El calce por anclas no puede distinguir grillas <strong>exactamente
+paralelas</strong> (el desplazamiento se absorbe en el offset del ajuste):
+quedan agrupadas como empatadas, y si el grupo supera 5 grillas el
+bloque lleva un campo <code>aviso</code> de empate masivo. El desempate viene
+de la pasada 2 o del criterio del ingeniero. Cuando los empates no se
+resuelven, <code>mapaejes-plantas</code> da la respuesta directa desde las plantas.</p>
+</div>
+<h2 id="planos-cli-mapaejes-plantas">planos-cli mapaejes-plantas</h2>
+<p>Identifica los ejes del plano desde las <strong>plantas</strong>: en ellas cada eje está
+dibujado en su posición real, así que basta leerlo y compararlo con las
+grillas del modelo. Solo reporte; exit 0 aunque haya diferencias.</p>
+<div class="highlight"><pre><span></span><code>planos-cli mapaejes-plantas --modelo-json modelo.json --dxf "plantas/dxf/*.dxf" --out mapa_ejes_plantas.json
+</code></pre></div>
+<p>Por cada planta:</p>
+<ol>
+<li><strong>Lee las burbujas</strong> (círculo con el nombre, capa <code>*RLE-EJE</code>) y sigue cada
+   una hasta su línea de eje (capa <code>*RLE-EJES</code>). Si la burbuja está abierta en
+   abanico, recorre la línea guía tramo a tramo (polilínea o líneas cortas
+   encadenadas) hasta el tramo largo. Baja por los bloques (xref ligadas).
+   En las plantas de Soler, líneas, burbujas y nombres van en la capa
+   <code>civ-ejes</code>; el dialecto se reconoce solo, por las capas del plano.</li>
+<li><strong>Separa vistas</strong>: las líneas de eje que se cruzan forman una planta; una
+   lámina con dos vistas lado a lado se calibra por separado.</li>
+<li><strong>Fija el origen</strong> de cada vista y dirección con la escala dada
+   (<code>--escala</code>, 1 u = 1 cm por defecto): el que hace coincidir más ejes con
+   su grilla homónima del modelo. Un nombre cruzado no lo desvía: queda fuera
+   del consenso.</li>
+<li><strong>Compara</strong> cada eje con la grilla más cercana en su dirección.</li>
+</ol>
+<p>Estados de cada eje del plano (<code>ejes</code> del reporte):</p>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coincide</code></td>
+<td>La grilla más cercana (a menos de <code>--tol</code>) tiene su nombre.</td>
+</tr>
+<tr>
+<td><code>otro_nombre</code></td>
+<td>La grilla más cercana tiene <strong>otro</strong> nombre: renombre. Si además hay una grilla con el nombre del eje en otra posición, sale en <code>homonima</code> (nombres cruzados: en R2868 la grilla <code>G</code> era el eje <code>G'</code> del plano y la <code>F1</code> era el <code>G</code>).</td>
+</tr>
+<tr>
+<td><code>sin_calce</code></td>
+<td>Ninguna grilla a menos de <code>--tol</code>; se informa la más cercana y la diferencia.</td>
+</tr>
+</tbody>
+</table>
+<p>El reporte trae además <code>grillas_sin_eje</code> (grillas del modelo que ningún eje
+del plano ocupa), <code>inclinados</code> (ejes no ortogonales, con sus extremos en
+coordenadas del modelo), <code>sin_calibracion</code> (ejes de una vista sin anclas
+suficientes) y, por hoja, las anclas y el residuo de cada calibración.</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dxf</code></td>
+<td>Plantas DXF a analizar (admite comodines).</td>
+</tr>
+<tr>
+<td><code>--edb</code> / <code>--modelo-json</code> / <code>--dump-modelo</code></td>
+<td>Igual que en <code>anotar-elevaciones</code>.</td>
+</tr>
+<tr>
+<td><code>--out</code></td>
+<td>Reporte JSON (ejes, grillas sin eje, inclinados, sin calibración, hojas, resumen).</td>
+</tr>
+<tr>
+<td><code>--escala</code></td>
+<td>Metros por unidad de dibujo (default 0.01: 1 u = 1 cm).</td>
+</tr>
+<tr>
+<td><code>--tol</code></td>
+<td>Distancia máxima (m) para decir que un eje está en una grilla (default 0.02).</td>
+</tr>
+<tr>
+<td><code>--min-anclas</code></td>
+<td>Ejes homónimos que deben coincidir para aceptar el origen de una vista (default 2).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="planos-cli-armaduras-corte">planos-cli armaduras-corte</h2>
+<p>Extrae de los planos de elevaciones <strong>ya anotados</strong> la armadura de corte que
+dibujó el calculista: la malla horizontal de muros y machones (por pier ×
+piso) y los estribos de las vigas (5 posiciones por viga). Sirve para partir de
+un piso realista en vez del default conservador ø8 @25 al revisar el corte: con
+el default, todo elemento arrastra una armadura muy menor que la del proyecto y
+los FU de armadura salen inflados. <strong>No revisa nada</strong>: lee lo que el plano
+imprime y dice cómo lo leyó.</p>
+<div class="highlight"><pre><span></span><code>planos-cli armaduras-corte --dxf-dir proyecto/planos/elevaciones-anotadas --out proyecto/revision/corte/RXXXX_armaduras_corte.json
+planos-cli armaduras-corte --dxf-dir elevaciones-anotadas --out armaduras.json --eje 10 --eje 12
+planos-cli armaduras-corte --dxf-dir elevaciones-anotadas --out armaduras.json --saltar 11B --saltar C --workers 6
+planos-cli armaduras-corte --dxf-dir elevaciones-anotadas --out inventario.json --inventario
+</code></pre></div>
+<p>Es el port de los extractores de la skill <code>prellenar-armaduras-vh1</code>
+(<code>extraer_por_elemento.py</code> para muros y machones, <code>extraer_vigas.py</code> para
+vigas), <strong>con sus reglas intactas</strong>: umbrales, patrones aceptados, herencia,
+default sin dato y regla conservadora son criterio de ingeniería validado por el
+ingeniero y fijado con fixtures, y el port reproduce la salida de los scripts
+originales clave por clave y valor por valor (probado en R2868 y R4626; ver
+<a href="#paridad-con-la-skill">Paridad</a>), salvo dos criterios que el ingeniero aprobó el
+2026-09-30: las secciones de viga <code>V.</code>, <code>VI</code> y <code>VSI</code>, y el bloque del eje sin
+espacio o compuesto (ver <a href="#diferencias-con-la-skill-prellenar-armaduras-vh1">Diferencias con la
+skill</a>). La lógica vive en
+<code>iec_core.planos</code>, que comparten este subcomando y la GUI de curvaw.</p>
+<p>Lo que depende de <strong>cómo dibuja el calculista</strong> está declarado en un
+<a href="#dialectos-de-dibujo">dialecto</a> (<code>--dialecto</code>, <code>rle</code> por defecto), y antes de
+barrer un proyecto nuevo conviene correr el <a href="#inventario-lo-que-el-dialecto-no-entiende">inventario</a>
+(<code>--inventario</code>), que dice qué no entiende el dialecto sin resolver nada.</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dxf-dir</code></td>
+<td>Carpeta de planos de elevaciones <strong>anotados</strong> (la <code>--out-dir</code> de <code>anotar-elevaciones</code>): los DXF en la raíz y un <code>&lt;eje&gt;_anotaciones.json</code> por eje en <code>anotaciones/</code>. Solo se lee; no se escribe nada ahí.</td>
+</tr>
+<tr>
+<td><code>--out</code></td>
+<td>JSON de salida (ver abajo); con <code>--inventario</code>, el JSON del inventario. Se crea la carpeta si no existe.</td>
+</tr>
+<tr>
+<td><code>--dialecto</code></td>
+<td>Cómo dibuja el calculista (ver <a href="#dialectos-de-dibujo">Dialectos de dibujo</a>). <code>rle</code> (el default) o <code>soler</code>. Queda registrado en <code>meta.dialecto</code> del JSON.</td>
+</tr>
+<tr>
+<td><code>--inventario</code></td>
+<td>No extrae: recorre los planos <strong>sin resolver nada</strong> y reporta por eje lo que el dialecto elegido no entiende (ver <a href="#inventario-lo-que-el-dialecto-no-entiende">Inventario</a>). Usa <code>--eje</code>, <code>--saltar</code>, <code>--workers</code> y <code>--dialecto</code> como la extracción.</td>
+</tr>
+<tr>
+<td><code>--eje</code></td>
+<td>Procesa solo este eje (repetible). Sin <code>--eje</code>: todos los que tienen anotaciones.</td>
+</tr>
+<tr>
+<td><code>--saltar</code></td>
+<td>Deja fuera este eje (repetible); p. ej. los que no tienen cobertura de anotaciones.</td>
+</tr>
+<tr>
+<td><code>--workers</code></td>
+<td>Procesos en paralelo, de a un grupo de ejes por proceso (por omisión, los que caben según los cores y la RAM libre, hasta 8; 1 = en serie). Los ejes cuyos JSON colocan elementos en una misma lámina forman un grupo, y esa lámina se abre una sola vez para todos; un grupo junta como mucho 4 láminas (ver <a href="#paridad-con-la-skill">Paridad con la skill</a>). Con 2 o más procesos el trabajo va a procesos aparte, salvo que todos los ejes formen un solo grupo: entonces corre en el mismo proceso, porque el pool solo sumaría su arranque. El resultado es el mismo con cualquier número. Los grupos salen al pool por el tamaño de los DXF que leen, los más pesados primero (la lista del JSON sigue en el orden de los nombres). Cada proceso retiene del orden de 1 GB mientras lee los DXF de su grupo (unas 10 veces el tamaño de esos DXF; en los proyectos medidos, un grupo junta hasta 3 láminas) y lo suelta al terminar: con poca RAM conviene bajarlo.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="que-lee">Qué lee</h3>
+<p>Por eje, el <code>&lt;eje&gt;_anotaciones.json</code> (región de cada elemento del modelo en
+coordenadas de dibujo, y las ventanas de XCLIP de cada copia del bloque del eje)
+y los DXF a los que apunta. Del DXF se lee <strong>solo lo que el plano imprime</strong>:</p>
+<ul>
+<li><strong>Atributos visibles de los bloques de malla.</strong> Los bloques dinámicos RLE
+  tienen un estado de visibilidad por variante (<code>*U###</code>): en uno de ellos el
+  mismo bloque trae <code>MALLA_1</code> oculto con un valor rancio y <code>MALLA_2</code> visible. Los
+  atributos ocultos se descartan y se cuentan (<code>ocultos_descartados</code>). Se camina
+  la definición de los bloques con la matriz acumulada, porque los atributos de un
+  bloque anidado no sobreviven a <code>virtual_entities()</code> (planos con xref bindeado).</li>
+<li><strong>Solo la franja visible de cada copia del bloque del eje.</strong> El dibujo inserta
+  el bloque varias veces con XCLIP, cada copia mostrando una franja de pisos; se
+  lee cada copia dentro de su ventana. Las copias de un eje son las del bloque
+  <code>EJE 16</code> o <code>EJE16</code> (o el compuesto que lo incluye, <code>EJE4'-12'-14'</code>), como en
+  <code>anotar-elevaciones</code>. Si las ventanas del JSON no calzan con esas copias (un DXF
+  que se editó después de anotar, o copias con escala o rotación, que
+  <code>anotar-elevaciones</code> omite) se lee sin filtro y se avisa (<code>SIN filtro de clip</code>).</li>
+<li><strong>Textos</strong> de la capa <code>TEXTOS-FE</code> (<code>IDEM CIELO</code> + <code>PISO N</code>, <code>E.%%C12a10</code>,
+  <code>H.</code>/<code>V.</code> sueltos) y, en vigas, todos los textos visibles dentro de la región de
+  cada viga.</li>
+</ul>
+<h3 id="que-escribe">Qué escribe</h3>
+<p>Un único JSON (<code>--out</code>). <code>muros</code> y <code>vigas</code> siguen el esquema de los scripts de la
+skill (con una clave nueva en cada muro, <code>W</code>), y <code>vigas_por_clave</code> es la lista plana
+de las vigas que lee el aplicador de la skill; el resto es para auditar y para la GUI.
+Las claves nuevas (<code>W</code>, <code>vigas_por_clave</code>) son aditivas: lo anterior no cambia y
+<code>esquema</code> sigue en 1.</p>
+<div class="highlight"><pre><span></span><code>{
+  "esquema": 1,
+  "muros":  { "&lt;pier&gt;|&lt;piso&gt;": {diam, sep, ramas, eje, origen, patron, W}, ... },
+  "vigas":  [ {eje, vigas: {"&lt;nombre&gt;|&lt;piso&gt;": {...}}, sin_region: [...], avisos: [...]}, ... ],
+  "vigas_por_clave": { "&lt;nombre&gt;|&lt;piso&gt;": {eje, estado, slots?}, ... },
+  "resumen": { "totales": {...}, "ejes": { "&lt;eje&gt;": {...} } },
+  "flags": [...],  "avisos": [...],
+  "ejes_fallidos": { "&lt;eje&gt;": "&lt;motivo&gt;" },  "ejes_saltados": [...],
+  "conflictos_vigas": [...],
+  "meta": { "dir_anotadas": "...", "iec_apps": "&lt;versión&gt;", "dialecto": "rle" }
+}
+</code></pre></div>
+<p><strong><code>muros</code></strong> — una entrada por pier × piso del eje (y por muro suelto: su clave es
+su texto). <code>diam</code> y <code>sep</code> son ø en mm y @ en cm; <code>ramas</code> es el número de mallas
+(2 = doble malla, 3 = triple, 4 = cuádruple) y <code>W</code> su letra en la columna W del libro VH
+(<code>M</code> = 1 rama, <code>D</code> = 2, <code>T</code> = 3, <code>C</code> = 4, hasta <code>O</code> = 8: la <code>S</code> del libro son SEIS ramas,
+no la malla simple del plano; <code>null</code> si el libro no tiene letra para ese número de ramas,
+y el aplicador no escribe esa fila). <code>patron</code> declara <strong>cómo se leyó</strong>
+el valor (auditoría obligatoria: un patrón nuevo de interpretación requiere el
+OK explícito del ingeniero y aparece siempre en el reporte):</p>
+<table>
+<thead>
+<tr>
+<th><code>patron</code></th>
+<th>Se leyó de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MALLA_1</code></td>
+<td>atributo <code>MALLA_1</code> del bloque (<code>D.M.</code>, doble malla uniforme)</td>
+</tr>
+<tr>
+<td><code>MALLA_2</code></td>
+<td>atributo <code>MALLA_2</code> (la malla <strong>horizontal</strong>, la que manda para corte); <code>MALLA_3</code> es la vertical</td>
+</tr>
+<tr>
+<td><code>T.M.H</code>, <code>4.M.H</code></td>
+<td>marcador en el atributo <code>ESTRIBO</code> (triple / cuádruple malla, horizontal); las ramas las dicta el marcador</td>
+</tr>
+<tr>
+<td><code>4.M</code></td>
+<td>igual, sin sufijo <code>H</code>: malla uniforme</td>
+</tr>
+<tr>
+<td><code>texto-H</code></td>
+<td>texto <code>H. %%C12a10</code> suelto sobre el rótulo: el texto visible manda sobre un atributo rancio; siempre doble malla</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td>sin dato (origen <code>default</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>origen</code></strong> de cada valor de <code>muros</code> (la columna <em>Origen</em> de la planilla VH):</p>
+<table>
+<thead>
+<tr>
+<th><code>origen</code></th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>directo</code></td>
+<td>Paño del plano contenido en la región del elemento</td>
+</tr>
+<tr>
+<td><code>cercano</code></td>
+<td>Paño asignado solo por proximidad (a menos de 150 u): evidencia débil, mirarlo con ojo</td>
+</tr>
+<tr>
+<td><code>linea</code></td>
+<td>Herencia por flecha dentro de la línea de muro (mismo x, piso de abajo)</td>
+</tr>
+<tr>
+<td><code>idem-cielo</code></td>
+<td>Texto <code>IDEM CIELO PISO N</code> del plano</td>
+</tr>
+<tr>
+<td><code>pier-inferior</code></td>
+<td>Heredado del mismo pier en el piso inferior más cercano</td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td><strong>Sin dato del plano</strong>: ø8 @25, doble malla. Nunca un valor inventado: es la malla mínima con que se construye un muro (asignar de menos infla el FU; de más escondería una deficiencia)</td>
+</tr>
+</tbody>
+</table>
+<p>La herencia va <strong>de abajo hacia arriba</strong> (el plano indica la armadura en un piso
+y la propaga con flechas). Un rótulo de <strong>machón</strong> (texto <code>E.%%C12a10</code> a menos de
+55 u del bloque) descarta el bloque completo —su atributo de malla es un residuo
+que el plano no muestra— y el elemento queda en <code>default</code> con un flag para que se
+lea del plano. Si el elemento igual recibe un valor (de un paño propio en el mismo
+eje, que se lee antes que el rótulo de machón, o del mismo pier y piso en otro eje),
+lo toma, y el flag sale igual pero dice de qué eje viene: «El elemento tomo el valor
+del eje X (origen); revisarlo contra el plano». El estribo nunca se captura como
+armadura de muro (en muros es
+confinamiento de cabezas). No se distingue muro de machón: el plano no lo hace.</p>
+<p><strong><code>vigas</code></strong> — una lista por eje, con el esquema de los scripts de la skill (auditoría: trae
+las capturas de cada rótulo). Cada viga (<code>"B81|S02"</code>) trae <code>estado</code>:</p>
+<table>
+<thead>
+<tr>
+<th><code>estado</code></th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>directo</code></td>
+<td>Hay estribo base en el plano: <code>slots</code> con las 5 posiciones</td>
+</tr>
+<tr>
+<td><code>sin-dato</code></td>
+<td>Nada en el plano, o solo trabas (las trabas se ignoran y quedan en <code>trabas_ignoradas</code>)</td>
+</tr>
+<tr>
+<td><code>no-entendido</code></td>
+<td>Hay un rótulo de armadura que la notación aprobada no entiende (<code>no_entendidos</code>)</td>
+</tr>
+<tr>
+<td><code>no-aplica</code></td>
+<td>Sección que no es de hormigón (<code>V</code>, <code>V.</code>, <code>VI</code> o <code>VSI</code> con <code>b/h</code>): metálica, sin fila en el VH</td>
+</tr>
+</tbody>
+</table>
+<p>Los <code>slots</code> <code>p1</code>..<code>p5</code> (<code>p1</code>/<code>p2</code> apoyo inicial, <code>p3</code> centro, <code>p4</code>/<code>p5</code> apoyo
+final) traen <code>W</code> (letra de ramas del libro VH, <code>D</code> = 2 ramas), <code>X</code> (ø), <code>Y</code> (@),
+<code>fuente</code> (el rótulo), <code>frac_x</code>, <code>patron</code> y <code>origen</code>:</p>
+<table>
+<thead>
+<tr>
+<th><code>origen</code> del slot</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>directo</code></td>
+<td>Rótulo leído en esa franja de la viga</td>
+</tr>
+<tr>
+<td><code>hereda-centro</code></td>
+<td>Dos zonas con un apoyo sin rótulo: el apoyo toma el centro</td>
+</tr>
+<tr>
+<td><code>conservador</code></td>
+<td>Dos o más rótulos distintos en una franja, o dos apoyos sin centro: el de <strong>menos</strong> armadura, con los descartes en <code>descarta</code></td>
+</tr>
+</tbody>
+</table>
+<p>Patrones aprobados: <code>E.%%CDaS</code> (2 ramas) y <code>NE.%%CDaS</code> sin <code>+</code> (N es la
+<strong>cantidad</strong> de estribos de la zona de apoyo, no ramas). Una sola zona resuelta
+llena las 5 posiciones; los apoyos asimétricos se escriben tal cual. Los cortes
+transversales no se miran y el longitudinal (<code>L:</code>) se excluye.</p>
+<p><strong><code>vigas_por_clave</code></strong> — las mismas vigas, planas: una entrada por <code>"&lt;nombre&gt;|&lt;piso&gt;"</code> con el
+<code>eje</code> de la lectura, su <code>estado</code> y, solo si es <code>directo</code>, sus cinco <code>slots</code> (iguales a los de
+la lista por eje). Es lo que lee el aplicador de la skill: una viga con estribos distintos en
+dos ejes (un conflicto) <strong>no aparece</strong>, y queda en <code>conflictos_vigas</code>. Un JSON anterior, con las
+vigas solo por eje, ya no lo lee el aplicador: hay que volver a extraer.</p>
+<p><strong><code>resumen</code></strong> — por eje y en <code>totales</code>: <code>elementos</code>, cómo se resolvió cada uno
+(<code>directo</code>, <code>linea</code>, <code>abajo</code>, <code>texto</code>, <code>sin_dato</code>), <code>huerfanos</code> (bloques con valor
+que no cayeron en ninguna región), <code>ambiguos</code> (descartados a propósito),
+<code>flags</code>, <code>machones_a_revisar</code>, <code>categorias</code> y <code>patrones</code> (conteos), <code>vigas</code> por
+estado, <code>patrones_vigas</code>, <code>vigas_sin_region</code>, <code>ocultos_descartados</code> y
+<code>expansiones_fallidas</code> (bloques anidados que ezdxf no pudo expandir; su contenido
+se omite de la lectura y se cuenta para que no pase en silencio).</p>
+<p>En la salida humana (stdout) se repite la tabla por eje de la skill, con los ejes
+de más <code>sinDat</code> y <code>flags</code> primero.</p>
+<h3 id="dialectos-de-dibujo">Dialectos de dibujo</h3>
+<p>No todos los calculistas dibujan igual. Todo lo que depende de <strong>cómo se dibuja</strong>
+el plano está declarado en un <strong>dialecto</strong>: cómo se reconoce el bloque de cada eje,
+qué bloque es un muro y en qué atributo va su malla, qué texto suelto la corrige o
+descarta el bloque, cómo se dice «igual al piso N», cómo se rotula una viga de
+hormigón y un estribo, y los umbrales calibrados (<code>TOL</code> y compañía). El motor que
+asocia los rótulos a los elementos y resuelve la armadura recibe el dialecto por
+parámetro y <strong>no contiene ninguna regla de dibujo</strong>: la herencia, la ambigüedad, las
+cinco posiciones de las vigas, la regla conservadora y el default ø8 @25 son criterio
+de la revisión, iguales para cualquier dialecto.</p>
+<table>
+<thead>
+<tr>
+<th>Dialecto</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rle</code> (default)</td>
+<td>Rene Lagos Engineers: bloques dinámicos de muro con atributos <code>MALLA_*</code> y marcadores en <code>ESTRIBO</code>, rótulos <code>E.%%C12a10</code> y <code>H. %%C12a10</code> sueltos, <code>IDEM CIELO</code> + <code>PISO N</code>, bloque <code>EJE 16</code> / <code>EJE16</code> con XCLIP. Calibrado en R4248, R2868 y R4626.</td>
+</tr>
+<tr>
+<td><code>soler</code></td>
+<td>Luis Soler P. &amp; Asoc.: las elevaciones explotadas en el model space (sin bloques <code>EJE</code>: cada eje es un viewport) y las mallas como <strong>texto suelto</strong> en la capa <code>civ-textos</code> (<code>DOBLE MALLA : ø 8 a 20</code>, <code>D.M. ø8a20</code>, <code>T.M.ø8a10</code>, <code>C.M. VERT Ø12a10</code>). Calibrado en R4834, <strong>solo muros</strong>: las vigas y los umbrales son los de RLE, sin calibrar para este calculista. Es el único que lee la malla <strong>vertical</strong> (ver <a href="#planos-cli-mallas-verticales"><code>mallas-verticales</code></a>).</td>
+</tr>
+</tbody>
+</table>
+<p><code>--dialecto</code> elige cuál y queda en <code>meta.dialecto</code> del JSON (y en <code>summary.dialecto</code>
+bajo <code>--json</code>). En la biblioteca es
+<code>extraer_armaduras_corte(..., dialecto="rle")</code>, que acepta el nombre o el objeto.</p>
+<p>Cada forma de capturar un valor es un <strong>patrón con nombre</strong> declarado en el dialecto;
+el nombre es el que sale en el campo <code>patron</code> (<code>MALLA_1</code>, <code>MALLA_2</code>, <code>T.M.H</code>,
+<code>texto-H</code>, los de las vigas...). Un patrón o un dialecto nuevo <strong>no se agrega porque el
+plano de hoy lo necesita</strong>: se propone al ingeniero con la evidencia del plano (el
+inventario la da), solo con su OK se declara, y entra con su caso de regresión. El
+procedimiento está en <code>docs_mantenedor/armaduras_corte/dialectos.md</code> (carpeta del
+repo que no se publica: nombra clientes).</p>
+<h3 id="inventario-lo-que-el-dialecto-no-entiende">Inventario: lo que el dialecto no entiende</h3>
+<p><code>--inventario</code> es el paso previo a calibrar un proyecto nuevo (otro calculista, o el
+mismo con otra convención): recorre los planos con los mismos roots, ventanas de
+clip y reglas de visibilidad que la extracción, pero <strong>no asocia elementos ni resuelve
+armaduras</strong>, y reporta por eje lo que el dialecto elegido <strong>no entiende</strong>. Cuesta
+lo que una extracción menos la asociación (R2868: del orden de 80 s con 4 procesos).
+Escribe su JSON en <code>--out</code> y el resumen legible a stdout. El resumen abre con una fila
+por eje (cuánto no entiende el dialecto en cada uno, los ejes con más por mirar primero)
+y sigue con una sección por tipo de cosa que no entiende, cada fila con los ejes donde
+está:</p>
+<table>
+<thead>
+<tr>
+<th>Sección</th>
+<th>Qué dice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raíces de eje que no calzan</td>
+<td>Hojas sin ningún bloque que pueda ser raíz de un eje, bloques candidatos que el dialecto no reconoce como eje y copias del bloque cuyo conteo no calza con las ventanas del JSON (esa hoja se leería sin filtro de clip).</td>
+</tr>
+<tr>
+<td>Bloques con atributos</td>
+<td>Por nombre de bloque: instancias, cuántas son de muro según el dialecto, los valores distintos de cada atributo con su conteo, cómo se leyó la malla de los bloques de muro (el patrón, o <code>sin_valor</code>) y los valores con pinta de armadura que ningún patrón de malla lee.</td>
+</tr>
+<tr>
+<td>Textos con pinta de armadura</td>
+<td>Los que mencionan diámetro, separación o un marcador (<code>ø</code>/<code>%%C</code>, <code>a</code>/<code>@</code>, <code>E.</code>, <code>T.</code>, <code>D.M.</code>, <code>L:</code>) y <strong>ningún patrón reconoce</strong>, agrupados por forma (los números como <code>N</code>: <code>E.%%C10a15</code> es <code>E.%%CNaN</code>) con su conteo y hasta tres ejemplos con coordenadas, capa y hoja.</td>
+</tr>
+<tr>
+<td>Secciones de viga no reconocidas</td>
+<td>Las vigas que quedarían <code>no-aplica</code>: hormigón con otro rótulo o perfil metálico.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>{
+  "esquema": 1,  "dialecto": "rle",
+  "ejes":  { "&lt;eje&gt;": {hojas, elementos, raices, bloques, bloques_omitidos, textos,
+                       secciones_viga, totales, ocultos_descartados,
+                       expansiones_fallidas}, ... },
+  "ejes_fallidos": { "&lt;eje&gt;": "&lt;motivo&gt;" },  "ejes_saltados": [...],  "avisos": [...],
+  "resumen": { ...lo mismo con todos los ejes juntos, lo más frecuente primero... },
+  "meta": { "dir_anotadas": "...", "iec_apps": "&lt;versión&gt;", "dialecto": "rle" }
+}
+</code></pre></div>
+<p>Para no inflar el archivo se listan 25 bloques por eje (primero los que traen valores
+con pinta de armadura sin leer, que nunca se pierden por el tope, y luego los más
+frecuentes) y las 30 formas de texto más frecuentes (lo que sobra se cuenta:
+<code>bloques_omitidos</code>, <code>formas_omitidas</code>, <code>(otros)</code>). <code>totales</code> de cada eje son los conteos
+exactos, sin tope (<code>bloques_con_atributos</code>, <code>bloques_de_muro</code>, <code>mallas_sin_valor</code>,
+<code>atributos_sin_leer</code>, <code>textos_sin_patron</code>, <code>hojas_con_raiz_que_no_calza</code>,
+<code>vigas_sin_reconocer</code>) y alimentan la tabla por eje del resumen.</p>
+<p>Bajo <code>--json</code>, el <code>summary</code> trae el <code>resumen</code>, <code>ejes_fallidos</code> y el <code>dialecto</code>, y los
+<code>warnings</code> las raíces que no calzan y los ejes que no se leyeron.</p>
+<p>Cómo leerlo: con el dialecto correcto no queda casi nada en «no entiende» (una lista
+vacía de textos con pinta de armadura y de atributos sin leer es lo esperado). Un proyecto
+dibujado de otra manera lo llena todo: los bloques de muro aparecen como «no son de
+muro», sus atributos con armadura como «sin leer» y los rótulos de armadura como textos
+que ningún patrón reconoce. Cada fila es <strong>evidencia para proponer un patrón</strong>, no un
+patrón; parte de lo que lista es ruido conocido (no se cuentan las etiquetas fijas como
+<code>M.H.A. e=</code>, pero sí, por ejemplo, las cantidades de barras de los cortes, <code>2%%C22</code>).</p>
+<p>Sigue la misma política de fallas que la extracción: un plano que no abre deja ese eje
+en <code>ejes_fallidos</code> y se sigue con los demás (exit 0); la carpeta que no sirve es una
+falla global (exit 3).</p>
+<h3 id="si-falla-la-lectura">Si falla la lectura</h3>
+<p>La extracción <strong>depende de los planos</strong> y se degrada, no revienta: si la carga
+falla, el valor es el default ø8 @25, nunca uno inventado ni una excepción que
+tumbe todo.</p>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Un DXF que no abre, un plano que falta, un <code>&lt;eje&gt;_anotaciones.json</code> ilegible o de otro esquema, o una falla inesperada leyendo un eje</td>
+<td><strong>No aborta.</strong> Ese eje queda en <code>ejes_fallidos</code> con su motivo (y en <code>warnings</code>), sus elementos <strong>no aparecen</strong> en <code>muros</code> ni <code>vigas</code> y se sigue con los demás. Exit 0.</td>
+</tr>
+<tr>
+<td>Un elemento cuyo piso no se puede ordenar (<code>PH</code>, <code>S1A</code>) y que necesita heredar «de abajo»</td>
+<td><strong>No aborta ni tumba el eje.</strong> Ese elemento queda en <code>default</code> (sin <code>patron</code>) con un aviso que lo nombra y el piso que no se pudo ordenar; los demás salen igual.</td>
+</tr>
+<tr>
+<td>Un proceso del pool muere (sin memoria, por ejemplo)</td>
+<td>Lo pendiente se reintenta en un pool de un solo proceso (nunca en el que llama). Si ese también muere, el eje que lo tumba queda en <code>ejes_fallidos</code> con su motivo y se sigue con el resto.</td>
+</tr>
+<tr>
+<td>La carpeta no existe, no tiene <code>anotaciones/</code>, no tiene ningún <code>&lt;eje&gt;_anotaciones.json</code>, no quedó ningún eje legible o no quedó ningún eje por procesar</td>
+<td>Falla global: exit 3 (<code>InputError</code>) con el motivo, y no se escribe <code>--out</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Un eje fallido es <strong>todo o nada</strong>: si falla cualquiera de sus planos, no se
+entrega un resultado a medias (heredar de un piso que no se leyó daría una
+armadura equivocada). Quien consume el JSON debe tratar un elemento que no
+aparece como «sin dato», es decir, en el default. Los elementos que sí aparecen
+con origen <code>default</code> son los que el plano no trajo (rótulo de machón, paño
+ilegible, pier sin región): también quedan en el default, con el motivo en
+<code>flags</code> cuando corresponde.</p>
+<h3 id="limites-de-lo-leido">Límites de lo leído</h3>
+<p>Declarados por la skill; no asumir que funcionan donde no se probaron:</p>
+<ul>
+<li><strong>Dialecto RLE.</strong> El único calibrado: bloques dinámicos con estados de
+  visibilidad, atributos <code>MALLA_*</code>, marcadores en <code>ESTRIBO</code>, bloque del eje con
+  XCLIP. No hay garantía de que dos calculistas, ni el mismo en dos proyectos,
+  dibujen igual. Ante un proyecto nuevo, correr antes el
+  <a href="#inventario-lo-que-el-dialecto-no-entiende">inventario</a>, que dice qué no entiende el
+  dialecto, y revisar a mano un par de rótulos por eje contra lo extraído: el
+  inventario no valida la lectura, solo muestra lo que el dialecto no lee.</li>
+<li><strong>Triple y cuádruple malla.</strong> Se leen solo con el marcador en <code>ESTRIBO</code>
+  (<code>T.M.H.</code>, <code>4.M.H.</code>, <code>4.M.</code>), validado en R4626 (un elemento con triple malla
+  y 28 con cuádruple malla). La etiqueta de plantilla <code>T.M.</code>/<code>C.M.</code> del camino
+  <code>MALLA_1/2</code> <strong>nunca se ejercitó</strong> en un plano real (ni en R2868 ni en R4626 salió
+  una sola malla triple o cuádruple por ese camino): si aparece una por ahí se
+  leería como doble malla y el área quedaría 33 % o 50 % corta. Verificar contra
+  el plano al primer caso. (Es el camino de bloques de RLE: en <code>soler</code> la triple y la
+  cuádruple malla van como texto, <code>T.M.</code> y <code>C.M.</code>, y sí se leen: ver
+  <a href="#planos-cli-mallas-verticales"><code>mallas-verticales</code></a>.)</li>
+<li><strong>Vigas validadas solo en R4626.</strong> La notación <code>E.%%CDaS</code> / <code>NE.%%CDaS</code>, la
+  regla de las trabas y la regla conservadora se fijaron con ese proyecto. La
+  sección debe ser de hormigón (prefijo <code>V</code>, <code>V.</code>, <code>VI</code> o <code>VSI</code> y <code>b/h</code>); otro
+  rótulo es <code>no-aplica</code>. En R2868 las secciones ya se reconocen, pero la mayoría
+  de sus vigas queda <code>sin-dato</code>: el plano de elevación no trae su rótulo de
+  estribo (ver <a href="#diferencias-con-la-skill-prellenar-armaduras-vh1">Diferencias con la
+  skill</a>).</li>
+<li><strong>La asignación elemento por elemento</strong> solo está validada contra un control
+  agregado (el mínimo por elemento coincide con el mínimo por eje) y visualmente
+  en los ejes capturados como casos de regresión, no caso a caso.</li>
+<li>Un eje sin anotaciones no entra (queda en el default); los elementos con eje <code>#</code>
+  (sin eje asignado en el modelo) no tienen plano al cual asociarse; un eje de
+  solo vigas no tiene muros.</li>
+<li>Una copia del bloque del eje con escala o rotación la omite <code>anotar-elevaciones</code>
+  (con aviso) y aquí no: el conteo de ventanas no calza y la hoja se lee <strong>sin
+  filtro de clip</strong> (queda en <code>avisos</code>). No ocurre en R2868 ni en R4626 (ningún
+  aviso de ese tipo).</li>
+</ul>
+<h3 id="diferencias-con-la-skill-prellenar-armaduras-vh1">Diferencias con la skill <code>prellenar-armaduras-vh1</code></h3>
+<p>El port reproduce la skill salvo dos criterios que el ingeniero aprobó el
+2026-09-30, al ver el barrido de R2868. El primero amplía las vigas que se leen;
+el segundo corrige qué parte del plano se lee en las láminas con varios ejes.
+Ninguno toca un umbral, un patrón de rótulo ni una regla de asignación.</p>
+<p><strong>1. Secciones de viga de hormigón: <code>V</code>, <code>V.</code>, <code>VI</code> y <code>VSI</code>.</strong> La skill solo
+reconocía rótulos del tipo <code>V40/70G35</code>: toda otra sección era metálica
+(<code>no-aplica</code>) y a esa viga no se le leía el estribo. Los modelos de RLE rotulan
+las vigas de hormigón <code>VI20/78*G25</code> (invertida), <code>V.15/40G25</code> (con punto) y
+<code>VSI.20/139G25</code> (semiinvertida), con un <code>*</code> antes del grado; en R4248 el grado
+es <code>H35</code> en vez de <code>G35</code>. Ahora basta un prefijo <code>V</code>, <code>V.</code>, <code>VI</code>, <code>VI.</code>, <code>VSI</code> o
+<code>VSI.</code> seguido de <code>b/h</code>: el <code>*</code>, el grado y lo que siga no importan. El canto
+que fija la ventana de captura (<code>canto / 2 + 20</code> cm sobre el eje de la viga) es
+el <code>h</code> de <code>b/h</code>: <code>VI20/78*G25</code> tiene 78. Sigue en <code>no-aplica</code> todo lo que no
+calza: <code>HEB500A36</code> y los perfiles <code>IN</code>, <code>HN</code>, <code>C</code>, <code>L</code>, <code>VS</code> y tubos.</p>
+<ul>
+<li>Antes de ampliar el patrón se inventariaron los rótulos de sección que caían en
+  <code>no-aplica</code>: en R2868, 19 rótulos distintos y ninguno metálico; en R4626, uno
+  solo, <code>HEB500A36</code> (68 vigas), que sigue en <code>no-aplica</code>. En R4248 (donde solo se
+  inventariaron los rótulos) son 43, también todos de hormigón.</li>
+<li>R2868: de las 598 vigas leídas (603 de 661 registros en los JSON), 566 salían
+  <code>no-aplica</code>; ahora ninguna. Quedan 43 <code>directo</code> y 523 <code>sin-dato</code>. Que la
+  mayoría sea <code>sin-dato</code> no viene del canto: en 460 de las 523 no hay ningún
+  rótulo de estribo ni de traba a menos de 6 m en vertical (el plano de
+  elevación no lo trae), y solo 13 tienen uno entre la ventana y 1.5 m (casi
+  todos a unos 90 cm del eje, en el rango del corte transversal que el ingeniero
+  excluyó).</li>
+<li>Las 43 leídas están en los ejes 2, 5, 7, 11, 13, 15, 15', B, D, E, G, H y J.
+  Las tres de canto 200 o más (<code>V.40/200G35</code> y <code>V.40/202G35</code>) tienen una ventana
+  de unos 120 cm sobre el eje: conviene mirarlas en el plano.</li>
+<li>R4626: sin cambios.</li>
+</ul>
+<p><strong>2. Bloque del eje sin espacio o compuesto.</strong> La skill solo reconocía el bloque
+<code>EJE 16</code> (con espacio). RLE escribe <code>EJE16</code> (todo R2868) y, cuando una
+elevación sirve a varios ejes, <code>EJE4'-12'-14'</code>. En una lámina de un solo eje no
+importaba (se tomaban todos los <code>EJE*</code>, que eran los suyos), pero en una lámina
+con varios ejes se tomaban los bloques de todos: el conteo de copias no calzaba
+con las ventanas de XCLIP del JSON y el eje se leía <strong>sin filtro de clip</strong>
+(<code>SIN filtro de clip</code> en <code>avisos</code>), con lo que se podían leer valores que el
+XCLIP esconde. Ahora las copias de un eje se eligen igual que lo hace
+<code>anotar-elevaciones</code> al guardar las ventanas (<code>eje_de_bloque</code> y
+<code>ejes_de_bloque</code> de <code>edbtodxf</code>): el bloque propio (<code>EJE 16</code> o <code>EJE16</code>) o, si el
+eje no lo tiene, el compuesto que lo incluye; con varios candidatos, el primero
+en orden alfabético; si ninguno nombra el eje, todos los <code>EJE*</code>, como antes.
+La regla es una sola: la del dialecto <code>rle</code> (<code>iec_core.planos.dialectos.rle</code>), que
+<code>edbtodxf.src.hoja</code> importa en vez de copiar (una app puede importar el núcleo).</p>
+<ul>
+<li>R2868: los ejes 14, 16, 17, 2', C y K se leían sin filtro de clip (8 avisos);
+  ahora las copias de los 62 pares eje × lámina calzan con las ventanas del JSON
+  y no queda ningún aviso.</li>
+<li>Cambian 21 de los 1487 muros: 11 del eje 14, 9 del C y 1 del 2'. En los ejes
+  16, 17 y K no cambia ninguno. Doce pasan a heredar del piso de abajo
+  (<code>pier-inferior</code>: 10 desde <code>linea</code>, 1 desde <code>directo</code> y 1 desde <code>cercano</code>) y
+  nueve conservan el origen con otro valor o patrón. En 10 cambia el valor (5
+  con menos armadura y 5 con más) y en 11 solo el origen o el patrón. Los
+  bloques huérfanos bajan de 7 a 0, los ambiguos de 4 a 0 y tres rótulos de
+  machón del eje C dejan de quedar a revisar (164 a 161).</li>
+<li>Las vigas que ya se leían no cambian.</li>
+<li>R4626: sin cambios (ningún eje se leía sin clip).</li>
+</ul>
+<h3 id="paridad-con-la-skill">Paridad con la skill</h3>
+<p>Las salidas del port se comparan con las de los scripts originales sobre
+proyectos reales, clave por clave, valor por valor y byte a byte del JSON
+serializado igual que la skill. Desde el 2026-09-30 la comparación excluye de
+forma explícita lo que cubren los dos criterios de la sección anterior (los muros
+y flags de los ejes cuyo bloque se leía sin clip, y las vigas cuya sección la
+skill daba por metálica); todo lo demás sigue exacto:</p>
+<table>
+<thead>
+<tr>
+<th>Proyecto</th>
+<th>Muros y machones</th>
+<th>Vigas</th>
+<th>Flags</th>
+<th>Atributos ocultos descartados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R2868</td>
+<td>1487 elementos: 1466 idénticos a la skill; los 21 distintos son de los ejes 14, C y 2' (criterio 2)</td>
+<td>598 vigas de 43 ejes: 32 idénticas y 566 con sección nueva (criterio 1); ninguna distinta sin explicar</td>
+<td>164 en la skill y 161 ahora (los tres que faltan son del eje C); los 161 son idénticos</td>
+<td>289120 (290596 en la skill: baja solo en los seis ejes, que ya no recorren los bloques de los otros ejes de su lámina)</td>
+</tr>
+<tr>
+<td>R4626</td>
+<td>54 elementos, idénticos</td>
+<td>294 vigas de 28 ejes, idénticas</td>
+<td>1, idéntico</td>
+<td>37552, igual</td>
+</tr>
+</tbody>
+</table>
+<p>El rediseño por <a href="#dialectos-de-dibujo">dialectos</a> (2026-09-30) <strong>no cambió ningún
+resultado</strong>: sobre R2868 y R4626 la salida de la API (<code>Resultado.a_dict()</code>) es idéntica
+byte a byte a la de antes del rediseño, y la del CLI también (el JSON suma solo
+<code>meta.dialecto</code>; el resumen de stdout no cambia). La revisión
+que siguió (constantes de estado y origen, la lectura de anotaciones en su módulo, el
+reparto por peso y la liberación del DXF de cada eje) tampoco cambió ningún resultado: la
+salida de la API y el JSON del CLI son idénticos byte a byte, salvo las dos claves nuevas
+(<code>W</code> en cada muro y <code>vigas_por_clave</code>), y el resumen de stdout no cambia.</p>
+<p>Tiempo de extracción de muros y vigas de cada proyecto completo:</p>
+<table>
+<thead>
+<tr>
+<th>Proyecto</th>
+<th>Scripts originales (en serie)</th>
+<th><code>armaduras-corte --workers 1</code></th>
+<th><code>--workers 4</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R2868</td>
+<td>514 s (348 muros + 166 vigas)</td>
+<td>171 s</td>
+<td>61 s</td>
+</tr>
+<tr>
+<td>R4626</td>
+<td>374 s (118 muros + 256 vigas)</td>
+<td>152 s</td>
+<td>47 s</td>
+</tr>
+</tbody>
+</table>
+<p>Desde el 2026-09-30 los ejes más pesados (por el tamaño de sus DXF) salen primero al pool,
+y cada proceso congela el DXF abierto fuera del recolector de basura y lo libera al terminar su
+tarea (un eje; desde el 2026-10-07, un grupo de ejes). En R2868 con 4 procesos, medido el mismo día y en la misma máquina: de 85 s a 61 s
+(−28 %); la memoria máxima del conjunto de procesos apenas cambia (de 4.7 a 4.8 GB de
+memoria privada) porque los cuatro DXF más pesados se leen a la vez.</p>
+<p>Desde el 2026-10-07 los ejes cuyos JSON colocan elementos en una misma lámina se leen
+juntos: el pool reparte grupos de ejes y cada DXF se abre una vez por grupo, no una por
+eje. Un grupo no pasa de 4 láminas abiertas a la vez: una cadena de ejes que comparte más
+se reparte en varios grupos que sí caben (cada eje se une a cada grupo que comparte una de
+sus láminas si la unión cabe), y el eje que por sí solo lee más de 4 láminas se lee solo.
+Cada eje cuenta lo que su lectura descarta por separado y da lo mismo que leído solo: en
+los cuatro proyectos de referencia ninguna cadena pasa del tope y el JSON sale idéntico.
+Donde más se nota es en un
+dibujo como el de Soler (R4834, <code>mallas-verticales --dialecto soler</code>: 69 ejes sobre 9
+láminas): de 36 s a 6 s en serie y de 13 s a 2.4 s con 4 procesos. En RLE pocos ejes
+comparten lámina (R4248, <code>armaduras-corte</code>: 56 ejes sobre 52 láminas) y la ganancia es chica:
+de 120 s a 110 s en serie y de 29 s a 27 s con 4 procesos. El pico de memoria del conjunto
+de procesos no cambia (R4834, R4248, R4626 y R2868).</p>
+<p>La diferencia en serie (unas 3 veces) no cambia el resultado: los scripts
+abrían cada plano dos veces (una para muros y otra para vigas) y volvían a
+explotar los mismos bloques en cada lectura; aquí se abre una vez por grupo de ejes que
+comparten lámina y cada bloque se explota una vez, con una copia de ezdxf que no clona los datos
+extendidos de las entidades (la lectura solo mira tipo, capa, texto y posición).
+Los textos y sus posiciones salen idénticos bit a bit a los de
+<code>virtual_entities()</code>.</p>
+<p>Con datos sanos no hay más diferencias con los scripts que los dos criterios de
+la sección anterior. Las otras son de manejo de fallas, a propósito:</p>
+<ul>
+<li>Un plano que falta o no abre deja ese eje fallido; los scripts omitían la hoja
+  en silencio (muros) o abortaban (vigas).</li>
+<li>Un piso que no se puede ordenar (nombres distintos de <code>S&lt;n&gt;</code> y <code>P&lt;n&gt;</code>, como <code>S1A</code> o
+  <code>PH</code>) no tumba el eje: el elemento que necesita heredar «de abajo» y no puede decidir
+  cuál es el piso inferior queda en el default con un aviso que lo nombra (<code>avisos</code>); el
+  script de muros abortaba todo el barrido.</li>
+<li>Un proceso del pool que muere (por ejemplo sin memoria) no tumba el barrido: lo
+  pendiente se reintenta en un pool de un solo proceso, nunca en el proceso que llama, y
+  solo el eje que tumba también a ese queda en <code>ejes_fallidos</code> con su motivo.</li>
+<li>Las vigas también aceptan los JSON de anotaciones sueltos junto a los DXF (con
+  aviso); el script de vigas solo miraba <code>anotaciones/</code>.</li>
+<li>Un plano de muros leído sin filtro de clip queda en <code>avisos</code>; el script de muros
+  no decía nada (el de vigas sí).</li>
+<li>Los atributos ocultos descartados y los bloques que no se pudieron expandir se
+  cuentan por eje, no en un contador global.</li>
+<li>Un <code>pier|piso</code> repetido en dos ejes avisa si el valor difiere. Se queda el que trae
+  dato del plano (el <code>default</code> de un eje no pisa el que otro sí leyó, sea cual sea el
+  orden de los ejes) y, entre dos con dato, el del último eje, igual que en el script.</li>
+</ul>
+<p>Los tests de la skill (caso de regresión <code>r4248_eje_12</code>, slots de vigas, bloques
+DXF, visibilidad y <code>resolver</code>) están portados a <code>tests/iec_core/planos/</code>, junto a
+un proyecto de elevaciones en miniatura cuyo «golden» lo produjeron los scripts
+originales.</p>
+<p>Desde Python (la GUI de curvaw): <code>from iec_core.planos import
+extraer_armaduras_corte</code>; devuelve un <code>Resultado</code> (<code>muros</code>, <code>vigas</code>, <code>ejes</code>,
+<code>ejes_fallidos</code>, <code>flags</code>, <code>avisos</code>, <code>falla_global</code>) y <strong>no lanza</strong> por problemas de
+los datos.</p>
+<h2 id="planos-cli-mallas-verticales">planos-cli mallas-verticales</h2>
+<p>Extrae de los planos de elevaciones <strong>ya anotados</strong> la <strong>malla vertical</strong> de muros y
+machones (por pier × piso): la que trabaja en flexión. La revisión de
+flexo-compresión de curvaw parte del armado por defecto de <code>curvaw-prellenar</code> (bordes
+por espesor y malla 2ø8 @25), que no es la armadura del calculista: con él, los FU
+salen inflados y no dicen nada del diseño. Este subcomando lleva al <code>.da9</code> la malla
+que el plano dibuja (ver <a href="../../curvaw/cli/#curvaw-prellenar-cwp-armado-masivo"><code>curvaw-prellenar --mallas-planos</code></a>).
+<strong>No revisa nada</strong>: lee lo que el plano imprime y dice cómo lo leyó.</p>
+<div class="highlight"><pre><span></span><code>planos-cli mallas-verticales --dxf-dir proyecto/planos/elevaciones-anotadas --dialecto soler --out proyecto/revision/ftc/RXXXX_mallas_verticales.json
+planos-cli mallas-verticales --dxf-dir elevaciones-anotadas --dialecto soler --out mallas_v.json --eje A --eje B
+planos-cli --json mallas-verticales --dxf-dir elevaciones-anotadas --dialecto soler --out mallas_v.json --workers 6
+</code></pre></div>
+<p>Es el hermano de <a href="#planos-cli-armaduras-corte"><code>armaduras-corte</code></a>: la misma carpeta de
+entrada, el mismo motor de asociación (la malla al elemento que la contiene, o al más
+cercano si no hay otro cerca), los mismos orígenes (menos <code>pier-inferior</code>) y la misma
+política de fallas. Cambia la malla que se lee (la vertical, no la horizontal de corte),
+que <strong>no procesa vigas</strong>, que <strong>no hereda del piso de abajo</strong> (un elemento sin rótulo en su
+piso queda en el default) y que <code>--dialecto</code> es <strong>obligatorio</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dxf-dir</code></td>
+<td>Carpeta de planos de elevaciones <strong>anotados</strong> (la <code>--out-dir</code> de <code>anotar-elevaciones</code>): los DXF en la raíz y un <code>&lt;eje&gt;_anotaciones.json</code> por eje en <code>anotaciones/</code>. Solo se lee; no se escribe nada ahí.</td>
+</tr>
+<tr>
+<td><code>--out</code></td>
+<td>JSON de salida (ver abajo). Se crea la carpeta si no existe.</td>
+</tr>
+<tr>
+<td><code>--dialecto</code></td>
+<td><strong>Obligatorio.</strong> Cómo dibuja el calculista. Solo lo leen los dialectos que rotulan las mallas como texto (hoy <code>soler</code>): el default del repo, <code>rle</code>, dibuja la malla como atributo de un bloque y de él solo se lee la horizontal; con <code>--dialecto rle</code> el CLI sale con error de uso (exit 2). Queda en <code>meta.dialecto</code> del JSON.</td>
+</tr>
+<tr>
+<td><code>--eje</code></td>
+<td>Procesa solo este eje (repetible). Sin <code>--eje</code>: todos los que tienen anotaciones.</td>
+</tr>
+<tr>
+<td><code>--saltar</code></td>
+<td>Deja fuera este eje (repetible).</td>
+</tr>
+<tr>
+<td><code>--workers</code></td>
+<td>Procesos en paralelo, de a un grupo de ejes por proceso (los ejes que leen la misma lámina van juntos: el DXF se abre una vez; por omisión, los que caben según los cores y la RAM libre, hasta 8; 1 = en serie). El resultado es el mismo con cualquier número.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="que-escribe_1">Qué escribe</h3>
+<p>Un único JSON (<code>--out</code>):</p>
+<div class="highlight"><pre><span></span><code>{
+  "esquema": "mallas-verticales/1",
+  "muros":  { "&lt;pier&gt;|&lt;piso&gt;": {diam, sep, ramas, eje, origen, patron}, ... },
+  "resumen": { "totales": {...}, "ejes": { "&lt;eje&gt;": {...} } },
+  "flags": [...],  "avisos": [...],
+  "ejes_fallidos": { "&lt;eje&gt;": "&lt;motivo&gt;" },  "ejes_saltados": [...],
+  "sin_dato_vertical": ["&lt;pier&gt;|&lt;piso&gt;", ...],
+  "meta": { "dir_anotadas": "...", "iec_apps": "&lt;versión&gt;", "dialecto": "soler", "direccion": "vertical" }
+}
+</code></pre></div>
+<p><strong><code>esquema</code></strong> — <code>mallas-verticales/1</code>, <strong>no</strong> el <code>1</code> del JSON de <code>armaduras-corte</code>. Los dos comparten la
+clave <code>muros</code>, pero no la malla: un aplicador de corte (la skill <code>prellenar-armaduras-vh1</code>, que solo
+entiende el esquema <code>1</code>) que aceptara éste escribiría la malla vertical en la planilla VH. Con un
+esquema aparte lo rechaza, y <code>curvaw-prellenar --mallas-planos</code> exige éste y <code>meta.direccion</code> =
+<code>vertical</code> (el JSON de corte es exit 3 allá). <code>meta.dialecto</code> y <code>meta.direccion</code> los escribe el
+núcleo (<code>Resultado.a_dict_mallas</code>); el CLI le suma la carpeta leída y la versión.</p>
+<p><strong><code>muros</code></strong> — una entrada por pier × piso del eje (y por muro suelto: su clave es su
+texto), con la malla <strong>vertical</strong>: <code>diam</code> es el ø en mm, <code>sep</code> el @ en cm (puede ser
+decimal: <code>12.5</code>, nunca se trunca) y <code>ramas</code> el número de mallas (2 = doble malla, 3 =
+triple, 4 = cuádruple). No lleva la letra <code>W</code>, que es de la planilla VH de corte. <code>origen</code> y <code>patron</code>
+dicen cómo se resolvió y cómo se leyó:</p>
+<table>
+<thead>
+<tr>
+<th><code>origen</code></th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>directo</code></td>
+<td>Rótulo dentro de la región del elemento</td>
+</tr>
+<tr>
+<td><code>cercano</code></td>
+<td>Rótulo asignado solo por proximidad (a menos de 150 u): evidencia débil, mirarlo con ojo</td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td><strong>Sin dato del plano</strong>: ø8 @25, doble malla. Nunca un valor inventado</td>
+</tr>
+</tbody>
+</table>
+<p><code>pier-inferior</code> (heredar del mismo pier en el piso de abajo) <strong>no sale</strong> en este subcomando: la
+malla vertical no supone nada de otro piso (ver «Sin rótulo en el piso», más abajo). Sí sale en
+<code>armaduras-corte</code>.</p>
+<p><strong><code>resumen</code></strong> trae, por eje y en <code>totales</code>, lo mismo que <code>armaduras-corte</code> (<code>elementos</code>,
+<code>directo</code>, <code>abajo</code> —aquí siempre 0—, <code>sin_dato</code>, <code>huerfanos</code>, <code>ambiguos</code>, <code>categorias</code>, <code>patrones</code>...)
+sin lo de las vigas, y además <code>sin_dato_direccion</code>: cuántos elementos quedaron en el default porque
+su rótulo declara la malla pero no la vertical (ver abajo). <strong><code>sin_dato_vertical</code></strong> es la lista de esos
+<code>pier|piso</code> (los que siguen en el default en <code>muros</code>, sin repetidos): la que lee <code>curvaw-prellenar</code>
+para contarlos, en vez de comparar la frase del motivo de los <code>flags</code>. La salida humana (stdout)
+repite la tabla por eje, cuántos elementos tienen malla del plano y cuántos quedaron
+en el default (y de ellos, cuántos sin dato vertical).</p>
+<h3 id="como-se-lee-un-rotulo">Cómo se lee un rótulo</h3>
+<p>El dialecto <code>soler</code> lee los <code>TEXT</code>/<code>MTEXT</code> de la capa <code>civ-textos</code> de la ventana de cada
+eje (el viewport de ese eje: el JSON de <code>anotar-elevaciones</code> guarda su ventana en
+coordenadas de model space). Cada rótulo <strong>arranca</strong> con el prefijo de malla o con
+<code>HORIZ.</code> / <code>VERT.</code>; un <code>+</code> o una <code>E</code> delante lo deja fuera. Lo que dice cada uno:</p>
+<table>
+<thead>
+<tr>
+<th>Rótulo (ejemplos)</th>
+<th><code>patron</code></th>
+<th>Horizontal</th>
+<th>Vertical</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DOBLE MALLA : ø 8 a 20</code>, <code>D.MALLA:ø8a20</code>, <code>D. MALLA ø8a20</code>, <code>D.MØ8a20</code>, <code>D.M. ø8a20</code>, <code>DM.Ø8a20</code></td>
+<td><code>doble-malla</code></td>
+<td>ø8 @20</td>
+<td>ø8 @20</td>
+</tr>
+<tr>
+<td><code>D.MALLA: HORIZ.ø8a15</code>, <code>D.M HORIZ.ø8a15</code>, <code>D.M. HORIZ.ø8a15</code>, <code>DOBLE MALLA : HORIZ.ø8 a 15</code></td>
+<td><code>doble-malla</code></td>
+<td>ø8 @15</td>
+<td><strong>sin dato</strong></td>
+</tr>
+<tr>
+<td><code>D. MALLA : ø8 a 20 HORIZ.ø8 a 12.5</code></td>
+<td><code>doble-malla</code></td>
+<td>ø8 @12.5</td>
+<td>ø8 @20</td>
+</tr>
+<tr>
+<td><code>TRIPLE MALLA:ø12a12.5</code>, <code>T.M.ø12a12.5</code></td>
+<td><code>triple-malla</code></td>
+<td>ø12 @12.5 (3 mallas)</td>
+<td>ø12 @12.5 (3 mallas)</td>
+</tr>
+<tr>
+<td><code>TRIPLE MALLA : HORIZ.ø8a15</code>, <code>T.M. HORIZ.ø8a15</code></td>
+<td><code>triple-malla</code></td>
+<td>ø8 @15 (3 mallas)</td>
+<td><strong>sin dato</strong></td>
+</tr>
+<tr>
+<td><code>C.M. HORIZ Ø8a15</code></td>
+<td><code>cuadruple-malla</code></td>
+<td>ø8 @15 (4 mallas)</td>
+<td><strong>sin dato</strong></td>
+</tr>
+<tr>
+<td><code>C.M. VERT Ø12a10</code></td>
+<td><code>cuadruple-malla</code></td>
+<td><strong>sin dato</strong></td>
+<td>ø12 @10 (4 mallas)</td>
+</tr>
+<tr>
+<td><code>HORIZ.ø8a15</code> (suelto)</td>
+<td><code>horiz-suelto</code></td>
+<td>ø8 @15</td>
+<td><strong>sin dato</strong></td>
+</tr>
+<tr>
+<td><code>VERT.øØ10a10</code> (suelto)</td>
+<td><code>vert-suelto</code></td>
+<td><strong>sin dato</strong></td>
+<td>ø10 @10</td>
+</tr>
+</tbody>
+</table>
+<p><code>DOBLE MALLA øDaS</code> sin calificador vale para las dos direcciones (2 capas de øD @S);
+con <code>HORIZ.</code> el valor calificado es la horizontal y uno anterior sin calificar es la
+vertical. Las abreviaturas valen igual: <code>D.M.</code> (y <code>D.MALLA</code>, <code>D.M</code>, <code>DM.</code>) es doble malla y
+<code>T.M.</code> triple (3 capas). La cuádruple malla, <code>C.M.</code> (4 capas), es la excepción: <strong>siempre trae
+el calificador</strong>, <code>HORIZ</code> o <code>VERT</code> <strong>sin punto</strong>, y dice solo esa dirección; sin calificador
+no se lee. Los separadores (<code>:</code>, espacios) y el símbolo del diámetro (<code>ø</code>, <code>Ø</code>, <code>øØ</code>,
+<code>%%c</code>) son opcionales.</p>
+<p><strong>Sin dato en la dirección.</strong> Si el rótulo de un muro declara la malla pero no la
+vertical, el plano habla de ese muro y no dice lo que se pregunta: el elemento queda en el
+default <strong>sin heredar de ningún lado</strong> (ni del piso de abajo) y sale en <code>flags</code> con el
+motivo <code>rotulo de malla sin la direccion vertical</code>, para leerlo del plano. Si el mismo
+muro trae además un <code>VERT.</code> suelto, esa es su vertical y no queda sin dato. Tampoco queda sin
+dato si otra lámina (otro eje) trae el valor del mismo elemento: ese dato prevalece y el
+flag del eje que no lo traía no se reporta.</p>
+<p><strong>Sin rótulo en el piso.</strong> La malla vertical <strong>no hereda del piso de abajo</strong>: un elemento sin
+rótulo de malla en su piso queda en el default ø8 @25 (origen <code>default</code>, sin <code>patron</code>) aunque
+el mismo pier tenga dato abajo, y <code>curvaw-prellenar --mallas-planos</code> lo arma con <code>--malla</code>. Es
+una decisión del usuario (2026-10-06) que vale solo para este subcomando: <code>armaduras-corte</code> (la
+malla horizontal, la de corte) conserva su herencia validada, piso inferior incluido. En
+Python es <code>resolver(..., heredar_piso_inferior=False)</code>, que la extracción vertical pasa sola.</p>
+<p><strong>Lo que no se lee</strong>, por decisión del ingeniero: las barras de borde de las cabezas
+(<code>2ø16</code>, <code>2+2ø12</code>, <code>Fe=2ø16 L=270</code>: siguen saliendo del armado por espesor de curvaw), los
+suples (<code>+ø8a25 int.</code>, <code>+ø10a10 ext L=200</code>: solo cuenta la malla base) y las piezas con
+estribos o laterales (<code>EDø10a10 Lat.2ø10</code>, <code>E.ø8a20-LAT.4ø8</code>, <code>TRABAø8a15</code>). Un rótulo que
+ningún patrón aprobado reconoce <strong>no se lee</strong> (p. ej. el compuesto <code>D.M.H.ø10a15+M.H.ø8a15</code>, o
+una <code>C.M.</code> sin calificador): el <a href="#inventario-lo-que-el-dialecto-no-entiende">inventario</a>
+(<code>armaduras-corte --inventario --dialecto soler</code>) lista esos textos para que el ingeniero
+decida si se agregan.</p>
+<h3 id="si-falla-la-lectura_1">Si falla la lectura</h3>
+<p>Igual que <code>armaduras-corte</code> (ver <a href="#si-falla-la-lectura">Si falla la lectura</a>): un plano o un
+JSON que no se pueden leer dejan a ese eje en <code>ejes_fallidos</code> y en <code>warnings</code> sin tumbar los
+demás (exit 0), y sus elementos no aparecen en <code>muros</code>; la carpeta que no sirve es una falla
+global (exit 3). Los umbrales de asociación (150 u de proximidad y compañía) son los de RLE,
+<strong>sin calibrar para Soler</strong>: mirar los <code>cercano</code> y los <code>ambiguos</code> con ojo.</p>
+<p>Desde Python: <code>from iec_core.planos import extraer_mallas_verticales</code>; devuelve el mismo
+<code>Resultado</code> que <code>extraer_armaduras_corte</code> (con <code>direccion</code> = <code>vertical</code>) y no lanza por
+problemas de los datos; con un dialecto que no la lee levanta <code>DialectoSinVertical</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../introduccion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introducción">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Introducción
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../clis/introduccion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Introducción">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Introducción
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Parte de esta documentación fue redactada con asistencia de IA y puede contener errores. Ante cualquier duda, prevalece el comportamiento real del software y el criterio del ingeniero.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://cl.linkedin.com/company/iec-ingenier-a-s.a." target="_blank" rel="noopener" title="cl.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iec-ingenieria" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<iec@iec.cl>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.path", "navigation.top", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tabs.sticky", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
