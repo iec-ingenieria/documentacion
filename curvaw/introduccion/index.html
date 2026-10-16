@@ -1,0 +1,4887 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iec-ingenieria.github.io/documentacion/curvaw/introduccion/">
+      
+      
+        <link rel="prev" href="../../tatoedb/versiones/">
+      
+      
+        <link rel="next" href="../formato_da9/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo_iec.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Introducción - Documentación Software IEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#curvaw" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Documentación Software IEC" class="md-header__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación Software IEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentación Software IEC" class="md-nav__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    Documentación Software IEC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flujo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧭 Flujo de una revisión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🆕 Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1️⃣ dxftoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1️⃣ dxftoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prepinchado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prepinchado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuración
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Básica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion_avanzada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avanzada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dxftoedb1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/planos_grilla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planos Grilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/grilla_excel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grilla Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herramientas LISP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Herramientas LISP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/instalacion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prelosa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prelosa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/motes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/problemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problemas Frecuentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/ideas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2️⃣ edbtopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2️⃣ edbtopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3️⃣ pretovh
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3️⃣ pretovh
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4️⃣ edbtoinf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4️⃣ edbtoinf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/uso_gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/parametros_sismicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros sísmicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/parametros_geometricos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros geométricos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/control_desplazamientos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control de desplazamientos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/drift_centro_masa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drift del centro de masa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/multitorre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos multi-torre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/derivas_html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte HTML de derivas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/formato_drift/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .drift
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5️⃣ tatoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5️⃣ tatoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/salidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Salidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6️⃣ curvaw
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6️⃣ curvaw
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interfaz-interactiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interfaz interactiva
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interfaz interactiva">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#botones-y-atajos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Botones, menús y atajos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-se-guarda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se guarda
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo se guarda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editar-fuera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editar el .da9 fuera de curvaw
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-del-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado del snapshot (.iecdb)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporte-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporte HTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caché
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identidades-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identidades del modelo en planta y elevación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homonimos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dónde sigue el elemento: los nombres repetidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes-de-esfuerzos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes de esfuerzos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sin-interfaz-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sin interfaz gráfica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#siguiente-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Siguiente paso
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formato_da9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .da9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orientacion_planta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientación en planta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../factor_utilizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factor de utilización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recorrido_eje_neutro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recorrido del eje neutro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../confinamiento_ds60/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confinamiento DS60
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisión de corte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tensiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtro por tensiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor_seccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor de sección
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visor_dxf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visores de planos DXF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas de revisión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI (modo batch)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7️⃣ pretoda9
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7️⃣ pretoda9
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8️⃣ pritopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    8️⃣ pritopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9️⃣ edbtodxf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    9️⃣ edbtodxf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtodxf/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtodxf/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔟 steelcheck (en desarrollo)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔟 steelcheck (en desarrollo)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⌨️ CLIs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⌨️ CLIs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso headless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/normas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primitivas de norma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/autoupdate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auto-update
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧰 Otras herramientas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧰 Otras herramientas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_16_1" id="__nav_16_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    anclajes (externa)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    anclajes (externa)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/datos_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/resultados_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/compresion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/traccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/ingreso_xlsx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ingreso Cargas XLSX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comandos-autocad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos de AutoCAD (referencia general)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Recursos de aprendizaje
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Recursos de aprendizaje
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aprendizaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aprendizaje/balasto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coeficiente de balasto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aprendizaje/curva-interaccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curva de interacción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎤 Presentaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../directorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📁 Directorios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interfaz-interactiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interfaz interactiva
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interfaz interactiva">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#botones-y-atajos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Botones, menús y atajos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-se-guarda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se guarda
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo se guarda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editar-fuera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editar el .da9 fuera de curvaw
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-del-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado del snapshot (.iecdb)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporte-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporte HTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caché
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identidades-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identidades del modelo en planta y elevación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homonimos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dónde sigue el elemento: los nombres repetidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes-de-esfuerzos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes de esfuerzos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sin-interfaz-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sin interfaz gráfica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#siguiente-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Siguiente paso
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    🏠 Inicio
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    6️⃣ curvaw
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="curvaw">CURVAW</h1>
+<p><em>Curvas de interacción y verificación de secciones de hormigón armado</em></p>
+<hr />
+<p><strong>curvaw</strong> es el visualizador y verificador de <strong>flexo-compresión</strong> y
+<strong>flexo-tracción</strong> de secciones de hormigón armado según ACI 318S-08. Para cada
+sección calcula la <strong>curva de interacción</strong> M-P (de diseño y nominal), el
+<strong>factor de utilización (FU)</strong> de cada carga y la <strong>verificación de confinamiento
+de bordes de muro DS60</strong>. Trabaja sobre archivos <a href="../formato_da9/"><code>.da9</code></a>, donde
+un solo archivo agrupa <strong>muchos elementos</strong> navegables.</p>
+<p>La herramienta principal es una <strong>GUI interactiva</strong>; hay además tres CLIs headless
+(<a href="../cli/">análisis batch, armado masivo y notas de revisión</a>) para revisión sin
+ventana, agentes y uso avanzado.</p>
+<h2 id="interfaz-interactiva">Interfaz interactiva</h2>
+<p>Se lanza con la ruta del proyecto <strong>sin la extensión <code>.da9</code></strong>:</p>
+<div class="highlight"><pre><span></span><code>cw<span class="w"> </span>proyecto<span class="w">                           </span><span class="c1"># abre proyecto.da9, en el directorio actual</span>
+cw<span class="w"> </span>carpeta/proyecto<span class="w">                   </span><span class="c1"># el .da9 está en otra carpeta</span>
+cw<span class="w"> </span>proyecto<span class="w"> </span>--iecdb<span class="w"> </span>ruta/RXXXX.iecdb<span class="w">  </span><span class="c1"># con el snapshot del modelo indicado</span>
+cw<span class="w"> </span>proyecto<span class="w"> </span>--pre<span class="w"> </span>ruta/RXXXX.pre<span class="w">      </span><span class="c1"># con un .pre indicado (fuente heredada)</span>
+cw<span class="w">                                    </span><span class="c1"># vista de bienvenida (botón "Abrir archivo DA9...")</span>
+</code></pre></div>
+<ul>
+<li><strong>La ruta es relativa al directorio desde donde se lanza <code>cw</code></strong> (o absoluta), y
+  curvaw le agrega <code>.da9</code>: con la extensión (<code>cw proyecto.da9</code>) buscaría
+  <code>proyecto.da9.da9</code>. Si no encuentra el archivo, la ventana abre y muestra
+  «Error al abrir archivo» con <code>No such file or directory: '&lt;ruta&gt;.da9'</code>, que es la
+  ruta que buscó. Desde la ventana, <strong>Archivo → Abrir DA9...</strong> abre otro archivo; busca
+  sus hermanos solo con la regla de nombres de abajo y <strong>no conserva</strong> el <code>--iecdb</code> ni el
+  <code>--pre</code> con que se lanzó <code>cw</code>: para abrir otro <code>.da9</code> con su snapshot en otra carpeta,
+  lanzar <code>cw</code> de nuevo con <code>--iecdb</code>.</li>
+<li><strong><code>--iecdb</code> y <code>--pre</code> son opcionales.</strong> Si la ruta que se les da no existe, <code>cw</code>
+  no abre y lo dice. Sin ellos, curvaw busca los archivos <strong>hermanos</strong> del <code>.da9</code>:
+  el <code>.pre</code> con el mismo nombre base en la misma carpeta (<code>RXXXX_ftc.pre</code>) y el
+  <code>.iecdb</code> en este orden: el que tenga el nombre base del <code>.pre</code> encontrado y, si
+  no, el que tenga el nombre base del <code>.da9</code> (<code>RXXXX_ftc.iecdb</code>), también en la
+  misma carpeta.</li>
+<li><strong>Con la estructura de carpetas estándar (<a href="../../directorios/">Directorios</a>)
+  nada coincide</strong>: el <code>.da9</code> es <code>revision/ftc/RXXXX_ftc.da9</code> y el snapshot,
+  <code>revision/esfuerzos/RXXXX.iecdb</code>, que ni está en esa carpeta ni se llama como el
+  <code>.da9</code>. El <code>.iecdb</code> hay que pasarlo con <code>--iecdb</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>cw<span class="w"> </span>proyecto/revision/ftc/RXXXX_ftc<span class="w"> </span>--iecdb<span class="w"> </span>proyecto/revision/esfuerzos/RXXXX.iecdb
+</code></pre></div>
+<p>Sin <code>.iecdb</code> (ni <code>.pre</code>), los elementos que el <code>.da9</code> trae sin esfuerzos quedan sin
+cargas, sin FU y sin corte, y la planta y la elevación dicen «No se encontró un
+.iecdb para este proyecto» (el indicador <strong>E</strong> queda en blanco: <a href="#estado-del-snapshot">Estado del
+snapshot</a>). Ante ese aviso, cerrar <code>cw</code> y lanzarlo de nuevo con
+<code>--iecdb &lt;ruta del .iecdb&gt;</code>. Lo mismo vale para <code>curvaw-batch</code>
+(<a href="../cli/#fuentes-de-esfuerzos-cascada">Fuentes de esfuerzos</a>).</p>
+<p>La primera apertura lee el <code>.da9</code> y resuelve los esfuerzos de cada elemento; lo
+que carga queda en una <strong>caché en disco</strong> (<a href="#cache">Caché</a>: <code>~/.cache/curvaw</code>,
+acotada a 1 GB por uso reciente), así que <strong>volver a abrir el mismo proyecto es
+casi instantáneo</strong> mientras el archivo no cambie. Los esfuerzos del snapshot
+<code>.iecdb</code> se guardan aparte, contra el snapshot y no contra el <code>.da9</code>, de modo que
+sobreviven a que un armado reescriba el archivo: la recarga posterior solo vuelve
+a leerlo.</p>
+<p>La ventana muestra una <strong>barra de filtros</strong> (eje, piso, tipo, nombre, ancho,
+alto, los dos FU —<strong>FU FTC</strong> de flexo-compresión y <strong>FU Corte</strong> de la
+<a href="../corte/#filtro-fu-corte">armadura de corte</a>—, y filtros de cargas por
+combinación/posición) que recortan qué
+elementos se ven, con un botón <strong>↻</strong> junto al limpiador de filtros que
+<strong>reaplica</strong> el filtro vigente sobre los valores actuales del elemento (útil
+tras armar una sección o editar barras, cuando el subconjunto filtrado quedó
+desactualizado sin que cambiaran los combos; refiltrar ya <strong>no reinicia la carga seleccionada</strong> ni el
+ángulo del recorrido cuando el elemento en pantalla es el mismo antes y después del
+filtro, porque pertenecen al elemento y no al subconjunto: solo cambia el contador
+<code>n/total</code>; el <strong>↻</strong> del extremo derecho de la barra es otro botón, que recarga el
+elemento: ver <a href="#botones-y-atajos">Botones, menús y atajos</a>); navegación elemento por
+elemento con ←/→ (las flechas y el contador <code>n/total</code> están en la barra
+inferior, junto a los controles del gráfico), en orden <strong>eje → nombre →
+piso → tipo</strong>: el mismo pier se recorre piso a piso, de abajo hacia arriba,
+<strong>subterráneos primero</strong> (del más profundo a la superficie: SUB2 → SUB1 →
+P01 → …, igual que el combo del filtro de piso). Con snapshot <code>.iecdb</code> el
+orden de los pisos sale de su <strong>cota real</strong>, así que vale aunque el modelo no
+siga la convención de nombres (<code>CS1</code>/<code>CS2</code> como subterráneos, por ejemplo);
+sin snapshot se reconocen <code>S#</code>/<code>SUB#</code> por nombre; la <strong>sección transversal</strong>
+con su eje neutro y zonas comprimida/traccionada, con su
+<a href="../orientacion_planta/">orientación real en planta</a> cuando el
+elemento la tiene; la <strong>curva de interacción</strong> M2/M3 (con un toggle para
+elegir cuál se muestra) y la celda del <strong>FU 3D</strong> (el corte del envelope en la
+dirección crítica con las cargas que actúan en ese plano, siempre visible); la <strong>planta y
+elevación</strong> del eje (un clic sobre un elemento navega a él si pasa los
+filtros), cada una con un toggle para superponer el
+<a href="../visor_dxf/">plano DXF real</a> del eje o el piso vigente — ambas rotulan los
+elementos con su <a href="#identidades-del-modelo">identidad en el modelo</a>
+(pier, spandrel o label ETABS), la elevación rotula además cada nivel con su
+<strong>cota y el nombre del piso</strong> (<code>54.14  P19</code>) y el título de la planta agrega
+la <strong>cota del piso vigente</strong> (<code>P19  ·  z=54.14</code>) cuando hay un snapshot
+<code>.iecdb</code> resuelto; y la celda de abajo a la derecha, que arranca en el
+<a href="../corte/#grafico-corte-por-carga">gráfico de corte por carga</a> (modo <strong>Corte</strong>) y
+con su selector pasa a la <strong>curva 3D</strong> del manto de capacidad, con sliders P y θ.</p>
+<p><strong>Zoom y pan</strong> funcionan igual en las cinco celdas de gráfico (sección,
+M2/M3, FU 3D, planta/elevación y 3D): la <strong>rueda del mouse hace zoom</strong>
+centrado en el
+cursor (en la celda 3D, al centro), aprovechando todo el ancho de la celda
+sin franjas muertas; en las celdas 2D, la <strong>rueda presionada</strong> (botón medio)
+permite además desplazar la vista (pan). El botón Home de la toolbar
+restaura la vista completa.</p>
+<p>La celda de <strong>Sección Transversal</strong> mantiene una <strong>leyenda fija</strong>, visible
+sin abrir el panel ⓘ: los diámetros presentes con su color y conteo
+(<code>ø16 ×4</code>) se ven siempre; con el panel de
+<a href="../confinamiento_ds60/">Confinamiento</a> abierto se suman las zonas eje
+neutro / comprimida / traccionada / cabeza a confinar. La armadura transversal
+se rotula con una entrada («Ac», armadura de corte) o, con el panel de
+<a href="../corte/#dibujo-en-la-seccion">Corte</a> abierto, con una por componente. El
+nombre, piso y eje del elemento en
+pantalla se muestran en tamaño más grande, para identificarlo de un vistazo
+al navegar rápido entre elementos.</p>
+<p>La <strong>segunda fila</strong> tiene los umbrales de tensión, para quedarse solo con los
+elementos que superan cierto valor (ver <a href="../tensiones/">Filtro por tensiones</a>).</p>
+<p>Los combos <code>Comb</code> y <code>Pos</code> no filtran elementos: acotan <strong>qué cargas del elemento
+se miran</strong> (y con ellas el FU, las tensiones y la verificación de confinamiento).
+Al tope de la lista de <code>Comb</code> hay dos atajos, <strong>Sismo X</strong> y <strong>Sismo Y</strong>, que
+marcan de una vez todas las combinaciones sísmicas de esa dirección (el número
+entre paréntesis dice cuántas agrupan); un segundo clic las desmarca, y lo que se
+haya elegido a mano queda intacto. La dirección se lee del nombre de la
+combinación (<code>Ex</code>, <code>Ey</code>, <code>SX</code>, <code>SY</code>, con o sin sufijo), sin confundirla con la
+torsión accidental <code>TAX</code>/<code>TAY</code> que la acompaña; si los nombres no la traen
+(<code>COMB31</code>), el atajo no aparece y queda la búsqueda del desplegable. Con una
+búsqueda activa el atajo agrupa solo lo que quedó a la vista. En todos los
+desplegables de selección múltiple, al reabrirlos las opciones marcadas aparecen
+primero, para quitarlas sin buscarlas; mientras uno está abierto, el orden no
+cambia.
+La <strong>barra inferior</strong> reúne los controles del gráfico activo, los armados
+masivos con su <strong>↺ Deshacer</strong> y la navegación entre elementos.</p>
+<p>Funciones principales:</p>
+<ul>
+<li><strong>FU radial</strong> por carga y dirección, y <strong>FU 3D biaxial</strong> (dirección crítica del
+  momento biaxial). Ver <a href="../factor_utilizacion/">Factor de utilización</a>.</li>
+<li><strong>Recorrido del eje neutro</strong> con los sliders P (axial) y θ (azimut), que muestra
+  el eje neutro, las zonas y la fluencia de cada barra. Ver
+  <a href="../recorrido_eje_neutro/">Recorrido del eje neutro</a>.</li>
+<li><strong>Orientación real en planta</strong> de la sección de muros, machones y columnas,
+  derivada y sellada automáticamente desde el snapshot <code>.iecdb</code>. En la planta
+  del piso, las <strong>columnas se dibujan con su forma y giro reales</strong>. Ver
+  <a href="../orientacion_planta/">Orientación en planta</a>.</li>
+<li><strong>Confinamiento de bordes de muro DS60</strong> (pestaña Confinamiento del ⚙ de la sección):
+  verificación por cabeza y dirección, reducida a la deriva du/hw. Ver
+  <a href="../confinamiento_ds60/">Confinamiento DS60</a>.</li>
+<li><strong>Revisión de corte ACI 318S-08</strong> (pestaña Corte del ⚙ de la sección): V2 y V3
+  con φ 0.60 y 0.75 contra la armadura transversal, que se declara por ramas
+  (mallas, estribo y trabas) y se dibuja en la sección. Requiere los esfuerzos del
+  <code>.iecdb</code>. La armadura transversal de muchos elementos se arma de una vez,
+  <a href="../corte/#armado-masivo-transversal">desde los planos anotados o sobre el filtro</a>.
+  Ver <a href="../corte/">Revisión de corte</a>.</li>
+<li><strong>Editor de sección</strong> (rectangular, circular y poligonal T/I/L/C) y editores de
+  armadura. Ver <a href="../editor_seccion/">Editor de sección</a>.</li>
+<li><strong>Visores de planos DXF/DWG</strong> en las celdas de planta y elevación, con
+  resolución automática de la carpeta de planos del proyecto y caché de
+  render. Ver <a href="../visor_dxf/">Visores de planos DXF</a>.</li>
+</ul>
+<h3 id="botones-y-atajos">Botones, menús y atajos</h3>
+<p>Controles de la barra superior (hay dos botones <strong>↻</strong> que <strong>no hacen lo mismo</strong>):</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>↻</strong> junto al <strong>✕</strong> de los filtros</td>
+<td><strong>Reaplica los filtros</strong>: vuelve a evaluar el filtro vigente con los valores actuales de los elementos (útil tras armar o editar barras). No lee el archivo.</td>
+</tr>
+<tr>
+<td><strong>✕</strong></td>
+<td>Limpia todos los filtros.</td>
+</tr>
+<tr>
+<td>Ícono de curva (<strong>∿</strong>)</td>
+<td>Muestra u oculta la curva nominal, además de la de diseño.</td>
+</tr>
+<tr>
+<td><strong>↻</strong> a la derecha, junto a la <strong>E</strong></td>
+<td><strong>Recarga el elemento en pantalla</strong> (Shift + F5): vuelve a leer ese elemento del <code>.da9</code>, con sus esfuerzos, y recalcula su curva y su FU. Los filtros y la posición no cambian.</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Estado del snapshot <code>.iecdb</code> (<a href="#estado-del-snapshot">más abajo</a>).</td>
+</tr>
+</tbody>
+</table>
+<p>En una ventana angosta, el ícono de curva, el <strong>↻</strong> de la derecha y la <strong>E</strong> pasan a la
+segunda fila de la barra (la de los umbrales de tensión), al extremo derecho.</p>
+<p>La barra inferior reúne, de izquierda a derecha, la barra de herramientas del gráfico
+(zoom, desplazamiento, Home), el grupo de la selección (<strong>◆ N</strong>, <strong>⧉ Copiar</strong>, <strong>✕</strong>;
+solo con una selección activa), <strong>⚙ Armar filtro</strong> (o <strong>Armar selección</strong>),
+<strong>▤ Plantilla</strong>, <strong>↺ Deshacer</strong> y <strong>← n/total →</strong>; ver
+<a href="../editor_seccion/">Editor de sección y armado</a>.</p>
+<p>Los menús de la ventana:</p>
+<table>
+<thead>
+<tr>
+<th>Menú</th>
+<th>Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Archivo</strong></td>
+<td>Abrir DA9..., Recargar DA9 (F5, Ctrl + R), Recargar elemento (Shift + F5), Cerrar DA9, <a href="#reporte-html">Exportar reporte HTML...</a>, Salir. No hay <strong>Guardar</strong> (<a href="#como-se-guarda">Cómo se guarda</a>).</td>
+</tr>
+<tr>
+<td><strong>Ver</strong></td>
+<td>Elemento anterior, Elemento siguiente, Ir al primero, Ir al último.</td>
+</tr>
+<tr>
+<td><strong>Editar</strong></td>
+<td>Nota del elemento... (Ctrl + N), Agregar barra..., Restaurar barras, Editar DA9 externo... (Ctrl + E).</td>
+</tr>
+<tr>
+<td><strong>Planos</strong></td>
+<td>Vincular carpeta de plantas..., Vincular carpeta de elevaciones..., Desvincular, Estado de los planos... (<a href="../visor_dxf/#vincular-carpetas-a-mano">Visores de planos</a>).</td>
+</tr>
+<tr>
+<td><strong>Ayuda</strong></td>
+<td>Atajos de teclado... (F1) y Acerca de...</td>
+</tr>
+</tbody>
+</table>
+<p>Los atajos de teclado (F1 los muestra) no actúan mientras el foco está en un campo
+de texto, con una excepción (<strong>Esc</strong>, en la tabla):</p>
+<table>
+<thead>
+<tr>
+<th>Atajo</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>←</strong> / <strong>→</strong></td>
+<td>Elemento anterior / siguiente</td>
+</tr>
+<tr>
+<td><strong>F5</strong>, <strong>Ctrl + R</strong></td>
+<td>Recargar el <code>.da9</code> completo</td>
+</tr>
+<tr>
+<td><strong>Shift + F5</strong></td>
+<td>Recargar solo el elemento en pantalla</td>
+</tr>
+<tr>
+<td><strong>Ctrl + N</strong></td>
+<td>Nota del elemento</td>
+</tr>
+<tr>
+<td><strong>Ctrl + E</strong></td>
+<td>Abrir el <code>.da9</code> en un editor externo</td>
+</tr>
+<tr>
+<td><strong>Esc</strong></td>
+<td>Limpiar la selección de elementos. Con el formulario de armado del ⚙ abierto, <strong>cancela el armado</strong>, también desde un campo de texto (<a href="../editor_seccion/#armar-seccion">Armar sección</a>).</td>
+</tr>
+<tr>
+<td><strong>F1</strong></td>
+<td>Mostrar los atajos</td>
+</tr>
+</tbody>
+</table>
+<p>Los gestos del mouse para seleccionar elementos (<strong>Ctrl + clic</strong>, <strong>Ctrl + arrastre</strong>,
+<strong>clic derecho</strong>) están en <a href="../editor_seccion/#seleccionar">Seleccionar</a>.</p>
+<h3 id="como-se-guarda">Cómo se guarda</h3>
+<p>curvaw <strong>no tiene Guardar ni Ctrl + Z</strong>. Cada acción confirmada escribe el <code>.da9</code> en
+ese momento: armar barras (el <strong>✓ Aceptar</strong> del ⚙ y los armados masivos), editar una
+barra o la sección, la armadura transversal, las cabezas de confinamiento, las notas.
+Al abrir con un <code>.iecdb</code>, curvaw además sella la orientación (<code>APLAN</code>) de los muros,
+machones y columnas (<a href="../orientacion_planta/#el-sellado-automatico">Orientación en planta</a>). Cada
+escritura es atómica: o el <code>.da9</code> queda completo, o queda como estaba
+(<a href="../formato_da9/">Formato <code>.da9</code></a>).</p>
+<p>Como el <code>.da9</code> es el archivo de verdad y lo ve quien lo abra, las vueltas atrás son
+pocas:</p>
+<ul>
+<li><strong>Cancelar</strong>, en cada panel o formulario, descarta lo que todavía no se aplicó.</li>
+<li><strong>↺ Deshacer</strong> revierte la última operación de armado; repetido, retrocede hasta
+  las 10 últimas, y no hay rehacer. Restaura el archivo entero, así que avisa y pide
+  confirmación si después hubo ediciones que no apilan un punto propio (barras a mano,
+  cabezas de confinamiento). Ver <a href="../editor_seccion/#deshacer-armado">↺ Deshacer un armado</a>.</li>
+<li><strong>Editar → Restaurar barras</strong> devuelve <strong>un elemento</strong> a la armadura que tenía antes de
+  su primera edición desde que se abrió o se recargó el archivo (un armado masivo toma el
+  archivo como nueva base); también reescribe el <code>.da9</code>. Si el elemento no se editó, no
+  hace nada.</li>
+</ul>
+<p>No hay copia automática del <code>.da9</code>: los respaldos del ↺ viven en una carpeta temporal
+que se borra al cerrar el archivo. Antes de un armado masivo, o de una corrección
+grande, conviene copiar el <code>.da9</code>.</p>
+<h4 id="editar-fuera">Editar el <code>.da9</code> fuera de curvaw</h4>
+<p>curvaw no detecta que el <code>.da9</code> cambió por fuera: sigue mostrando lo que leyó hasta que
+se le pide volver a leerlo.</p>
+<ol>
+<li>Abrirlo con <strong>Ctrl + E</strong> (<strong>Editar → Editar DA9 externo...</strong>), que usa VS Code si
+   <code>code</code> está en el PATH y, si no, el programa que el sistema tenga asociado al
+   archivo. También sirve abrirlo con cualquier editor de texto.</li>
+<li>Guardar los cambios en el editor.</li>
+<li>Volver a curvaw y recargar: el aviso que deja Ctrl + E trae el botón <strong>Recargar</strong>;
+   si se cerró, <strong>F5</strong> o <strong>Ctrl + R</strong> (<strong>Archivo → Recargar DA9</strong>) relee todo el archivo, y
+   <strong>Shift + F5</strong> (<strong>Archivo → Recargar elemento</strong>, o el <strong>↻</strong> de la derecha) relee solo
+   el elemento en pantalla, más rápido.</li>
+</ol>
+<h3 id="estado-del-snapshot">Estado del snapshot (<code>.iecdb</code>)</h3>
+<p>La <strong>E</strong> sobre el cuadrado azul, al extremo derecho de la barra superior, dice si el
+<code>.iecdb</code> sigue al día. curvaw no abre ETABS, pero compara la <strong>fecha de modificación
+del <code>.edb</code></strong> de origen con la que se guardó al capturar el snapshot (no revisa el
+contenido). El texto completo del estado sale al pasar el mouse por encima.</p>
+<table>
+<thead>
+<tr>
+<th>La <strong>E</strong></th>
+<th>Estado</th>
+<th>Qué significa</th>
+<th>Qué hacer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verde</td>
+<td>Vigente</td>
+<td>El <code>.edb</code> no cambió desde la captura.</td>
+<td>Nada.</td>
+</tr>
+<tr>
+<td>Roja, con «Revisar»</td>
+<td>El <code>.edb</code> cambió</td>
+<td>La fecha del <code>.edb</code> es otra que la de la captura: la planta, la elevación y lo que sale del snapshot (esfuerzos, cortes, orientación) pueden estar desactualizados. Solo se compara la fecha: guardar el <code>.edb</code> sin cambiar nada, o reemplazarlo por una copia con otra fecha, también dispara el aviso.</td>
+<td>Si el modelo cambió de verdad: cerrar <code>cw</code> (mientras está abierto, el <code>.iecdb</code> queda bloqueado y no se puede reescribir ni reemplazar), regenerar el <code>.iecdb</code> con <a href="../../edbtopre/introduccion/">edbtopre</a> y abrir <code>cw</code> de nuevo. Se genera una sola vez para todo el proyecto, porque lo comparten la revisión de corte y la de flexo-compresión (<a href="../../directorios/">Directorios</a>).</td>
+</tr>
+<tr>
+<td>Blanca, con «Revisar»</td>
+<td>No se pudo confirmar</td>
+<td>No se pudo leer la fecha del <code>.edb</code> (carpeta de red caída, archivo movido o de otra máquina), o la comprobación todavía está en curso.</td>
+<td>Esperar unos segundos; si sigue, comprobar que el <code>.edb</code> está donde se capturó.</td>
+</tr>
+<tr>
+<td>Blanca, sin texto</td>
+<td>Sin snapshot</td>
+<td>No hay <code>.iecdb</code> para este <code>.da9</code>: no hay planta ni elevación ni corte (los cortes salen del <code>.iecdb</code>), y los esfuerzos solo pueden venir del propio <code>.da9</code> o de un <code>.pre</code>. La sección, las curvas y el FU siguen disponibles.</td>
+<td>Abrir con <code>--iecdb</code> (<a href="#interfaz-interactiva">arriba</a>).</td>
+</tr>
+<tr>
+<td>Blanca, sin texto</td>
+<td>Snapshot sin geometría</td>
+<td>Hay <code>.iecdb</code>, pero sin geometría de modelo (los de <code>pritopre</code> nunca la traen, y uno de <code>edbtopre</code> puede quedarse sin ella si su captura falló): no hay planta ni elevación, y la sección, las curvas y el FU siguen disponibles.</td>
+<td>No hay nada que reconectar. Con un <code>.iecdb</code> de <code>edbtopre</code>, volver a generarlo; los de <code>pritopre</code> no traen geometría.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Revisar</strong> (o un clic en la <strong>E</strong>) <strong>vuelve a comparar la fecha</strong> del <code>.edb</code> y a
+dibujar la planta y la elevación desde el <code>.iecdb</code> ya abierto: no genera un snapshot
+nuevo ni corrige nada. Con la <strong>E</strong> en rojo, la vista sigue funcionando con el
+snapshot viejo hasta que se regenere.</p>
+<h3 id="reporte-html">Reporte HTML</h3>
+<p><strong>Archivo → Exportar reporte HTML...</strong> genera un reporte de flexo-compresión de los
+elementos que se ven con los filtros vigentes:</p>
+<ol>
+<li>Un cuadro <strong>Configuración del reporte</strong> pide el <strong>Umbral FU</strong> (1,2 por defecto; un
+   número mayor que 0). Los elementos <strong>críticos</strong> son los de FU <strong>mayor</strong> que el
+   umbral, y el reporte trae una página de detalle por cada uno.</li>
+<li>Un diálogo pide dónde guardarlo y propone <code>&lt;proyecto&gt;_reporte.html</code> en la carpeta
+   del <code>.da9</code>.</li>
+<li>Calcula lo pendiente y dibuja el reporte (en un proyecto grande son minutos, con
+   una barra de avance) y, al terminar, ofrece abrirlo.</li>
+</ol>
+<p>El reporte lista los filtros que estaban activos y usa el FU planar (el máximo de M2 y
+M3), como el batch por defecto (<a href="../cli/#fu-3d-biaxial">CLI</a>). <strong>No incluye la revisión
+de corte</strong> (<a href="../corte/#alcance">Alcance y pendientes</a>). Sin ventana, el mismo tipo de
+reporte lo genera <a href="../cli/#salidas"><code>curvaw-batch</code></a>.</p>
+<h3 id="cache">Caché</h3>
+<p>curvaw guarda en disco dos cachés independientes. Ninguna se limpia desde la
+aplicación:</p>
+<table>
+<thead>
+<tr>
+<th>Caché</th>
+<th>Dónde</th>
+<th>Qué guarda</th>
+<th>Límite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>De carga</td>
+<td><code>~/.cache/curvaw</code> (en Windows, <code>C:\Users\&lt;usuario&gt;\.cache\curvaw</code>)</td>
+<td>El <code>.da9</code> ya leído, con sus esfuerzos; el CLI guarda además las curvas y el FU.</td>
+<td>1 GB en total y 50 proyectos: se descartan los menos usados.</td>
+</tr>
+<tr>
+<td>De planos</td>
+<td><code>~/.iec/curvaw/cache_dxf/</code></td>
+<td>Los planos DXF/DWG ya convertidos a vectorial para los <a href="../visor_dxf/#rendimiento-cache-vectorial-y-pre-render">visores</a>.</td>
+<td>500 MB.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Qué invalida la caché de carga</strong>: su clave junta la versión de la suite, la ruta
+  completa de los archivos y la <strong>fecha de modificación y el tamaño</strong> del <code>.da9</code> y,
+  si los hay, del <code>.pre</code> y del <code>.iecdb</code>. Editar el <code>.da9</code>, regenerar el <code>.iecdb</code> o
+  actualizar la suite la renueva sola. <strong>Recargar DA9</strong> también la usa: relee el
+  archivo si cambió, pero no la salta.</li>
+<li><strong>Qué invalida la de planos</strong>: el archivo del plano y su fecha de modificación.</li>
+<li><strong>No hay flag ni botón para saltarla</strong>, ni en la ventana ni en los CLI. <code>curvaw-batch</code>
+  avisa por stderr con <code>(caché)</code> cuando sirvió el proyecto desde ella.</li>
+<li><strong>Para limpiarla</strong> (una vista o un reporte que parece viejo, por ejemplo tras copiar
+  un <code>.da9</code> de otra máquina): cerrar <code>cw</code> y borrar la carpeta. Se regenera sola, a
+  costa de una primera apertura lenta.</li>
+</ul>
+<h3 id="identidades-del-modelo">Identidades del modelo en planta y elevación</h3>
+<p>Las celdas de planta y elevación rotulan los elementos con la <strong>identidad que
+tienen en el modelo ETABS</strong>, para reconocer el entorno del elemento en estudio
+sin volver al modelo:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Rótulo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Muro</td>
+<td>Nombre del <strong>pier</strong></td>
+</tr>
+<tr>
+<td>Dintel modelado como área</td>
+<td>Nombre del <strong>spandrel</strong></td>
+</tr>
+<tr>
+<td>Viga con spandrel asignado</td>
+<td>Nombre del <strong>spandrel</strong></td>
+</tr>
+<tr>
+<td>Viga sin spandrel, columna, brace</td>
+<td><strong>Label</strong> ETABS</td>
+</tr>
+</tbody>
+</table>
+<p>Tres reglas gobiernan qué se ve:</p>
+<ul>
+<li><strong>Un elemento, un rótulo.</strong> Un muro dividido en diez paños con el mismo pier
+  muestra su nombre <strong>una sola vez, centrado</strong> en la extensión del conjunto. En
+  la elevación la integración es además vertical: el pier que corre por veinte
+  pisos, o la columna que conserva su label piso a piso, llevan un único
+  rótulo centrado en toda su altura. Así la elevación completa queda rotulada
+  con un rótulo por posición estructural, sin saturarse.</li>
+<li><strong>Pier y spandrel a la vez.</strong> Un paño que porta ambas etiquetas muestra las
+  dos, apiladas en la misma vertical: el pier arriba y el spandrel abajo.</li>
+<li><strong>Solo lo que pertenece al eje.</strong> Pertenecer exige dos cosas: caber en la
+  franja de tolerancia del eje <strong>y correr con él</strong>. Los trozos de otros ejes
+  que el plano apenas atraviesa —el nudo de un muro <strong>perpendicular</strong>, o los
+  paños junto al cruce de un eje <strong>casi paralelo</strong> (típico con ejes
+  diagonales)— no pertenecen: la elevación no los dibuja ni los rotula (la
+  elevación de un eje muestra su eje, no su corte), y la planta —que dibuja el
+  piso completo— no les atribuye identidad. La planta además rotula únicamente
+  el eje en estudio: el resto quedaría ilegible.</li>
+<li><strong>Salvo lo que se llama igual.</strong> La única excepción de la planta a la regla
+  anterior: lo que está fuera del eje pero lleva el <strong>mismo nombre</strong> que algo
+  del eje se rotula igual, <strong>atenuado</strong>. Ver
+  <a href="#homonimos">Dónde sigue el elemento</a> más abajo.</li>
+</ul>
+<p>Cada familia usa el color de la convención del dibujo (muros en rojo, vigas en
+amarillo, columnas en verde, braces en azul).</p>
+<p>El elemento en pantalla se pinta con <strong>borde blanco</strong>, y un clic sobre otro navega
+a él, con la misma identidad. Un <strong>spandrel</strong> se reconoce por su nombre completo
+(la «/» de <code>B/01-02</code> es parte del nombre) y en el piso en que ETABS lo reporta: el
+nivel más cercano a la media altura de cada paño. Por eso un antepecho que nace de
+la losa es del piso de abajo, y un dintel que cruza un nivel junta sus dos paños.
+Un paño que es a la vez pier y spandrel se pinta con el elemento que esté en
+pantalla, sea el pier o el spandrel, y un clic sobre él lleva al spandrel y otro
+clic, al pier (lo mismo con una viga que también es spandrel). Lo que el filtro
+deja fuera no cuenta: si el spandrel no está en la lista, el clic lleva al pier.</p>
+<h3 id="homonimos">Dónde sigue el elemento: los nombres repetidos</h3>
+<p>Una sección especial —un pier en <strong>L, T, U o cajón</strong>— es un solo elemento con
+paños repartidos en <strong>varios ejes</strong>. Como la planta rotula el eje en estudio, la
+mitad del pier quedaba sin nombre y no se veía por dónde seguía.</p>
+<p>La planta rotula además, <strong>atenuados</strong>, los elementos de otros ejes que llevan
+el mismo nombre que alguno del eje en estudio. Con el pier <code>L</code> en el eje 7, su
+ala sobre el eje D aparece rotulada <code>L</code> en gris: el elemento completo se lee de
+un vistazo, sin volver al modelo.</p>
+<p>Eso mismo delata los <strong>errores de asignación</strong>: si un nombre de pier aparece en
+un eje que no tiene nada que ver con la sección en estudio, casi seguro es una
+etiqueta puesta dos veces por error. Un pier partido entre dos ejes que no se
+tocan salta a la vista.</p>
+<p>Dos detalles del criterio:</p>
+<ul>
+<li><strong>Un rótulo por rama.</strong> Cada tramo recto lleva el suyo, centrado en su
+  extensión y girado con la rama. Un cajón visto desde una de sus caras muestra
+  tres rótulos —uno por cara restante—, no uno solo flotando en el hueco del
+  medio.</li>
+<li><strong>Mismo nombre no basta: tiene que ser el mismo tipo de nombre.</strong> Un pier <code>M1</code>
+  y una viga cuyo label ETABS es <code>M1</code> no se emparejan (son universos distintos);
+  un dintel modelado mitad como área y mitad como frame sí, porque en los dos
+  casos el nombre es el del spandrel. Las columnas quedan fuera: su label ETABS
+  es único dentro de la planta, así que nunca hay nada que emparejar.</li>
+</ul>
+<h2 id="fuentes-de-esfuerzos">Fuentes de esfuerzos</h2>
+<p>curvaw resuelve los esfuerzos de cada elemento en esta cascada de prioridad:</p>
+<div class="highlight"><pre><span></span><code>.da9 embebidos  ›  .pre hermano (auto-detectado)  ›  .iecdb (auto-detectado)
+</code></pre></div>
+<p>Si el <code>.da9</code> viene "limpio" (sin esfuerzos — el único modo que genera
+<code>pretoda9-cli</code>), curvaw busca un <code>.pre</code> hermano junto al archivo (lo produce
+<code>edbtopre</code>) y, si tampoco hay <code>.pre</code>, un <code>.iecdb</code> (snapshot del modelo, ver
+<a href="../../edbtopre/introduccion/">edbtopre</a>): recombina los esfuerzos desde los
+casos de carga elemental sin abrir ETABS. curvaw no abre ETABS en ningún punto de
+este proceso: solo comprueba si el <code>.edb</code> del snapshot cambió (<a href="#estado-del-snapshot">Estado del
+snapshot</a>). Esto se controla igual desde la GUI (<code>cw proyecto
+--pre P.pre --iecdb M.iecdb</code>, con la regla de nombres de <a href="#interfaz-interactiva">arriba</a>)
+y desde el <a href="../cli/">CLI batch</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Un <code>.da9</code> con otro nombre base no tiene <code>.pre</code> ni <code>.iecdb</code> hermanos</p>
+<p>Los hermanos se buscan con el nombre base del <code>.da9</code> que se abre. La copia
+<code>&lt;da9&gt;_armado.da9</code> que escribe <a href="../cli/#curvaw-prellenar-cwp-armado-masivo"><code>curvaw-prellenar</code></a>
+no encuentra el <code>.pre</code> ni el <code>.iecdb</code> de <code>&lt;da9&gt;.da9</code>: se abre con <code>--iecdb</code> (y
+<code>--pre</code>) explícitos o, si el original venía sin esfuerzos, queda sin ellos.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">El <code>.pre</code> está deprecado y el corte requiere el <code>.iecdb</code></p>
+<p>El <code>.pre</code> es una fuente heredada y <strong>no trae los cortes V2 y V3</strong>: solo los
+esfuerzos que salen del <code>.iecdb</code> los llevan, y la
+<a href="../corte/">revisión de corte</a> los necesita. Un elemento con esfuerzos embebidos
+en el <code>.da9</code> o tomados del <code>.pre</code> queda <strong>sin corte</strong>, y el panel lo dice. Como
+el <code>.pre</code> hermano del <code>.da9</code> se usa antes que el <code>.iecdb</code>, para revisar el corte
+hay que abrir el <code>.da9</code> sin un <code>.pre</code> que cubra a esos elementos. Las partes que
+crea ⫽ (<code>V101/p1p2</code>) son la excepción: con un <code>.iecdb</code> resuelto toman siempre
+sus esfuerzos de él, aunque traigan copia en el <code>.da9</code>.</p>
+</div>
+<h2 id="sin-interfaz-grafica">Sin interfaz gráfica</h2>
+<p>Para revisar todos los elementos de un <code>.da9</code> y emitir un reporte sin abrir la
+GUI, ver <a href="../cli/">CLIs headless</a>: <code>curvaw-batch</code> (análisis y FU),
+<code>curvaw-prellenar</code> (armado masivo) y <code>curvaw-notas</code> (las notas de revisión, hacia
+el acta).</p>
+<h2 id="siguiente-paso">Siguiente paso</h2>
+<p>Las notas de revisión de cada elemento van al acta: <code>curvaw-notas</code> las lista. Ver
+<a href="../../flujo/#etapa-curvaw">Flujo de una revisión</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../../tatoedb/versiones/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Historial">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Historial
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../formato_da9/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Formato .da9">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Formato .da9
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Parte de esta documentación fue redactada con asistencia de IA y puede contener errores. Ante cualquier duda, prevalece el comportamiento real del software y el criterio del ingeniero.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://cl.linkedin.com/company/iec-ingenier-a-s.a." target="_blank" rel="noopener" title="cl.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iec-ingenieria" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<iec@iec.cl>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.path", "navigation.top", "announce.dismiss", "content.code.annotate", "content.code.copy", "navigation.tabs.sticky", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/guias.js"></script>
+      
+    
+  </body>
+</html>
