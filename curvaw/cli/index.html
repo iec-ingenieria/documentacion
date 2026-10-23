@@ -1,0 +1,6164 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iec-ingenieria.github.io/documentacion/curvaw/cli/">
+      
+      
+        <link rel="prev" href="../notas/">
+      
+      
+        <link rel="next" href="../versiones/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo_iec.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>CLI (modo batch) - Documentación Software IEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#curvaw-clis-headless" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Documentación Software IEC" class="md-header__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación Software IEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CLI (modo batch)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentación Software IEC" class="md-nav__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    Documentación Software IEC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flujo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧭 Flujo de una revisión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🆕 Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1️⃣ dxftoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1️⃣ dxftoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prepinchado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prepinchado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuración
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Básica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion_avanzada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avanzada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dxftoedb1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/planos_grilla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planos Grilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/grilla_excel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grilla Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herramientas LISP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Herramientas LISP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/instalacion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prelosa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prelosa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/motes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/problemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problemas Frecuentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/ideas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2️⃣ edbtopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2️⃣ edbtopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3️⃣ pretovh
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3️⃣ pretovh
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4️⃣ edbtoinf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4️⃣ edbtoinf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/uso_gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/parametros_sismicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros sísmicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/parametros_geometricos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros geométricos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/control_desplazamientos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control de desplazamientos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/drift_centro_masa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drift del centro de masa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/reparto_corte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reparto del corte: muros y columnas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/multitorre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos multi-torre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/derivas_html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte HTML de derivas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/formato_drift/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .drift
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtoinf/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5️⃣ tatoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5️⃣ tatoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/salidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Salidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6️⃣ curvaw
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6️⃣ curvaw
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formato_da9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .da9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orientacion_planta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientación en planta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../factor_utilizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factor de utilización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recorrido_eje_neutro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recorrido del eje neutro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../confinamiento_ds60/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confinamiento DS60
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisión de corte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tensiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtro por tensiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor_seccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor de sección
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visor_dxf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visores de planos DXF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas de revisión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI (modo batch)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI (modo batch)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#curvaw-batch-cwb-analisis-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-batch (cwb): análisis batch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="curvaw-batch (cwb): análisis batch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#salidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-propias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones propias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuentes-de-esfuerzos-cascada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes de esfuerzos (cascada)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrar-que-elementos-se-analizan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrar qué elementos se analizan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrar-por-tension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrar por tensión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tolerar-elementos-a-medio-armar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tolerar elementos a medio armar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tolerar elementos a medio armar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-de-lectura-causa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dónde ver la causa de un error de lectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fu-3d-biaxial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FU 3D biaxial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-que-rama-falla-compresion-traccion-o-ambas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En qué rama falla: compresión, tracción o ambas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trazabilidad-por-que-entro-cada-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trazabilidad: por qué entró cada elemento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criticos-por-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corte: fu_corte y críticos por corte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalle-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El detalle del corte (--detalle-corte)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrar-por-fu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrar por FU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-descartados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elementos descartados en curvaw
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caché
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curvaw-prellenar-cwp-armado-masivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-prellenar (cwp): armado masivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="curvaw-prellenar (cwp): armado masivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salida
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Salida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prellenar-omitidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué cuentan las «omitidas»
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-propias_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones propias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#malla-vertical-de-los-planos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Malla vertical de los planos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editar-un-elemento-puntual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editar UN elemento puntual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curvaw-notas-cwn-notas-de-revision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-notas (cwn): notas de revisión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="curvaw-notas (cwn): notas de revisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones-propias_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones propias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corte-en-subconjunto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revisar el corte en un .da9 aparte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revisar el corte en un .da9 aparte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curvaw-subconjunto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-subconjunto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curvaw-editar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-editar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curvaw-fusionar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-fusionar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7️⃣ pretoda9
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7️⃣ pretoda9
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8️⃣ pritopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    8️⃣ pritopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9️⃣ edbtodxf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    9️⃣ edbtodxf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtodxf/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtodxf/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔟 steelcheck (en desarrollo)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔟 steelcheck (en desarrollo)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⌨️ CLIs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⌨️ CLIs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso headless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/normas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primitivas de norma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/autoupdate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auto-update
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧰 Otras herramientas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧰 Otras herramientas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_16_1" id="__nav_16_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    anclajes (externa)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    anclajes (externa)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/datos_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/resultados_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/compresion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/traccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/ingreso_xlsx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ingreso Cargas XLSX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comandos-autocad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos de AutoCAD (referencia general)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Recursos de aprendizaje
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Recursos de aprendizaje
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aprendizaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aprendizaje/balasto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coeficiente de balasto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aprendizaje/curva-interaccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curva de interacción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎤 Presentaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../directorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📁 Directorios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#curvaw-batch-cwb-analisis-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-batch (cwb): análisis batch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="curvaw-batch (cwb): análisis batch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#salidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-propias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones propias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuentes-de-esfuerzos-cascada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes de esfuerzos (cascada)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrar-que-elementos-se-analizan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrar qué elementos se analizan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrar-por-tension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrar por tensión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tolerar-elementos-a-medio-armar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tolerar elementos a medio armar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tolerar elementos a medio armar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-de-lectura-causa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dónde ver la causa de un error de lectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fu-3d-biaxial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FU 3D biaxial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-que-rama-falla-compresion-traccion-o-ambas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        En qué rama falla: compresión, tracción o ambas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trazabilidad-por-que-entro-cada-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trazabilidad: por qué entró cada elemento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criticos-por-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corte: fu_corte y críticos por corte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalle-corte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El detalle del corte (--detalle-corte)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrar-por-fu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrar por FU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-descartados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elementos descartados en curvaw
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caché
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curvaw-prellenar-cwp-armado-masivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-prellenar (cwp): armado masivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="curvaw-prellenar (cwp): armado masivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salida
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Salida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prellenar-omitidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué cuentan las «omitidas»
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-propias_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones propias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#malla-vertical-de-los-planos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Malla vertical de los planos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editar-un-elemento-puntual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editar UN elemento puntual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curvaw-notas-cwn-notas-de-revision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-notas (cwn): notas de revisión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="curvaw-notas (cwn): notas de revisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opciones-propias_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones propias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corte-en-subconjunto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revisar el corte en un .da9 aparte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revisar el corte en un .da9 aparte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curvaw-subconjunto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-subconjunto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curvaw-editar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-editar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curvaw-fusionar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        curvaw-fusionar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    🏠 Inicio
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../introduccion/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    6️⃣ curvaw
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="curvaw-clis-headless">CURVAW — CLIs headless</h1>
+<p>curvaw expone <strong>seis</strong> CLIs sin interfaz gráfica que comparten el
+<a href="../../clis/uso/">marco común de los CLIs</a>:</p>
+<ul>
+<li><strong><code>curvaw-batch</code></strong> (alias <strong><code>cwb</code></strong>) — analiza las curvas de interacción y los
+  factores de utilización (FU) de todos los elementos de un <code>.da9</code> y emite un
+  reporte.</li>
+<li><strong><code>curvaw-prellenar</code></strong> (alias <strong><code>cwp</code></strong>) — arma armaduras por defecto en un
+  <code>.da9</code> (la versión batch del editor de armado de la GUI).</li>
+<li><strong><code>curvaw-notas</code></strong> (alias <strong><code>cwn</code></strong>) — lista las
+  <a href="../notas/">notas de revisión</a> de un <code>.da9</code>, para llevarlas al acta.</li>
+<li><strong><code>curvaw-subconjunto</code></strong>, <strong><code>curvaw-editar</code></strong> y <strong><code>curvaw-fusionar</code></strong> — revisan el
+  corte de unos cuantos elementos en un <code>.da9</code> aparte y devuelven el resultado al del
+  proyecto (<a href="#corte-en-subconjunto">Revisar el corte en un <code>.da9</code> aparte</a>).</li>
+</ul>
+<p>Todos heredan los flags comunes (<code>--json</code>, <code>--quiet</code>, <code>--verbose</code>, <code>--schema</code>) y
+los exit codes 0-5 del <a href="../../clis/uso/">marco de CLIs</a>; aquí se documentan solo
+los flags <strong>propios</strong> de cada uno.</p>
+<div class="admonition info">
+<p class="admonition-title">Alias</p>
+<p><code>cwb</code> = <code>curvaw-batch</code>, <code>cwp</code> = <code>curvaw-prellenar</code>, <code>cwn</code> = <code>curvaw-notas</code>. La
+GUI interactiva es un entry point aparte: <code>cw</code> (= <code>curvaw</code>), descrita en
+<a href="../introduccion/">Introducción</a>.</p>
+</div>
+<hr />
+<h2 id="curvaw-batch-cwb-analisis-batch"><code>curvaw-batch</code> (<code>cwb</code>): análisis batch</h2>
+<p>Analiza un <code>.da9</code> completo sin abrir la GUI: calcula curvas y FU de cada
+elemento, imprime un log de texto y un resumen pasa/revisa, y escribe un
+<strong>reporte HTML</strong> ejecutivo.</p>
+<div class="highlight"><pre><span></span><code>curvaw-batch<span class="w"> </span>&lt;archivo&gt;<span class="w"> </span><span class="o">[</span>opciones<span class="o">]</span>
+</code></pre></div>
+<p><code>&lt;archivo&gt;</code> es la ruta del <code>.da9</code>, con o sin la extensión (<code>modelo</code> o <code>modelo.da9</code>),
+relativa al directorio actual, igual que en <code>cw</code>
+(<a href="../introduccion/#interfaz-interactiva">Introducción</a>). Con la estructura de
+carpetas estándar el <code>.iecdb</code> se encuentra solo
+(<a href="#fuentes-de-esfuerzos-cascada">Fuentes de esfuerzos</a>).</p>
+<h3 id="salidas">Salidas</h3>
+<table>
+<thead>
+<tr>
+<th>Salida</th>
+<th>Dónde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Log de texto detallado (FU por elemento, elementos y ejes críticos)</td>
+<td><strong>stdout</strong>, fuera de <code>--json</code>/<code>--quiet</code></td>
+</tr>
+<tr>
+<td>Resumen <code>pasa</code> / <code>revisa</code> según el umbral</td>
+<td><strong>stdout</strong></td>
+</tr>
+<tr>
+<td>Reporte HTML ejecutivo</td>
+<td>archivo <code>./&lt;da9&gt;_reporte.html</code> (en el cwd), salvo <code>--no-html</code></td>
+</tr>
+</tbody>
+</table>
+<p>El log y el <code>reporte</code> del JSON recorren los elementos en el <strong>mismo orden que la
+navegación de la GUI</strong>: eje → nombre → piso (→ tipo), no en el del <code>.da9</code> (que
+viene agrupado por tipo). El piso va por su <strong>cota real</strong> cuando hay un <code>.iecdb</code>
+resuelto (ver la cascada más abajo) y por nombre —subterráneos <code>S#</code>/<code>SUB#</code>
+primero— cuando no. <code>--filtro</code>, <code>--solo</code> y <code>--solo-criticos</code> conservan ese orden
+relativo. La tabla y los detalles del HTML siguen ordenados por FU descendente.</p>
+<div class="admonition warning">
+<p class="admonition-title">El batch no escribe <code>.da9</code> ni <code>.md</code></p>
+<p><code>curvaw-batch</code> <strong>no</strong> genera archivos <code>.md</code> ni un <code>.da9</code> de revisión. Su único
+artefacto de salida es el <code>&lt;da9&gt;_reporte.html</code>; todo lo demás va a la consola.
+Para re-armar armaduras use <a href="#curvaw-prellenar-cwp-armado-masivo"><code>curvaw-prellenar</code></a>
+o edite el <code>.da9</code> a mano.</p>
+</div>
+<h3 id="opciones-propias">Opciones propias</h3>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-u, --umbral FU</code></td>
+<td>Umbral de FU para reportar excedencias y separar pasa/revisa.</td>
+<td><code>1.0</code></td>
+</tr>
+<tr>
+<td><code>--solo-criticos</code></td>
+<td>Deja en el <code>reporte</code> del <code>--json</code> solo los elementos con FU de flexo-compresión <strong>mayor</strong> que <code>--umbral</code>, según el criterio vigente. El <code>summary</code> no se recorta. Para filtrar como la GUI (con <strong>≥</strong> y también por corte), <code>--fu-ftc</code>/<code>--fu-corte</code>/<code>--fu-sec</code>.</td>
+<td>desactivado</td>
+</tr>
+<tr>
+<td><code>--operador-fu {o,y}</code></td>
+<td>Cómo se combinan <code>--fu-ftc</code>, <code>--fu-corte</code> y <code>--fu-sec</code> cuando van dos o más, como el selector <strong>o | y</strong> de la GUI: <code>o</code> deja los que alcanzan alguno y <code>y</code>, los que alcanzan todos (<a href="#filtrar-por-fu">Filtrar por FU</a>).</td>
+<td><code>o</code></td>
+</tr>
+<tr>
+<td><code>--fu-ftc FU</code></td>
+<td>Deja solo los elementos con FU de flexo-compresión <strong>≥</strong> <code>FU</code>, como el filtro <strong>FU FTC ≥</strong> de la GUI (<a href="#filtrar-por-fu">Filtrar por FU</a>).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--fu-corte FU</code></td>
+<td>Deja solo los elementos con FU de corte <strong>≥</strong> <code>FU</code>, como el filtro <strong>FU Corte ≥</strong> de la GUI.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--fu-sec FU</code></td>
+<td>Deja solo los elementos con FU de sección (<code>fu_sec</code>) <strong>≥</strong> <code>FU</code>, como el filtro <strong>FU Sección ≥</strong> de la GUI.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--detalle-corte</code></td>
+<td>Agrega a cada fila del <code>--json</code> la clave <code>corte</code>: lo que gobierna el FU de corte en cada dirección (<a href="#detalle-corte">El detalle del corte</a>). Agranda bastante el JSON (en R4834, un 75 % más).</td>
+<td>desactivado</td>
+</tr>
+<tr>
+<td><code>--pre PATH</code></td>
+<td><code>.pre</code> explícito; inyecta esfuerzos en los elementos sin solicitación (el <code>.da9</code> sin esfuerzos que genera siempre <code>pretoda9-cli</code>).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--no-pre</code></td>
+<td>No auto-detectar el <code>.pre</code> hermano del <code>.da9</code>.</td>
+<td>desactivado</td>
+</tr>
+<tr>
+<td><code>--iecdb PATH</code></td>
+<td><code>.iecdb</code> explícito (el snapshot del modelo que escribe <code>edbtopre</code>); recombina esfuerzos para los elementos sin solicitación en el <code>.da9</code> ni en el <code>.pre</code>.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--no-iecdb</code></td>
+<td>No auto-detectar el <code>.iecdb</code>: ni el hermano del <code>.pre</code> resuelto o del <code>.da9</code>, ni el de la carpeta <code>esfuerzos/</code> del proyecto.</td>
+<td>desactivado</td>
+</tr>
+<tr>
+<td><code>--filtro COND</code></td>
+<td>Analiza solo los elementos que cumplan la condición. Repetible (OR).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--solo EJE/NOMBRE/PISO</code></td>
+<td>Analiza un elemento puntual. Repetible (OR). El primer campo es el eje, el último el piso y lo que va en medio el nombre, que puede llevar <code>/</code> (<code>B/V12/p1/P01</code>).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--tension SPEC</code></td>
+<td>Deja solo los elementos que superan <strong>alguno</strong> de los umbrales de tensión (<code>f2</code>, <code>f3</code>, <code>t</code>, <code>cfc</code>; O entre ellos). Repetible (suma umbrales).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--skip-errores</code></td>
+<td>Omite los elementos con error de lectura, sin esfuerzos o sin curva de interacción y continúa, listándolos al final.</td>
+<td>desactivado</td>
+</tr>
+<tr>
+<td><code>--fu3d</code></td>
+<td>Calcula además el FU 3D biaxial (<code>fu3d_max</code>, <code>angulo_critico_3d</code>, <code>combinacion_critica_3d</code>, <code>axial_critico_3d</code> y <code>razon_axial_critico_3d</code>) y vuelca el criterio de corte al 3D. Cuesta <strong>~20 ms por elemento</strong> (ver <a href="#fu-3d-biaxial">Costo del 3D</a>).</td>
+<td>desactivado</td>
+</tr>
+<tr>
+<td><code>--criterio {planar,fu3d}</code></td>
+<td>Qué FU decide el corte pasa/revisa (umbral, summary, HTML, puntos sobre umbral). <code>fu3d</code> activa el cálculo 3D aunque falte <code>--fu3d</code>.</td>
+<td><code>fu3d</code> con <code>--fu3d</code>; si no, <code>planar</code></td>
+</tr>
+<tr>
+<td><code>--html PATH</code></td>
+<td>Destino del reporte HTML.</td>
+<td><code>./&lt;da9&gt;_reporte.html</code></td>
+</tr>
+<tr>
+<td><code>--no-html</code></td>
+<td>No generar el reporte HTML.</td>
+<td>desactivado</td>
+</tr>
+<tr>
+<td><code>--umbral-reporte FU</code></td>
+<td>Umbral del FU del HTML, independiente del de análisis.</td>
+<td>el de <code>--umbral</code></td>
+</tr>
+<tr>
+<td><code>--max-detalles N</code></td>
+<td>Tope de páginas de detalle del HTML (las N de mayor FU); la tabla de críticos sigue completa.</td>
+<td>todas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fuentes-de-esfuerzos-cascada">Fuentes de esfuerzos (cascada)</h3>
+<p>curvaw resuelve los esfuerzos de cada elemento en este orden de prioridad:</p>
+<div class="highlight"><pre><span></span><code>.da9 embebidos  ›  .pre hermano (auto-detectado)  ›  .iecdb (auto-detectado)
+</code></pre></div>
+<ol>
+<li><strong><code>.da9</code> embebidos</strong> — los esfuerzos que ya trae el bloque del elemento.</li>
+<li><strong><code>.pre</code> hermano</strong> — si el <code>.da9</code> está "limpio" (sin esfuerzos — el único modo
+   que genera <code>pretoda9-cli</code>), curvaw busca automáticamente un <code>.pre</code> con el
+   mismo nombre base junto al <code>.da9</code>. Es lo que produce <code>edbtopre</code>. Se pasa uno
+   explícito con <code>--pre PATH</code> y la auto-detección se desactiva con <code>--no-pre</code>.</li>
+<li><strong><code>.iecdb</code></strong> — si tampoco hay <code>.pre</code>, curvaw busca un <code>.iecdb</code> (el
+   snapshot del modelo que también escribe <code>edbtopre</code>) y recombina los
+   esfuerzos desde los casos de carga elemental, sin abrir ETABS. Lo busca, en
+   este orden, junto al <code>.pre</code> resuelto (mismo nombre base), junto al <code>.da9</code>
+   (mismo nombre base) y en la carpeta <code>esfuerzos/</code> vecina de la del <code>.da9</code>
+   (regla de abajo). Se pasa uno explícito con <code>--iecdb PATH</code> y toda la
+   auto-detección se desactiva con <code>--no-iecdb</code>. curvaw no abre ETABS en ningún punto de esta
+   cascada.</li>
+</ol>
+<p>El <code>.iecdb</code> encontrado se avisa por stderr: <code>Auto-detectado .iecdb: &lt;ruta&gt;</code>.</p>
+<p>La carpeta <code>esfuerzos/</code> es la hermana de la carpeta del <code>.da9</code>
+(<code>&lt;carpeta del .da9&gt;/../esfuerzos/</code>). Se toma el <code>.iecdb</code> cuyo nombre es el
+comienzo del nombre del <code>.da9</code>, cortado en un carácter que no sea letra ni
+número, sin distinguir mayúsculas. Con la estructura estándar
+(<a href="../../directorios/#curvaw-iecdb">Directorios</a>), <code>revision/ftc/RXXXX_ftc.da9</code>
+encuentra <code>revision/esfuerzos/RXXXX.iecdb</code>, y lo mismo <code>RXXXX_ftc_armado.da9</code>.
+Si hay varios que sirven, gana el de nombre más largo; si ninguno comparte el
+comienzo (<code>R48.iecdb</code> no sirve para <code>R4834_ftc.da9</code>), no toma ninguno.</p>
+<div class="admonition warning">
+<p class="admonition-title">Un <code>.iecdb</code> fuera de <code>revision/esfuerzos/</code> hay que pasarlo con <code>--iecdb</code></p>
+<p><code>edbtopre</code> deja el <code>.iecdb</code> junto al modelo (<code>modelos/iec/</code>), y esa carpeta
+<strong>no se busca</strong>: hay que moverlo a <code>revision/esfuerzos/</code> o pasar <code>--iecdb</code>. Sin
+ninguna de las dos, los elementos que el <code>.da9</code> trae sin esfuerzos (el caso
+normal: así lo escribe <code>pretoda9</code>) quedan sin ellos y el batch se detiene con
+<code>N elementos no tienen esfuerzos (ni en el .da9, ni en el .pre, ni en el
+.iecdb)</code>. La GUI (<code>cw</code>) tiene la misma regla.</p>
+<div class="highlight"><pre><span></span><code>curvaw-batch<span class="w"> </span>proyecto/revision/ftc/RXXXX_ftc<span class="w"> </span>--iecdb<span class="w"> </span>proyecto/modelos/iec/RXXXX.iecdb
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Con la estructura estándar el resultado cambia respecto de versiones anteriores</p>
+<p>Antes, un <code>curvaw-batch</code> sin <code>--iecdb</code> sobre <code>revision/ftc/</code> no encontraba el
+snapshot de <code>revision/esfuerzos/</code> y abortaba con el mensaje de arriba. Ahora lo
+encuentra y calcula esos elementos con sus esfuerzos.</p>
+</div>
+<h3 id="filtrar-que-elementos-se-analizan">Filtrar qué elementos se analizan</h3>
+<p>En una revisión es habitual iterar eje por eje, cambiando armaduras y volviendo
+a correr solo ese subconjunto. El flag <code>--filtro</code> evita tener que recortar el
+<code>.da9</code> a mano: el archivo sigue completo, pero solo se analizan y reportan los
+elementos que pasan el filtro.</p>
+<div class="highlight"><pre><span></span><code>curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--filtro<span class="w"> </span><span class="s2">"tipo=muro,eje=B"</span><span class="w">   </span><span class="c1"># solo muros del eje B</span>
+curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--filtro<span class="w"> </span><span class="s2">"eje=A1|I1"</span><span class="w">          </span><span class="c1"># ejes A1 o I1</span>
+curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--filtro<span class="w"> </span><span class="s2">"piso=P01|P02"</span><span class="w">       </span><span class="c1"># pisos P01 o P02</span>
+curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--solo<span class="w"> </span>B/M2/P03<span class="w">               </span><span class="c1"># un elemento puntual</span>
+curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--filtro<span class="w"> </span><span class="s2">"tipo=muro,ancho=0.2|0.25"</span><span class="w">   </span><span class="c1"># muros de 20 o 25 cm</span>
+</code></pre></div>
+<p>Campos disponibles: <code>eje</code>, <code>tipo</code>, <code>nombre</code>, <code>piso</code>, <code>ancho</code> y <code>alto</code>. <code>ancho</code> y
+<code>alto</code> son los combos <strong>Ancho</strong> y <strong>Alto</strong> de la GUI: van en metros y se comparan
+<strong>al centímetro</strong>, como los lista el combo (<code>ancho=0.2</code> toma un muro de 0.20 y uno
+de 0.203, que el combo muestra como <code>0.20</code>, pero no uno de 0.25). Basta el valor
+del combo (<code>0.2</code> y <code>0.20</code> valen lo mismo). Un valor que no es un número mayor
+que 0 aborta con error (exit 3). <code>curvaw-prellenar --ancho</code> compara distinto (con
+1 mm de tolerancia, ver <a href="#curvaw-prellenar-cwp-armado-masivo">sus opciones</a>).</p>
+<p>Reglas de combinación:</p>
+<ul>
+<li><strong>Coma</strong> dentro de un <code>--filtro</code> = AND entre campos: <code>"tipo=muro,eje=B"</code> exige
+  muro <strong>y</strong> eje B.</li>
+<li><strong><code>|</code></strong> = OR de valores de un mismo campo: <code>"eje=A1|I1"</code> toma A1 <strong>o</strong> I1.</li>
+<li><strong>Repetir</strong> <code>--filtro</code> o <code>--solo</code> = OR entre selecciones: pasa el elemento si
+  cumple cualquiera de ellas.</li>
+<li>El match es <strong>insensible a mayúsculas</strong>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Tipos: alias <code>viga</code>=<code>beam</code> y validación contra el archivo</p>
+<p>Los tipos del <code>.da9</code> son los subtipos verticales (<code>muro</code>, <code>machon</code>,
+<code>columna</code>, por razón de aspecto) más los del <code>.pre</code> (<code>beam</code>, <code>brace</code>,
+<code>spandrel</code>, ...): las vigas se guardan como <strong><code>beam</code></strong>. La spec acepta
+<code>viga</code> como alias de <code>beam</code>. Un valor de <code>tipo</code> que <strong>no existe en el
+archivo</strong> aborta con error (exit 3) listando los tipos disponibles: dentro
+de un OR, un tipo mal escrito seleccionaría de menos <strong>en silencio</strong>
+(<code>tipo=muro|vga</code> igual devuelve los muros).</p>
+</div>
+<p><code>--solo</code> identifica por <code>eje/nombre/piso</code> (sin <code>tipo</code>), igual que el match con el
+<code>.pre</code>. Es un atajo para el caso puntual de un único elemento. El primer campo es el
+eje, el último el piso y lo que va en medio es el nombre, así que admite un nombre
+con barra: <code>--solo B/V12/p1/P01</code> elige el tramo <code>V12/p1</code> de una viga no prismática
+(<a href="../formato_da9/#secciones-no-prismaticas-variable">Secciones no-prismáticas</a>).</p>
+<h3 id="filtrar-por-tension">Filtrar por tensión</h3>
+<p><code>--tension</code> deja solo los elementos que superan cierta tensión, con las mismas
+cuatro de la hoja VH0 que ofrece la GUI (ver
+<a href="../tensiones/">Filtro por tensiones</a>):</p>
+<div class="highlight"><pre><span></span><code>curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--tension<span class="w"> </span><span class="s2">"t=400"</span><span class="w">             </span><span class="c1"># traccionan 400 t/m² o más</span>
+curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--tension<span class="w"> </span><span class="s2">"t=400,cfc=0.35"</span><span class="w">    </span><span class="c1"># T ≤ -400 t/m² O C/f'c ≥ 0.35 (una u otra)</span>
+curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--filtro<span class="w"> </span><span class="s2">"tipo=muro"</span><span class="w"> </span>--tension<span class="w"> </span><span class="s2">"cfc=0.35"</span><span class="w">   </span><span class="c1"># de los muros, los que comprimen</span>
+</code></pre></div>
+<p>Claves: <code>f2</code>, <code>f3</code>, <code>t</code>, <code>cfc</code>. <strong>El sentido lo pone cada tensión, no quien escribe
+el comando</strong>: <code>f2</code>, <code>f3</code> y <code>cfc</code> filtran por "mayor o igual", y <code>t</code> por tracción de
+al menos esa magnitud (<code>t=400</code> significa T ≤ -400 t/m², sin importar el signo que
+se escriba).</p>
+<ul>
+<li>El decimal va con <strong>punto</strong>: la coma ya separa umbrales.</li>
+<li>Los umbrales son <strong>alternativas (O)</strong>, a diferencia de la coma de <code>--filtro</code>:
+  <code>"t=400,cfc=0.35"</code> toma los que traccionan más de 400 <strong>o</strong> comprimen más de
+  0.35 f'c. Repetir <code>--tension</code> suma umbrales igual que la coma (la misma tensión
+  dos veces se queda con el umbral menos exigente). No hay forma de
+  exigir dos tensiones a la vez: al ingeniero le interesa el elemento crítico por
+  cualquiera de ellas, igual que en la GUI.</li>
+<li>Solo, <code>--tension</code> filtra el <strong>archivo completo</strong>; combinado con
+  <code>--filtro</code>/<code>--solo</code>, <strong>acota</strong> (Y) lo que esos dejaron: "de estos ejes, los que
+  traccionen más de 400". Si nada cumple, el run aborta con error (exit 3), no
+  devuelve el archivo sin filtrar.</li>
+<li>Los elementos sin sección utilizable (no-prismáticos, o con error de lectura) no
+  tienen tensión que comparar y quedan fuera en cuanto se pide un umbral.</li>
+</ul>
+<p>Con <code>--tension</code>, cada fila del reporte lleva <code>criterios_tension</code>: qué umbral(es)
+superó el elemento, uno a uno, normalizados y con el signo resuelto
+(<code>["cfc&gt;=0.42"]</code>), para no perder el porqué cuando hay varios en O.</p>
+<h3 id="tolerar-elementos-a-medio-armar">Tolerar elementos a medio armar</h3>
+<p>Durante una revisión en curso es normal que algunos elementos tengan armadura
+placeholder (diámetro <code>0.000</code>) o lleguen sin esfuerzos. <strong>Por defecto el run
+aborta</strong> ante el primero, para no producir un reporte parcial silenciosamente.</p>
+<p>Con <code>--skip-errores</code> esos elementos se <strong>omiten</strong>, el análisis continúa con el
+resto y al final se listan los omitidos con su motivo (eje/tipo/nombre/piso):</p>
+<div class="highlight"><pre><span></span><code>curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--skip-errores
+curvaw-batch<span class="w"> </span>modelo<span class="w"> </span>--filtro<span class="w"> </span><span class="s2">"eje=B"</span><span class="w"> </span>--skip-errores<span class="w">   </span><span class="c1"># combinable con el filtro</span>
+</code></pre></div>
+<p>Se omiten tres clases de problema:</p>
+<ul>
+<li><strong>Error de lectura</strong>: el parser rechazó el elemento. El listado (y los <code>warnings</code> del
+  <code>--json</code>) trae la causa entre paréntesis: <code>error de lectura (línea de barras con 4
+  campos: '2 0.012 0.05 2.95' ...)</code>. La más común es un placeholder a medio armar,
+  con diámetro <code>0.000</code>, pero hay otras: ver
+  <a href="#error-de-lectura-causa">Dónde ver la causa</a>.</li>
+<li><strong>Sin esfuerzos</strong>: el elemento no tiene solicitaciones ni en el <code>.da9</code>, ni en el
+  <code>.pre</code>, ni en el <code>.iecdb</code>.</li>
+<li><strong>Sin curva de interacción</strong>: sin armadura (un <code>.da9</code> recién generado por
+  <code>pretoda9-cli</code> sale sin barras; armarlo con <code>curvaw-prellenar</code> o a mano) o
+  error de cálculo. Su FU no es calculable y <strong>no cuenta como "pasa"</strong>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Las secciones variables no entran al reporte, pero se avisan</p>
+<p>Un elemento de sección variable (la marca <code>VARIABLE</code> del <code>.da9</code>, como una viga
+no prismática) no tiene curva: el batch lo deja fuera de la tabla, del
+total del <code>summary</code> y de la lista de omitidos, y no aborta la corrida. Se
+avisan aparte: una línea en el progreso (stderr), un <code>warnings</code> por elemento en el
+<code>--json</code> y la cuenta en <code>summary.seccion_variable</code>. Se ven en <code>cw</code> como
+«no calculable» (<a href="../formato_da9/#secciones-no-prismaticas-variable">Secciones no-prismáticas</a>).</p>
+<p>No depende de las fuentes de esfuerzos: el <code>.da9</code> de una sección variable no
+aporta solicitaciones (curvaw no lee las suyas), y sin <code>.pre</code> ni <code>.iecdb</code> el
+batch la sigue contando como sección variable, no como «sin esfuerzos».</p>
+</div>
+<h4 id="error-de-lectura-causa">Dónde ver la causa de un error de lectura</h4>
+<p>El batch <strong>imprime la causa</strong> del error de lectura, tanto cuando aborta (<code>N
+elementos con error de lectura en el .da9. Ejemplos: Eje A, columna C1, piso P01 (causa); ...</code>) como con
+<code>--skip-errores</code> (en el listado de omitidos y en los <code>warnings</code> del <code>--json</code>). El
+mensaje es el del parser, en una línea. Si no alcanza, se ve completo en <code>cw</code>:</p>
+<ol>
+<li>Abrir el proyecto en <code>cw</code> y navegar al elemento: la celda de la curva dice
+   «⚠ Error en elemento» con el mensaje, que se <strong>corta a 80 caracteres</strong> (con un
+   nombre largo, el detalle puede quedar fuera). Si el error ocurrió antes de leer la
+   sección, la celda de la sección dice además «Error al procesar elemento».</li>
+<li>Si el detalle no alcanza, revisar en el <code>.da9</code> las líneas de ese elemento contra
+   las causas habituales
+   (<a href="../formato_da9/#lineas-mal-escritas">Líneas mal escritas</a>): un diámetro <code>0</code>, una
+   solicitación que no trae sus cinco campos (por ejemplo, una combinación con un
+   espacio), un elemento sin su línea <code>fin</code>, una línea de barras o <code>~</code> mal formada o una línea
+   <code>^</code> o <code>%</code> mal formada.</li>
+</ol>
+<h3 id="fu-3d-biaxial">FU 3D biaxial</h3>
+<p>Por defecto el batch calcula el FU radial 2D (en M2 y M3). Con <code>--fu3d</code> agrega el
+<strong>FU 3D biaxial</strong>: construye la superficie de interacción P-M2-M3 con un barrido
+angular y verifica cada combinación contra la capacidad <strong>en la dirección de su
+momento</strong>; suma <code>fu3d_max</code>, <code>angulo_critico_3d</code>, <code>combinacion_critica_3d</code>,
+<code>axial_critico_3d</code> y <code>razon_axial_critico_3d</code> al reporte. El HTML usa <code>fu3d_max</code> y el
+axial de esa combinación cuando el criterio es el FU 3D (ver abajo).</p>
+<p>Con <code>--fu3d</code>, el <strong>criterio de corte</strong> (umbral, <code>summary.criticos</code>, pasa/revisa,
+HTML y puntos sobre umbral) pasa a ser el FU 3D — se pidió el cálculo caro para
+decidir con él, no como dato suelto. Para conservar el corte planar con el 3D de
+dato adicional: <code>--fu3d --criterio planar</code>. Al revés, <code>--criterio fu3d</code> sin
+<code>--fu3d</code> activa el cálculo 3D solo. El <code>summary</code> declara el criterio vigente
+(<code>"criterio": "planar" | "fu3d"</code>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Costo del 3D</p>
+<p>El barrido angular cuesta del orden de <strong>20 ms por elemento</strong>, contra el ~1 ms
+del FU planar: construye la superficie de interacción completa y la refina en
+las direcciones donde el momento resistente gira rápido. En un proyecto de 3200
+elementos eso son unos <strong>60 s</strong> (el mismo run sin <code>--fu3d</code> tarda 3 s); acotado
+con <code>--filtro</code> a un eje, segundos. El cálculo se reparte entre los núcleos, una
+tarea por elemento, y el avance se informa por <strong>stderr</strong> (<code>FU 3D: n/N
+elementos (x%)</code>, una línea cada 2 % y siempre la del 100 %), así que con <code>--json</code>
+stdout sigue siendo un único objeto y <code>--quiet</code> lo silencia. Úselo cuando la
+flexión biaxial importe (columnas de
+esquina, muros con momento en ambos ejes); para una pasada rápida deje el 2D.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Los números del batch y los de la GUI no son el mismo FU</p>
+<p>Sin <code>--fu3d</code>, el <code>fu_max</code> del reporte y el FU del HTML son el <strong>FU planar</strong>:
+el peor entre el FU radial de M2 contra la curva M2–P y el de M3 contra la
+curva M3–P, cada dirección por separado. La GUI (<code>cw</code>), en cambio, muestra en
+la celda <strong>FU 3D</strong> (título <code>FU 3D — θc N°</code>) y en la tarjeta de cada carga al
+pasar el mouse sobre las curvas el <strong>FU 3D biaxial</strong>: el momento resultante
+contra el corte del envelope en su propio azimut. En una carga con momento en
+las dos direcciones el 3D suele ser mayor (el planar puede subestimar la
+flexión biaxial), así que un elemento puede "pasar" en el batch y verse
+reprobado en la celda FU 3D de la GUI.</p>
+<p>Para reproducir en el reporte lo que muestra esa celda, correr con
+<code>--fu3d</code> (que además vuelca el criterio de corte al 3D): <code>fu3d_max</code>,
+<code>angulo_critico_3d</code> y <code>combinacion_critica_3d</code> son los mismos valores del
+título de la celda y de su carga crítica. Lo que sí coincide sin <code>--fu3d</code> es
+lo que la propia GUI hace con el FU planar: el filtro y el resaltado
+<strong>FU FTC ≥</strong> de la planta/elevación y el HTML de <strong>Archivo → Exportar reporte
+HTML</strong> usan el máximo planar M2/M3, igual que el batch por defecto.</p>
+</div>
+<h3 id="en-que-rama-falla-compresion-traccion-o-ambas">En qué rama falla: compresión, tracción o ambas</h3>
+<p>Cada fila del reporte trae el desglose por <strong>rama del axial</strong> (convención IEC:
+<code>P &gt; 0</code> compresión, <code>P &lt; 0</code> tracción), porque el signo del axial del punto de FU
+máximo (<code>axial_critico</code>) no alcanza: un elemento puede exceder el umbral en las
+dos ramas y ese campo solo muestra la del peor punto.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué trae</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>modo</code></td>
+<td><code>compresion</code>, <code>traccion</code>, <code>ambas</code>, o <code>null</code> si nada excede el umbral</td>
+</tr>
+<tr>
+<td><code>fu_max_compresion</code> / <code>fu_max_traccion</code></td>
+<td>peor FU planar de cada rama</td>
+</tr>
+<tr>
+<td><code>puntos_sobre_fu_compresion</code> / <code>puntos_sobre_fu_traccion</code></td>
+<td>combinaciones sobre umbral en cada rama</td>
+</tr>
+</tbody>
+</table>
+<p>Con <code>--fu3d</code> se agregan los equivalentes biaxiales: <code>modo_3d</code>,
+<code>fu3d_max_compresion</code>, <code>fu3d_max_traccion</code>, <code>puntos_sobre_fu3d</code> y su desglose
+por rama.</p>
+<div class="admonition note">
+<p class="admonition-title">Los conteos por rama no suman <code>puntos_sobre_fu</code></p>
+<p><code>puntos_sobre_fu</code> cuenta M2 y M3 por separado (un mismo punto puede sumar
+dos). El desglose por rama cuenta <strong>combinaciones</strong>, tomando el peor de M2 y
+M3 en cada una.</p>
+</div>
+<h3 id="trazabilidad-por-que-entro-cada-elemento">Trazabilidad: por qué entró cada elemento</h3>
+<p>Cada fila del reporte (JSON) explica sus números, no solo los trae:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué trae</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>combinacion_critica</code></td>
+<td>la combinación de cargas del punto de FU planar máximo</td>
+</tr>
+<tr>
+<td><code>combinacion_critica_3d</code></td>
+<td>ídem del FU 3D (solo con el cálculo 3D activo)</td>
+</tr>
+<tr>
+<td><code>axial_critico_3d</code></td>
+<td>el axial de ese punto, en t (<code>P &gt; 0</code> compresión); el de <code>axial_critico</code> es el del punto de FU planar máximo, que puede ser otra carga (solo con el cálculo 3D activo)</td>
+</tr>
+<tr>
+<td><code>razon_axial_critico_3d</code></td>
+<td>ese axial sobre f'c·Ag, con su signo y el área real de la sección (no la de <code>ancho_m</code> × <code>alto_m</code>, que es su caja); <code>null</code> si el <code>.da9</code> no conoce el f'c del elemento (solo con el cálculo 3D activo)</td>
+</tr>
+<tr>
+<td><code>tensiones</code></td>
+<td>las cuatro tensiones VH0 evaluadas, cada una con su combinación gobernante: <code>{"cfc": {"valor": 0.4382, "gobierna": "1.2CM+SX"}, ...}</code> (<code>null</code> la que ninguna carga alcanza; <code>tensiones: null</code> si el elemento no tiene sección utilizable)</td>
+</tr>
+<tr>
+<td><code>criterios_tension</code></td>
+<td>solo con <code>--tension</code>: los umbrales que el elemento supera, normalizados (<code>["cfc&gt;=0.42"]</code>)</td>
+</tr>
+<tr>
+<td><code>forma_corregida</code></td>
+<td>las paredes desplazadas respecto del modelo (las líneas <code>&gt;</code> del <code>.da9</code>), una por pared, en m: <code>[{"x0": 0.075, "y0": 0.25, "ancho": 0.2, "alto": 0.35, "dx": 0.075, "dy": 0.0}]</code>; <code>[]</code> si la sección es la del modelo. Ver <a href="../formato_da9/#paredes-desplazadas">Paredes desplazadas</a></td>
+</tr>
+</tbody>
+</table>
+<p>Para quedarse solo con lo que interesa en una corrida grande, <code>--solo-criticos</code>
+recorta el <code>reporte</code> del JSON a los elementos sobre el umbral (según el criterio
+vigente); <code>summary</code> no se recorta (<code>total</code>/<code>pasan</code>/<code>criticos</code>: la corrida
+completa o, con <code>--fu-ftc</code>/<code>--fu-corte</code>/<code>--fu-sec</code>, lo que pasó ese filtro).</p>
+<p>Los <code>valor</code> de <code>tensiones</code> van con 4 decimales, como los FU: con 2, una
+<code>cfc</code> de 0.3532 salía como 0.35 y no se distinguía de un umbral de 0.35.</p>
+<h3 id="criticos-por-corte">Corte: <code>fu_corte</code> y críticos por corte</h3>
+<p>Cada fila del <code>reporte</code> trae además tres claves del corte:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué trae</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fu_corte</code></td>
+<td>El mismo FU que mide el filtro <strong>FU Corte ≥</strong> de la GUI: armadura requerida sobre armadura provista, con φ 0.60, el mayor de V2 y V3 sobre todas las cargas, sin el FU de sección. <code>null</code> cuando no hay número.</td>
+</tr>
+<tr>
+<td><code>motivo_corte</code></td>
+<td><code>null</code> si <code>fu_corte</code> tiene número. Si <code>fu_corte</code> es <code>null</code>, la causa: el texto de la revisión cuando el elemento no se puede revisar (por ejemplo, sin los cortes del <code>.iecdb</code>), o <code>hay demanda de corte en una dirección sin armadura que la tome (FU infinito)</code>.</td>
+</tr>
+<tr>
+<td><code>fu_sec</code></td>
+<td>El FU de sección que mide el filtro <strong>FU Sección ≥</strong> de la GUI: el <code>Vs</code> requerido contra el máximo de 11.4.7.9 (<code>0.66·√f'c·bw·d</code>), con φ 0.60, el mayor de V2 y V3 sobre todas las cargas. No depende de la armadura, así que tiene número aunque <code>fu_corte</code> sea infinito. <code>null</code> si el elemento no se puede revisar.</td>
+</tr>
+</tbody>
+</table>
+<p>Un elemento con demanda de corte en una dirección sin armadura que la tome tiene
+FU infinito: sale con <code>fu_corte: null</code> (el JSON no escribe infinitos) y cuenta como
+crítico por corte. Uno que no se puede revisar también sale con <code>null</code>, pero no
+cuenta como crítico. <code>summary.criticos_corte</code> cuenta los elementos que superan
+<code>--umbral</code> en corte. <code>--solo-criticos</code> no mira el corte: para quedarse con los
+que fallan al corte, <code>--fu-corte</code> (<a href="#filtrar-por-fu">Filtrar por FU</a>).</p>
+<h3 id="detalle-corte">El detalle del corte (<code>--detalle-corte</code>)</h3>
+<p>Con <code>--detalle-corte</code>, cada fila del <code>reporte</code> trae además <code>corte</code>, para saber de dónde
+sale su <code>fu_corte</code>: si de las cargas o de la armadura mínima, y con qué armadura. Es
+<code>null</code> si el elemento no se puede revisar. Sus claves:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué trae</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gobierna</code></td>
+<td>La dirección que da <code>fu_corte</code>: <code>"V2"</code> o <code>"V3"</code>; <code>null</code> si no hay cargas que revisar.</td>
+</tr>
+<tr>
+<td><code>fi</code></td>
+<td>El φ de la revisión: 0.60, el de <code>fu_corte</code>.</td>
+</tr>
+<tr>
+<td><code>subtipo</code>, <code>ancho</code>, <code>alto</code></td>
+<td>El subtipo de corte (<code>muro</code>, <code>machon</code>, <code>columna</code> o <code>null</code>) y las dimensiones con que se revisó, en m.</td>
+</tr>
+<tr>
+<td><code>alfa</code></td>
+<td>El α de 21.9.4.1 en muros y machones; <code>null</code> en los demás.</td>
+</tr>
+<tr>
+<td><code>V2</code>, <code>V3</code></td>
+<td>Lo que gobierna en cada dirección: su posición de mayor FU. Una dirección sin cargas que revisar no viene.</td>
+</tr>
+</tbody>
+</table>
+<p>En <code>V2</code> y en <code>V3</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué trae</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fu</code>, <code>fu_infinito</code></td>
+<td>El FU de la dirección (<code>null</code> con <code>fu_infinito: true</code> si hay demanda y ninguna armadura la toma).</td>
+</tr>
+<tr>
+<td><code>posicion</code></td>
+<td>La posición que gobierna.</td>
+</tr>
+<tr>
+<td><code>demanda</code></td>
+<td>La armadura requerida, en cm²/m: la mayor de <code>asmin</code>, <code>as11</code> y <code>as21</code>, que también vienen.</td>
+</tr>
+<tr>
+<td><code>fija_demanda</code></td>
+<td>Cuál de las tres la fija: <code>asmin</code> (la mínima), <code>as11</code> (11.2 u 11.9) o <code>as21</code> (21.9.4.1). En un empate, <code>asmin</code>: el FU no sale de las cargas.</td>
+</tr>
+<tr>
+<td><code>combinacion</code></td>
+<td>La carga que fija la demanda; <code>null</code> si la fija la mínima.</td>
+</tr>
+<tr>
+<td><code>adis</code>, <code>provista</code>, <code>origen</code>, <code>solo_por_defecto</code></td>
+<td>La armadura provista en la dirección: su área en cm²/m, en texto (con «(por defecto)» donde lo es), el origen del set y si el <code>adis</code> sale solo de armadura por defecto.</td>
+</tr>
+<tr>
+<td><code>d</code>, <code>sep_max</code>, <code>sep_provista</code>, <code>excede_sep</code>, <code>fu_sec</code></td>
+<td>La altura útil en m; la separación máxima de norma y la mayor provista, en cm, y si la provista la supera; y el FU de sección. <code>sep_max</code> y <code>fu_sec</code> son los de la carga que gobierna el As 11 (con <code>fija_demanda</code> en <code>asmin</code> o <code>as21</code> no son los de esa carga); si ninguna carga pide As 11, <code>sep_max</code> es la de corte nulo y <code>fu_sec</code> vale 0.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filtrar-por-fu">Filtrar por FU</h3>
+<p><code>--fu-ftc</code>, <code>--fu-corte</code> y <code>--fu-sec</code> son los filtros <strong>FU FTC ≥</strong>, <strong>FU Corte ≥</strong>
+y <strong>FU Sección ≥</strong> de la GUI, con el selector <strong>o | y</strong> en <code>--operador-fu</code>:</p>
+<div class="highlight"><pre><span></span><code>curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>--fu-ftc<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span>--fu-corte<span class="w"> </span><span class="m">1</span>.2<span class="w"> </span>--json<span class="w"> </span>--no-html<span class="w">          </span><span class="c1"># FTC ≥ 1.0 o Corte ≥ 1.2</span>
+curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>--fu-ftc<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span>--fu-corte<span class="w"> </span><span class="m">1</span>.2<span class="w"> </span>--operador-fu<span class="w"> </span>y<span class="w"> </span>--json<span class="w">    </span><span class="c1"># los dos</span>
+curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>--filtro<span class="w"> </span><span class="s2">"tipo=muro"</span><span class="w"> </span>--fu-corte<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span>--json<span class="w"> </span>--no-html<span class="w">  </span><span class="c1"># muros que fallan al corte</span>
+curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>--fu-sec<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span>--json<span class="w"> </span>--no-html<span class="w">                         </span><span class="c1"># secciones que no dan al corte</span>
+</code></pre></div>
+<ul>
+<li>Comparan con <strong>≥</strong>, como la GUI: <code>--fu-ftc 1.0</code> deja un elemento con FU 1.00.
+  <code>--umbral</code> y <code>--solo-criticos</code> comparan con <strong>&gt;</strong>.</li>
+<li><strong>Filtran de verdad</strong>: lo que no pasa sale del <code>reporte</code>, del <code>summary</code>
+  (<code>total</code>, <code>criticos</code>) y del HTML, que muestra el filtro en el chip <strong>FU</strong> como el
+  reporte de la GUI. El RESUMEN de texto lo dice en la línea <code>FILTRO DE FU:</code> y,
+  si se filtró por corte, cuántos superan <code>--umbral</code> en corte (con <strong>&gt;</strong>).
+  <code>--solo-criticos</code>, en cambio, solo recorta las filas del <code>--json</code>.</li>
+<li><code>--fu-ftc</code> mide el FU del criterio vigente: el planar (el máximo de M2 y M3,
+  el de la GUI) o el 3D (con <code>--fu3d</code> o <code>--criterio fu3d</code>; ver <code>--criterio</code>).</li>
+<li><code>--fu-corte</code> mide <code>fu_corte</code> (<a href="#criticos-por-corte">Corte</a>). Una demanda sin
+  armadura (FU infinito) pasa siempre y un elemento que no se puede revisar, nunca.</li>
+<li><code>--fu-sec</code> mide <code>fu_sec</code>. Un elemento que no se puede revisar no pasa nunca.</li>
+<li>Se combinan con los demás filtros por <strong>y</strong>: primero <code>--filtro</code>, <code>--solo</code> y
+  <code>--tension</code> eligen qué se analiza, y sobre eso actúan los de FU.</li>
+<li><code>summary.filtro_fu</code> dice qué se pidió (<code>fu_ftc</code>, <code>fu_corte</code>, <code>fu_sec</code>, <code>operador</code>) y
+  cuántos elementos había antes del filtro (<code>antes_del_filtro</code>); sin filtros de
+  FU vale <code>null</code>. Que ninguno pase no es un error: el <code>reporte</code> sale vacío.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Lo que la GUI tiene y el CLI no</p>
+<p>En la GUI el FU se mide sobre las cargas que dejan ver los filtros <strong>Comb</strong> y
+<strong>Pos</strong>; el CLI no tiene esos filtros y mide sobre todas las cargas, como la
+GUI sin ellos.</p>
+</div>
+<h3 id="cli-descartados">Elementos descartados en curvaw</h3>
+<p>Los elementos que el ingeniero marcó con el chip «Descartar» de la GUI
+(<a href="../notas/#marcas">Notas de revisión</a>) quedan fuera del acta, y el batch los trata
+igual: no se analizan ni cuentan en <code>reporte</code>, <code>total</code>, <code>criticos</code> ni en el HTML. Se
+informan aparte, entre los elementos que pasan <code>--filtro</code>/<code>--solo</code>/<code>--tension</code>:</p>
+<ul>
+<li>En el <code>--json</code>, la clave <code>descartados</code>: una lista de
+  <code>{id, eje, tipo, nombre, piso, motivo}</code>, donde <code>id</code> es el mismo de las filas del
+  <code>reporte</code> (<code>eje&amp;tipo&amp;nombre&amp;piso</code>) y <code>motivo</code> es el comentario del elemento (vacío
+  si se descartó sin comentario: la marca no exige motivo), y <code>summary.descartados</code>,
+  con su cuenta.</li>
+<li>En el texto, el bloque <code>ELEMENTOS DESCARTADOS EN CURVAW, FUERA DEL ACTA (N):</code> con el
+  <code>id</code> y el comentario de cada uno.</li>
+</ul>
+<h3 id="ejemplos">Ejemplos</h3>
+<div class="highlight"><pre><span></span><code>curvaw-batch<span class="w"> </span>proyecto<span class="w">                       </span><span class="c1"># FU umbral = 1.0</span>
+curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>-u<span class="w"> </span><span class="m">0</span>.9<span class="w">                </span><span class="c1"># FU umbral = 0.9</span>
+curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>--fu3d<span class="w">                </span><span class="c1"># FU 3D biaxial; el corte pasa a fu3d</span>
+curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>--json<span class="w"> </span>--no-html<span class="w">      </span><span class="c1"># solo el envelope JSON, sin HTML</span>
+curvaw-batch<span class="w"> </span>limpio<span class="w"> </span>--pre<span class="w"> </span>modelo.pre<span class="w">        </span><span class="c1"># .da9 limpio: inyecta esfuerzos del .pre</span>
+curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>--filtro<span class="w"> </span><span class="s2">"tipo=muro,eje=B"</span><span class="w"> </span>--skip-errores
+curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>--tension<span class="w"> </span><span class="s2">"t=400,cfc=0.42"</span><span class="w"> </span>--json<span class="w"> </span>--no-html<span class="w">  </span><span class="c1"># O entre tensiones</span>
+curvaw-batch<span class="w"> </span>proyecto<span class="w"> </span>-u<span class="w"> </span><span class="m">1</span>.2<span class="w"> </span>--solo-criticos<span class="w"> </span>--json<span class="w"> </span>--no-html<span class="w">   </span><span class="c1"># solo filas sobre umbral</span>
+</code></pre></div>
+<h3 id="cache">Caché</h3>
+<p><code>curvaw-batch</code> usa la misma caché en disco que la GUI (<code>~/.cache/curvaw</code>). Sirve el
+proyecto desde ella mientras no cambien la ruta ni la fecha y el tamaño del <code>.da9</code>, del
+<code>.pre</code> y del <code>.iecdb</code>, y lo avisa por stderr (<code>Elementos cargados: N (caché)</code>). No hay
+un flag para saltarla: si un resultado parece viejo, borrar esa carpeta. Qué la
+invalida, su límite y la otra caché (la de planos del visor) están en
+<a href="../introduccion/#cache">Caché</a>.</p>
+<hr />
+<h2 id="curvaw-prellenar-cwp-armado-masivo"><code>curvaw-prellenar</code> (<code>cwp</code>): armado masivo</h2>
+<p>Arma armaduras por defecto en un <code>.da9</code> sin abrir la GUI: es la versión batch del
+editor de armado (botones <strong>⚙ Armar filtro</strong> / <strong>▤ Plantilla</strong> de la
+GUI, ver <a href="../editor_seccion/">Editor de sección</a>). Comparte el mismo motor en
+memoria.</p>
+<div class="highlight"><pre><span></span><code>curvaw-prellenar<span class="w"> </span>&lt;archivo&gt;<span class="w"> </span><span class="o">[</span>opciones<span class="o">]</span>
+</code></pre></div>
+<p><code>&lt;archivo&gt;</code> admite el <code>.da9</code> con o sin extensión.</p>
+<p>A cada sección que pase los filtros le asigna <strong>armadura de borde</strong> según su rango
+de espesor, una <strong>malla intermedia</strong> (solo muros) y un <strong>recubrimiento</strong>. Con
+<code>--mallas-planos</code> la malla de los muros y machones sale de los planos del
+calculista en vez de <code>--malla</code> (ver <a href="#malla-vertical-de-los-planos">Malla vertical de los planos</a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Alcance: rectangular, circular y poligonal rectilínea</p>
+<p><code>curvaw-prellenar</code> arma <strong>secciones rectangulares y circulares</strong>, y las
+<strong>poligonales rectilíneas</strong> (T, I, L, C, H…) <strong>por paredes</strong>: cada pared
+rectangular del contorno elige su regla por su propio espesor y se arma como un
+muro (ver <a href="../editor_seccion/#armado-de-secciones-poligonales">Armado de secciones poligonales</a>).
+Solo las poligonales con <strong>lados inclinados</strong> se <strong>omiten</strong> y se contabilizan
+aparte (<code>omitidas_poly</code> en el <code>summary</code>); su armadura por coordenada (<code>@</code>) se
+ingresa desde el <a href="../editor_seccion/">Editor de sección</a> de la GUI o a mano en el
+<code>.da9</code>.</p>
+</div>
+<h3 id="salida">Salida</h3>
+<p>Por defecto escribe una <strong>copia</strong> del <code>.da9</code>, <code>&lt;da9&gt;_armado.da9</code>, en la misma
+carpeta y con las barras generadas, y deja el original como estaba. Con
+<code>--in-place</code> escribe sobre el original, <strong>sin copia de respaldo</strong>. Imprime a stdout
+la cuenta de secciones armadas y omitidas y la ruta del resultado:</p>
+<div class="highlight"><pre><span></span><code>Armaduras generadas en 120 secciones (omitidas 8: 5 con armadura previa, 3 error de lectura).
+Archivo: proyecto/revision/ftc/RXXXX_ftc_armado.da9
+</code></pre></div>
+<p>Volver a correr el comando copia otra vez el original sobre <code>&lt;da9&gt;_armado.da9</code>: lo
+que se le hubiera hecho a la copia (un armado en <code>cw</code>, una nota) se pierde.</p>
+<div class="admonition warning">
+<p class="admonition-title">Sin <code>--solo-vacios</code>, se reemplaza la armadura de todos los elementos del filtro</p>
+<p>«No sobreescribe el original» habla del <strong>archivo</strong>, no de las barras: sin
+<code>--solo-vacios</code>, la copia recibe barras nuevas en <strong>todos</strong> los elementos que
+pasan los filtros, también en los que ya tenían armadura, incluida la hecha a
+mano. Con <code>--in-place</code> esas barras se pierden sin copia de respaldo. El
+<code>summary</code> del <code>--json</code> dice cuántos elementos del filtro ya tenían armadura
+(<code>con_armadura_previa</code>). Para no tocar lo ya armado, usar <code>--solo-vacios</code>; antes de
+<code>--in-place</code>, copiar el <code>.da9</code>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">La copia <code>_armado</code> no encuentra el <code>.pre</code> hermano</p>
+<p><code>&lt;da9&gt;_armado.da9</code> tiene otro nombre base que el original, así que curvaw no
+encuentra el <code>.pre</code> ni el <code>.iecdb</code> que están junto a <code>&lt;da9&gt;</code>. En la estructura
+estándar el <code>.iecdb</code> sí se encuentra, porque está en <code>revision/esfuerzos/</code> y se
+busca por el comienzo del nombre (<code>RXXXX_ftc_armado</code> encuentra <code>RXXXX.iecdb</code>;
+<a href="#fuentes-de-esfuerzos-cascada">Fuentes de esfuerzos</a>). El <code>.pre</code> no: si se usa,
+hay que pasarlo con <code>--pre</code>. Un <code>.iecdb</code> que está en otra carpeta también hay que
+pasarlo; sin él, un <code>.da9</code> que venía sin esfuerzos (lo normal: así lo deja
+<code>pretoda9</code>) sigue sin ellos: <code>curvaw-batch</code> aborta con <code>N elementos no tienen
+esfuerzos</code> y <code>cw</code> lo abre sin cargas.</p>
+<div class="highlight"><pre><span></span><code>curvaw-prellenar<span class="w"> </span>proyecto/revision/ftc/RXXXX_ftc
+cw<span class="w"> </span>proyecto/revision/ftc/RXXXX_ftc_armado<span class="w"> </span>--pre<span class="w"> </span>proyecto/revision/ftc/RXXXX_ftc.pre
+</code></pre></div>
+</div>
+<h4 id="prellenar-omitidas">Qué cuentan las «omitidas»</h4>
+<p><code>omitidas</code> son los elementos del filtro que no recibieron barras. El texto los
+desglosa por motivo (solo los que no son cero) y el <code>summary</code> de <code>--json</code> los separa en
+las claves de la tabla:</p>
+<table>
+<thead>
+<tr>
+<th>Clave</th>
+<th>Motivo</th>
+<th>Qué hacer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>omitidas_error</code></td>
+<td>Error de lectura, o sección y materiales ilegibles (también cuenta aquí una sección variable, que no tiene geometría). Un diámetro <code>0.000</code> (la armadura a medio armar) <strong>es un error de lectura</strong>: <code>--solo-vacios</code> no lo salva y el elemento se omite igual.</td>
+<td>Completar o borrar esa barra en el <code>.da9</code> y volver a correr (<a href="#error-de-lectura-causa">Dónde ver la causa</a>).</td>
+</tr>
+<tr>
+<td><code>omitidas_con_armadura</code></td>
+<td>Con <code>--solo-vacios</code>, el elemento ya tenía barras.</td>
+<td>Nada: es lo pedido.</td>
+</tr>
+<tr>
+<td><code>omitidas_poly</code></td>
+<td>Poligonal con lados inclinados: no se descompone en paredes.</td>
+<td>Armarla por coordenada, desde el Editor de sección o a mano.</td>
+</tr>
+<tr>
+<td><code>omitidas_sin_regla</code></td>
+<td>Ninguna regla aplica al elemento (con las tres reglas por espesor del CLI no debería ocurrir).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>omitidas_reparto</code></td>
+<td>La regla no genera barras en ese elemento, o las capas pedidas no caben en la sección.</td>
+<td>Una regla con menos barras o capas, o armarlo a mano.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="opciones-propias_1">Opciones propias</h3>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--borde-r1 NxD</code></td>
+<td>Armadura de borde para espesor <strong>&lt; 20 cm</strong>.</td>
+<td><code>2x10</code></td>
+</tr>
+<tr>
+<td><code>--borde-r2 NxD</code></td>
+<td>Armadura de borde para espesor <strong>20-34 cm</strong>.</td>
+<td><code>2x12</code></td>
+</tr>
+<tr>
+<td><code>--borde-r3 NxD</code></td>
+<td>Armadura de borde para espesor <strong>≥ 35 cm</strong>.</td>
+<td><code>2x16</code></td>
+</tr>
+<tr>
+<td><code>--malla NxD@S</code></td>
+<td>Malla intermedia (solo muros).</td>
+<td><code>2x8@25</code></td>
+</tr>
+<tr>
+<td><code>--recubrimiento M</code></td>
+<td>Recubrimiento [m].</td>
+<td><code>0.03</code></td>
+</tr>
+<tr>
+<td><code>--mallas-planos JSON</code></td>
+<td>JSON de <a href="../../edbtodxf/cli/#planos-cli-mallas-verticales"><code>planos-cli mallas-verticales</code></a>: los muros y machones con malla vertical del plano se arman con ella (<code>ramas</code> × ø @ <code>sep</code>) en vez de <code>--malla</code>.</td>
+<td>sin malla de los planos</td>
+</tr>
+<tr>
+<td><code>--solo-vacios</code></td>
+<td>Solo arma elementos sin armadura (no pisa las existentes). Sin esta opción se reemplaza la armadura de <strong>todos</strong> los elementos del filtro, también la hecha a mano. Un diámetro <code>0.000</code> es un error de lectura y se omite igual.</td>
+<td>desactivado</td>
+</tr>
+<tr>
+<td><code>--in-place</code></td>
+<td>Escribe sobre el <code>.da9</code> original, sin copia de respaldo.</td>
+<td>crea <code>&lt;da9&gt;_armado.da9</code></td>
+</tr>
+<tr>
+<td><code>--eje VALOR</code></td>
+<td>Solo este eje (exacto).</td>
+<td>todos</td>
+</tr>
+<tr>
+<td><code>--tipo VALOR</code></td>
+<td>Solo este tipo (exacto): <code>muro</code>/<code>machon</code>/<code>columna</code>/<code>beam</code>/… (<code>viga</code> vale lo mismo que <code>beam</code>, que es lo que guarda el <code>.da9</code>). Es <strong>repetible</strong>: <code>--tipo muro --tipo machon</code> arma los dos.</td>
+<td>todos</td>
+</tr>
+<tr>
+<td><code>--piso VALOR</code></td>
+<td>Solo este piso (exacto).</td>
+<td>todos</td>
+</tr>
+<tr>
+<td><code>--nombre VALOR</code></td>
+<td>Solo este nombre (exacto).</td>
+<td>todos</td>
+</tr>
+<tr>
+<td><code>--ancho M</code></td>
+<td>Solo elementos con este ancho, en <strong>metros</strong>. Si es un número se compara con el ancho con tolerancia de 1 mm (<code>0.2</code> toma los de 0.20 y no los de 0.25; <code>0.20</code> y <code>.2</code> dan lo mismo). Si no es un número, se busca como texto dentro del ancho con dos decimales.</td>
+<td>todos</td>
+</tr>
+<tr>
+<td><code>--alto M</code></td>
+<td>Solo elementos con este alto, en <strong>metros</strong>, con la misma regla que <code>--ancho</code>.</td>
+<td>todos</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Sintaxis de los specs de armadura</p>
+<ul>
+<li><strong><code>NxD</code></strong> (borde): <code>N</code> barras de diámetro <code>D</code> <strong>en mm</strong>. Ej.: <code>2x16</code> = 2 Ø16.</li>
+<li><strong><code>NxD@S</code></strong> (malla): <code>N</code> barras Ø <code>D</code> mm cada <code>S</code> <strong>cm</strong>. Ej.: <code>2x8@25</code> = 2 Ø8
+  @ 25 cm.</li>
+</ul>
+</div>
+<h3 id="malla-vertical-de-los-planos">Malla vertical de los planos</h3>
+<p>El armado por defecto no es la armadura del calculista: la revisión de
+flexo-compresión con él da FU que no dicen nada del diseño. Con
+<code>--mallas-planos</code> los <strong>muros y machones</strong> del subconjunto que tienen malla vertical en
+los planos se arman con <strong>esa malla</strong> (<code>ramas</code> × ø <code>diam</code> @ <code>sep</code>, p. ej. 2ø8 @20) en
+vez de <code>--malla</code>. Los <strong>bordes siguen saliendo de las reglas por espesor</strong> (las barras de
+las cabezas no se leen de los planos), y todo lo demás —los filtros, <code>--solo-vacios</code>,
+<code>--in-place</code>— funciona igual.</p>
+<div class="highlight"><pre><span></span><code>planos-cli<span class="w"> </span>mallas-verticales<span class="w"> </span>--dxf-dir<span class="w"> </span>proyecto/planos/elevaciones-anotadas<span class="w"> </span>--dialecto<span class="w"> </span>soler<span class="w"> </span>--out<span class="w"> </span>mallas_v.json
+<span class="c1"># los muros y los machones, en una sola corrida</span>
+curvaw-prellenar<span class="w"> </span>proyecto/revision/ftc/RXXXX_ftc<span class="w"> </span>--tipo<span class="w"> </span>muro<span class="w"> </span>--tipo<span class="w"> </span>machon<span class="w"> </span>--mallas-planos<span class="w"> </span>mallas_v.json
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Muros y machones: pide los dos tipos</p>
+<p><code>--tipo</code> compara el tipo <strong>exacto</strong>: <code>--tipo muro</code> no incluye a los <code>machon</code>, y sin <code>--tipo</code>
+se arma <strong>todo</strong> el <code>.da9</code> (columnas y vigas también), que no es lo que busca esta receta.
+Como <code>--tipo</code> se repite, <code>--tipo muro --tipo machon</code> arma los dos en la misma corrida. Lo que
+una corrida deja fuera de sus filtros se avisa: el <code>summary</code> lo cuenta
+(<code>del_plano_fuera_del_filtro</code>) y <code>warnings</code> nombra los primeros elementos; con solo
+<code>--tipo muro</code>, son los machones con malla del plano.</p>
+</div>
+<ul>
+<li><strong>Qué elemento recibe qué malla.</strong> Se empareja por <code>nombre|piso</code> (el pier y el piso, sin
+  el eje: el mismo criterio con que curvaw <a href="../corte/">arma el corte desde los
+  planos</a>). Una <strong>poligonal</strong> (T, I, L, C…) se arma por paredes: la malla del plano
+  va a todas sus paredes. Un elemento sin malla del plano —o con origen <code>default</code>, es decir,
+  que el plano no dijo nada— queda con <code>--malla</code>; una viga o una columna no se toca. La malla
+  vertical <strong>no hereda del piso de abajo</strong>: un elemento sin rótulo de malla en su piso viene con
+  origen <code>default</code> aunque el mismo pier lo tenga abajo, y queda con <code>--malla</code>.</li>
+<li><strong>Qué JSON.</strong> El que escribe <code>planos-cli mallas-verticales</code>: se reconoce por su <code>esquema</code>
+  (<code>mallas-verticales/1</code>) y por <code>meta.direccion</code> = <code>vertical</code>. El JSON de <code>armaduras-corte</code> (esquema
+  <code>1</code>) trae la malla <em>horizontal</em>, la de corte: se rechaza con exit 3 en vez de armar los muros con
+  una malla que no corresponde. Una malla del JSON con <code>ramas</code>, ø o @ no positivos también es
+  exit 3 y nombra el elemento, y la lista <code>sin_dato_vertical</code> es parte del documento: sin ella
+  también.</li>
+<li><strong>Qué dice el <code>summary</code></strong> (<code>--json</code>) con el flag, solo sobre los muros y machones que se
+  armaron en esa corrida:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Clave</th>
+<th>Qué cuenta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>con_malla_del_plano</code></td>
+<td>Armados con la malla del plano, por el origen con que se leyó (<code>directo</code> o <code>cercano</code>)</td>
+</tr>
+<tr>
+<td><code>malla_default</code></td>
+<td>Armados con <code>--malla</code>: sin dato del plano o con origen <code>default</code></td>
+</tr>
+<tr>
+<td><code>sin_dato_vertical</code></td>
+<td>De ellos, los que el plano rotula pero <strong>sin la vertical</strong> (la lista <code>sin_dato_vertical</code> del JSON): conviene leerlos del plano</td>
+</tr>
+<tr>
+<td><code>del_plano_fuera_del_filtro</code></td>
+<td>Mallas del plano cuyo muro o machón está en el <code>.da9</code> pero los filtros de esta corrida lo dejaron fuera (con solo <code>--tipo muro</code>, los machones): no se aplicaron; las primeras salen en <code>warnings</code></td>
+</tr>
+<tr>
+<td><code>del_plano_como_columna</code></td>
+<td>Mallas del plano de piers que el <code>.da9</code> clasifica como <strong>columna</strong> por su razón de aspecto: no se tocan, igual que en el <a href="../corte/">armado de corte</a>; las primeras salen en <code>warnings</code></td>
+</tr>
+<tr>
+<td><code>del_plano_sin_elemento</code></td>
+<td>Mallas del plano cuya clave (nombre del elemento y piso) no es de ningún muro, machón ni columna del <code>.da9</code> entero (no solo del filtro); las primeras salen en <code>warnings</code></td>
+</tr>
+</tbody>
+</table>
+<p>Las tres últimas cuentan claves <code>nombre|piso</code> sobre el <code>.da9</code> entero y sus ejemplos van en orden natural
+(<code>M2|P01</code> antes que <code>M10|P01</code>).</p>
+<h3 id="editar-un-elemento-puntual">Editar UN elemento puntual</h3>
+<p><code>curvaw-prellenar</code> cubre el <strong>armado masivo</strong>, que es cómputo. Para ajustar la
+armadura de <strong>un solo</strong> elemento, el <code>.da9</code> es texto plano editable a mano (ver
+<a href="../formato_da9/">formato <code>.da9</code></a>): edítelo y vuelva a correr <code>curvaw-batch</code>, que
+recomputa las curvas al cargar.</p>
+<h3 id="ejemplos_1">Ejemplos</h3>
+<div class="highlight"><pre><span></span><code>curvaw-prellenar<span class="w"> </span>modelo<span class="w">                              </span><span class="c1"># defaults: bordes 2x10/2x12/2x16, malla 2x8@25</span>
+curvaw-prellenar<span class="w"> </span>modelo<span class="w"> </span>--borde-r3<span class="w"> </span>2x18<span class="w"> </span>--malla<span class="w"> </span>2x10@20
+curvaw-prellenar<span class="w"> </span>modelo<span class="w"> </span>--solo-vacios<span class="w">                </span><span class="c1"># solo elementos sin armadura</span>
+curvaw-prellenar<span class="w"> </span>modelo<span class="w"> </span>--tipo<span class="w"> </span>muro<span class="w"> </span>--in-place<span class="w">       </span><span class="c1"># solo muros, sobre el original: reemplaza sus barras, sin copia</span>
+curvaw-prellenar<span class="w"> </span>modelo<span class="w"> </span>--tipo<span class="w"> </span>muro<span class="w"> </span>--tipo<span class="w"> </span>machon<span class="w">    </span><span class="c1"># muros y machones (--tipo se repite)</span>
+curvaw-prellenar<span class="w"> </span>modelo<span class="w"> </span>--tipo<span class="w"> </span>muro<span class="w"> </span>--tipo<span class="w"> </span>machon<span class="w"> </span>--mallas-planos<span class="w"> </span>mallas_v.json<span class="w">   </span><span class="c1"># la malla vertical que dibujó el calculista</span>
+curvaw-prellenar<span class="w"> </span>modelo<span class="w"> </span>--json
+</code></pre></div>
+<hr />
+<h2 id="curvaw-notas-cwn-notas-de-revision"><code>curvaw-notas</code> (<code>cwn</code>): notas de revisión</h2>
+<p>Lista las <a href="../notas/">notas de revisión</a> que se dejaron en curvaw (la marca «Al acta» o
+«Descartar» y el comentario), una por elemento, con su eje, tipo, nombre y piso. Solo
+lee el <code>.da9</code>: no necesita esfuerzos ni <code>.iecdb</code>, ni calcula nada. Es lo que lee el
+paso del acta (skill <code>acta-revision-iec</code>) para redactar las observaciones.</p>
+<h3 id="opciones-propias_2">Opciones propias</h3>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>archivo</code></td>
+<td>El <code>.da9</code> (con o sin extensión).</td>
+</tr>
+<tr>
+<td><code>--sin-internas</code></td>
+<td>Deja fuera los comentarios sin marca (los que no van al acta). Los elementos descartados salen igual: el acta necesita saber qué excluir.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="salida_1">Salida</h3>
+<p>Sin <code>--json</code>, una línea por nota (<code>eje / nombre / piso (tipo): texto</code>, con
+<code>[al acta]</code> o <code>[descartado]</code> tras el tipo si el elemento tiene esa marca; un
+comentario sin marca va sin nada) y un resumen. Los renglones de un comentario van
+en una sola línea, separados por <code>/</code>, y una marca sin comentario termina en la
+marca, sin <code>:</code>:</p>
+<div class="highlight"><pre><span></span><code>A / Col 40x40 sin armar / P01 (columna) [al acta]: B4 en P04 es la viga VI.201 / lámina 1755-C35-018
+B / Col 50x50 sin armar / P01 (columna): revisar el modelo
+C / Col circular D50 sin armar / P01 (columna) [descartado]
+M1 / Muro e15 sin armar / P01 (muro) [al acta]
+4 notas: 2 marcados al acta, 1 comentario sin marca, 1 elemento descartado.
+</code></pre></div>
+<p>Con <code>--json</code>, la lista <code>notas</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eje</code>, <code>tipo</code>, <code>nombre</code>, <code>piso</code></td>
+<td>La identidad del elemento, como en el <code>.da9</code>.</td>
+</tr>
+<tr>
+<td><code>ancho_m</code>, <code>alto_m</code></td>
+<td>La caja de la sección [m], como en <code>curvaw-batch</code> (para rotular <code>viga 20x50</code>, <code>muro e=20</code>); <code>null</code> en una sección variable.</td>
+</tr>
+<tr>
+<td><code>texto</code></td>
+<td>El comentario, con sus saltos de línea. Viene vacío en un elemento marcado sin comentario.</td>
+</tr>
+<tr>
+<td><code>interna</code></td>
+<td><code>true</code> si no va al acta como observación: los comentarios sin marca y los elementos descartados. <code>false</code> en los marcados «Al acta».</td>
+</tr>
+<tr>
+<td><code>descartado</code></td>
+<td><code>true</code> si el elemento está marcado «Descartar» (entero fuera del acta), <code>false</code> si no.</td>
+</tr>
+</tbody>
+</table>
+<p>El <code>summary</code> cuenta <code>notas</code>, <code>acta</code> (los marcados «Al acta»), <code>internas</code> (los
+comentarios sin marca) y <code>descartados</code>. Un elemento con error de lectura se avisa en
+<code>warnings</code>: si el error está antes de la nota (en las barras, o en la nota misma), su
+nota no se leyó.</p>
+<h3 id="ejemplos_2">Ejemplos</h3>
+<div class="highlight"><pre><span></span><code>curvaw-notas<span class="w"> </span>proyecto/revision/ftc/R4834_ftc
+curvaw-notas<span class="w"> </span>proyecto/revision/ftc/R4834_ftc.da9<span class="w"> </span>--json
+curvaw-notas<span class="w"> </span>proyecto/revision/ftc/R4834_ftc<span class="w"> </span>--sin-internas<span class="w"> </span>--json
+</code></pre></div>
+<hr />
+<h2 id="corte-en-subconjunto">Revisar el corte en un <code>.da9</code> aparte</h2>
+<p>Tres CLIs permiten revisar el corte de unos cuantos elementos en un <code>.da9</code> aparte y
+devolver después el resultado al <code>.da9</code> del proyecto, sin pisar lo que se siga
+editando en él mientras tanto:</p>
+<ol>
+<li><strong><code>curvaw-subconjunto</code></strong> copia los elementos elegidos a otro <code>.da9</code> (por ejemplo,
+   en <code>revision/corte/</code>) y deja junto a él su <strong>base</strong>, <code>&lt;subconjunto&gt;.origen.json</code>.</li>
+<li><strong><code>curvaw-editar</code></strong> escribe en un <code>.da9</code> la armadura longitudinal, la transversal y
+   la nota (marca y comentario) de cada elemento desde un JSON, para quien lee los
+   planos fuera de cw.</li>
+<li><strong><code>curvaw-fusionar</code></strong> devuelve al <code>.da9</code> completo lo que cambió en el subconjunto.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>curvaw-batch<span class="w"> </span>proyecto/revision/ftc/R4834_ftc<span class="w"> </span>--fu-corte<span class="w"> </span><span class="m">1</span>.2<span class="w"> </span>--json<span class="w"> </span>--no-html<span class="w"> </span>&gt;<span class="w"> </span>fu.json
+curvaw-subconjunto<span class="w"> </span>proyecto/revision/ftc/R4834_ftc<span class="w"> </span>--output<span class="w"> </span>proyecto/revision/corte/R4834_corte<span class="w"> </span>--ids-json<span class="w"> </span>fu.json
+curvaw-editar<span class="w"> </span>proyecto/revision/corte/R4834_corte<span class="w"> </span>--cambios<span class="w"> </span>cambios.json
+cw<span class="w"> </span>proyecto/revision/corte/R4834_corte
+curvaw-fusionar<span class="w"> </span>proyecto/revision/corte/R4834_corte<span class="w"> </span>--dry-run
+curvaw-fusionar<span class="w"> </span>proyecto/revision/corte/R4834_corte
+</code></pre></div>
+<p>El subconjunto se abre en cw como cualquier <code>.da9</code>. cw encuentra solo el <code>.iecdb</code> de
+<code>revision/esfuerzos/</code> si el subconjunto está en una carpeta hermana de <code>esfuerzos/</code>
+(como <code>revision/corte/</code>) y su nombre empieza con el del <code>.iecdb</code> seguido de un
+separador: <code>R4834_corte</code> encuentra <code>R4834.iecdb</code>, <code>R4834corte</code> no
+(<a href="../../directorios/#curvaw-iecdb">cómo lo busca</a>). Los tres CLIs no tienen alias.</p>
+<h3 id="curvaw-subconjunto"><code>curvaw-subconjunto</code></h3>
+<p>Copia los elementos elegidos tal cual, línea por línea y en el orden del <code>.da9</code>
+completo: header, barras, cabezas <code>~</code>, armadura <code>^</code>, nota <code>%</code> y lo que haya hasta el
+<code>fin</code>. Junto al subconjunto deja su base, <code>&lt;subconjunto&gt;.origen.json</code>, con la ruta del
+<code>.da9</code> completo y una huella de cada parte de cada elemento tal como estaba al
+extraerlo. <code>curvaw-fusionar</code> la necesita: no hay que borrarla ni editarla.</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>archivo</code></td>
+<td>El <code>.da9</code> completo, con o sin extensión.</td>
+<td>requerido</td>
+</tr>
+<tr>
+<td><code>--output OUT</code></td>
+<td>El <code>.da9</code> del subconjunto, con o sin extensión. Crea su carpeta si no existe.</td>
+<td>requerido</td>
+</tr>
+<tr>
+<td><code>--ids-json J</code></td>
+<td>Los elementos, desde un JSON: una lista, o un objeto con <code>elementos</code> o <code>reporte</code> (el <code>--json</code> de <code>curvaw-batch</code>). Cada uno es un id <code>eje&amp;tipo&amp;nombre&amp;piso</code> o un objeto con <code>id</code>, o con <code>eje</code>, <code>tipo</code>, <code>nombre</code> y <code>piso</code>.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--id ID</code></td>
+<td>Un elemento por su id. Repetible; se suma a <code>--ids-json</code>.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--filtro COND</code></td>
+<td>Los elementos que cumplen la condición, con la sintaxis de <code>curvaw-batch</code> (<a href="#filtrar-que-elementos-se-analizan">Filtrar qué elementos se analizan</a>). Con <code>--ids-json</code> o <code>--id</code>, acota esa lista. Repetible (OR).</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--force</code></td>
+<td>Pisa un subconjunto que ya existe, y su base.</td>
+<td>desactivado</td>
+</tr>
+</tbody>
+</table>
+<p>Hace falta al menos uno de <code>--ids-json</code>, <code>--id</code> o <code>--filtro</code>. Termina con exit 3, sin
+escribir nada, si falta un elemento pedido, si <code>--output</code> es el mismo <code>.da9</code> completo,
+si no queda ningún elemento o si el subconjunto ya existe y no se pasó <code>--force</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title"><code>--force</code> pierde lo que se hizo en el subconjunto</p>
+<p>Un subconjunto existente puede tener cambios que todavía no se fusionaron. Con
+<code>--force</code> se pisan el <code>.da9</code> y su base, y esos cambios ya no llegan al completo.
+Antes, fusionarlo: <code>curvaw-fusionar --dry-run</code> dice si queda algo por pasar.</p>
+</div>
+<div class="highlight"><pre><span></span><code>Subconjunto: revision\corte\R4834_corte.da9 (3 elementos de 633)
+Base para curvaw-fusionar: revision\corte\R4834_corte.origen.json
+</code></pre></div>
+<h3 id="curvaw-editar"><code>curvaw-editar</code></h3>
+<p>Escribe en un <code>.da9</code> las barras de la sección, la armadura transversal (lo que en la
+GUI se hace con el panel de Corte) y la nota (los chips <strong>Al acta</strong> y <strong>Descartar</strong> y
+el 📝), desde un JSON. Las líneas <code>^</code> y <code>%</code> las escribe el mismo código que la GUI, y
+las barras se validan con el mismo lector con que cw lee el <code>.da9</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>archivo</code></td>
+<td>El <code>.da9</code> a editar, con o sin extensión.</td>
+<td>requerido</td>
+</tr>
+<tr>
+<td><code>--cambios JSON</code></td>
+<td>El JSON de cambios.</td>
+<td>requerido</td>
+</tr>
+<tr>
+<td><code>--dry-run</code></td>
+<td>Valida y muestra lo que cambiaría, sin escribir.</td>
+<td>desactivado</td>
+</tr>
+</tbody>
+</table>
+<p>El JSON, con todas sus formas (también vale la lista de elementos sola, sin el
+objeto que la envuelve):</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"elementos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0D&amp;beam&amp;B403&amp;S01"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"transversal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"general"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"origen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"directo"</span><span class="p">,</span><span class="w"> </span><span class="nt">"estribo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"diam"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">"sep"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">}},</span>
+<span class="w">                   </span><span class="nt">"por_posicion"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"origen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"directo"</span><span class="p">,</span><span class="w"> </span><span class="nt">"estribo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"diam"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">"sep"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">}}}},</span>
+<span class="w">   </span><span class="nt">"nota"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"marca"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acta"</span><span class="p">,</span><span class="w"> </span><span class="nt">"comentario"</span><span class="p">:</span><span class="w"> </span><span class="s2">"estribos de la lámina 018"</span><span class="p">}},</span>
+<span class="w">  </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12&amp;machon&amp;12_02&amp;P06"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"longitudinal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"capas"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"diam"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="nt">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.03</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"diam"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="nt">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.97</span><span class="p">}],</span>
+<span class="w">                    </span><span class="nt">"mallas"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"diam"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nt">"y1"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.03</span><span class="p">,</span><span class="w"> </span><span class="nt">"y2"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.97</span><span class="p">,</span><span class="w"> </span><span class="nt">"sep"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">}],</span>
+<span class="w">                    </span><span class="nt">"barras"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.15</span><span class="p">,</span><span class="w"> </span><span class="nt">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="nt">"diam"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">}]},</span>
+<span class="w">   </span><span class="nt">"transversal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"general"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"origen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"directo"</span><span class="p">,</span><span class="w"> </span><span class="nt">"mallas"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"diam"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">"sep"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">},</span>
+<span class="w">                               </span><span class="nt">"trabas"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"direccion"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"n"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"diam"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nt">"sep"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="nt">"origen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">}]}}},</span>
+<span class="w">  </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#&amp;beam&amp;B268&amp;S01"</span><span class="p">,</span><span class="w"> </span><span class="nt">"nota"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"marca"</span><span class="p">:</span><span class="w"> </span><span class="s2">"descartado"</span><span class="p">}}]}</span>
+</code></pre></div>
+<ul>
+<li><strong>El elemento</strong> va por <code>id</code> (<code>eje&amp;tipo&amp;nombre&amp;piso</code>, como lo da <code>curvaw-batch</code>) o
+  por <code>eje</code>, <code>tipo</code>, <code>nombre</code> y <code>piso</code>, sin distinguir mayúsculas.</li>
+<li><strong><code>longitudinal</code></strong> reemplaza <strong>todas</strong> las barras de la sección: hay que mandar la
+  armadura completa, no lo que cambia. No toca el header, las propiedades, los
+  vértices ni las paredes <code>&gt;</code> de una poligonal. Trae una o más de tres listas, que
+  son las tres formas de barra del <a href="../formato_da9/">formato <code>.da9</code></a>: <code>capas</code> (<code>n</code>
+  barras a la cota <code>y</code>), <code>mallas</code> (<code>n</code> barras por cota, de <code>y1</code> a <code>y2</code> cada <code>sep</code>) y
+  <code>barras</code> (una barra suelta en <code>x</code>, <code>y</code>). <code>diam</code> va en mm, entero de 6 a 40, y <code>x</code>,
+  <code>y</code>, <code>y1</code>, <code>y2</code> y <code>sep</code> en metros, en las coordenadas de la sección del <code>.da9</code>. En
+  una poligonal van las <code>barras</code>: una capa o una malla sirve solo si su cota corta
+  la sección en dos puntos.</li>
+<li><strong>Una malla no pone barras en <code>y1</code> ni en <code>y2</code></strong>: cw reparte sus cotas cada <code>sep</code>
+  centradas en el tramo, y la última queda antes de <code>y2</code>. De 0.2 a 3.8 cada 0.2
+  quedan 18 cotas, de 0.3 a 3.7. La salida dice cuántas barras quedaron; para cotas
+  exactas, usar <code>capas</code>.</li>
+<li><strong><code>transversal</code></strong> reemplaza todos los sets del elemento: <code>general</code> (el de todas las
+  posiciones) y <code>por_posicion</code>, que en la posición que nombra reemplaza al general.
+  Las posiciones son las del <code>.iecdb</code>: <code>p1</code> a <code>p5</code> en los frames (vigas, columnas y
+  diagonales), <code>Top</code> y <code>Bottom</code> en los piers (muros y machones) y <code>Left</code> y <code>Right</code> en
+  los spandrels. Una que no es ninguna de esas se escribe igual, pero su set no rige
+  en ninguna carga, y lo avisa (<code>Aviso: ... su set no rige en ninguna carga</code>, también
+  en <code>warnings</code>). El aviso no mira el tipo del elemento: <code>Top</code> en una viga no avisa,
+  y tampoco rige. El α de 21.9.4.1 que el elemento ya tenía se conserva, salvo que
+  el JSON traiga <code>alfa</code> o <code>hw_alfa</code> (un <code>alfa</code> nuevo sin <code>hw_alfa</code> deja vacía la
+  altura con que se calculó).</li>
+<li><strong>Un set</strong> lleva <code>mallas</code> (<code>n</code>, <code>diam</code>, <code>sep</code>), <code>estribo</code> (<code>diam</code>, <code>sep</code> y <code>ramas</code>,
+  2 por defecto) y <code>trabas</code> (una lista de grupos con <code>direccion</code> 2 o 3, <code>n</code>, <code>diam</code> y
+  <code>sep</code>), todos opcionales pero al menos uno. <code>diam</code> va en mm y <code>sep</code> en cm. El
+  <code>origen</code> del set es <code>manual</code> si no se da; cada componente puede traer el suyo:
+  <code>manual</code>, <code>directo</code>, <code>cercano</code>, <code>linea</code>, <code>idem-cielo</code>, <code>pier-inferior</code>,
+  <code>hereda-centro</code>, <code>conservador</code> o <code>default</code> (ver
+  <a href="../corte/#origen-por-componente">Origen por componente</a>).</li>
+<li><strong><code>nota</code></strong>: <code>marca</code> es <code>"acta"</code>, <code>"descartado"</code> o <code>null</code> (sin marca: el comentario
+  no va al acta), y <code>comentario</code> es el texto. La clave que falta se conserva:
+  <code>{"marca": "acta"}</code> marca el elemento y deja el comentario que tuviera.</li>
+<li><strong>Lo que falta no se toca y <code>null</code> lo quita</strong>: un elemento sin <code>transversal</code> conserva
+  sus líneas <code>^</code>, y con <code>"transversal": null</code> las pierde, α incluido (queda con la
+  <a href="../corte/#armadura-por-defecto">armadura por defecto</a>); lo mismo con <code>nota</code>. Sin
+  <code>longitudinal</code> las barras quedan como estaban; <code>longitudinal</code> no admite <code>null</code>.</li>
+</ul>
+<p>Todo se valida antes de escribir. Una clave desconocida, una cantidad que no es entera
+(<code>"n": 2.5</code>), un <code>diam</code> fuera de 6 a 40 mm (un <code>0.016</code> en metros, por ejemplo), una
+barra que cae fuera de la sección, una marca que no existe, un elemento que no está
+en el <code>.da9</code> o que se repite en el JSON, un elemento con error de lectura o sección
+variable que trae <code>transversal</code>, o uno de sección variable o con su sección ilegible
+que trae <code>longitudinal</code>, terminan con exit 3 y la lista de errores, y el archivo queda
+como estaba. Volver a correr el mismo JSON no cambia nada.</p>
+<p><strong><code>longitudinal</code> sí se acepta en un elemento con error de lectura</strong> si el <code>.da9</code> deja
+leer su sección (el contorno y el acero): reescribir las barras es la forma de reparar
+unas barras ilegibles. Después del cambio se relee el elemento y la salida lo dice:
+<code>lectura corregida</code>, o <code>lectura sigue con error: &lt;causa&gt;</code> si el error venía de otra
+línea (una <code>^</code> mal escrita, por ejemplo), que hay que arreglar aparte.</p>
+<div class="highlight"><pre><span></span><code>0D&amp;beam&amp;B403&amp;S01: transversal general: estribo ø10 @15; p1: estribo ø10 @10; nota [al acta]: estribos de la lámina 018
+12&amp;machon&amp;12_02&amp;P06: longitudinal 2 barras, As 2.26 cm2 -&gt; 25 barras, As 19.23 cm2; transversal general: doble malla ø10 @20 + 2 trabas ø8 @25 (V3) (por defecto)
+#&amp;beam&amp;B268&amp;S01: nota [descartado]
+3 elementos cambiaron en revision\corte\R4834_corte.da9.
+</code></pre></div>
+<p>La línea <code>longitudinal</code> dice cuántas barras tenía la sección y su área total, y
+cuántas quedan: sirve para auditar el cambio antes de escribir, con <code>--dry-run</code>.</p>
+<p>Con <code>--json</code>, <code>elementos</code> trae por elemento su <code>id</code>, la <code>longitudinal</code>, la
+<code>transversal</code> y la <code>nota</code> en ese texto, <code>lineas_longitudinal</code> (las líneas de barras
+del <code>.da9</code> antes y después: <code>{"antes": [...], "ahora": [...]}</code>), <code>lectura</code> (solo en un
+elemento que tenía error de lectura y al que <code>longitudinal</code> le cambió las barras) y <code>cambia</code>; <code>summary</code> cuenta <code>pedidos</code> y
+<code>cambiados</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Escribe sobre el <code>.da9</code> sin copia de respaldo</p>
+<p><code>curvaw-editar</code> reemplaza las barras, las líneas <code>^</code>, las <code>%</code> o varias de ellas,
+según lo que traiga cada elemento del JSON, y no deja respaldo. Conviene correrlo sobre un subconjunto
+y llevar los cambios al completo con <code>curvaw-fusionar</code>, o probar antes con
+<code>--dry-run</code>.</p>
+</div>
+<h3 id="curvaw-fusionar"><code>curvaw-fusionar</code></h3>
+<p>Devuelve al <code>.da9</code> completo lo que cambió en el subconjunto. Compara cada parte de
+cada elemento (sección y barras, cabezas <code>~</code>, armadura <code>^</code>, nota <code>%</code> y esfuerzos) en
+los dos archivos contra la base que dejó <code>curvaw-subconjunto</code>:</p>
+<table>
+<thead>
+<tr>
+<th>La parte cambió...</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solo en el subconjunto</td>
+<td>La pasa al completo.</td>
+</tr>
+<tr>
+<td>Solo en el completo (se siguió editando en cw)</td>
+<td>La deja como está.</td>
+</tr>
+<tr>
+<td>En los dos, y quedó igual</td>
+<td>Nada: ya está.</td>
+</tr>
+<tr>
+<td>En los dos, y quedó distinta</td>
+<td><strong>Conflicto</strong>: no la toca.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Descripción</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>subconjunto</code></td>
+<td>El <code>.da9</code> del subconjunto, con o sin extensión. Su base tiene que estar junto a él.</td>
+<td>requerido</td>
+</tr>
+<tr>
+<td><code>--hacia DA9</code></td>
+<td>El <code>.da9</code> completo. Hace falta si el proyecto cambió de carpeta desde la extracción. Con un <code>.da9</code> que no es el de la base, la base no se pone al día.</td>
+<td>el que guardó la base</td>
+</tr>
+<tr>
+<td><code>--dry-run</code></td>
+<td>Muestra lo que haría, sin escribir.</td>
+<td>desactivado</td>
+</tr>
+<tr>
+<td><code>--omitir-conflictos</code></td>
+<td>Con conflictos, fusiona lo demás y deja esas partes como están en el completo.</td>
+<td>desactivado</td>
+</tr>
+</tbody>
+</table>
+<p>Con algún conflicto y sin <code>--omitir-conflictos</code> no escribe nada y termina con exit 5:
+<code>N conflictos, no se escribió nada: &lt;id&gt; (&lt;parte&gt;), ...</code>. Con <code>--dry-run --json</code>, cada
+conflicto trae las dos versiones (<code>subconjunto</code> y <code>completo</code>) para decidir cuál vale.
+Para resolverlo, dejar esa parte igual en los dos archivos (con <code>curvaw-editar</code>, con
+cw o a mano): la fusión siguiente la da por resuelta.</p>
+<div class="highlight"><pre><span></span><code>#&amp;beam&amp;B268&amp;S01: nota &lt;- subconjunto
+0D&amp;beam&amp;B403&amp;S01: transversal &lt;- subconjunto
+0D&amp;beam&amp;B403&amp;S01: nota &lt;- subconjunto
+12&amp;machon&amp;12_02&amp;P06: transversal &lt;- subconjunto
+4 partes de 3 elementos pasaron a revision\ftc\R4834_ftc.da9. Si cw tiene abierto el completo, recargarlo (F5) antes de editar esos elementos.
+</code></pre></div>
+<p>Después de escribir, la base queda al día con lo fusionado: se puede seguir
+trabajando en el subconjunto y volver a fusionar, y lo ya fusionado no se repite.
+Un elemento que salió del subconjunto, uno que no estaba al extraer (las partes de
+un <a href="../editor_seccion/#descomponer-por-posicion-boton">descomponer</a>) o uno que ya no
+está en el completo no se fusiona: lo dicen los <code>warnings</code>. Con <code>--json</code>, <code>tomadas</code> y
+<code>conflictos</code> listan cada <code>id</code> y <code>parte</code>, y <code>summary</code> cuenta <code>partes_tomadas</code>,
+<code>elementos_cambiados</code> y <code>conflictos</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Con el completo abierto en cw, recargar antes de editar</p>
+<p>cw guarda las barras, la armadura de corte y las cabezas de un elemento desde lo
+que tiene en memoria, cada una por separado. Si el completo está abierto en cw
+durante la fusión, editar después una de esas partes de un elemento fusionado sin
+recargar (<strong>F5</strong>) la pisa con la versión de antes de la fusión. Las notas no tienen
+ese problema: cw las relee del archivo antes de cambiarlas.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../notas/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Notas de revisión">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Notas de revisión
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../versiones/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Historial">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Historial
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Parte de esta documentación fue redactada con asistencia de IA y puede contener errores. Ante cualquier duda, prevalece el comportamiento real del software y el criterio del ingeniero.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://cl.linkedin.com/company/iec-ingenier-a-s.a." target="_blank" rel="noopener" title="cl.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iec-ingenieria" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<iec@iec.cl>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.path", "navigation.top", "announce.dismiss", "content.code.annotate", "content.code.copy", "navigation.tabs.sticky", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/guias.js"></script>
+      
+    
+  </body>
+</html>

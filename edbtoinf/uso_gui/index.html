@@ -1,0 +1,4830 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://iec-ingenieria.github.io/documentacion/edbtoinf/uso_gui/">
+      
+      
+        <link rel="prev" href="../introduccion/">
+      
+      
+        <link rel="next" href="../parametros_sismicos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo_iec.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Uso (interfaz) - Documentación Software IEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uso-de-la-interfaz" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Documentación Software IEC" class="md-header__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación Software IEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Uso (interfaz)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Cambiar al modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar al modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentación Software IEC" class="md-nav__button md-logo" aria-label="Documentación Software IEC" data-md-component="logo">
+      
+  <img src="../../images/logo_iec.png" alt="logo">
+
+    </a>
+    Documentación Software IEC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💾 Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flujo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧭 Flujo de una revisión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🆕 Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1️⃣ dxftoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1️⃣ dxftoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prepinchado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prepinchado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuración
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Básica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/configuracion_avanzada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avanzada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dxftoedb1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/planos_grilla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planos Grilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/grilla_excel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grilla Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/dxftoedb4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dxftoedb4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herramientas LISP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Herramientas LISP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/introduccion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/instalacion_lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/prelosa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prelosa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/motes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/problemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problemas Frecuentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/ideas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxftoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2️⃣ edbtopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2️⃣ edbtopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3️⃣ pretovh
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3️⃣ pretovh
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretovh/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4️⃣ edbtoinf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4️⃣ edbtoinf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cargar-el-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cargar el modelo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1 — Parámetros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 1 — Parámetros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h0-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La H₀ propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lineas-sin-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Líneas X / Y sin propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-niveles-para-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2 — Niveles para drift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-parametros-opcionales-suelo-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3 — Parámetros opcionales (suelo F)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generar-el-informe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generar el informe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mensajes-de-error-y-avisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mensajes de error y avisos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mensajes de error y avisos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#al-cargar-el-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Al cargar el modelo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#al-generar-el-informe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Al generar el informe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avisos-en-el-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avisos en el log
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistencia-por-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistencia por proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-de-lineas-resistentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propuesta de líneas resistentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parametros_sismicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros sísmicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parametros_geometricos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parámetros geométricos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control_desplazamientos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control de desplazamientos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../drift_centro_masa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drift del centro de masa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reparto_corte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reparto del corte: muros y columnas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multitorre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos multi-torre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivas_html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte HTML de derivas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formato_drift/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .drift
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5️⃣ tatoedb
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5️⃣ tatoedb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/salidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Salidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tatoedb/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6️⃣ curvaw
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6️⃣ curvaw
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/formato_da9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formato .da9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/orientacion_planta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientación en planta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/factor_utilizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factor de utilización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/recorrido_eje_neutro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recorrido del eje neutro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/confinamiento_ds60/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confinamiento DS60
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/corte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisión de corte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/tensiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtro por tensiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/editor_seccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor de sección
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/visor_dxf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visores de planos DXF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas de revisión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI (modo batch)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curvaw/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7️⃣ pretoda9
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7️⃣ pretoda9
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pretoda9/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8️⃣ pritopre
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    8️⃣ pritopre
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pritopre/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9️⃣ edbtodxf
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    9️⃣ edbtodxf
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtodxf/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../edbtodxf/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔟 steelcheck (en desarrollo)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔟 steelcheck (en desarrollo)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso (interfaz)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../steelcheck/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⌨️ CLIs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⌨️ CLIs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso headless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/normas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primitivas de norma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clis/autoupdate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auto-update
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧰 Otras herramientas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧰 Otras herramientas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_16_1" id="__nav_16_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    anclajes (externa)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    anclajes (externa)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/datos_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/resultados_iniciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados iniciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/compresion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/traccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_cax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Compresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/small_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Pequeño con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/large_moment_tra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momento Grande con Tracción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/ingreso_xlsx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ingreso Cargas XLSX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anclajes/versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comandos-autocad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos de AutoCAD (referencia general)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Recursos de aprendizaje
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Recursos de aprendizaje
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aprendizaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aprendizaje/balasto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coeficiente de balasto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aprendizaje/curva-interaccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curva de interacción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎤 Presentaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../directorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📁 Directorios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cargar-el-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cargar el modelo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1 — Parámetros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 1 — Parámetros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h0-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La H₀ propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lineas-sin-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Líneas X / Y sin propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-niveles-para-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2 — Niveles para drift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-parametros-opcionales-suelo-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3 — Parámetros opcionales (suelo F)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generar-el-informe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generar el informe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mensajes-de-error-y-avisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mensajes de error y avisos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mensajes de error y avisos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#al-cargar-el-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Al cargar el modelo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#al-generar-el-informe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Al generar el informe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avisos-en-el-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avisos en el log
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistencia-por-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistencia por proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-de-lineas-resistentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propuesta de líneas resistentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    🏠 Inicio
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../introduccion/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    4️⃣ edbtoinf
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="uso-de-la-interfaz">Uso de la interfaz</h1>
+<p>La interfaz de <code>edbtoinf</code> es un asistente (wizard) que carga el modelo ETABS,
+<strong>propone solo</strong> los parámetros NCh433 y el perfil bio-sísmico, deja editar los
+niveles para el cálculo de drift y genera el Informe Ejecutivo. El flujo es:</p>
+<div class="highlight"><pre><span></span><code>Cargar EDB  -&gt;  autopropuestas  -&gt;  Paso 1 Parámetros  -&gt;  Paso 2 Niveles
+            -&gt;  (Paso 3 Opcionales, necesario con suelo F)  -&gt;  Generar Informe
+</code></pre></div>
+<h2 id="cargar-el-modelo">Cargar el modelo</h2>
+<p>La barra superior tiene el botón <strong>Cargar EDB...</strong>. Al elegir el <code>.edb</code>,
+<code>edbtoinf</code> se conecta a ETABS y rescata los datos (modal de progreso
+<em>"Cargando datos desde ETABS..."</em>). Terminado el rescate, habilita los
+controles y rellena las propuestas automáticas. Desde ese momento el botón se
+llama <strong>Recargar EDB...</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Antes de cargar el modelo</p>
+<p>El modelo debe cumplir los
+<a href="../introduccion/#requisitos-del-modelo">requisitos del modelo</a>: los casos
+<code>SX</code>/<code>SY</code> y <code>SXE</code>/<code>SYE</code> (o <code>Ex</code>/<code>Ey</code> y <code>ExE</code>/<code>EyE</code>), <code>TAX</code> y <code>TAY</code> (los crea
+<a href="../../tatoedb/introduccion/">tatoedb</a>) y <code>Modal</code>, todos analizados; masa
+igual en X y en Y; y Project Information completa. El orden de trabajo es
+tatoedb, analizar y, solo entonces, <code>edbtoinf</code>. Si algo falta, la carga se
+detiene con un mensaje; ver
+<a href="../introduccion/#mensajes-de-verificacion">Mensajes de verificación</a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Qué ETABS usa al cargar</p>
+<p>Si la instancia activa de ETABS tiene abierto ese mismo <code>.edb</code>, <code>edbtoinf</code> lee esa sesión, con
+los cambios sin guardar. Si no, abre ETABS con el archivo del disco. Guardar
+el modelo antes de cargar. Ver
+<a href="../introduccion/#conexion-con-etabs">Conexión con ETABS</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Qué propone cada control al cargar</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Cómo se propone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Categoría / Zona / Suelo</td>
+<td>Del nombre de la función de espectro del caso <code>SX</code> (o <code>Ex</code>), según la convención IEC <code>C&lt;cat&gt;Z&lt;zona&gt;S&lt;suelo&gt;</code> (p. ej. <code>CIIZ2SC</code> → Categoría II, Zona 2, Suelo C). Si el nombre no cumple la convención, no hay propuesta y se eligen a mano: al recargar otro modelo sin propuesta, los tres combos conservan el valor del modelo anterior, así que hay que revisarlos.</td>
+</tr>
+<tr>
+<td>Sistema / Material</td>
+<td>No se proponen: arrancan en <code>muro</code> y <code>HA</code>.</td>
+</tr>
+<tr>
+<td>H₀ [m]</td>
+<td>Cota del piso <code>P*</code> más alto menos la del piso <code>P*</code> más bajo. Es una propuesta que hay que revisar: ver <a href="#h0-propuesta">La H₀ propuesta</a>.</td>
+</tr>
+<tr>
+<td>Líneas X / Y</td>
+<td>Por la heurística de líneas resistentes (ver <a href="#propuesta-de-lineas-resistentes">más abajo</a>). Sin propuesta, el campo queda vacío y el Log lo avisa.</td>
+</tr>
+<tr>
+<td>Niveles para drift</td>
+<td>Carga <code>&lt;Project Number&gt;.drift</code> si existe junto al <code>.edb</code>; si no, genera una propuesta automática.</td>
+</tr>
+</tbody>
+</table>
+<p>Todas son propuestas: el usuario las revisa y corrige antes de generar. Si el
+modelo ya se usó antes, los valores guardados en esa ejecución reemplazan a
+las propuestas (ver <a href="#persistencia-por-proyecto">Persistencia por proyecto</a>).</p>
+</div>
+<h2 id="paso-1-parametros">Paso 1 — Parámetros</h2>
+<p>Reúne la identificación NCh433 y el perfil bio-sísmico.</p>
+<p><strong>Identificación NCh433:</strong></p>
+<ul>
+<li><strong>Categoría</strong>, <strong>Zona</strong>, <strong>Suelo</strong> (propuestos del espectro).</li>
+<li><strong>Sistema</strong>: pórtico o muro. Filtra las opciones del combo <strong>Material</strong>. Arranca
+  en <code>muro</code>.</li>
+<li><strong>Material</strong>: el sistema/material de la Tabla 5.1 de la NCh433 (por ejemplo
+  <code>HA</code>, <code>OMF</code>, <code>SMF</code>). De aquí salen R y R0 tabulados. Arranca en <code>HA</code>.</li>
+<li><strong>TFR</strong>: tolerancia de la verificación del factor de reducción del modelo
+  (0.005 por defecto). Solo se usa ahí; ver
+  <a href="../parametros_sismicos/#verificacion-del-factor-de-reduccion">Verificación del factor de reducción del modelo</a>.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">R y R0 solo tabulados</p>
+<p>La interfaz solo ofrece los sistemas y materiales de la Tabla 5.1: no tiene
+campos para cambiar R ni R0. Un sistema no tipificado (por ejemplo, R = R0 = 3)
+requiere el CLI con <code>--override-r</code> y <code>--override-r0</code> (ver
+<a href="../cli/">CLI</a>). Como Sistema y Material arrancan en <code>muro</code> y <code>HA</code>, si el
+proyecto es otro hay que cambiarlos: de lo contrario, entran al cálculo R y R0
+de muro de hormigón armado.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Pórtico con IMF (R = 5) se detiene</p>
+<p>La Tabla 6.4 de la NCh433 (corte máximo) no tiene R = 5, y edbtoinf valida el R
+del sistema contra ella: con <strong>Sistema</strong> <code>portico</code> y <strong>Material</strong> <code>IMF</code>, el informe
+se detiene con <code>R=5 no válido para el corte máximo (Tabla 6.4)</code>. Solo el CLI
+permite seguir, con <code>--override-r</code> y un R de la tabla, lo que cambia el cálculo.</p>
+</div>
+<p><strong>Perfil bio-sísmico:</strong></p>
+<ul>
+<li><strong>H₀ [m]</strong>: altura del edificio para el perfil. Ver <a href="#h0-propuesta">La H₀ propuesta</a>.</li>
+<li><strong>Líneas X / Líneas Y</strong>: número de líneas resistentes por dirección. Ver
+  <a href="#lineas-sin-propuesta">Líneas X / Y sin propuesta</a>.</li>
+<li><strong>Modo pred. X / Modo pred. Y</strong>: modo predominante por dirección (0 =
+  automático, se elige por masa modal participante).</li>
+</ul>
+<h3 id="h0-propuesta">La H₀ propuesta</h3>
+<p>La propuesta es la cota del piso <code>P*</code> más alto menos la del piso <code>P*</code> más bajo.
+Solo cuenta los pisos cuyo nombre empieza con <code>P</code> (un <code>PH</code> o un <code>PM</code> también
+cuenta). La base, los subterráneos <code>S*</code>, las salas de máquinas <code>SM*</code> y cualquier
+otro nombre quedan fuera.</p>
+<div class="admonition warning">
+<p class="admonition-title">Revisar H₀ antes de generar el informe</p>
+<p>La propuesta <strong>no incluye la altura del primer piso <code>P*</code></strong> y no se mide
+desde la base: con <code>P01</code> a <code>P10</code> de 3 m sobre la base, propone 27 m, no 30 m.
+El tooltip del campo habla de la altura sobre el nivel basal, pero la
+propuesta no se calcula así. Revisar el valor y, si el criterio del proyecto
+es otro, corregirlo a mano. Sin pisos <code>P*</code>, no hay propuesta y el campo no se
+modifica: al recargar otro modelo, conserva la H₀ del modelo anterior.</p>
+</div>
+<p>H₀ entra en cuatro indicadores del perfil bio-sísmico del PDF: <code>H0 / T</code>,
+<code>H0 / Tcr</code>, <code>1000 δ / H0</code> y <code>1000 δu / H0</code>. Con varias torres, la H₀ propuesta es
+una sola para todo el modelo (ver <a href="../multitorre/">Modelos multi-torre</a>). En el
+CLI, <code>--h0 auto</code> usa la misma propuesta.</p>
+<h3 id="lineas-sin-propuesta">Líneas X / Y sin propuesta</h3>
+<p>Los campos <strong>Líneas X</strong> y <strong>Líneas Y</strong> arrancan vacíos, y <strong>0 no significa
+«automático»</strong>. Si la
+<a href="#propuesta-de-lineas-resistentes">heurística</a> no encuentra una propuesta
+(si falta el caso de una dirección, <code>Ex</code>, <code>SX</code> o <code>ExE</code> para X o <code>Ey</code>, <code>SY</code> o <code>EyE</code>
+para Y, con esas grafías, no hay propuesta para ninguna de las dos; o ningún piso
+<code>P##</code> tiene una captura de corte confiable), el campo se vacía (al cargar otro modelo nunca queda el valor
+del anterior) y el <strong>Log</strong> registra «Líneas resistentes X: sin propuesta; ingresar
+a mano.». Al generar el informe, la interfaz rechaza un campo vacío
+(«Falta 'lineas_x'») y un campo en 0 («'lineas_x' debe ser un entero &gt;= 1 (0 no
+significa automático): ingrese el número a mano»).</p>
+<p>En ese caso, ingresar el número a mano. La pestaña <strong>Log</strong> da el motivo solo
+cuando faltan los casos sísmicos («Propuesta líneas resistentes: No se
+encontraron casos sísmicos...»). Si el problema es la captura de corte, el log
+solo dice que no hubo propuesta; la línea «Propuesta líneas resistentes» muestra
+<code>X=None</code> o <code>Y=None</code> cuando falla solo una dirección.</p>
+<h2 id="paso-2-niveles-para-drift">Paso 2 — Niveles para drift</h2>
+<p>Un cuadro de texto editable con el mapeo <strong>NIVEL SUP → NIVEL INF</strong>: contra qué
+nivel inferior se mide la deriva de cada nivel superior. Botones:</p>
+<ul>
+<li><strong>Generar propuesta</strong>: cada nivel contra el inmediatamente inferior de su misma
+  torre y su mismo diafragma, y el último de cada cadena contra <code>base</code>
+  (empotramiento). Con varios diafragmas por piso hay una cadena, y un <code>base</code>, por
+  diafragma; ver <a href="../formato_drift/#propuesta-por-defecto">Propuesta por defecto</a>.</li>
+<li><strong>Cargar .drift</strong> / <strong>Guardar .drift</strong>: leer o guardar <code>&lt;Project Number&gt;.drift</code>
+  en la carpeta del <code>.edb</code>. No abren un selector de archivos: <strong>Cargar .drift</strong>
+  relee ese archivo y avisa si no existe, y <strong>Guardar .drift</strong> lo escribe (si ya
+  existe, pregunta «¿Sobreescribir archivo?» sin nombrarlo: es ese).</li>
+</ul>
+<p>Usar <code>base</code> como nivel inferior para empotrar contra la fundación. El formato y
+las reglas de columnas se detallan en <a href="../formato_drift/">Formato .drift</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Qué pasa con las ediciones del mapeo</p>
+<p>Si el mapeo se edita a mano, <strong>Generar propuesta</strong> y <strong>Cargar .drift</strong> piden
+confirmación antes de reemplazarlo. <strong>Recargar EDB...</strong> también la pide (al
+elegir el archivo, antes de leer el modelo): si se acepta, reemplaza
+el cuadro por el <code>&lt;Project Number&gt;.drift</code> de la carpeta del <code>.edb</code> o, si ese
+archivo no existe, por la propuesta automática. Guardar antes con
+<strong>Guardar .drift</strong> lo que se quiera conservar.</p>
+<p>Al generar el informe se usa lo que esté en el cuadro en ese momento, aunque
+no se haya guardado con <strong>Guardar .drift</strong>. Antes de generar, la interfaz
+revisa el mapeo: un nivel inexistente, un nivel del modelo sin fila o un nivel
+contra sí mismo se muestran como error en vez de generar en silencio con un
+mapeo incorrecto (ver <a href="#mensajes-de-error-y-avisos">Mensajes de error y avisos</a>).</p>
+</div>
+<h2 id="paso-3-parametros-opcionales-suelo-f">Paso 3 — Parámetros opcionales (suelo F)</h2>
+<p>Esta pestaña siempre está disponible y tiene dos partes:</p>
+<ul>
+<li><strong>Parámetros sísmicos avanzados</strong> (<strong>S*</strong>, <strong>T0*</strong>, <strong>n</strong>, <strong>p</strong>,
+  <strong>A0</strong>): los campos solo se habilitan con Suelo F; al elegir otro suelo se
+  vacían y se deshabilitan. Con suelo F, S y T0 son obligatorios y la interfaz
+  marca en rojo lo que falta.</li>
+<li><strong>Espectros de sitio</strong>: filas para examinar los archivos <strong>Sa(T)</strong>
+  (aceleraciones; obligatorio con suelo F) y <strong>Sde(T)</strong> (desplazamientos;
+  opcional). Igual que los parámetros, solo se habilitan con suelo F: al elegir
+  otro suelo se vacían y se deshabilitan, y las rutas recordadas en
+  <code>.&lt;codigo&gt;_params.json</code> se ignoran con suelos A–E. El formato de
+  los archivos está en
+  <a href="../parametros_sismicos/#formato-de-los-espectros">Formato de los archivos de espectro</a>.</li>
+</ul>
+<p>Qué es cada parámetro de suelo F:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S*</strong></td>
+<td>Parámetro de amplificación del suelo (DS61 Tabla 12.3). Obligatorio con suelo F: entra al coeficiente sísmico y a los cortes mínimo y máximo.</td>
+</tr>
+<tr>
+<td><strong>T0*</strong></td>
+<td>Período T0 [s] del suelo (DS61 Tabla 12.3). Obligatorio con suelo F: lo necesita R* (NCh433 5.7) aunque el espectro venga del archivo.</td>
+</tr>
+<tr>
+<td><strong>n</strong></td>
+<td>Parámetro n del suelo. Opcional. Solo se imprime en la nota del gráfico del espectro.</td>
+</tr>
+<tr>
+<td><strong>p</strong></td>
+<td>Exponente p de α(T). Opcional. Con suelo F no interviene en el cálculo (el espectro sale del archivo) y solo se imprime en la nota del gráfico.</td>
+</tr>
+<tr>
+<td><strong>A0</strong></td>
+<td>Aceleración efectiva máxima, en fracción de g. Opcional; si se deja vacío se usa la de la zona sísmica (NCh433 6.2).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="generar-el-informe">Generar el informe</h2>
+<p>La barra inferior muestra bullets de estado (<em>EDB cargado</em>, <em>Niveles
+definidos</em>). El botón <strong>Generar Informe Ejecutivo</strong> se habilita solo cuando
+ambos están en orden. El PDF queda como <code>IE_&lt;codigo&gt;.pdf</code> en la carpeta del
+<code>.edb</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Antes de generar</p>
+<p><code>edbtoinf</code> hace un pre-flight: avisa si el PDF de salida está bloqueado por
+un visor abierto, para no perder el cálculo. Cerrar el PDF anterior si está
+abierto.</p>
+</div>
+<p>Al terminar aparece un modal <em>"Informe listo"</em> con <strong>Abrir PDF</strong>, <strong>Copiar
+ruta</strong> y <strong>Cerrar</strong>. La pestaña <strong>Log</strong> muestra el detalle del proceso con tags
+coloreados (info, advertencia, error, propuesta, detalle), incluido el
+diagnóstico de las propuestas automáticas.</p>
+<div class="admonition note">
+<p class="admonition-title">El HTML de derivas no se genera desde la interfaz</p>
+<p>La interfaz produce el PDF. El reporte HTML interactivo de derivas se genera
+solo desde los CLIs (<code>edbtoinf-cli --drift-html</code> o <code>derivas-cli</code>); ver
+<a href="../cli/">Interfaz de línea de comandos</a>.</p>
+</div>
+<h2 id="mensajes-de-error-y-avisos">Mensajes de error y avisos</h2>
+<p>Los errores salen en un cuadro «Error» y en la pestaña <strong>Log</strong>, que además guarda
+el detalle completo. El texto de un error de cálculo lleva antepuesto el tipo
+(<code>ValueError:</code>).</p>
+<h3 id="al-cargar-el-modelo">Al cargar el modelo</h3>
+<p>Si el modelo no cumple los
+<a href="../introduccion/#requisitos-del-modelo">requisitos del modelo</a>, la carga termina
+con un mensaje de verificación (<code>No existe SXE o EXE en load cases.</code>,
+<code>Load case TAX no finalizado con éxito.</code>, <code>Masa x (…) no es igual a masa y (…)</code>,
+<code>Agregar 'Project Name' en project information.</code> y otros). Cada uno se explica en
+<a href="../introduccion/#mensajes-de-verificacion">Mensajes de verificación</a>. Si ETABS no
+se puede iniciar o deja de responder, el mensaje es «ETABS no respondió (puede
+haberse cerrado o estar ocupado). Comprobar que ETABS siga abierto y responda, y
+volver a intentar.»</p>
+<h3 id="al-generar-el-informe">Al generar el informe</h3>
+<table>
+<thead>
+<tr>
+<th>Mensaje</th>
+<th>Qué significa</th>
+<th>Qué hacer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Falta 'h0'</code></td>
+<td>El campo está vacío. El mensaje usa el nombre interno: <code>h0</code> (H₀ [m]), <code>tolerancia</code> (TFR), <code>lineas_x</code> y <code>lineas_y</code> (Líneas X y Líneas Y), <code>modo_x</code> y <code>modo_y</code> (Modo pred. X y Y), además de <code>categoria</code>, <code>zona</code>, <code>suelo</code>, <code>sistema</code> y <code>material</code>.</td>
+<td>Completar el campo.</td>
+</tr>
+<tr>
+<td><code>'lineas_x' debe ser un entero &gt;= 1 (0 no significa automático)...</code></td>
+<td>Líneas X o Y en 0 (el vacío da <code>Falta 'lineas_x'</code>).</td>
+<td>Ingresar el número de líneas resistentes.</td>
+</tr>
+<tr>
+<td><code>Valor inválido en 'h0': abc</code></td>
+<td>El campo no es un número. En líneas y modos un decimal no da error: se trunca (2.7 se toma como 2).</td>
+<td>Corregir el valor.</td>
+</tr>
+<tr>
+<td><code>Para suelo F faltan: S, T0, archivo de espectro Sa(T)</code></td>
+<td>Con suelo F faltan datos del Paso 3. También aparece en rojo bajo los campos.</td>
+<td>Completar lo que nombra.</td>
+</tr>
+<tr>
+<td><code>¡Cargar EDB!</code></td>
+<td>No hay un modelo cargado.</td>
+<td>Cargar el <code>.edb</code>.</td>
+</tr>
+<tr>
+<td><code>Archivo .drift vacío o solo header</code></td>
+<td>El cuadro está vacío o no tiene filas de datos. La primera línea siempre se descarta como encabezado.</td>
+<td>Usar <strong>Generar propuesta</strong> o <strong>Cargar .drift</strong>, o dejar el encabezado y al menos una fila.</td>
+</tr>
+<tr>
+<td><code>Nivel inexistente 'X' en .drift (no está en el modelo)</code></td>
+<td>Un NIVEL SUP no existe en el modelo.</td>
+<td>Corregir el nombre (por ejemplo, <code>P10 - D1</code>) o partir de <strong>Generar propuesta</strong>.</td>
+</tr>
+<tr>
+<td><code>Niveles incompletos: el nivel X no tiene nivel inferior.</code></td>
+<td>Un nivel del modelo no figura como NIVEL SUP en el <code>.drift</code> y queda sin nivel inferior; el mensaje nombra el nivel.</td>
+<td>Agregar la fila de ese nivel. <strong>Generar propuesta</strong> lista todos los niveles.</td>
+</tr>
+<tr>
+<td><code>Nombre Nivel Inválido: X</code></td>
+<td>Un NIVEL INF no existe en el modelo y no es <code>base</code>.</td>
+<td>Corregir el nombre.</td>
+</tr>
+<tr>
+<td><code>Comparación contra sí mismo: X</code></td>
+<td>Una fila tiene el mismo nivel en las dos columnas.</td>
+<td>Corregir la fila.</td>
+</tr>
+<tr>
+<td><code>Altura entrepiso negativa (-3.00), entre P01 - D1 y P02 - D1</code></td>
+<td>El NIVEL INF está más alto que el NIVEL SUP (filas invertidas) o a la misma cota (0.00).</td>
+<td>Corregir o invertir la fila.</td>
+</tr>
+<tr>
+<td><code>No puedo escribir el(los) siguiente(s) archivo(s)</code></td>
+<td>El PDF está abierto en un visor.</td>
+<td>Cerrarlo y volver a generar.</td>
+</tr>
+<tr>
+<td><code>RecalcularFactorReduccion: SISMO X: … SISMO Y: … ¡Verificar CZS, Re-calcular FR o Aumentar Tolerancia !</code> (con las cifras de cada dirección entre medio)</td>
+<td>El factor de reducción del modelo no coincide con el recalculado.</td>
+<td>Ver <a href="../parametros_sismicos/#verificacion-del-factor-de-reduccion">Verificación del factor de reducción del modelo</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="avisos-en-el-log">Avisos en el log</h3>
+<table>
+<thead>
+<tr>
+<th>Aviso</th>
+<th>Qué significa</th>
+<th>Qué hacer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Espectro 'X' no cumple convención IEC C&lt;cat&gt;Z&lt;zona&gt;S&lt;suelo&gt;; sin propuesta NCh433.</code></td>
+<td>El nombre de la función de espectro no sigue la convención. No hay propuesta de categoría, zona y suelo.</td>
+<td>Elegirlos a mano.</td>
+</tr>
+<tr>
+<td><code>Líneas resistentes X: sin propuesta; ingresar a mano.</code> (igual para Y)</td>
+<td>La heurística no pudo proponer ese valor y el campo quedó vacío.</td>
+<td>Ingresar el número de líneas a mano.</td>
+</tr>
+<tr>
+<td><code>Propuesta líneas resistentes: No se encontraron casos sísmicos (...)</code></td>
+<td>Para X no hay ningún caso <code>Ex</code>, <code>SX</code> o <code>ExE</code>, o para Y ninguno <code>Ey</code>, <code>SY</code> o <code>EyE</code>. No hay propuesta de líneas.</td>
+<td>Ingresar Líneas X y Líneas Y a mano.</td>
+</tr>
+<tr>
+<td><code>Drift adicional: N nudo(s) fuera de la huella del nivel inferior en M nivel(es) (cuáles: reporte HTML de derivas, ...)</code></td>
+<td>N nudos tienen su vertical fuera de las losas del nivel inferior: su drift adicional no es medible (N/A) y no entra al máximo.</td>
+<td>Ver cuáles son en el <a href="../derivas_html/">reporte HTML de derivas</a>, que solo generan los CLIs. Detalle en <a href="../control_desplazamientos/#nudos-na-fuera-de-huella">Nudos N/A</a>.</td>
+</tr>
+<tr>
+<td><code>ADVERTENCIA: drift del CG no medible (centro de masa fuera de la huella del nivel inferior), reportado como N/A en: P05 - D1 vs P04 - D1, ...</code></td>
+<td>El centro de masa del nivel superior de un par («superior vs inferior») cae fuera de la nube de nudos del nivel inferior: el DRIFT CM de ese par queda N/A.</td>
+<td>Revisar en el <code>.drift</code> que el nivel inferior sea el que soporta a ese diafragma. Si la geometría es esa, el N/A es el resultado esperado.</td>
+</tr>
+<tr>
+<td><code>Reparto del corte X: la combinación modal no reproduce el caso espectral en todos los pisos (factor entre ... y ...). Revisar la combinación modal y el amortiguamiento del caso.</code> (igual para Y)</td>
+<td>El corte de los pisos combinado desde los modos no sigue al del caso espectral con un mismo factor en altura (el mayor supera al menor en más de 5 %). El informe se genera igual.</td>
+<td>Revisar que el caso <code>SX</code>/<code>SY</code> (o <code>Ex</code>/<code>Ey</code>) combine por CQC con 5 % de amortiguamiento. Ver <a href="../reparto_corte/#control-contra-el-caso-espectral">Control contra el caso espectral</a>.</td>
+</tr>
+<tr>
+<td><code>Reparto del corte por diafragma: parte del corte no quedó en ningún diafragma en P05 (94.8 %), ... el reparto de cada diafragma no los incluye.</code></td>
+<td>En un piso con varios diafragmas, más del 2 % del corte del piso no pasa por un pier ni por una columna asignados a un diafragma (diagonales, muros sin pier label, elementos lejos de las losas o entre dos diafragmas). El informe se genera igual.</td>
+<td>Revisar que los muros de esos pisos tengan pier label. Ver <a href="../reparto_corte/#torres-y-diafragmas">Varias torres o varios diafragmas por piso</a>.</td>
+</tr>
+<tr>
+<td><code>Calibración modal X: formas modales reescaladas x1234.0 (...)</code></td>
+<td>ETABS entregó las formas modales con una normalización inconsistente; <code>edbtoinf</code> las reescaló contra el caso reducido (<code>Ex</code>/<code>Ey</code> o, si no existen, <code>SX</code>/<code>SY</code>). El aviso sale solo cuando el factor queda fuera de 0.67 a 1.5.</td>
+<td>Nada: el análisis sísmico no cambia. Ver <a href="../control_desplazamientos/#calibracion-modal">Calibración de las formas modales</a>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="persistencia-por-proyecto">Persistencia por proyecto</h2>
+<ul>
+<li>Al generar el informe, pasadas las validaciones, los parámetros se guardan por
+  proyecto en un archivo oculto <code>.&lt;codigo&gt;_params.json</code> junto al <code>.edb</code>
+  (<code>&lt;codigo&gt;</code> es el Project Number del modelo). Se guardan aunque el cálculo
+  falle después.</li>
+<li>Al volver a cargar ese modelo, los valores guardados <strong>reemplazan a las
+  propuestas</strong>: categoría, zona, suelo, sistema, material, H₀, TFR, modos,
+  parámetros de suelo F, rutas de espectro y líneas X/Y (salvo las que quedaron
+  guardadas en 0, que se ignoran para que la propuesta sobreviva). Los tooltips de
+  categoría, zona, suelo y H₀ dicen «valor recordado de la ejecución anterior».</li>
+<li>Un modelo que cambió (otros pisos, otro espectro, otras cotas) puede arrancar
+  con la H₀, el espectro o las líneas de un análisis anterior. Para volver a las
+  propuestas, borrar <code>.&lt;codigo&gt;_params.json</code> (es un archivo oculto) y cargar el
+  modelo de nuevo, o corregir los campos a mano.</li>
+<li>La última carpeta usada (separada para <code>.edb</code> y para espectros) se recuerda en
+  <code>~/.edbtoinf_state.json</code>.</li>
+</ul>
+<h2 id="propuesta-de-lineas-resistentes">Propuesta de líneas resistentes</h2>
+<p>El número de líneas resistentes X/Y que propone el Paso 1 sale de una heurística
+sobre el modelo, no de un valor fijo. A grandes rasgos:</p>
+<ol>
+<li><strong>Suma el aporte horizontal por eje</strong> combinando tres familias de elementos:
+   los <strong>piers</strong> (clasificados por orientación según su bounding box), las
+   <strong>columnas</strong> (su corte local V2/V3 proyectado al global con el ángulo del
+   eje) y los <strong>braces</strong> (componente horizontal del axial por sus cosenos
+   directores 3D). Usa los casos sísmicos del modelo (<code>Ex</code>/<code>Ey</code>, con fallback a
+   <code>SX</code>/<code>SY</code> y <code>ExE</code>/<code>EyE</code>), con esas grafías exactas.</li>
+<li><strong>Agrupa por eje</strong> los elementos con coordenada cercana (tolerancia ~1 m) y
+   calcula la fracción del corte que toma cada eje.</li>
+<li><strong>Cuenta como línea resistente</strong> cada eje que toma <strong>≥ 5%</strong> del corte
+   capturado en ese piso.</li>
+<li><strong>Toma la mediana</strong> de ese conteo sobre los pisos de torre (<code>P##</code>) con
+   captura razonable (entre 50 % y 150 % del corte del piso), y descarta los
+   demás.</li>
+</ol>
+<p>El log reporta, para cada dirección, el conteo de líneas de cada piso con captura
+confiable, la cantidad de piers, columnas y braces considerados y el umbral.
+Debajo lista los ejes detectados, cada uno con el nombre de su grilla en el
+modelo (o su coordenada, como <code>y=12.3</code>, si no hay una grilla a 0.5 m o menos),
+en cuántos de esos pisos es línea resistente y su fracción máxima de corte. <strong>No
+lista los pisos descartados</strong>: sirve para validar el conteo, no para saber qué
+pisos quedaron fuera de la mediana.</p>
+<div class="admonition warning">
+<p class="admonition-title">Es una propuesta, no una verdad</p>
+<p>Es una estimación geométrica/de esfuerzos. Para muros oblicuos, plantas muy
+irregulares o sistemas mixtos puede quedar corta o sobrar; revisar el conteo
+contra el criterio del proyecto y corregirlo a mano si hace falta.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../introduccion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introducción">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Introducción
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../parametros_sismicos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Parámetros sísmicos">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Parámetros sísmicos
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Parte de esta documentación fue redactada con asistencia de IA y puede contener errores. Ante cualquier duda, prevalece el comportamiento real del software y el criterio del ingeniero.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://cl.linkedin.com/company/iec-ingenier-a-s.a." target="_blank" rel="noopener" title="cl.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iec-ingenieria" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<iec@iec.cl>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.path", "navigation.top", "announce.dismiss", "content.code.annotate", "content.code.copy", "navigation.tabs.sticky", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/guias.js"></script>
+      
+    
+  </body>
+</html>

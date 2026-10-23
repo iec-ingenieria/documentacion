@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coeficiente de balasto · Recursos de aprendizaje IEC</title>
+<meta name="description" content="Guía interactiva del coeficiente de balasto: bulbo de tensiones, arenas y arcillas, ecuaciones de Terzaghi, forma, corridas, sismo y modelo de Winkler.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="importmap">
+{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
+             "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}
+</script>
+<style>
+:root{
+  color-scheme:light;
+  --papel:#EDF1F0; --papel-2:#DEE6E5; --tarjeta:#FFFFFF;
+  --tinta:#17222C; --tinta-2:#56646F; --regla:#C8D2D4;
+  --iec:#E87000; --iec-hondo:#A94F00;
+  --arena:#D2AE6A; --arena-hondo:#8C6420;
+  --arcilla:#A88A82; --arcilla-hondo:#6B4D45;
+  --iso-3:#2463AE;
+  --sombra:0 1px 2px rgba(23,34,44,.06),0 14px 34px rgba(23,34,44,.09);
+  --gutter:clamp(16px,4vw,32px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;overflow-x:clip;background-color:var(--papel);color:var(--tinta);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:16px;line-height:1.55;
+  background-image:linear-gradient(var(--papel-2) 1px,transparent 1px),linear-gradient(90deg,var(--papel-2) 1px,transparent 1px);
+  background-size:32px 32px;background-position:-1px -1px}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.envoltura{max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+a{color:var(--iec-hondo)}
+button,input{font:inherit}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--iec);outline-offset:2px}
+
+/* ---------- Barra superior ---------- */
+.barra{position:sticky;top:0;z-index:30;background:rgba(237,241,240,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--regla)}
+.barra .envoltura{display:flex;align-items:center;gap:24px;min-height:48px}
+.marca{font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-2);
+  white-space:nowrap;text-decoration:none}
+.marca b{color:var(--iec);font-weight:600;letter-spacing:.2em}
+.barra nav{display:flex;gap:18px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.barra nav::-webkit-scrollbar{display:none}
+.barra nav a{font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--tinta-2);
+  text-decoration:none;white-space:nowrap;padding:8px 0}
+.barra nav a:hover{color:var(--tinta)}
+.embebida .barra{display:none}
+
+/* ---------- Tipografía ---------- */
+h1,h2,h3{font-family:'Archivo',sans-serif;font-stretch:125%;margin:0;letter-spacing:-.012em}
+h1{font-weight:850;font-size:clamp(34px,4.3vw,58px);line-height:.98}
+h1 em{font-style:normal;color:var(--iec)}
+h2{font-weight:800;font-size:clamp(26px,3vw,40px);line-height:1.04;margin-bottom:16px}
+h3{font-weight:750;font-size:19px;font-stretch:112%;line-height:1.15}
+.ceja{font:500 11.5px/1.2 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--iso-3);
+  margin-bottom:14px;display:flex;gap:10px;align-items:center}
+.ceja::before{content:"";width:22px;height:2px;background:currentColor;flex:none}
+p{margin:0 0 14px;max-width:64ch}
+.lead{font-size:18px;color:var(--tinta-2)}
+.ayuda{font-size:13.5px;color:var(--tinta-2);margin:10px 0 0}
+
+/* ---------- Controles ---------- */
+.controles{display:grid;gap:16px;margin-top:22px}
+.control label,.control .rot{display:flex;justify-content:space-between;gap:12px;font:500 12px/1.3 'IBM Plex Mono',monospace;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:8px}
+.control output{color:var(--tinta);font-weight:600;white-space:nowrap;text-transform:none;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--iec);height:26px;margin:0}
+.segmentado{display:inline-flex;flex-wrap:wrap;border:1px solid var(--regla);border-radius:14px;background:var(--tarjeta);padding:3px;gap:2px;max-width:100%}
+.segmentado button{border:0;background:transparent;font:500 13.5px/1.2 'IBM Plex Sans',sans-serif;color:var(--tinta-2);padding:9px 15px;
+  border-radius:11px;cursor:pointer;transition:background .18s,color .18s;min-height:38px}
+.segmentado button[aria-pressed=true]{background:var(--tinta);color:#fff}
+.segmentado button:hover:not([aria-pressed=true]){color:var(--tinta)}
+.segmentado button i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;vertical-align:-1px;border:1px solid rgba(0,0,0,.18)}
+
+/* ---------- Hero ---------- */
+.heroe{padding:40px 0 34px}
+.heroe .rejilla{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"texto vista" "mando vista";
+  grid-template-rows:auto 1fr;column-gap:44px;row-gap:0;align-items:start}
+.h-texto{grid-area:texto}.h-vista{grid-area:vista}.h-mando{grid-area:mando}
+.formula{display:inline-flex;align-items:baseline;gap:14px;margin:22px 0 10px;padding:12px 18px;background:var(--tarjeta);
+  border:1px solid var(--regla);border-radius:12px;box-shadow:var(--sombra);font-family:'IBM Plex Mono',monospace;flex-wrap:wrap}
+.formula .k{font-size:28px;font-weight:600}
+.datos{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:12px}
+.dato{display:inline-flex;align-items:center;gap:8px;background:var(--tarjeta);border:1px solid var(--regla);border-radius:12px;padding:6px 8px 6px 12px;box-shadow:var(--sombra);
+  font:500 12px 'IBM Plex Mono',monospace;color:var(--tinta-2)}
+.dato input{width:76px;padding:6px 8px;border:1px solid var(--regla);border-radius:8px;font:600 16px 'IBM Plex Mono',monospace;color:var(--tinta);background:#fff}
+.dato input:focus{border-color:var(--iec)}
+.datos-nota{flex:1 1 220px;font-size:12.5px;line-height:1.4;color:var(--tinta-2)}
+.ec-hero-rot{font:600 12.5px/1.35 'IBM Plex Mono',monospace;letter-spacing:.01em;color:var(--tinta-2)}
+.seg3d{position:absolute;left:10px;top:10px;z-index:3;display:flex;gap:2px;padding:3px;background:rgba(255,255,255,.9);
+  border:1px solid var(--regla);border-radius:10px}
+.seg3d button{width:34px;height:30px;border:0;border-radius:7px;background:transparent;color:var(--tinta-2);cursor:pointer;display:grid;place-items:center;padding:0}
+.seg3d button:hover:not([aria-pressed=true]){color:var(--tinta);background:var(--papel)}
+.seg3d button[aria-pressed=true]{background:var(--tinta);color:#fff}
+.seg3d svg{width:18px;height:18px;fill:currentColor}
+.pasos-texto{margin:0 0 14px;padding-left:22px;max-width:64ch}
+.pasos-texto li{margin-bottom:8px;padding-left:4px}
+.pasos-texto li::marker{font:600 14px 'IBM Plex Mono',monospace;color:var(--iec-hondo)}
+.formula .def{font-size:13px;color:var(--tinta-2);line-height:1.4}
+
+/* ---------- Vistas 3D ---------- */
+.vista3d{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--regla);box-shadow:var(--sombra);
+  background:radial-gradient(120% 90% at 65% 0%,#FFFFFF 0%,#F1F5F5 52%,#DCE5E6 100%);aspect-ratio:var(--aspecto,4/3)}
+.vista3d.ancha{--aspecto:16/10}
+.vista3d canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}
+.vista3d canvas:active{cursor:grabbing}
+.capa-etq{position:absolute!important;inset:0;pointer-events:none}
+.etq{font:500 11.5px/1.25 'IBM Plex Mono',monospace;color:var(--tinta);background:rgba(255,255,255,.9);border:1px solid var(--regla);
+  border-radius:6px;padding:3px 7px;white-space:nowrap}
+.etq.titulo{font:700 13px/1.1 'Archivo',sans-serif;font-stretch:112%;letter-spacing:.01em;padding:5px 9px}
+.etq-escala{font:600 10.5px/1 'IBM Plex Mono',monospace;color:var(--tinta);text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 6px #fff}
+.vista3d .tag{position:absolute;left:12px;top:12px;font:600 12px/1.2 'IBM Plex Mono',monospace;color:var(--tinta);background:rgba(255,255,255,.9);
+  border:1px solid var(--regla);border-radius:8px;padding:6px 10px;pointer-events:none;max-width:calc(100% - 24px)}
+.vista3d .tag:empty,.vista3d.sin3d .tag{display:none}
+.vista3d .pista{position:absolute;right:10px;bottom:10px;font:500 11px/1 'IBM Plex Mono',monospace;color:var(--tinta-2);
+  background:rgba(255,255,255,.88);border:1px solid var(--regla);border-radius:999px;padding:6px 10px;pointer-events:none;transition:opacity .5s}
+.vista3d .pista .tactil{display:none}
+@media (hover:none){.vista3d .pista .raton{display:none}.vista3d .pista .tactil{display:inline}}
+.vista3d.tocado .pista{opacity:0}
+.vista3d .aviso{display:none;position:absolute;inset:0;place-items:center;text-align:center;padding:28px;color:var(--tinta-2);font-size:14px}
+.vista3d.sin3d .aviso{display:grid}
+.vista3d.sin3d .pista{display:none}
+.resultado{margin-top:14px;display:grid;grid-template-columns:minmax(0,1fr);background:var(--tarjeta);border:1px solid var(--regla);
+  border-left:4px solid var(--arena-hondo);border-radius:14px;box-shadow:var(--sombra);overflow:hidden}
+.resultado.arcilla{border-left-color:var(--arcilla-hondo)}
+.res-k{padding:12px 18px 10px;border-bottom:1px solid var(--regla);min-width:0;overflow-x:auto}
+.ec-filas{display:grid;grid-template-columns:auto auto;justify-content:start;column-gap:.3em;row-gap:8px;align-items:center;margin:8px 0 4px}
+.ec-filas math{font-size:1.3em}
+.ec-filas div:first-child{text-align:right}
+.ec-res{color:var(--iec);font-size:1.3em}
+.ec-uni{font-size:.8em;color:var(--tinta-2)}
+.ec-t{font:500 12.5px/1.4 'IBM Plex Mono',monospace;color:var(--tinta-2)}
+.res-otros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;padding:12px 18px}
+.res-item{display:flex;gap:10px;align-items:flex-start}
+.res-item b{display:block;font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:24px;line-height:1}
+.res-item .tit{display:block;font:500 11.5px/1.3 'IBM Plex Mono',monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:4px}
+.ec-t:empty{display:none}
+.res-item small{display:block;font:500 12px/1.35 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:4px}
+.resultado > a{grid-column:1 / -1;padding:8px 16px;border-top:1px solid var(--regla);font:500 12.5px 'IBM Plex Mono',monospace}
+.tag .marca3d{margin-right:6px}
+@media (max-width:560px){.res-otros{grid-template-columns:minmax(0,1fr)}}
+.marca3d{font:700 12px/1 'IBM Plex Mono',monospace;color:#fff;background:var(--tinta);border-radius:5px;padding:3px 6px;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.pie3d{font:500 12px/1.45 'IBM Plex Mono',monospace;color:var(--tinta-2);margin:10px 2px 0}
+
+/* ---------- Lecturas ---------- */
+
+/* ---------- Secciones ---------- */
+section.bloque{padding:64px 0;border-top:1px solid var(--regla)}
+.dos{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.3fr);gap:44px;align-items:start}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--regla);border-radius:16px;box-shadow:var(--sombra);padding:18px}
+.tarjeta svg{display:block;width:100%;height:auto}
+.leyenda{display:flex;flex-wrap:wrap;gap:8px 18px;font:500 12px 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:10px}
+.leyenda i{display:inline-block;width:20px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.cifras{display:flex;gap:26px;flex-wrap:wrap;margin:18px 0}
+.cifra .n{font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:30px;line-height:1}
+.cifra .l{font:500 11.5px 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:6px}
+.nota{border-left:3px solid var(--iec);padding:10px 14px;background:rgba(232,112,0,.06);border-radius:0 10px 10px 0;font-size:14.5px;
+  max-width:64ch;margin-top:14px}
+.nota b{color:var(--iec-hondo)}
+.chips{display:flex;flex-wrap:wrap;gap:6px 14px;font:500 11.5px 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:10px}
+.chips span{display:inline-flex;align-items:center;gap:6px}
+.chips i{width:13px;height:13px;border-radius:3px;border:1px solid rgba(0,0,0,.2);display:inline-block}
+#corrida-chips{align-items:center;gap:8px}
+#corrida-chips i{width:min(220px,40vw);height:12px;border-radius:4px}
+
+/* ---------- Arena o arcilla ---------- */
+.suelos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.ficha{background:var(--tarjeta);border:1px solid var(--regla);border-radius:16px;box-shadow:var(--sombra);overflow:hidden}
+.ficha header{padding:16px 18px 12px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--regla)}
+.ficha header .muestra{width:38px;height:38px;border-radius:10px;flex:none;border:1px solid rgba(0,0,0,.15)}
+.ficha.arena .muestra{background:radial-gradient(circle at 30% 30%,#EFE1BF 0 18%,transparent 19%),radial-gradient(circle at 70% 60%,#B49668 0 20%,transparent 21%),
+  radial-gradient(circle at 40% 78%,#CDB386 0 15%,transparent 16%),#D9BE87}
+.ficha.arcilla .muestra{background:repeating-linear-gradient(170deg,#A18379 0 4px,#937369 4px 7px)}
+.ficha header small{display:block;font:500 11.5px 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:3px}
+.ficha dl{margin:0;padding:6px 18px 14px}
+.ficha dt{font:500 11px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-2);margin-top:12px}
+.ficha dd{margin:4px 0 0;font-size:15px}
+.mini{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+.mini h3{font-size:15px;margin-bottom:6px}
+
+/* ---------- Ecuaciones ---------- */
+.ecuaciones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(6,auto);column-gap:18px;margin-top:26px}
+.ec-tarjeta{background:var(--tarjeta);border:1px solid var(--regla);border-radius:16px;box-shadow:var(--sombra);padding:0 0 16px;overflow:hidden;
+  display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0}
+.ec-tarjeta header{padding:14px 20px;color:#fff}
+.ec-tarjeta.arena header{background:var(--arena-hondo)}
+.ec-tarjeta.arcilla header{background:var(--arcilla-hondo)}
+.ec-tarjeta header small{display:block;font:500 11.5px 'IBM Plex Mono',monospace;opacity:.85;margin-top:4px}
+.ec{padding:14px 20px 4px;overflow-x:auto}
+.ec .rot{font:500 11px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-2);display:block;margin-bottom:6px}
+math{font-family:'STIX Two Math','Cambria Math',math;font-size:1.38em}
+math[display=block]{margin:4px 0 6px}
+.limites{margin:8px 20px 0;padding:0;list-style:none;font-size:14.5px;display:grid;grid-row:span 3;grid-template-rows:subgrid}
+.limites li{padding:7px 0;border-top:1px dashed var(--regla)}
+.variables{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:20px 0 0;font-size:14.5px;max-width:70ch}
+.variables dt{font-family:'IBM Plex Mono',monospace;font-weight:600}
+.variables dd{margin:0;color:var(--tinta-2)}
+.calculadora{margin-top:26px}
+.matriz-env{overflow-x:auto;margin-top:12px;border:1px solid var(--regla);border-radius:12px}
+table.matriz{border-collapse:collapse;width:100%;font:500 13.5px 'IBM Plex Mono',monospace;text-align:right}
+.matriz th,.matriz td{padding:8px 10px;border-bottom:1px solid var(--regla);white-space:nowrap}
+.matriz tr:last-child td,.matriz tr:last-child th{border-bottom:0}
+.matriz thead th,.matriz tbody th{background:var(--papel);color:var(--tinta-2);font-weight:600}
+.matriz thead th:first-child{text-align:left}
+.matriz th.eje{color:var(--tinta);font-weight:600}
+.matriz tbody th{text-align:left}
+.matriz tr > th:first-child{width:1%}
+.matriz thead tr:first-child th.eje{text-align:center;border-bottom:1px solid var(--regla)}
+.matriz td{cursor:pointer;color:var(--tinta)}
+.matriz td:hover{outline:1px solid var(--tinta);outline-offset:-1px}
+.matriz td.na{color:#B5C0C4;text-align:center;cursor:default}
+.matriz td.na:hover{outline:0}
+.matriz td.diag{font-weight:700}
+.matriz td.sel{outline:2px solid var(--iec);outline-offset:-2px}
+.calculadora .campos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.campo label,.campo-rot{display:block;font:500 12.5px/1.3 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-bottom:6px;min-height:17px}
+.campo .segmentado{display:flex}
+.campo input[type=number]{width:100%;padding:9px 11px;border:1px solid var(--regla);border-radius:10px;background:#fff;
+  font:500 16px 'IBM Plex Mono',monospace;color:var(--tinta)}
+
+/* ---------- Sismo ---------- */
+.barras{display:grid;gap:12px;margin-top:16px}
+.barra-s{display:grid;grid-template-columns:80px minmax(0,1fr);align-items:center;gap:12px;font:500 13px 'IBM Plex Mono',monospace}
+.barra-s .pista-b{height:20px;background:var(--papel);border-radius:6px;overflow:hidden;border:1px solid var(--regla)}
+.barra-s .relleno{height:100%;border-radius:5px;transition:width .45s cubic-bezier(.2,.7,.3,1)}
+
+/* ---------- Resumen ---------- */
+table.resumen{border-collapse:collapse;width:100%;font-size:15px;background:var(--tarjeta);border-radius:14px;overflow:hidden;box-shadow:var(--sombra)}
+table.resumen th{font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:16px;text-align:left;padding:14px 18px;border-bottom:2px solid var(--tinta)}
+table.resumen th.sube{color:var(--iec-hondo)} table.resumen th.baja{color:var(--iso-3)}
+table.resumen td{padding:11px 18px;border-bottom:1px solid var(--regla);vertical-align:top;width:50%}
+table.resumen tr:last-child td{border-bottom:0}
+.manda{margin-top:28px;display:flex;gap:22px;align-items:center;background:var(--tinta);color:#fff;border-radius:16px;padding:22px 26px}
+.manda .grande{font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:900;font-size:clamp(22px,2.6vw,32px);line-height:1;color:var(--iec);flex:none;max-width:12ch}
+.manda p{margin:0;color:#D6DEE2;max-width:72ch}
+footer{padding:30px 0 50px;border-top:1px solid var(--regla);font:500 12px/1.6 'IBM Plex Mono',monospace;color:var(--tinta-2)}
+footer b{color:var(--iec)}
+
+@media (max-width:900px){
+  .heroe{padding-top:26px}
+  .heroe .rejilla{grid-template-columns:minmax(0,1fr);grid-template-areas:"texto" "vista" "mando";row-gap:18px}
+  .dos,.suelos,.ecuaciones{grid-template-columns:minmax(0,1fr);gap:24px}
+  .barra .envoltura{flex-wrap:wrap;gap:0;padding-top:10px}
+  .barra nav{width:100%;margin:0;padding:2px 0 4px}
+  .vista3d{--aspecto:1/1}
+  .vista3d.ancha{--aspecto:4/3}
+  section.bloque{padding:48px 0}
+}
+@media (max-width:560px){
+  #grafico-b text{font-size:20px}
+  h1{font-stretch:108%}
+  h2{font-stretch:112%}
+  .lead{font-size:16.5px}
+  .mini{grid-template-columns:minmax(0,1fr)}
+  .segmentado{display:flex}
+  .segmentado button{flex:1 1 auto;padding:9px 10px}
+  .barra-s{grid-template-columns:70px minmax(0,1fr);font-size:12px}
+  .manda{flex-direction:column;align-items:flex-start;gap:12px}
+  table.resumen{font-size:14px}
+  table.resumen th,table.resumen td{padding:10px 12px}
+  .calculadora .campos{grid-template-columns:minmax(0,1fr)}
+  .variables{grid-template-columns:minmax(0,1fr);gap:2px}
+  .variables dd{margin-bottom:8px}
+  math{font-size:1.22em}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="barra"><div class="envoltura">
+  <a class="marca" href="./"><b>IEC</b> · Recursos de aprendizaje</a>
+  <nav aria-label="Secciones">
+    <a href="#suelos">Arena o arcilla</a><a href="#ecuaciones">Ecuaciones</a><a href="#ancho">Ancho</a><a href="#forma">Forma</a>
+    <a href="#corrida">Corridas</a><a href="#sismo">Sismo</a><a href="#winkler">Winkler</a><a href="#resumen">Resumen</a>
+  </nav>
+</div></div>
+
+<header class="heroe"><div class="envoltura rejilla">
+  <div class="h-texto">
+    <div class="ceja">Coeficiente de balasto</div>
+    <h1>El suelo no tiene un balasto. Lo tiene <em>cada zapata.</em></h1>
+    <div class="formula" aria-label="Definición">
+      <span class="k">k = q / s</span>
+      <span class="def">presión de contacto<br>dividida por el asentamiento</span>
+    </div>
+    <p class="lead">La carga baja por el suelo formando un bulbo de tensiones. Mientras más ancha la zapata, más hondo llega el bulbo, más suelo se comprime y más asienta: el mismo suelo responde con un k menor.</p>
+  </div>
+  <div class="h-vista">
+    <div class="datos" role="group" aria-label="Datos del caso">
+      <label class="dato"><span>k₃₀ del informe</span><input id="dato-k30" type="number" min="0.1" step="0.5" value="12" inputmode="decimal"><small>kgf/cm³</small></label>
+      <label class="dato"><span>presión q</span><input id="dato-q" type="number" min="0.5" step="0.5" value="10" inputmode="decimal"><small>t/m²</small></label>
+      <span class="datos-nota">Valores de ejemplo: escribir los del informe de suelos.</span>
+    </div>
+    <div class="vista3d" id="vista-bulbo" role="img" aria-label="Bloque de suelo cortado en un cuarto, con la zapata encima y las isobaras del bulbo de tensiones">
+      <div class="aviso">Cargando la vista 3D…</div>
+      <div class="tag" aria-hidden="true"></div>
+      <div class="pista"><span class="raton">Arrastrar para girar</span><span class="tactil">Deslizar de lado para girar</span></div>
+    </div>
+    <div class="resultado" id="ec-hero">
+      <div class="res-k">
+        <div class="ec-hero-rot" id="ecH-rot"></div>
+        <div class="ec-filas" id="ecH-filas"></div>
+        <div class="ec-t" id="ecH-t"></div>
+      </div>
+      <div class="res-otros">
+        <div class="res-item"><span class="marca3d">10 %</span><div><span class="tit">Profundidad del bulbo</span><b id="lec-bulbo">–</b><small id="lec-bulbo-l"></small></div></div>
+        <div class="res-item"><span class="marca3d">s</span><div><span class="tit">Asentamiento de la zapata</span><b id="lec-s">–</b><small id="lec-s-l"></small></div></div>
+      </div>
+      <a href="#ecuaciones">Ver las ecuaciones y la calculadora</a>
+    </div>
+  </div>
+  <div class="h-mando">
+    <div class="controles">
+      <div class="control">
+        <label for="anchoB">Ancho de la zapata B <output id="anchoB-out">1,20 m</output></label>
+        <input id="anchoB" type="range" min="0.3" max="3" step="0.05" value="1.2">
+      </div>
+      <div class="control">
+        <span class="rot">Forma en planta</span>
+        <div class="segmentado" role="group" aria-label="Forma en planta">
+          <button data-forma data-v="cuadrada" aria-pressed="true">Cuadrada B × B</button>
+          <button data-forma data-v="corrida" aria-pressed="false">Corrida (L ≫ B)</button>
+        </div>
+      </div>
+      <div class="control">
+        <span class="rot">Suelo</span>
+        <div class="segmentado" role="group" aria-label="Suelo">
+          <button data-suelo data-v="arena" aria-pressed="true"><i style="background:var(--arena)"></i>Arena y grava</button>
+          <button data-suelo data-v="arcilla" aria-pressed="false"><i style="background:var(--arcilla)"></i>Arcilla</button>
+        </div>
+      </div>
+    </div>
+    <p class="ayuda">El bloque está cortado en un cuarto. Las cáscaras azules son las isobaras de Boussinesq (10, 20, 40 y 70 % de q): dependen solo de B y de la forma, no del suelo ni de q. Lo que cambia con el suelo es la rigidez E de las capas que el bulbo alcanza, y con ella el asentamiento.</p>
+  </div>
+</div></header>
+
+<section class="bloque" id="suelos"><div class="envoltura">
+  <div class="dos">
+    <div>
+      <div class="ceja">Tipo de suelo</div>
+      <h2>Arena y arcilla no ganan rigidez de la misma forma.</h2>
+      <p>Las ecuaciones clásicas son dos porque los dos suelos se comportan distinto bajo la zapata. Esa diferencia decide cuánto baja k al agrandar la fundación.</p>
+    </div>
+    <div>
+      <div class="vista3d ancha" id="vista-contacto" role="img" aria-label="Presión de contacto bajo una zapata rígida en arena y en arcilla">
+        <div class="aviso">Cargando la vista 3D…</div>
+        <div class="pista"><span class="raton">Arrastrar para girar</span><span class="tactil">Deslizar de lado para girar</span></div>
+      </div>
+      <p class="pie3d">Distribuciones idealizadas: arena sin cohesión con la zapata en superficie (parábola, cero en el borde) y arcilla como medio elástico (crece hacia el borde). La placa blanca marca la presión promedio q.</p>
+    </div>
+  </div>
+  <div class="suelos">
+    <article class="ficha arena">
+      <header><span class="muestra" aria-hidden="true"></span><div><h3>Arena y grava</h3><small>suelo granular, sin cohesión</small></div></header>
+      <dl>
+        <dt>Rigidez en profundidad</dt><dd>Crece con la profundidad: más confinamiento, más rigidez.</dd>
+        <dt>Cuándo asienta</dt><dd>Casi todo al cargar: el agua drena rápido entre los granos.</dd>
+        <dt>Bajo una zapata rígida</dt><dd>La presión se carga al centro; el borde tiene poco confinamiento.</dd>
+      </dl>
+    </article>
+    <article class="ficha arcilla">
+      <header><span class="muestra" aria-hidden="true"></span><div><h3>Arcilla</h3><small>suelo cohesivo, de partículas finas</small></div></header>
+      <dl>
+        <dt>Rigidez en profundidad</dt><dd>Casi pareja en una arcilla firme (preconsolidada), que es la que supone Terzaghi.</dd>
+        <dt>Cuándo asienta</dt><dd>Una parte al cargar y otra por consolidación, en meses o años, a medida que el agua sale de los poros.</dd>
+        <dt>Bajo una zapata rígida</dt><dd>La presión se concentra en los bordes.</dd>
+      </dl>
+    </article>
+  </div>
+  <div class="mini">
+    <div class="tarjeta">
+      <h3>Rigidez en profundidad</h3>
+      <svg id="grafico-rigidez" viewBox="0 0 320 240" role="img" aria-label="Rigidez relativa contra profundidad para arena y arcilla"></svg>
+    </div>
+    <div class="tarjeta">
+      <h3>Asentamiento en el tiempo</h3>
+      <svg id="grafico-tiempo" viewBox="0 0 320 240" role="img" aria-label="Asentamiento contra tiempo para arena y arcilla"></svg>
+    </div>
+  </div>
+  <p class="pie3d">Curvas cualitativas: muestran la tendencia, no valores de un suelo en particular.</p>
+</div></section>
+
+<section class="bloque" id="ecuaciones"><div class="envoltura">
+  <div class="ceja">Ecuaciones clásicas · Terzaghi (1955)</div>
+  <h2>Dos correcciones: por ancho y por forma.</h2>
+  <p>El ensayo de placa mide k en una placa cuadrada de 30 cm (1 pie). Las ecuaciones de Terzaghi llevan ese valor, k<sub>30</sub>, a una zapata de ancho B y largo L. El informe de mecánica de suelos lo puede llamar KBO, k0 o k1.</p>
+  <div class="ecuaciones">
+    <article class="ec-tarjeta arena">
+      <header><h3>Arenas y gravas</h3><small>suelos granulares, no cohesivos</small></header>
+      <div class="ec"><span class="rot">Por ancho · zapata cuadrada B × B</span>
+        <math display="block"><msub><mi>k</mi><mi>B</mi></msub><mo>=</mo><msub><mi>k</mi><mn>30</mn></msub><mo>·</mo><msup><mrow><mo>(</mo><mfrac><mrow><mi>B</mi><mo>+</mo><mn>0,30</mn></mrow><mrow><mn>2</mn><mi>B</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></math>
+      </div>
+      <div class="ec"><span class="rot">Por forma · zapata rectangular B × L</span>
+        <math display="block"><msub><mi>k</mi><mrow><mi>B</mi><mi>L</mi></mrow></msub><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>·</mo><msub><mi>k</mi><mi>B</mi></msub><mo>·</mo><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mfrac><mi>B</mi><mrow><mn>2</mn><mi>L</mi></mrow></mfrac><mo>)</mo></mrow></math>
+      </div>
+      <ul class="limites">
+        <li>Con B = 0,30 m, k<sub>B</sub> = k<sub>30</sub>: es la placa.</li>
+        <li>Con B muy grande, k<sub>B</sub> tiende a k<sub>30</sub> / 4: el piso de la arena.</li>
+        <li>La corrección es cuadrática: k baja rápido al principio y después casi no baja.</li>
+      </ul>
+    </article>
+    <article class="ec-tarjeta arcilla">
+      <header><h3>Arcillas</h3><small>suelos cohesivos</small></header>
+      <div class="ec"><span class="rot">Por ancho · zapata cuadrada B × B</span>
+        <math display="block"><msub><mi>k</mi><mi>B</mi></msub><mo>=</mo><msub><mi>k</mi><mn>30</mn></msub><mo>·</mo><mfrac><mn>0,30</mn><mi>B</mi></mfrac></math>
+      </div>
+      <div class="ec"><span class="rot">Por forma · zapata rectangular B × L</span>
+        <math display="block"><msub><mi>k</mi><mrow><mi>B</mi><mi>L</mi></mrow></msub><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>·</mo><msub><mi>k</mi><mi>B</mi></msub><mo>·</mo><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mfrac><mi>B</mi><mrow><mn>2</mn><mi>L</mi></mrow></mfrac><mo>)</mo></mrow></math>
+      </div>
+      <ul class="limites">
+        <li>Con B = 0,30 m, k<sub>B</sub> = k<sub>30</sub>: es la placa.</li>
+        <li>Con B muy grande, k<sub>B</sub> tiende a cero: la arcilla no tiene piso.</li>
+        <li>La corrección es lineal: con el doble de B, la mitad de k.</li>
+      </ul>
+    </article>
+  </div>
+  <dl class="variables">
+    <dt>k<sub>30</sub></dt><dd>coeficiente de la placa de 30 cm, del informe de mecánica de suelos (kgf/cm³)</dd>
+    <dt>B, L</dt><dd>ancho menor y largo mayor de la zapata (m)</dd>
+    <dt>k<sub>B</sub>, k<sub>BL</sub></dt><dd>balasto de la zapata cuadrada y de la rectangular (kgf/cm³; 1 kgf/cm³ = 1.000 t/m³)</dd>
+  </dl>
+
+  <div class="tarjeta calculadora">
+    <h3 style="margin-bottom:14px">Matriz de balasto B × L</h3>
+    <div class="campos">
+      <div class="campo">
+        <span class="campo-rot">Suelo</span>
+        <div class="segmentado" role="group" aria-label="Suelo de la matriz">
+          <button data-suelo data-v="arena" aria-pressed="true">Arena</button>
+          <button data-suelo data-v="arcilla" aria-pressed="false">Arcilla</button>
+        </div>
+      </div>
+      <div class="campo"><label for="calc-k30">k₃₀ (kgf/cm³)</label><input id="calc-k30" type="number" min="0.1" step="0.5" value="12" inputmode="decimal"></div>
+      <div class="campo">
+        <span class="campo-rot">Unidad</span>
+        <div class="segmentado" role="group" aria-label="Unidad de la matriz">
+          <button data-unidad data-v="kgf" aria-pressed="true">kgf/cm³</button>
+          <button data-unidad data-v="t" aria-pressed="false">t/m³</button>
+        </div>
+      </div>
+    </div>
+    <p class="ayuda">Cada celda es el k de una zapata B × L. La diagonal L = B es la zapata cuadrada; con L menor que B la celda no aplica, porque B es el lado menor. Un clic en una celda muestra su cálculo.</p>
+    <div class="matriz-env"><table class="matriz" id="matriz"></table></div>
+    <div class="ec-hero-rot" id="mat-rot" style="margin-top:14px"></div>
+    <div class="ec-filas" id="mat-ec"></div>
+  </div>
+</div></section>
+
+<section class="bloque" id="ancho"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Variable · ancho B</div>
+    <h2>Más ancho, más blando. Pero no igual en los dos suelos.</h2>
+    <p>El asentamiento suma lo que se comprime cada capa del bulbo. Que k baje rápido o lento con B depende de cómo cambia la rigidez del suelo con la profundidad.</p>
+    <p><b>Arcilla:</b> la rigidez es casi pareja. Si B se duplica, el bulbo baja al doble, el asentamiento se duplica y k cae a la mitad.</p>
+    <p><b>Arena y grava:</b> una zapata ancha carga suelo más profundo, que también es más rígido, y eso compensa: k baja cada vez menos y tiende a un piso.</p>
+    <div class="nota">Las curvas continuas son las ecuaciones de Terzaghi. Las punteadas salen de integrar Boussinesq en un estrato elástico, con la rigidez creciente (arena) o constante (arcilla); el estrato tiene 20 m para que el bulbo más hondo del gráfico (corrida de 3 m, unos 19 m) quede dentro. Un clic en el gráfico cambia B.</div>
+  </div>
+  <div class="tarjeta">
+    <svg id="grafico-b" viewBox="0 0 640 380" role="img" aria-label="k relativo a k30 en función de B, para arena y arcilla"></svg>
+    <div class="leyenda">
+      <span><i style="background:var(--arena-hondo)"></i>arena y grava</span>
+      <span><i style="background:var(--arcilla-hondo)"></i>arcilla</span>
+      <span><i style="height:0;border-top:2px dashed var(--tinta-2);background:none"></i>modelo elástico</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="bloque" id="forma"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Variable · forma L/B</div>
+    <h2>Más larga, más blanda.</h2>
+    <p>Con el mismo ancho B, una zapata cuadrada reparte la carga hacia sus cuatro lados; una larga, solo hacia los dos costados. Bajo la larga la tensión cae más lento con la profundidad, el bulbo llega más hondo, se comprime más suelo y k baja: en una corrida, hasta 2/3 del k de la cuadrada.</p>
+    <div class="control" style="max-width:440px;margin-top:18px">
+      <label for="relLB">Largo / ancho L/B <output id="relLB-out">4,0</output></label>
+      <input id="relLB" type="range" min="1" max="10" step="0.5" value="4">
+    </div>
+    <div class="ec-hero-rot" style="margin-top:22px">Factor de forma: cuánto baja k respecto de la cuadrada</div>
+    <div class="ec-filas" id="f-ec"></div>
+  </div>
+  <div>
+    <div class="vista3d" id="vista-forma" role="img" aria-label="Bulbos de una zapata cuadrada y de una rectangular del mismo ancho">
+      <div class="aviso">Cargando la vista 3D…</div>
+      <div class="pista"><span class="raton">Arrastrar para girar</span><span class="tactil">Deslizar de lado para girar</span></div>
+    </div>
+    <div class="ec-hero-rot" style="margin-top:16px">Profundidad del bulbo, hasta Δσ = 10 % de q (línea punteada)</div>
+    <div class="cifras" style="margin-top:8px">
+      <div class="cifra"><div class="n" id="f-bulbo-a">–</div><div class="l" id="f-bulbo-a-l">cuadrada B × B</div></div>
+      <div class="cifra"><div class="n" id="f-bulbo">–</div><div class="l" id="f-bulbo-l">larga B × L</div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="bloque" id="corrida"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Variable · ancho local</div>
+    <h2>Dentro de una corrida, cada punto ve su propio ancho.</h2>
+    <ol class="pasos-texto">
+      <li>El <b>ancho local</b> de un punto es el diámetro del círculo más grande que cabe dentro de la corrida y lo contiene. En un tramo recto mide b, el ancho de la corrida.</li>
+      <li>En un quiebre o un cruce cabe un círculo mayor. En una L toca los dos bordes exteriores y la esquina interior: su diámetro es 2√2 / (1 + √2) · b = 1,17 b. En una T toca el borde de la barra y las dos esquinas interiores: 1,25 b. El suelo de esa zona está cargado por los dos brazos: sus bulbos se superponen y trabaja como bajo una zapata más ancha.</li>
+      <li>Con un ancho mayor, Terzaghi da un k menor. Por eso el cruce queda más claro, y el color vuelve de a poco al del tramo a medida que el punto se aleja.</li>
+    </ol>
+    <div class="controles">
+      <div class="control" style="max-width:440px">
+        <label for="anchoC">Ancho de la corrida <output id="anchoC-out">0,60 m</output></label>
+        <input id="anchoC" type="range" min="0.4" max="1.2" step="0.05" value="0.6">
+      </div>
+    </div>
+    <div class="nota">El ancho local importa en las franjas, zapatas mucho más largas que anchas: del orden de L &gt; 3 B, o A / B<sub>máx</sub>² &gt; 3 en formas no rectangulares. En una zapata compacta casi no cambia y basta un solo k.</div>
+  </div>
+  <div>
+    <div class="vista3d" id="vista-corridas" style="--aspecto:4/3.2" role="img" aria-label="Corrida dividida en piezas coloreadas según su k, con los círculos del ancho local mínimo y máximo">
+      <div class="aviso">Cargando la vista 3D…</div>
+      <div class="seg3d" role="group" aria-label="Geometría de la corrida">
+        <button data-geo data-v="L" aria-pressed="true" title="Quiebre en L" aria-label="Quiebre en L"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3h4v9h9v4H4z"/></svg></button>
+        <button data-geo data-v="T" aria-pressed="false" title="Cruce en T" aria-label="Cruce en T"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4h14v4h-5v9H8V8H3z"/></svg></button>
+        <button data-geo data-v="V" aria-pressed="false" title="Cambio de ancho" aria-label="Cambio de ancho"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 6h8v8H2zM10 8h8v4h-8z"/></svg></button>
+      </div>
+      <div class="pista"><span class="raton">Pasar el mouse por la corrida · arrastrar para girar</span><span class="tactil">Tocar una pieza · deslizar de lado para girar</span></div>
+    </div>
+    <div class="chips" id="corrida-chips"></div>
+    <div class="cifras">
+      <div class="cifra"><div class="n" id="c-min">–</div><div class="l" id="c-min-l"></div></div>
+      <div class="cifra"><div class="n" id="c-max">–</div><div class="l" id="c-max-l"></div></div>
+    </div>
+    <div class="ec-hero-rot" style="margin-top:6px" id="c-sel">Punto seleccionado</div>
+    <div class="cifras" style="margin-top:6px">
+      <div class="cifra"><div class="n" id="c-b">–</div><div class="l">ancho local b</div></div>
+    </div>
+    <div class="ec-filas" id="c-ec"></div>
+    <p class="ayuda" id="c-ayuda"></p>
+  </div>
+</div></section>
+
+<section class="bloque" id="sismo"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Variable · velocidad de carga</div>
+    <h2>El mismo suelo es más rígido ante un sismo.</h2>
+    <p>Ante cargas rápidas y cíclicas, con deformaciones chicas, el módulo del suelo es varias veces mayor que bajo la carga sostenida del peso propio. El factor dinámico / estático lo entrega el informe de mecánica de suelos: es un dato del proyecto, no se supone.</p>
+    <div class="control" style="max-width:440px;margin-top:18px">
+      <label for="factorS"><span>Factor dinámico / estático <span style="text-transform:none">f</span> (ejemplo)</span> <output id="factorS-out">3,0</output></label>
+      <input id="factorS" type="range" min="1" max="4" step="0.1" value="3">
+    </div>
+  </div>
+  <div class="tarjeta">
+    <p class="mono" style="font-size:12.5px;color:var(--tinta-2);margin:0 0 4px" id="sismo-sub"></p>
+    <div class="ec-filas" id="sismo-ec"></div>
+    <div class="barras">
+      <div class="barra-s"><span>estático</span><div class="pista-b"><div class="relleno" id="b-est" style="background:var(--iso-3)"></div></div></div>
+      <div class="barra-s"><span>sísmico</span><div class="pista-b"><div class="relleno" id="b-sis" style="background:var(--iec)"></div></div></div>
+    </div>
+    <div class="nota">Un area spring no cambia según el caso de carga. Si en la misma corrida van casos estáticos y sísmicos, el ingeniero decide: dos modelos, o uno solo con el k sísmico.</div>
+  </div>
+</div></section>
+
+<section class="bloque" id="winkler"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Límite del modelo</div>
+    <h2>Los resortes no se conocen entre sí.</h2>
+    <p>El modelo de Winkler pone un resorte independiente bajo cada punto: si se carga uno, el vecino no se entera. En el suelo real, el corte entre columnas de suelo arrastra a los vecinos y se forma una cubeta de asentamiento.</p>
+    <div class="segmentado" role="group" aria-label="Modelo de suelo" style="margin-top:8px">
+      <button data-modelo data-v="winkler" aria-pressed="true">Resortes de Winkler</button>
+      <button data-modelo data-v="continuo" aria-pressed="false">Suelo real</button>
+    </div>
+    <p class="ayuda">Un clic sobre el suelo mueve la carga.</p>
+    <div class="nota">Por eso los bordes de una zapata rígida no reciben la misma presión que el centro, y la diferencia depende del suelo (ver <a href="#suelos">Arena o arcilla</a>).</div>
+  </div>
+  <div class="vista3d" id="vista-winkler" role="img" aria-label="Lecho de resortes de Winkler contra suelo continuo bajo una carga">
+    <div class="aviso">Cargando la vista 3D…</div>
+    <div class="tag" aria-hidden="true"></div>
+    <div class="pista"><span class="raton">Clic para mover la carga · arrastrar para girar</span><span class="tactil">Tocar para mover la carga · deslizar de lado para girar</span></div>
+  </div>
+</div></section>
+
+<section class="bloque" id="resumen"><div class="envoltura">
+  <div class="ceja">Resumen</div>
+  <h2 style="margin-bottom:22px">Qué mueve el balasto</h2>
+  <table class="resumen">
+    <thead><tr><th class="sube">Sube k</th><th class="baja">Baja k</th></tr></thead>
+    <tbody>
+      <tr><td>Zapata más angosta: el bulbo se queda arriba</td><td>Zapata más ancha: el bulbo llega más hondo</td></tr>
+      <tr><td>Forma compacta (L cerca de B)</td><td>Forma de franja (L mucho mayor que B)</td></tr>
+      <tr><td>Suelo más denso o rígido (k₃₀ alto)</td><td>Bulbos superpuestos: cruces de corridas, zapatas muy juntas</td></tr>
+      <tr><td>Carga rápida y cíclica: el sismo (factor del informe)</td><td>Un estrato blando dentro del bulbo de una zapata grande</td></tr>
+      <tr><td>Rigidez que crece con la profundidad (arenas y gravas): k cae menos con B</td><td>Carga sostenida en arcillas: consolidación</td></tr>
+    </tbody>
+  </table>
+  <div class="manda">
+    <div class="grande">El informe de suelos manda.</div>
+    <p>Estas curvas explican la tendencia con las ecuaciones clásicas. La fórmula, el coeficiente base, el factor sísmico y los límites de validez de cada proyecto salen de su informe de mecánica de suelos, y lo que diga el informe prevalece sobre cualquier criterio de esta guía.</p>
+  </div>
+</div></section>
+
+<footer><div class="envoltura"><b>IEC</b> · Recursos de aprendizaje · Coeficiente de balasto. Valores de ejemplo, ajustables en <a href="#ecuaciones">Ecuaciones</a>: k₃₀ = 12 kgf/cm³ (arena y grava) y 4 kgf/cm³ (arcilla). Modelo elástico: Boussinesq en un estrato compresible de 20 m. Ecuaciones: Terzaghi, K. (1955), «Evaluation of coefficients of subgrade reaction», Géotechnique 5(4). Vistas 3D con three.js.</div></footer>
+
+<script>
+'use strict';
+(() => {
+const REDUCIDO = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const NS = 'http://www.w3.org/2000/svg';
+const $ = id => document.getElementById(id);
+function el(tag, attrs, padre){
+  const e = document.createElementNS(NS, tag);
+  for(const k in attrs) e.setAttribute(k, attrs[k]);
+  if(padre) padre.appendChild(e);
+  return e;
+}
+const fmt = (v, d) => Number(v).toFixed(d).replace('.', ',');
+const miles = v => Math.round(v).toLocaleString('es-CL');
+const texto = (padre, x, y, t, extra = {}) => {
+  const e = el('text', Object.assign({x, y, 'font-size': 11.5, fill: '#56646F', 'font-family': 'IBM Plex Mono'}, extra), padre);
+  e.textContent = t; return e;
+};
+
+/* ---------- Física ---------- */
+// Boussinesq: influencia en la esquina de un rectángulo cargado (Newmark), m = a/z, n = b/z.
+function Irect(m, n){
+  const m2 = m * m, n2 = n * n, s = Math.sqrt(m2 + n2 + 1);
+  const a = 2 * m * n * s / (m2 + n2 + m2 * n2 + 1) * (m2 + n2 + 2) / (m2 + n2 + 1);
+  return (a + Math.atan2(2 * m * n * s, m2 + n2 + 1 - m2 * n2)) / (4 * Math.PI);
+}
+function esquina(a, b, z){ return (a === 0 || b === 0) ? 0 : Math.sign(a) * Math.sign(b) * Irect(Math.abs(a) / z, Math.abs(b) / z); }
+// Δσ/q en (x, y, z) bajo un rectángulo B x L centrado en el origen (B según x, L según y, z hacia abajo).
+function sigRect(x, y, z, B, L){
+  const x1 = -B / 2 - x, x2 = B / 2 - x, y1 = -L / 2 - y, y2 = L / 2 - y;
+  return esquina(x2, y2, z) - esquina(x1, y2, z) - esquina(x2, y1, z) + esquina(x1, y1, z);
+}
+// Δσ/q bajo una franja infinita de ancho B (solución cerrada de la carga en franja).
+function sigFranja(x, z, B){
+  const t1 = Math.atan((x + B / 2) / z), t2 = Math.atan((x - B / 2) / z);
+  return (t1 - t2 + (Math.sin(2 * t1) - Math.sin(2 * t2)) / 2) / Math.PI;
+}
+const sigma3 = (x, y, z, B, L) => L === Infinity ? sigFranja(x, z, B) : sigRect(x, y, z, B, L);
+const sigma = (x, z, B, L) => sigma3(x, 0, z, B, L);
+const RIGIDEZ = {arena: z => 1 + z / 0.3, arcilla: () => 1};
+const H_COMPRESIBLE = 20;
+// Asentamiento relativo bajo el centro: suma de Δσ/E en el estrato compresible.
+function asentamientoRel(B, L, suelo){
+  const E = RIGIDEZ[suelo];
+  let s = 0, z0 = 1e-3;
+  const pasos = 360, r = Math.pow(H_COMPRESIBLE / z0, 1 / pasos);
+  for(let i = 0; i < pasos; i++){
+    const z1 = z0 * r, z = (z0 + z1) / 2;
+    s += sigma(0, z, B, L) / E(z) * (z1 - z0);
+    z0 = z1;
+  }
+  return s;
+}
+const placa = {arena: asentamientoRel(0.3, 0.3, 'arena'), arcilla: asentamientoRel(0.3, 0.3, 'arcilla')};
+// Memo: las curvas del gráfico de ancho piden siempre los mismos B, y cada valor integra 360 capas.
+const memoModelo = new Map();
+const kRelModelo = (B, L, s) => {
+  const clave = `${B}|${L}|${s}`;
+  if(!memoModelo.has(clave)) memoModelo.set(clave, placa[s] / asentamientoRel(B, L, s));
+  return memoModelo.get(clave);
+};
+// Terzaghi (1955): corrección por ancho de cada suelo y corrección por forma (B y L en m).
+const factorAncho = (B, s) => s === 'arena' ? Math.pow((B + 0.3) / (2 * B), 2) : 0.3 / B;
+const factorForma = (B, L) => L === Infinity ? 2 / 3 : (1 + 0.5 * B / L) / 1.5;
+const kRel = (B, L, s) => factorAncho(B, s) * factorForma(B, L);
+// Filas de una ecuación alineadas en el signo igual (MathML): [símbolo, lado derecho, '', siguiente, ...].
+const filasEc = filas => filas.map(f => `<div>${f ? `<math displaystyle="true">${f}</math>` : ''}</div>`).join('');
+// Hasta 2 decimales, sin ceros de relleno: así el k₃₀ se ve tal como se escribió.
+const num = v => String(+v.toFixed(2)).replace('.', ',');
+const mmlForma = (b, dosL) => `<mfrac><mn>2</mn><mn>3</mn></mfrac><mo>·</mo><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mfrac>${b}<mrow>${dosL}</mrow></mfrac><mo>)</mo></mrow>`;
+const resultadoEc = (v, unidad = 'kgf/cm³', dec = 2) => `<mo>=</mo><mn class="ec-res">${dec ? fmt(v, dec) : miles(v)}</mn>` +(unidad ? `<mspace width="0.35em"></mspace><mtext class="ec-uni">${unidad}</mtext>` : '');
+// Terzaghi con símbolos, con números y resultado. op.b: nombre del ancho; op.k: símbolo del lado izquierdo; op.t: en t/m³.
+function filasTerzaghi(s, k30, B, L, op = {}){
+  const cuadrada = L !== Infinity && Math.abs(L - B) < 1e-9;
+  const ancho = (k, b, dosB) => s === 'arena'
+    ? `${k}<mo>·</mo><msup><mrow><mo>(</mo><mfrac><mrow>${b}<mo>+</mo><mn>0,30</mn></mrow><mrow>${dosB}</mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup>`
+    : `${k}<mo>·</mo><mfrac><mn>0,30</mn>${b}</mfrac>`;
+  const forma = (b, dosL) => {
+    if(L === Infinity) return '<mo>·</mo><mfrac><mn>2</mn><mn>3</mn></mfrac>';
+    return cuadrada ? '' : '<mo>·</mo>' + mmlForma(b, dosL);
+  };
+  const sB = `<mi>${op.b || 'B'}</mi>`, vB = `<mn>${fmt(B, 2)}</mn>`, vL = `<mn>${fmt(L, 2)}</mn>`;
+  const simbolo = op.k || (cuadrada ? '<msub><mi>k</mi><mi>B</mi></msub>' : '<msub><mi>k</mi><mrow><mi>B</mi><mi>L</mi></mrow></msub>');
+  return filasEc([
+    simbolo, '<mo>=</mo>' + ancho('<msub><mi>k</mi><mn>30</mn></msub>', sB, `<mn>2</mn>${sB}`) + forma(sB, '<mn>2</mn><mi>L</mi>'),
+    '', '<mo>=</mo>' + ancho(`<mn>${op.t ? miles(k30 * 1000) : num(k30)}</mn>`, vB, `<mn>2</mn><mo>·</mo>${vB}`) + forma(vB, `<mn>2</mn><mo>·</mo>${vL}`),
+    '', op.t ? resultadoEc(k30 * kRel(B, L, s) * 1000, 't/m³', 0) : resultadoEc(k30 * kRel(B, L, s))]);
+}
+function profundidadBulbo(B, L, nivel){
+  let a = 1e-3, b = 300;
+  for(let i = 0; i < 60; i++){ const m = (a + b) / 2; (sigma(0, m, B, L) > nivel) ? a = m : b = m; }
+  return (a + b) / 2;
+}
+// Bulbo de presiones: por convención, hasta donde Δσ cae al 10 % de q.
+const NIVEL_BULBO = 0.1, zBulbo = (B, L) => profundidadBulbo(B, L, NIVEL_BULBO);
+// Rampa fría de Δσ/q para los cortes: transparente sin tensión, azul profundo bajo la zapata.
+const RAMPA = [[0, [223, 241, 246, 0]], [0.06, [190, 228, 240, 0.42]], [0.15, [132, 200, 222, 0.62]],
+  [0.35, [64, 140, 196, 0.76]], [0.65, [47, 100, 170, 0.86]], [1, [29, 47, 107, 0.93]]];
+function rampa(v){
+  for(let i = 1; i < RAMPA.length; i++){
+    if(v <= RAMPA[i][0]){
+      const [a, ca] = RAMPA[i - 1], [b, cb] = RAMPA[i], t = (v - a) / (b - a);
+      return ca.map((c, k) => c + (cb[k] - c) * t);
+    }
+  }
+  return RAMPA[RAMPA.length - 1][1];
+}
+// Marching squares sobre una grilla NX x NY: segmentos de la curva de nivel en coordenadas de celda.
+function contornos(campo, NX, NY, nivel){
+  const segs = [];
+  for(let j = 0; j < NY - 1; j++) for(let i = 0; i < NX - 1; i++){
+    const a = campo[j * NX + i], b = campo[j * NX + i + 1], c = campo[(j + 1) * NX + i + 1], d = campo[(j + 1) * NX + i];
+    const idx = (a > nivel ? 8 : 0) | (b > nivel ? 4 : 0) | (c > nivel ? 2 : 0) | (d > nivel ? 1 : 0);
+    if(idx === 0 || idx === 15) continue;
+    const t = (p, q) => (nivel - p) / (q - p);
+    const T = [i + t(a, b), j], R = [i + 1, j + t(b, c)], Bo = [i + t(d, c), j + 1], Le = [i, j + t(a, d)];
+    const caso = {1: [[Le, Bo]], 2: [[Bo, R]], 3: [[Le, R]], 4: [[T, R]], 5: [[Le, T], [Bo, R]], 6: [[T, Bo]], 7: [[Le, T]],
+      8: [[Le, T]], 9: [[T, Bo]], 10: [[T, R], [Le, Bo]], 11: [[T, R]], 12: [[Le, R]], 13: [[Bo, R]], 14: [[Le, Bo]]}[idx];
+    for(const s of caso) segs.push(s);
+  }
+  return segs;
+}
+
+/* ---------- Estado ---------- */
+const estado = {B: 1.2, forma: 'cuadrada', suelo: 'arena', k30: {arena: 12, arcilla: 4}, q: 10, relLB: 4, factorSis: 3,
+  geo: 'L', anchoC: 0.6, modelo: 'winkler', unidad: 'kgf'};
+const NOMBRE = {arena: 'arena y grava', arcilla: 'arcilla'};
+const COLOR_SUELO = {arena: css('--arena-hondo'), arcilla: css('--arcilla-hondo')};
+const Lde = () => estado.forma === 'corrida' ? Infinity : estado.B;
+const kAbs = (B, L, s = estado.suelo) => estado.k30[s] * kRel(B, L, s);
+const oyentes = [];
+let pend = null;
+// Solo se avisan las claves que de verdad cambiaron: un clic o una tecla sin efecto no redibuja nada.
+function cambiar(p){
+  const claves = Object.keys(p).filter(k => JSON.stringify(estado[k]) !== JSON.stringify(p[k]));
+  if(!claves.length) return;
+  claves.forEach(k => { estado[k] = p[k]; });
+  if(!pend){
+    pend = new Set();
+    requestAnimationFrame(() => { const c = pend; pend = null; oyentes.forEach(f => f(c)); });
+  }
+  claves.forEach(k => pend.add(k));
+}
+const escuchar = f => oyentes.push(f);
+const toca = (c, ...ks) => ks.some(k => c.has(k));
+function enlazarSegmentado(selector, clave){
+  const botones = document.querySelectorAll(selector);
+  botones.forEach(b => b.addEventListener('click', () => cambiar({[clave]: b.dataset.v})));
+  escuchar(c => { if(c.has(clave)) botones.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === estado[clave]))); });
+}
+function enlazarRango(id, clave, formato){
+  const r = $(id), out = $(id + '-out');
+  r.addEventListener('input', () => cambiar({[clave]: +r.value}));
+  escuchar(c => { if(c.has(clave)){ r.value = estado[clave]; out.textContent = formato(estado[clave]); } });
+}
+// Campo numérico: un valor no positivo no se aplica, y al salir del campo se repone el vigente.
+function enlazarNumero(id, leer, aplicar, claves){
+  const campo = $(id);
+  campo.addEventListener('input', () => { const v = +campo.value; if(v > 0) aplicar(v); });
+  campo.addEventListener('change', () => { if(!(+campo.value > 0)) campo.value = leer(); });
+  escuchar(c => { if(toca(c, ...claves) && document.activeElement !== campo) campo.value = leer(); });
+}
+const k30Vigente = () => estado.k30[estado.suelo];
+const fijarK30 = v => cambiar({k30: Object.assign({}, estado.k30, {[estado.suelo]: v})});
+
+/* ---------- Hero: controles y lecturas ---------- */
+enlazarRango('anchoB', 'B', B => fmt(B, 2) + ' m');
+enlazarNumero('dato-k30', k30Vigente, fijarK30, ['suelo', 'k30']);
+enlazarNumero('dato-q', () => estado.q, q => cambiar({q}), ['q']);
+enlazarSegmentado('[data-forma]', 'forma');
+enlazarSegmentado('[data-suelo]', 'suelo');
+escuchar(c => {
+  if(!toca(c, 'B', 'forma', 'suelo', 'k30', 'q')) return;
+  const B = estado.B, L = Lde(), s = estado.suelo, k = kAbs(B, L);
+  const zb = zBulbo(B, L);
+  $('lec-bulbo').textContent = fmt(zb, 1) + ' m';
+  $('lec-bulbo-l').textContent = `≈ ${fmt(zb / B, 1)} B. Hasta esa profundidad la zapata aumenta la tensión del suelo en más del 10 % de q; más abajo, casi nada.`;
+  $('lec-s').textContent = fmt(estado.q / k, 1) + ' mm';
+  $('lec-s-l').textContent = `con q = ${fmt(estado.q, 1)} t/m² y el k de arriba`;
+  $('ec-hero').classList.toggle('arcilla', s === 'arcilla');
+  $('ecH-rot').textContent = 'Terzaghi · ' + NOMBRE[s] + (L === Infinity ? ' · corrida' : ' · zapata cuadrada');
+  $('ecH-filas').innerHTML = filasTerzaghi(s, estado.k30[s], B, L);
+  $('ecH-t').textContent = L === Infinity ? 'El 2/3 es el factor de forma de una corrida (L ≫ B).' : '';
+});
+
+/* ---------- k contra B ---------- */
+const gB = $('grafico-b');
+const GB = {x0: 58, x1: 612, y0: 24, y1: 326, bmin: 0.3, bmax: 3, rmax: 1.05};
+const bx = b => GB.x0 + (b - GB.bmin) / (GB.bmax - GB.bmin) * (GB.x1 - GB.x0);
+const by = r => GB.y1 - r / GB.rmax * (GB.y1 - GB.y0);
+function dibujarGraficoB(){
+  gB.innerHTML = '';
+  for(const r of [0, 0.25, 0.5, 0.75, 1]){
+    el('line', {x1: GB.x0, x2: GB.x1, y1: by(r), y2: by(r), stroke: '#E3E9EC'}, gB);
+    texto(gB, GB.x0 - 10, by(r) + 4, fmt(r, 2), {'text-anchor': 'end'});
+  }
+  for(let b = 0.5; b <= 3; b += 0.5){
+    el('line', {x1: bx(b), x2: bx(b), y1: GB.y0, y2: GB.y1, stroke: '#E3E9EC'}, gB);
+    texto(gB, bx(b), GB.y1 + 20, fmt(b, 1) + ' m', {'text-anchor': 'middle'});
+  }
+  texto(gB, GB.x0, 14, 'k / k₃₀');
+  texto(gB, GB.x1, GB.y1 + 42, 'ancho B', {'text-anchor': 'end'});
+  const corrida = estado.forma === 'corrida', Lf = b => corrida ? Infinity : b;
+  // Piso de la arena: el factor por ancho tiende a 1/4 cuando B crece.
+  const piso = 0.25 * factorForma(1, Lf(1));
+  el('line', {x1: GB.x0, x2: GB.x1, y1: by(piso), y2: by(piso), stroke: '#56646F', 'stroke-dasharray': '2 5'}, gB);
+  texto(gB, GB.x0 + 8, by(piso) - 7, corrida ? 'piso de la arena: k₃₀/4 · 2/3' : 'piso de la arena: k₃₀/4');
+  const curva = (f, attrs) => {
+    let d = '';
+    for(let i = 0; i <= 90; i++){ const b = GB.bmin + (GB.bmax - GB.bmin) * i / 90; d += (i ? 'L' : 'M') + bx(b).toFixed(1) + ',' + by(Math.min(GB.rmax, f(b))).toFixed(1); }
+    el('path', Object.assign({d, fill: 'none'}, attrs), gB);
+  };
+  for(const s of ['arcilla', 'arena']){
+    const activo = s === estado.suelo, color = COLOR_SUELO[s];
+    curva(b => kRelModelo(b, Lf(b), s), {stroke: color, 'stroke-width': activo ? 2.2 : 1.5, 'stroke-dasharray': '6 6', opacity: activo ? 0.85 : 0.45});
+    curva(b => kRel(b, Lf(b), s), {stroke: color, 'stroke-width': activo ? 3.6 : 2.2, 'stroke-linecap': 'round', opacity: activo ? 1 : 0.55});
+    texto(gB, GB.x1 - 4, by(kRel(3, Lf(3), s)) - 9, NOMBRE[s], {'text-anchor': 'end', fill: color, 'font-weight': 600});
+  }
+  const B = estado.B;
+  el('line', {x1: bx(B), x2: bx(B), y1: GB.y0, y2: GB.y1, stroke: '#17222C', 'stroke-width': 1, 'stroke-dasharray': '3 4'}, gB);
+  for(const s of ['arcilla', 'arena']){
+    const activo = s === estado.suelo, color = COLOR_SUELO[s];
+    el('circle', {cx: bx(B), cy: by(Math.min(GB.rmax, kRel(B, Lf(B), s))), r: activo ? 7 : 5, fill: activo ? color : '#fff', stroke: activo ? '#fff' : color, 'stroke-width': 2.5}, gB);
+  }
+  const ka = kRel(B, Lf(B), estado.suelo);
+  texto(gB, Math.min(bx(B) + 12, GB.x1 - 190), by(Math.min(GB.rmax, ka)) - 14, `B = ${fmt(B, 2)} m → k = ${fmt(ka, 2)} k₃₀`, {fill: '#17222C', 'font-size': 13, 'font-weight': 600});
+  el('rect', {x: GB.x0, y: GB.y0, width: GB.x1 - GB.x0, height: GB.y1 - GB.y0, fill: 'transparent', style: 'cursor:pointer'}, gB);
+}
+gB.addEventListener('click', ev => {
+  const p = gB.createSVGPoint(); p.x = ev.clientX; p.y = ev.clientY;
+  const w = p.matrixTransform(gB.getScreenCTM().inverse());
+  const b = GB.bmin + (w.x - GB.x0) / (GB.x1 - GB.x0) * (GB.bmax - GB.bmin);
+  if(b >= 0.3 && b <= 3) cambiar({B: Math.round(b / 0.05) * 0.05});
+});
+escuchar(c => { if(toca(c, 'B', 'forma', 'suelo')) dibujarGraficoB(); });
+
+/* ---------- Arena o arcilla: rigidez y tiempo ---------- */
+function dibujarRigidez(){
+  const g = $('grafico-rigidez'); g.innerHTML = '';
+  const P = {x0: 44, x1: 300, y0: 28, y1: 200, zmax: 6};
+  const zy = z => P.y0 + z / P.zmax * (P.y1 - P.y0), ex = e => P.x0 + e * (P.x1 - P.x0);
+  for(let z = 0; z <= 6; z += 2){
+    el('line', {x1: P.x0, x2: P.x1, y1: zy(z), y2: zy(z), stroke: '#E3E9EC'}, g);
+    texto(g, P.x0 - 8, zy(z) + 4, z + ' m', {'text-anchor': 'end'});
+  }
+  el('line', {x1: P.x0, x2: P.x0, y1: P.y0, y2: P.y1, stroke: '#C8D2D4'}, g);
+  texto(g, P.x1, P.y1 + 28, 'más rígido →', {'text-anchor': 'end'});
+  texto(g, P.x0, 16, 'profundidad');
+  const Emax = RIGIDEZ.arena(P.zmax);
+  let d = '';
+  for(let i = 0; i <= 40; i++){ const z = P.zmax * i / 40; d += (i ? 'L' : 'M') + ex(RIGIDEZ.arena(z) / Emax * 0.95).toFixed(1) + ',' + zy(z).toFixed(1); }
+  const activoA = estado.suelo === 'arena';
+  el('path', {d, fill: 'none', stroke: COLOR_SUELO.arena, 'stroke-width': activoA ? 3.4 : 2.2, opacity: activoA ? 1 : 0.6}, g);
+  el('line', {x1: ex(0.42), x2: ex(0.42), y1: zy(0), y2: zy(P.zmax), stroke: COLOR_SUELO.arcilla, 'stroke-width': activoA ? 2.2 : 3.4, opacity: activoA ? 0.6 : 1}, g);
+  texto(g, ex(0.95) - 4, zy(5.6), 'arena', {'text-anchor': 'end', fill: COLOR_SUELO.arena, 'font-weight': 600});
+  texto(g, ex(0.42) + 7, zy(1.2), 'arcilla', {fill: COLOR_SUELO.arcilla, 'font-weight': 600});
+}
+// Consolidación unidimensional de Terzaghi: grado medio U(Tv), aproximación clásica.
+const gradoU = T => T <= 0.283 ? Math.sqrt(4 * T / Math.PI) : 1 - Math.pow(10, (1.781 - T) / 0.933) / 100;
+function dibujarTiempo(){
+  const g = $('grafico-tiempo'); g.innerHTML = '';
+  const P = {x0: 44, x1: 300, y0: 28, y1: 200}, l0 = Math.log10(1 / 24), l1 = Math.log10(365 * 30);
+  const tx = dias => P.x0 + (Math.log10(dias) - l0) / (l1 - l0) * (P.x1 - P.x0), sy = s => P.y0 + s * (P.y1 - P.y0);
+  for(const [dias, t] of [[1 / 24, '1 h'], [1, '1 día'], [30, '1 mes'], [365, '1 año'], [3650, '10 años']]){
+    el('line', {x1: tx(dias), x2: tx(dias), y1: P.y0, y2: P.y1, stroke: '#E3E9EC'}, g);
+    texto(g, tx(dias), P.y1 + 18, t, {'text-anchor': dias < 1 ? 'start' : 'middle', 'font-size': 10.5});
+  }
+  for(const s of [0, 0.5, 1]){ texto(g, P.x0 - 8, sy(s) + 4, fmt(s, 1), {'text-anchor': 'end'}); }
+  texto(g, P.x0, 16, 's / s final');
+  const activoA = estado.suelo === 'arena';
+  el('line', {x1: P.x0, x2: P.x1, y1: sy(1), y2: sy(1), stroke: COLOR_SUELO.arena, 'stroke-width': activoA ? 3.4 : 2.2, opacity: activoA ? 1 : 0.6}, g);
+  let d = '';
+  for(let i = 0; i <= 80; i++){ const l = l0 + (l1 - l0) * i / 80, dias = Math.pow(10, l); const s = 0.3 + 0.7 * gradoU(dias / 1095); d += (i ? 'L' : 'M') + tx(dias).toFixed(1) + ',' + sy(Math.min(1, s)).toFixed(1); }
+  el('path', {d, fill: 'none', stroke: COLOR_SUELO.arcilla, 'stroke-width': activoA ? 2.2 : 3.4, opacity: activoA ? 0.6 : 1}, g);
+  texto(g, P.x0 + 6, sy(1) - 8, 'arena: casi todo al cargar', {fill: COLOR_SUELO.arena, 'font-weight': 600, 'font-size': 11});
+  texto(g, P.x0 + 6, sy(0.3) - 8, 'arcilla: sigue por consolidación', {fill: COLOR_SUELO.arcilla, 'font-weight': 600, 'font-size': 11});
+}
+escuchar(c => { if(c.has('suelo')){ dibujarRigidez(); dibujarTiempo(); } });
+
+/* ---------- Ecuaciones: matriz B x L ---------- */
+const Bs = [0.6, 0.8, 1, 1.2, 1.5, 2, 2.5, 3], Ls = [...Bs, 4, 6, 10];
+// Mapa de calor de la matriz: celeste claro (k menor) a azul profundo (k mayor).
+const CALOR = [[0, [234, 244, 250]], [0.35, [140, 200, 234]], [0.7, [44, 109, 181]], [1, [24, 44, 102]]];
+function calorK(r){
+  const i = Math.max(1, CALOR.findIndex(([p]) => p >= r)), [a, ca] = CALOR[i - 1], [b, cb] = CALOR[i], u = (r - a) / (b - a);
+  return `rgb(${ca.map((c, j) => Math.round(c + (cb[j] - c) * u)).join(',')})`;
+}
+let celda = {B: 1.2, L: 3};
+function dibujarMatriz(){
+  const s = estado.suelo, k30 = k30Vigente(), tabla = $('matriz'), enT = estado.unidad === 't';
+  const valido = (B, L) => L >= B - 1e-9, k = (B, L) => k30 * kRel(B, L, s);
+  const ks = Bs.flatMap(B => Ls.filter(L => valido(B, L)).map(L => k(B, L)));
+  const lo = Math.min(...ks), hi = Math.max(...ks);
+  let h = `<thead><tr><th></th><th scope="colgroup" colspan="${Ls.length}" class="eje">L (m) →</th></tr>`
+    + `<tr><th scope="col" class="eje">B (m) ↓</th>${Ls.map(L => `<th scope="col">${fmt(L, 2)}</th>`).join('')}</tr></thead><tbody>`;
+  for(const B of Bs){
+    h += `<tr><th scope="row">${fmt(B, 2)}</th>`;
+    for(const L of Ls){
+      if(!valido(B, L)){ h += '<td class="na">—</td>'; continue; }
+      const v = k(B, L), r = hi > lo ? (v - lo) / (hi - lo) : 0.5;
+      const clase = [Math.abs(L - B) < 1e-9 ? 'diag' : '', celda.B === B && celda.L === L ? 'sel' : ''].join(' ').trim();
+      h += `<td class="${clase}" data-b="${B}" data-l="${L}" style="background:${calorK(r)};color:${r > 0.55 ? '#fff' : 'var(--tinta)'}">${enT ? miles(v * 1000) : fmt(v, 2)}</td>`;
+    }
+    h += '</tr>';
+  }
+  tabla.innerHTML = h + '</tbody>';
+  $('mat-rot').textContent = `Celda B = ${fmt(celda.B, 2)} m · L = ${fmt(celda.L, 2)} m · ${NOMBRE[s]}`;
+  $('mat-ec').innerHTML = filasTerzaghi(s, k30, celda.B, celda.L, {t: enT});
+}
+$('matriz').addEventListener('click', e => {
+  const td = e.target.closest('td[data-b]');
+  if(!td) return;
+  celda = {B: +td.dataset.b, L: +td.dataset.l};
+  dibujarMatriz();
+});
+enlazarNumero('calc-k30', k30Vigente, fijarK30, ['suelo', 'k30']);
+enlazarSegmentado('[data-unidad]', 'unidad');
+escuchar(c => { if(toca(c, 'suelo', 'k30', 'unidad')) dibujarMatriz(); });
+
+/* ---------- Forma ---------- */
+function dibujarForma(){
+  const rel = estado.relLB, B = 1, L = rel;
+  $('f-ec').innerHTML = filasEc([
+    '<mi>f</mi>', '<mo>=</mo>' + mmlForma('<mi>B</mi>', '<mn>2</mn><mi>L</mi>'),
+    '', '<mo>=</mo>' + mmlForma('<mn>1</mn>', `<mn>2</mn><mo>·</mo><mn>${fmt(rel, 1)}</mn>`),
+    '', resultadoEc(factorForma(B, L), '')]);
+  const zA = zBulbo(1, 1), zL = zBulbo(B, L), Bm = estado.B;
+  $('f-bulbo-a').textContent = fmt(zA, 1) + ' B';
+  $('f-bulbo').textContent = fmt(zL, 1) + ' B';
+  $('f-bulbo-a-l').textContent = `cuadrada B × B · con B = ${fmt(Bm, 2)} m, llega a ${fmt(zA * Bm, 1)} m`;
+  $('f-bulbo-l').textContent = `larga B × L, L = ${fmt(rel, 1)} B · con B = ${fmt(Bm, 2)} m, llega a ${fmt(zL * Bm, 1)} m`;
+}
+enlazarRango('relLB', 'relLB', v => fmt(v, 1));
+escuchar(c => { if(toca(c, 'relLB', 'B')) dibujarForma(); });
+
+/* ---------- Corridas: ancho local ---------- */
+const CORR = {MW: 8, MH: 5.6, piezas: [], segs: [], lo: 0, hi: 1};
+// Brazos disjuntos: la malla de cada uno cubre la corrida sin huecos ni piezas dobles en el cruce.
+function rectsCorrida(B = estado.anchoC, geo = estado.geo){
+  if(geo === 'L') return [[0.8, 1.2, 6.8, 1.2 + B], [0.8, 1.2 + B, 0.8 + B, 5.0]];
+  if(geo === 'T') return [[0.6, 1.4, 7.4, 1.4 + B], [4.0 - B / 2, 1.4 + B, 4.0 + B / 2, 5.2]];
+  const B2 = Math.max(0.3, B * 0.75);
+  return [[0.6, 2.4, 4.0, 2.4 + B], [4.0, 2.4 + (B - B2) / 2, 7.4, 2.4 + (B + B2) / 2]];
+}
+const adentroCorrida = (x, y, rs) => rs.some(([a, b, c, d]) => x >= a && x <= c && y >= b && y <= d);
+// Borde de la unión de rectángulos: los tramos de lado que tienen corrida a un solo lado.
+function bordesCorrida(rs){
+  const e = 1e-6, segs = [];
+  const cortes = (i, lo, hi) => [...new Set(rs.flatMap(r => [r[i], r[i + 2]]).filter(v => v > lo && v < hi).concat(lo, hi))].sort((p, q) => p - q);
+  for(const [a, b, c, d] of rs){
+    const xs = cortes(0, a, c), ys = cortes(1, b, d);
+    for(const y of [b, d]) for(let i = 1; i < xs.length; i++){
+      const m = (xs[i - 1] + xs[i]) / 2;
+      if(adentroCorrida(m, y - e, rs) !== adentroCorrida(m, y + e, rs)) segs.push([xs[i - 1], y, xs[i], y]);
+    }
+    for(const x of [a, c]) for(let i = 1; i < ys.length; i++){
+      const m = (ys[i - 1] + ys[i]) / 2;
+      if(adentroCorrida(x - e, m, rs) !== adentroCorrida(x + e, m, rs)) segs.push([x, ys[i - 1], x, ys[i]]);
+    }
+  }
+  return segs;
+}
+// Distancia de un punto interior al borde: el radio del círculo inscrito centrado en él.
+function distBorde(x, y){
+  let m = Infinity;
+  for(const [x0, y0, x1, y1] of CORR.segs){
+    const dx = Math.max(x0 - x, 0, x - x1), dy = Math.max(y0 - y, 0, y - y1), d = dx * dx + dy * dy;
+    if(d < m) m = d;
+  }
+  return Math.sqrt(m);
+}
+// Círculo inscrito más grande que toca la pieza: centros cada 2 cm y luego cada 2 mm alrededor del mejor.
+function circuloPieza(p, rs, rmax){
+  let mejor = {r: 0, centro: [p.x + p.w / 2, p.y + p.h / 2]};
+  const buscar = (x0, x1, y0, y1, paso) => {
+    for(let cy = y0; cy <= y1 + 1e-9; cy += paso) for(let cx = x0; cx <= x1 + 1e-9; cx += paso){
+      if(!adentroCorrida(cx, cy, rs)) continue;
+      const r = distBorde(cx, cy);
+      if(r <= mejor.r) continue;
+      const lejos = Math.hypot(Math.max(p.x - cx, 0, cx - p.x - p.w), Math.max(p.y - cy, 0, cy - p.y - p.h));
+      if(lejos <= r) mejor = {r, centro: [cx, cy]};
+    }
+  };
+  buscar(p.x - rmax, p.x + p.w + rmax, p.y - rmax, p.y + p.h + rmax, 0.02);
+  const [cx, cy] = mejor.centro;
+  buscar(cx - 0.02, cx + 0.02, cy - 0.02, cy + 0.02, 0.002);
+  return {b: 2 * mejor.r, r: mejor.r, centro: mejor.centro};
+}
+function prepararCorrida(){
+  // Cota del radio inscrito para acotar la búsqueda: el mayor es el del cruce en T, 0,625 b.
+  const rs = rectsCorrida(), rmax = 0.7 * estado.anchoC;
+  CORR.segs = bordesCorrida(rs);
+  // Malla de cada brazo alineada a sus bordes, con piezas de unos 0,25 m.
+  CORR.piezas = rs.flatMap(([a, b0, c, d]) => {
+    const nx = Math.ceil((c - a) / 0.25 - 1e-9), ny = Math.ceil((d - b0) / 0.25 - 1e-9), w = (c - a) / nx, hh = (d - b0) / ny;
+    return Array.from({length: nx * ny}, (_, n) => {
+      const p = {x: a + (n % nx) * w, y: b0 + Math.floor(n / nx) * hh, w, h: hh};
+      return Object.assign(p, circuloPieza(p, rs, rmax));
+    });
+  });
+  valorarPiezas();
+}
+// Una corrida es larga (L ≫ b): factor de forma 2/3.
+function valorarPiezas(){  CORR.piezas.forEach(p => { p.k = kAbs(p.b, Infinity); });
+  const ks = CORR.piezas.map(p => p.k);
+  CORR.lo = Math.min(...ks); CORR.hi = Math.max(...ks);
+}
+// Misma rampa que la matriz (claro, k menor; oscuro, k mayor), desde un celeste que se distinga del piso blanco.
+const TONO_MIN = 0.25;
+const colorK = k => calorK(TONO_MIN + (1 - TONO_MIN) * (CORR.hi > CORR.lo + 1e-9 ? (k - CORR.lo) / (CORR.hi - CORR.lo) : 0.5));
+// Piezas con el ancho local mínimo y máximo: las que se marcan con su círculo en el 3D.
+// La de ancho mínimo se toma lo más lejos posible de la de ancho máximo, para que los dos círculos no se pisen.
+function extremosCorrida(){
+  const P = CORR.piezas, max = P.reduce((a, p) => p.b > a.b ? p : a, P[0]), bmin = Math.min(...P.map(p => p.b));
+  const d = p => Math.hypot(p.x - max.x, p.y - max.y);
+  const min = P.filter(p => p.b < bmin + 1e-6).reduce((a, p) => d(p) > d(a) ? p : a);
+  return {min, max};
+}
+const gradCorrida = [0, 0.5, 1].map(r => `${calorK(TONO_MIN + (1 - TONO_MIN) * r)} ${r * 100}%`).join(', ');
+$('corrida-chips').innerHTML = `<span>k menor (más blando)</span><i style="background:linear-gradient(90deg, ${gradCorrida})"></i><span>k mayor</span>`;
+function mostrarExtremos(){  const {min, max} = extremosCorrida(), kg = ' kgf/cm³';
+  $('c-min').textContent = fmt(min.b, 2) + ' m';
+  $('c-min-l').textContent = `b mín: ancho local mínimo · k = ${fmt(min.k, 2)}${kg}, el mayor`;
+  $('c-max').textContent = fmt(max.b, 2) + ' m';
+  $('c-max-l').textContent = `b máx: ancho local máximo (${fmt(max.b / estado.anchoC, 2)} b) · k = ${fmt(max.k, 2)}${kg}, el menor`;
+}
+// Sin punto elegido muestra el de b máx; el último punto elegido queda hasta elegir otro.
+function lecturaCorrida(b){
+  const elegido = b != null;
+  if(!elegido) b = extremosCorrida().max.b;
+  $('c-sel').textContent = elegido ? 'Punto seleccionado' : 'Punto seleccionado: b máx (elegir otro punto sobre la corrida)';
+  $('c-b').textContent = fmt(b, 2) + ' m';
+  $('c-ec').innerHTML = filasTerzaghi(estado.suelo, estado.k30[estado.suelo], b, Infinity, {b: 'b', k: '<mi>k</mi>'});
+  $('c-ayuda').textContent = `La corrida es larga (L ≫ b): factor de forma 2/3. Suelo: ${NOMBRE[estado.suelo]}.`;
+}
+enlazarRango('anchoC', 'anchoC', b => fmt(b, 2) + ' m');
+enlazarSegmentado('[data-geo]', 'geo');
+escuchar(c => {
+  if(toca(c, 'geo', 'anchoC')) prepararCorrida();
+  else if(toca(c, 'suelo', 'k30')) valorarPiezas();
+  if(toca(c, 'geo', 'anchoC', 'suelo', 'k30')){ mostrarExtremos(); lecturaCorrida(null); }
+});
+
+/* ---------- Sismo ---------- */
+function dibujarSismo(){
+  const f = estado.factorSis, B = estado.B, k = kAbs(B, Lde());
+  $('sismo-sub').textContent = `k est: el de la zapata del corte (${NOMBRE[estado.suelo]}, ${estado.forma}, B = ${fmt(B, 2)} m)`;
+  $('sismo-ec').innerHTML = filasEc([
+    '<msub><mi>k</mi><mtext>sís</mtext></msub>', '<mo>=</mo><mi>f</mi><mo>·</mo><msub><mi>k</mi><mtext>est</mtext></msub>',
+    '', `<mo>=</mo><mn>${fmt(f, 1)}</mn><mo>·</mo><mn>${fmt(k, 2)}</mn>`,
+    '', resultadoEc(k * f)]);
+  // Escala de las barras: el factor máximo del control (4) llena la barra.
+  $('b-est').style.width = '25%';
+  $('b-sis').style.width = (25 * f) + '%';
+}
+enlazarRango('factorS', 'factorSis', f => fmt(f, 1));
+escuchar(c => { if(toca(c, 'factorSis', 'B', 'forma', 'suelo', 'k30')) dibujarSismo(); });
+
+enlazarSegmentado('[data-modelo]', 'modelo');
+
+window.BAL = {estado, escuchar, toca, Lde, RIGIDEZ, kAbs, sigRect, sigma3, zBulbo, rampa, contornos, calorK,
+  REDUCIDO, CORR, rectsCorrida, colorK, lecturaCorrida, extremosCorrida};
+oyentes.forEach(f => f(new Set(Object.keys(estado))));
+// Dentro de la documentación (iframe): sin la barra propia, y avisando el alto para que la página tenga un solo scroll.
+if(window.self !== window.top){
+  document.documentElement.classList.add('embebida');
+  // Se mide el body y no el scrollHeight del documento, que nunca baja del alto actual del iframe y no lo dejaría achicarse.
+  const avisar = () => parent.postMessage({altoGuia: Math.ceil(document.body.getBoundingClientRect().height)}, '*');
+  new ResizeObserver(avisar).observe(document.body);
+}
+})();
+</script>
+
+<script type="module">
+const BAL = window.BAL, {estado} = BAL;
+const vistas = [...document.querySelectorAll('.vista3d')];
+function sin3d(msg){ vistas.forEach(v => { v.classList.add('sin3d'); v.querySelector('.aviso').textContent = msg; }); }
+let T, OrbitControls, MarchingCubes, CSS2DRenderer, CSS2DObject;
+try {
+  T = await import('three');
+  ({OrbitControls} = await import('three/addons/controls/OrbitControls.js'));
+  ({MarchingCubes} = await import('three/addons/objects/MarchingCubes.js'));
+  ({CSS2DRenderer, CSS2DObject} = await import('three/addons/renderers/CSS2DRenderer.js'));
+} catch(e){
+  T = null;
+  sin3d('Las vistas 3D necesitan conexión a internet: cargan la librería three.js. El resto de la guía funciona sin ella.');
+}
+const conWebGL = (() => { try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch(e){ return false; } })();
+if(T && !conWebGL) sin3d('Este navegador no tiene WebGL activo: las vistas 3D no se pueden mostrar.');
+const MOVIL = matchMedia('(max-width: 700px)').matches;
+const FINO = matchMedia('(pointer: fine)').matches;
+
+/* ---------- Utilidades 3D ---------- */
+function crearVista(id, op){
+  const cont = document.getElementById(id);
+  cont.querySelector('.aviso').textContent = '';
+  const renderer = new T.WebGLRenderer({antialias: true, alpha: true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, MOVIL ? 1.75 : 2));
+  cont.prepend(renderer.domElement);
+  const capa = new CSS2DRenderer(); capa.domElement.className = 'capa-etq'; cont.appendChild(capa.domElement);
+  const scene = new T.Scene();
+  const camera = new T.PerspectiveCamera(op.fov || 30, 1, 0.1, 400);
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.target.set(...op.objetivo);
+  camera.position.copy(controls.target).add(new T.Vector3().setFromSpherical(new T.Spherical(op.dist, op.phi, op.theta)));
+  Object.assign(controls, {enableZoom: false, enablePan: false, enableDamping: true, dampingFactor: 0.09, rotateSpeed: 0.75,
+    minAzimuthAngle: op.azimut[0], maxAzimuthAngle: op.azimut[1], minPolarAngle: op.polar[0], maxPolarAngle: op.polar[1]});
+  // En pantallas táctiles el arrastre vertical sigue haciendo scroll; el horizontal gira la vista.
+  renderer.domElement.style.touchAction = 'pan-y';
+  scene.add(new T.HemisphereLight(0xffffff, 0x9d8f78, 1.25));
+  const sol = new T.DirectionalLight(0xffffff, 1.55); sol.position.set(8, 14, 10); scene.add(sol);
+  const v = {cont, renderer, capa, scene, camera, controls, visible: true, continuo: false, alCuadro: null, tocado: false, dist: op.dist};
+  let pendiente = 0, animando = 0, hasta = 0;
+  v.render = () => { renderer.render(scene, camera); capa.render(scene, camera); };
+  v.pedir = () => { if(pendiente || animando) return; pendiente = requestAnimationFrame(() => { pendiente = 0; v.render(); }); };
+  const bucle = t => {
+    const seguir = v.alCuadro ? v.alCuadro(t) : false;
+    controls.update(); v.render();
+    animando = (t < hasta || seguir || (v.continuo && v.visible)) ? requestAnimationFrame(bucle) : 0;
+  };
+  v.animar = (ms = 0) => {
+    hasta = Math.max(hasta, performance.now() + ms);
+    if(!animando){ if(pendiente){ cancelAnimationFrame(pendiente); pendiente = 0; } animando = requestAnimationFrame(bucle); }
+  };
+  controls.addEventListener('start', () => { v.tocado = true; v.continuo = false; cont.classList.add('tocado'); v.animar(60000); });
+  controls.addEventListener('end', () => { hasta = performance.now() + 900; });
+  controls.addEventListener('change', () => v.pedir());
+  const ajustar = () => {
+    const w = cont.clientWidth, h = cont.clientHeight; if(!w || !h) return;
+    renderer.setSize(w, h, false); capa.setSize(w, h);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+    const f = Math.min(1.9, Math.max(1, (op.aspecto || 1.3) / camera.aspect));
+    const off = new T.Vector3().subVectors(camera.position, controls.target).setLength(v.dist * f);
+    camera.position.copy(controls.target).add(off); controls.update(); v.pedir();
+  };
+  v.fijarDist = d => { v.dist = d; ajustar(); };
+  new ResizeObserver(ajustar).observe(cont); ajustar();
+  new IntersectionObserver(([e]) => { v.visible = e.isIntersecting; if(v.visible && v.continuo) v.animar(); }).observe(cont);
+  return v;
+}
+function etiqueta(txt, clase = 'etq'){
+  const d = document.createElement('div'); d.className = clase; d.textContent = txt;
+  const o = new CSS2DObject(d); o.center.set(0.5, 0.5); return o;
+}
+const matLineas = new Map();
+function lineas(puntos, color, opacidad = 1){
+  const geo = new T.BufferGeometry(); geo.setAttribute('position', new T.Float32BufferAttribute(puntos, 3));
+  const clave = color + '|' + opacidad;
+  if(!matLineas.has(clave)) matLineas.set(clave, new T.LineBasicMaterial({color, transparent: opacidad < 1, opacity: opacidad}));
+  return new T.LineSegments(geo, matLineas.get(clave));
+}
+// Prisma cortado en un cuarto: le falta el cuadrante x > 0, z > 0.
+function prismaL(x0, x1, z0, z1, y0, y1, mat, colorBorde, opBorde){
+  const g = new T.Group();
+  const caja = (a, b, c, d) => { const m = new T.Mesh(new T.BoxGeometry(b - a, y1 - y0, d - c), mat); m.position.set((a + b) / 2, (y0 + y1) / 2, (c + d) / 2); g.add(m); };
+  caja(x0, 0, z0, z1); caja(0, x1, z0, 0);
+  g.add(bordesL(x0, x1, z0, z1, y0, y1, colorBorde, opBorde));
+  return g;
+}
+function bordesL(x0, x1, z0, z1, y0, y1, color, op){
+  const P = [[x0, z0], [x1, z0], [x1, 0], [0, 0], [0, z1], [x0, z1]], s = [];
+  for(const y of [y0, y1]) for(let i = 0; i < 6; i++){ const a = P[i], b = P[(i + 1) % 6]; s.push(a[0], y, a[1], b[0], y, b[1]); }
+  for(const [x, z] of P) s.push(x, y0, z, x, y1, z);
+  return lineas(s, color, op);
+}
+function bordesCaja(w, h, d, y0, color, op){
+  const geo = new T.EdgesGeometry(new T.BoxGeometry(w, h, d));
+  const l = new T.LineSegments(geo, new T.LineBasicMaterial({color, transparent: true, opacity: op})); l.position.y = y0 + h / 2; return l;
+}
+function liberar(obj){ obj.traverse(o => { if(o.geometry) o.geometry.dispose(); }); }
+// Nodos de MarchingCubes: el nodo i queda en c + s (i - N/2) / (N/2); los útiles van de 1 a N - 2.
+function mapaMC(N, min, max){ const h = N / 2, a = (1 - h) / h, b = (N - 2 - h) / h, s = (max - min) / (b - a); return {s, c: min - s * a}; }
+const nodos = (N, m) => Float64Array.from({length: N}, (_, i) => m.c + m.s * (i - N / 2) / (N / 2));
+// Recalcula las cáscaras sobre el campo F y sube a la GPU solo el tramo del buffer que tiene triángulos.
+function cargarConchas(conchas, F){
+  for(const mc of conchas){
+    mc.reset(); mc.field.set(F); mc.update();
+    for(const nombre of ['position', 'normal']) mc.geometry.getAttribute(nombre).addUpdateRange(0, mc.count * 3);
+  }
+}
+// Mientras dura un arrastre ejecuta fn a lo más cada ms, y una vez más al final con el estado vigente.
+function limitar(fn, ms = 150){
+  let timer = 0, ultimo = 0;
+  return () => {
+    clearTimeout(timer);
+    const ahora = performance.now();
+    if(ahora - ultimo > ms){ ultimo = ahora; fn(); }
+    else timer = setTimeout(() => { ultimo = performance.now(); fn(); }, ms);
+  };
+}
+function azar(semilla){ return () => (semilla = (semilla * 16807) % 2147483647) / 2147483647; }
+function lienzo(wM, hM, ppm, pintar){ const c = document.createElement('canvas'); c.width = Math.round(wM * ppm); c.height = Math.round(hM * ppm); pintar(c.getContext('2d'), c.width, c.height); return c; }
+function aTex(canvas){ const t = new T.CanvasTexture(canvas); t.colorSpace = T.SRGBColorSpace; t.anisotropy = 4; return t; }
+function pintarSuelo(ctx, W, H, suelo, semilla){
+  const r = azar(semilla), g = ctx.createLinearGradient(0, 0, 0, H);
+  if(suelo === 'arena'){ g.addColorStop(0, '#E3CFA2'); g.addColorStop(1, '#9A7B4B'); }
+  else { g.addColorStop(0, '#AA9187'); g.addColorStop(1, '#957970'); }
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  if(suelo === 'arena'){
+    const tonos = ['#B49C72', '#E7D9B8', '#8E7A57', '#CDB88D', '#A08A63', '#F1E7CF', '#7E6A4B'], n = W * H / 40, e = W / 260;
+    for(let i = 0; i < n; i++){
+      const y = r() * H, prof = y / H;
+      if(r() > 0.3 + 0.7 * prof) continue;   // más granos, más apretados, en profundidad
+      const x = r() * W, rad = (1 + r() * 3) * e;
+      ctx.beginPath(); ctx.ellipse(x, y, rad, rad * (0.6 + r() * 0.35), r() * Math.PI, 0, 2 * Math.PI);
+      ctx.globalAlpha = 0.45 + r() * 0.5; ctx.fillStyle = tonos[(r() * tonos.length) | 0]; ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  } else {
+    for(let i = 0; i < W * H / 14; i++){ ctx.fillStyle = r() > 0.5 ? 'rgba(255,255,255,.07)' : 'rgba(40,25,20,.08)'; ctx.fillRect(r() * W, r() * H, 1.5, 1.5); }
+    ctx.strokeStyle = 'rgba(60,40,32,.14)'; ctx.lineWidth = Math.max(1, W / 240);
+    for(let k = 1; k < 16; k++){ const y = k / 16 * H; ctx.beginPath(); for(let x = 0; x <= W; x += 6) ctx.lineTo(x, y + Math.sin(x / (W / 7) + k * 1.7) * (H / 300)); ctx.stroke(); }
+  }
+}
+function pintarTope(ctx, W, H, suelo, wM, hM){
+  ctx.fillStyle = suelo === 'arena' ? '#E8D8B2' : '#B8A39A'; ctx.fillRect(0, 0, W, H);
+  const r = azar(3);
+  for(let i = 0; i < W * H / 20; i++){ ctx.fillStyle = r() > 0.5 ? 'rgba(255,255,255,.12)' : 'rgba(60,45,30,.10)'; ctx.fillRect(r() * W, r() * H, 2, 2); }
+  ctx.strokeStyle = 'rgba(23,34,44,.10)'; ctx.lineWidth = 1;
+  for(let x = 1; x < wM; x++){ ctx.beginPath(); ctx.moveTo(x / wM * W, 0); ctx.lineTo(x / wM * W, H); ctx.stroke(); }
+  for(let y = 1; y < hM; y++){ ctx.beginPath(); ctx.moveTo(0, y / hM * H); ctx.lineTo(W, y / hM * H); ctx.stroke(); }
+}
+const colorPresion = p => new T.Color(BAL.calorK(Math.min(1, p / 3)));
+
+/* ---------- 1. Bulbo bajo la zapata (hero) ---------- */
+function construirBulbo(){
+  const v = crearVista('vista-bulbo', {fov: 30, objetivo: [0.2, -2.35, 0], theta: 0.74, phi: 1.13, dist: 19.5, azimut: [0.1, 1.47], polar: [0.8, 1.42], aspecto: 1.1});
+  const HX = 3, HD = 6.5, g = new T.Group(); v.scene.add(g);
+  const tex = {};
+  const texturas = suelo => tex[suelo] || (tex[suelo] = (() => {
+    const base = lienzo(HX, HD, 64, (c, W, H) => pintarSuelo(c, W, H, suelo, 7));
+    return {base, lado: aTex(base), topeA: aTex(lienzo(HX, 2 * HX, 40, (c, W, H) => pintarTope(c, W, H, suelo, HX, 2 * HX))),
+      topeB: aTex(lienzo(HX, HX, 40, (c, W, H) => pintarTope(c, W, H, suelo, HX, HX)))};
+  })());
+  const matOculto = new T.MeshStandardMaterial({color: 0x9b8462, roughness: 1});
+  const matLado = new T.MeshStandardMaterial({roughness: 0.95}), matTopeA = new T.MeshStandardMaterial({roughness: 0.95}), matTopeB = new T.MeshStandardMaterial({roughness: 0.95});
+  const cajaA = new T.Mesh(new T.BoxGeometry(HX, HD, 2 * HX), [matOculto, matLado, matTopeA, matOculto, matLado, matLado]);
+  cajaA.position.set(-HX / 2, -HD / 2, 0);
+  const cajaB = new T.Mesh(new T.BoxGeometry(HX, HD, HX), [matLado, matOculto, matTopeB, matOculto, matOculto, matLado]);
+  cajaB.position.set(HX / 2, -HD / 2, -HX / 2);
+  g.add(cajaA, cajaB, bordesL(-HX, HX, -HX, HX, -HD, 0, 0x2b2218, 0.6));
+  // Caras del corte con el mapa de Δσ/q: plano z = 0 (dirección de B) y plano x = 0 (dirección de L).
+  const cortes = [0, 1].map(() => {
+    const c = document.createElement('canvas'); c.width = HX * 64; c.height = HD * 64;
+    const t = aTex(c), m = new T.Mesh(new T.PlaneGeometry(HX, HD), new T.MeshStandardMaterial({map: t, roughness: 0.9}));
+    g.add(m); return {c, t, m};
+  });
+  cortes[0].m.position.set(HX / 2, -HD / 2, 0.004);
+  cortes[1].m.rotation.y = Math.PI / 2; cortes[1].m.position.set(0.004, -HD / 2, HX / 2);
+  const CNX = 128, CNY = 224, campoC = new Float32Array(CNX * CNY);
+  const calor = document.createElement('canvas'); calor.width = CNX; calor.height = CNY;
+  const cctx = calor.getContext('2d'), imgC = cctx.createImageData(CNX, CNY);
+  function pintarCorte(canvas, base, fn){
+    const ctx = canvas.getContext('2d'), W = canvas.width, H = canvas.height;
+    for(let j = 0; j < CNY; j++){ const d = (j + 0.5) / CNY * HD; for(let i = 0; i < CNX; i++) campoC[j * CNX + i] = fn((i + 0.5) / CNX, d); }
+    for(let k = 0; k < CNX * CNY; k++){
+      const c = BAL.rampa(Math.min(1, campoC[k]));
+      imgC.data[4 * k] = c[0]; imgC.data[4 * k + 1] = c[1]; imgC.data[4 * k + 2] = c[2]; imgC.data[4 * k + 3] = c[3] * 255;
+    }
+    cctx.putImageData(imgC, 0, 0);
+    ctx.drawImage(base, 0, 0, W, H);
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(calor, 0, 0, W, H);
+    const sx = W / CNX, sy = H / CNY;
+    for(const [nivel, ancho, alfa] of [[0.7, 1.4, .6], [0.4, 1.6, .65], [0.2, 2, .75], [0.1, 3.2, .95]]){
+      ctx.beginPath();
+      for(const [p, q] of BAL.contornos(campoC, CNX, CNY, nivel)){ ctx.moveTo((p[0] + .5) * sx, (p[1] + .5) * sy); ctx.lineTo((q[0] + .5) * sx, (q[1] + .5) * sy); }
+      ctx.strokeStyle = `rgba(255,255,255,${alfa})`; ctx.lineWidth = ancho; ctx.stroke();
+    }
+  }
+  function pintarCortes(B, L){
+    const base = texturas(estado.suelo).base;
+    pintarCorte(cortes[0].c, base, (u, d) => BAL.sigma3(HX * u, 0, d, B, L));
+    pintarCorte(cortes[1].c, base, (u, d) => BAL.sigma3(0, HX * (1 - u), d, B, L));
+    cortes.forEach(k => { k.t.needsUpdate = true; });
+  }
+  // Cáscaras de las isobaras en el cuarto cortado (marching cubes sobre el campo de Boussinesq).
+  const N = MOVIL ? 32 : 44, mx = mapaMC(N, -0.25, HX), my = mapaMC(N, -HD, 0.3), mz = mapaMC(N, -0.25, HX);
+  const xs = nodos(N, mx), ys = nodos(N, my), zs = nodos(N, mz);
+  const NIV = [[0.1, 0xA8D8F0, 0.24], [0.2, 0x5EA9DD, 0.27], [0.4, 0x2E6FBF, 0.34], [0.7, 0x1A3275, 0.6]];
+  const conchas = NIV.map(([nivel, color, opacity], i) => {
+    const mat = new T.MeshStandardMaterial({color, emissive: color, emissiveIntensity: 0.22, roughness: 0.35, transparent: true, opacity, side: T.DoubleSide, depthWrite: false});
+    const mc = new MarchingCubes(N, mat, false, false, 20000);
+    mc.position.set(mx.c, my.c, mz.c); mc.scale.set(mx.s, my.s, mz.s); mc.isolation = nivel; mc.renderOrder = 10 + i;
+    g.add(mc); return mc;
+  });
+  const F = new Float32Array(N * N * N);
+  function rellenar(B, L){
+    const N2 = N * N;
+    for(let k = 0; k < N; k++){
+      const z = zs[k], dentroZ = L === Infinity || Math.abs(z) <= L / 2;
+      if(L === Infinity && k > 0){ F.copyWithin(k * N2, 0, N2); continue; }
+      for(let j = 0; j < N; j++){
+        const d = -ys[j];
+        for(let i = 0; i < N; i++){
+          const x = xs[i];
+          F[i + j * N + k * N2] = d <= 0.004 ? ((Math.abs(x) <= B / 2 && dentroZ) ? 1 : 0) : BAL.sigma3(x, z, d, B, L);
+        }
+      }
+    }
+    cargarConchas(conchas, F);
+  }
+  // Zapata y columna (o muro), cortadas igual que el bloque.
+  const matZap = new T.MeshStandardMaterial({color: 0xE87000, roughness: 0.6});
+  const matHor = new T.MeshStandardMaterial({color: 0xA7AFB4, roughness: 0.8});
+  const matFlecha = new T.MeshStandardMaterial({color: 0x17222C, roughness: 0.5});
+  const etqQ = etiqueta('q', 'marca3d'); g.add(etqQ);
+  let zapata = null, yZap = 0, yMeta = 0;
+  const EXAGERA = 25, TOPE = 0.3;
+  function construirZapata(B, L){
+    if(zapata){ g.remove(zapata); liberar(zapata); }
+    const Lz = L === Infinity ? 2 * HX : L, c = Math.min(0.18, B * 0.35), m = Math.min(0.1, B * 0.3);
+    zapata = new T.Group();
+    zapata.add(prismaL(-B / 2, B / 2, -Lz / 2, Lz / 2, 0, 0.4, matZap, 0x6b3300, 0.8));
+    // Flechas de la presión q, hacia abajo sobre la zapata (fuera del cuarto cortado y de la columna o el muro).
+    const nx = Math.max(3, Math.round(B / 0.3)), nz = L === Infinity ? Math.round(Lz / 0.5) : nx;
+    const geoV = new T.CylinderGeometry(0.03, 0.03, 0.62, 8), geoP = new T.ConeGeometry(0.09, 0.2, 14);
+    for(let i = 0; i < nx; i++) for(let k = 0; k < nz; k++){
+      const x = -B / 2 + (i + 0.5) * B / nx, z = -Lz / 2 + (k + 0.5) * Lz / nz;
+      if((x > 0 && z > 0) || Math.abs(x) < (L === Infinity ? m : c) + 0.06 && (L === Infinity || Math.abs(z) < c + 0.06)) continue;
+      const vara = new T.Mesh(geoV, matFlecha); vara.position.set(x, 0.42 + 0.2 + 0.31, z);
+      const punta = new T.Mesh(geoP, matFlecha); punta.rotation.x = Math.PI; punta.position.set(x, 0.42 + 0.1, z);
+      zapata.add(vara, punta);
+    }
+    etqQ.position.set(-B / 2 - 0.3, 1.15, L === Infinity ? 2.2 : 0);
+    zapata.add(L === Infinity ? prismaL(-m, m, -Lz / 2, Lz / 2, 0.4, 1.25, matHor, 0x17222C, 0.6) : prismaL(-c, c, -c, c, 0.4, 1.9, matHor, 0x17222C, 0.6));
+    zapata.position.y = yZap;
+    g.add(zapata);
+  }
+  // Regla de profundidad, línea del bulbo y etiquetas.
+  const marcas = [];
+  for(let d = 1; d < HD; d++){
+    marcas.push(-HX, -d, HX, -HX - 0.2, -d, HX);
+    const e = etiqueta(d + ' m', 'etq-escala'); e.position.set(-HX - 0.6, -d, HX); g.add(e);
+  }
+  g.add(lineas(marcas, 0x17222C, 0.7));
+  const lineaBulbo = new T.Line(new T.BufferGeometry().setFromPoints([new T.Vector3(0, 0, 0.012), new T.Vector3(HX, 0, 0.012)]),
+    new T.LineDashedMaterial({color: 0xffffff, dashSize: 0.18, gapSize: 0.12}));
+  lineaBulbo.computeLineDistances(); g.add(lineaBulbo);
+  const etqBulbo = etiqueta('10 %', 'marca3d'), etqB = etiqueta('s', 'marca3d'), etqSuelo = v.cont.querySelector('.tag');
+  g.add(etqBulbo, etqB);
+  // Perfil de rigidez E(z) pintado sobre la cara lateral del bloque (plano x = HX): ancho proporcional al módulo del modelo elástico.
+  const cRig = document.createElement('canvas'); cRig.width = HX * 100; cRig.height = HD * 100;
+  const tRig = aTex(cRig), panel = new T.Mesh(new T.PlaneGeometry(HX, HD), new T.MeshBasicMaterial({map: tRig, transparent: true, depthWrite: false}));
+  panel.rotation.y = Math.PI / 2; panel.position.set(HX + 0.006, -HD / 2, -HX / 2); g.add(panel);
+  const etqE = etiqueta('E', 'marca3d'); etqE.position.set(HX, 0.3, -0.5); g.add(etqE);
+  function pintarRigidez(){
+    const ctx = cRig.getContext('2d'), W = cRig.width, H = cRig.height, x0 = W * 0.05, ancho = W * 0.9;
+    const arena = estado.suelo === 'arena', Emax = BAL.RIGIDEZ.arena(HD), r = d => arena ? BAL.RIGIDEZ.arena(d) / Emax : 0.55;
+    ctx.clearRect(0, 0, W, H);
+    ctx.beginPath(); ctx.moveTo(x0, 0);
+    for(let i = 0; i <= 60; i++){ const d = HD * i / 60; ctx.lineTo(x0 + ancho * r(d), H * i / 60); }
+    ctx.lineTo(x0, H); ctx.closePath();
+    ctx.fillStyle = 'rgba(36,72,150,.72)'; ctx.fill();
+    ctx.strokeStyle = 'rgba(255,255,255,.95)'; ctx.lineWidth = 5; ctx.stroke();
+    ctx.strokeStyle = '#17222C'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(x0, 0); ctx.lineTo(x0, H); ctx.stroke();
+    ctx.fillStyle = '#fff'; ctx.font = '600 26px IBM Plex Mono, monospace'; ctx.textAlign = 'right';
+    ctx.fillText('más rígido →', x0 + ancho, H - 24);
+    tRig.needsUpdate = true;
+  }
+  const refrescarCampo = limitar(() => { const B = estado.B, L = BAL.Lde(); rellenar(B, L); pintarCortes(B, L); v.pedir(); });
+  function actualizar(c){
+    if(!BAL.toca(c, 'B', 'forma', 'suelo', 'k30', 'q')) return;
+    const B = estado.B, L = BAL.Lde();
+    if(c.has('suelo')){
+      pintarRigidez();
+      const t = texturas(estado.suelo);
+      matLado.map = t.lado; matTopeA.map = t.topeA; matTopeB.map = t.topeB;
+      [matLado, matTopeA, matTopeB].forEach(m => { m.needsUpdate = true; });
+      etqSuelo.innerHTML = '<span class="marca3d">E</span>' + (estado.suelo === 'arena' ? 'Arena y grava: la rigidez crece con la profundidad' : 'Arcilla: rigidez casi pareja en profundidad');
+    }
+    if(BAL.toca(c, 'B', 'forma')){
+      construirZapata(B, L);
+      const zb = BAL.zBulbo(B, L);
+      lineaBulbo.visible = zb < HD; lineaBulbo.position.y = -zb;
+      etqBulbo.position.set(Math.min(HX - 0.4, B / 2 + 0.9), -Math.min(zb, HD - 0.15), 0.02);
+      etqB.position.set(-B / 4, 0.2, (L === Infinity ? HX : B / 2) + 0.05);
+      refrescarCampo();
+    } else if(c.has('suelo')) pintarCortes(B, L);
+    const s = estado.q / BAL.kAbs(B, L);
+    yMeta = -Math.min(TOPE, s / 1000 * EXAGERA);
+    if(BAL.REDUCIDO){ yZap = yMeta; if(zapata) zapata.position.y = yZap; } else v.animar();
+    v.pedir();
+  }  BAL.escuchar(actualizar);
+  actualizar(new Set(['B', 'forma', 'suelo', 'q', 'k30']));
+  const sph = new T.Spherical(), off = new T.Vector3(), vaiven = !BAL.REDUCIDO && FINO;
+  v.continuo = vaiven;
+  v.alCuadro = t => {
+    let seguir = false;
+    if(Math.abs(yMeta - yZap) > 1e-4){ yZap += (yMeta - yZap) * 0.15; if(zapata) zapata.position.y = yZap; seguir = true; }
+    if(vaiven && !v.tocado){
+      off.subVectors(v.camera.position, v.controls.target); sph.setFromVector3(off);
+      sph.theta = 0.74 + 0.14 * Math.sin(t / 2800); off.setFromSpherical(sph);
+      v.camera.position.copy(v.controls.target).add(off);
+    }
+    return seguir;
+  };
+  v.animar();
+}
+
+/* ---------- 2. Presión de contacto en arena y en arcilla ---------- */
+function construirContacto(){
+  const v = crearVista('vista-contacto', {fov: 30, objetivo: [0, 0.55, 0], theta: 0.12, phi: 1.0, dist: 9.6, azimut: [-0.8, 0.8], polar: [0.75, 1.38], aspecto: 1.6});
+  const A = 1.1, n = 44, ESC = 0.5, TOPE = 2.6, cp = colorPresion;
+  // Arcilla: distribución elástica de una zapata rígida, truncada cerca del borde y escalada para que su promedio sea q.
+  const c = x => 0.6366 / Math.sqrt(1 - Math.min(x * x, 0.97 * 0.97)), elastica = (u, w) => Math.min(TOPE, c(u) * c(w));
+  let suma = 0;
+  for(let i = 0; i < 200; i++) for(let j = 0; j < 200; j++) suma += elastica(-1 + (2 * i + 1) / 200, -1 + (2 * j + 1) / 200);
+  const media = suma / 40000;
+  const casos = [
+    {x0: -1.75, p: (u, w) => 2.25 * (1 - u * u) * (1 - w * w), color: 0xD7BC85, titulo: 'Arena y grava'},
+    {x0: 1.75, p: (u, w) => elastica(u, w) / media, color: 0xA88A82, titulo: 'Arcilla'}
+  ];
+  const yZap = ESC * TOPE / media + 0.25;
+  const PUNTOS = [-0.82, -0.49, -0.16, 0.16, 0.49, 0.82];
+  const geoVara = new T.CylinderGeometry(0.026, 0.026, 1, 8); geoVara.translate(0, 0.5, 0);
+  const geoPunta = new T.ConeGeometry(0.075, 0.15, 12), matFlecha = new T.MeshStandardMaterial({color: 0x17222C, roughness: 0.5});
+  for(const cs of casos){
+    const g = new T.Group(); g.position.x = cs.x0; v.scene.add(g);
+    const suelo = new T.Mesh(new T.BoxGeometry(2 * A + 0.5, 0.8, 2 * A + 0.5), new T.MeshStandardMaterial({color: cs.color, roughness: 1}));
+    suelo.position.y = -0.4; g.add(suelo, bordesCaja(2 * A + 0.5, 0.8, 2 * A + 0.5, -0.8, 0x2b2218, 0.5));
+    const geo = new T.PlaneGeometry(2 * A, 2 * A, n, n); geo.rotateX(-Math.PI / 2);
+    const pos = geo.attributes.position, col = new Float32Array(pos.count * 3), alto = new Float32Array(pos.count);
+    for(let i = 0; i < pos.count; i++){
+      const p = cs.p(pos.getX(i) / A, pos.getZ(i) / A); alto[i] = 0.012 + ESC * p; pos.setY(i, alto[i]);
+      const k = cp(p); col[3 * i] = k.r; col[3 * i + 1] = k.g; col[3 * i + 2] = k.b;
+    }
+    geo.setAttribute('color', new T.BufferAttribute(col, 3)); geo.computeVertexNormals();
+    const matP = new T.MeshStandardMaterial({vertexColors: true, side: T.DoubleSide, roughness: 0.5, transparent: true, opacity: 0.55, depthWrite: false});
+    g.add(new T.Mesh(geo, matP));
+    // Flechas de la presión de contacto: el suelo empuja la zapata hacia arriba, con largo proporcional a p.
+    for(const u of PUNTOS) for(const w of PUNTOS){
+      const h = ESC * cs.p(u, w);
+      if(h < 0.16) continue;
+      const vara = new T.Mesh(geoVara, matFlecha); vara.scale.y = h - 0.15; vara.position.set(u * A, 0.012, w * A);
+      const punta = new T.Mesh(geoPunta, matFlecha); punta.position.set(u * A, 0.012 + h - 0.075, w * A);
+      g.add(vara, punta);
+    }
+    // Faldón: cierra el diagrama por los cuatro lados hasta el suelo.
+    const fp = [], fc = [], fi = [];
+    const borde = [];
+    for(let i = 0; i <= n; i++) borde.push(i);
+    for(let j = 1; j <= n; j++) borde.push(j * (n + 1) + n);
+    for(let i = n - 1; i >= 0; i--) borde.push(n * (n + 1) + i);
+    for(let j = n - 1; j >= 0; j--) borde.push(j * (n + 1));
+    borde.forEach((idx, q) => {
+      fp.push(pos.getX(idx), alto[idx], pos.getZ(idx), pos.getX(idx), 0.012, pos.getZ(idx));
+      fc.push(col[3 * idx], col[3 * idx + 1], col[3 * idx + 2], col[3 * idx], col[3 * idx + 1], col[3 * idx + 2]);
+      if(q > 0){ const a = 2 * (q - 1), b = 2 * q; fi.push(a, a + 1, b, b, a + 1, b + 1); }
+    });
+    const gf = new T.BufferGeometry(); gf.setAttribute('position', new T.Float32BufferAttribute(fp, 3)); gf.setAttribute('color', new T.Float32BufferAttribute(fc, 3)); gf.setIndex(fi); gf.computeVertexNormals();
+    g.add(new T.Mesh(gf, new T.MeshStandardMaterial({vertexColors: true, side: T.DoubleSide, roughness: 0.6, transparent: true, opacity: 0.5, depthWrite: false})));
+    const prom = new T.Mesh(new T.PlaneGeometry(2 * A, 2 * A), new T.MeshBasicMaterial({color: 0xffffff, transparent: true, opacity: 0.42, side: T.DoubleSide, depthWrite: false}));
+    prom.rotation.x = -Math.PI / 2; prom.position.y = 0.012 + ESC; prom.renderOrder = 5; g.add(prom);
+    g.add(bordesCaja(2 * A, 0.001, 2 * A, 0.012 + ESC, 0x17222C, 0.35));
+    const zap = new T.Mesh(new T.BoxGeometry(2 * A, 0.16, 2 * A), new T.MeshStandardMaterial({color: 0xE87000, roughness: 0.6, transparent: true, opacity: 0.88}));
+    zap.position.y = yZap; g.add(zap, bordesCaja(2 * A, 0.16, 2 * A, yZap - 0.08, 0x6b3300, 0.8));
+    const guias = [];
+    for(const sx of [-1, 1]) for(const sz of [-1, 1]) guias.push(sx * A, yZap - 0.08, sz * A, sx * A, 0.012, sz * A);
+    g.add(lineas(guias, 0x6b3300, 0.35));
+    const et = etiqueta(cs.titulo, 'etq titulo'); et.position.set(0, yZap + 0.45, 0); g.add(et);
+  }
+  const eq = etiqueta('q promedio', 'marca3d'); eq.position.set(0, 0.012 + ESC, 0.4); v.scene.add(eq);
+  v.pedir();
+}
+
+/* ---------- 3. Bulbo de la cuadrada contra el de la rectangular ---------- */
+function construirGemelos(){
+  const v = crearVista('vista-forma', {fov: 30, objetivo: [-0.3, -2.0, 0], theta: 0.62, phi: 1.3, dist: 20, azimut: [-0.35, 1.4], polar: [0.85, 1.62], aspecto: 1.25});
+  // MEX y MEZ: margen del volumen de cálculo alrededor de cada zapata; con menos, el bulbo de la larga se recorta.
+  const XA = -2.6, XB = 1.6, N = MOVIL ? 30 : 38, HDF = 6.4, MEX = 2.6, MEZ = 2.2, XR = -4.6;
+  const grilla = [];
+  for(let x = -4; x <= 4; x++) grilla.push(x, 0, -7, x, 0, 7);
+  for(let z = -7; z <= 7; z++) grilla.push(-4, 0, z, 4, 0, z);
+  v.scene.add(lineas(grilla, 0x9fb0b4, 0.45));
+  const matZap = new T.MeshStandardMaterial({color: 0xE87000, roughness: 0.6});
+  const zA = new T.Mesh(new T.BoxGeometry(1, 0.16, 1), matZap); zA.position.set(XA, 0.08, 0);
+  const zB = new T.Mesh(new T.BoxGeometry(1, 0.16, 1), matZap); zB.position.set(XB, 0.08, 0);
+  v.scene.add(zA, zB);
+  const NIVF = [[0.1, 0xA8D8F0, 0.3], [0.3, 0x2E6FBF, 0.5]];
+  const conchas = () => NIVF.map(([nivel, color, opacity], i) => {
+    const mc = new MarchingCubes(N, new T.MeshStandardMaterial({color, emissive: color, emissiveIntensity: 0.2, roughness: 0.35, transparent: true, opacity, side: T.DoubleSide, depthWrite: false}), false, false, 20000);
+    mc.isolation = nivel; mc.renderOrder = 10 + i; v.scene.add(mc); return mc;
+  });
+  const cA = conchas(), cB = conchas(), F = new Float32Array(N * N * N);
+  function llenar(cs, x0, L){
+    const mx = mapaMC(N, x0 - MEX, x0 + MEX), my = mapaMC(N, -HDF, 0.12), mz = mapaMC(N, -L / 2 - MEZ, L / 2 + MEZ);
+    const xs = nodos(N, mx), ys = nodos(N, my), zs = nodos(N, mz), N2 = N * N;
+    for(let k = 0; k < N; k++) for(let j = 0; j < N; j++){
+      const d = -ys[j];
+      for(let i = 0; i < N; i++){
+        const x = xs[i] - x0, z = zs[k];
+        F[i + j * N + k * N2] = d <= 0.004 ? ((Math.abs(x) <= 0.5 && Math.abs(z) <= L / 2) ? 1 : 0) : BAL.sigRect(x, z, d, 1, L);
+      }
+    }
+    for(const mc of cs){ mc.position.set(mx.c, my.c, mz.c); mc.scale.set(mx.s, my.s, mz.s); }
+    cargarConchas(cs, F);
+  }
+  const eA = etiqueta('B × B', 'marca3d'), eB = etiqueta('B × L', 'marca3d');
+  eA.position.set(XA, 0.6, 0); eB.position.set(XB, 0.6, 0);
+  v.scene.add(eA, eB);
+  // Regla de profundidad en múltiplos de B y una cota punteada al fondo de cada bulbo (isobara de 10 % de q).
+  const regla = [XR, 0, 0, XR, -6.2, 0];
+  for(let d = 1; d <= 6; d++){
+    regla.push(XR, -d, 0, XR + 0.25, -d, 0);
+    const e = etiqueta(d + ' B', 'etq-escala'); e.position.set(XR - 0.45, -d, 0); v.scene.add(e);
+  }
+  v.scene.add(lineas(regla, 0x17222C, 0.6));
+  const cota = x0 => {
+    const l = new T.Line(new T.BufferGeometry().setFromPoints([new T.Vector3(XR, 0, 0), new T.Vector3(x0, 0, 0)]), new T.LineDashedMaterial({color: 0x1A3275, dashSize: 0.16, gapSize: 0.1}));
+    l.computeLineDistances(); v.scene.add(l); return l;
+  };
+  const cotaA = cota(XA), cotaB = cota(XB);
+  cotaA.position.y = -BAL.zBulbo(1, 1);
+  llenar(cA, XA, 1);
+  const llenarLarga = limitar(() => { llenar(cB, XB, estado.relLB); v.pedir(); });
+  function actualizar(c){
+    if(!c.has('relLB')) return;
+    const rel = estado.relLB;
+    zB.scale.z = rel;
+    cotaB.position.y = -BAL.zBulbo(1, rel);
+    llenarLarga();
+    v.fijarDist(14.5 + 1.05 * rel);
+  }
+  BAL.escuchar(actualizar);
+  actualizar(new Set(['relLB']));
+}
+
+/* ---------- 4. Ancho local en una corrida ---------- */
+function construirCorridas(){
+  const v = crearVista('vista-corridas', {fov: 32, objetivo: [0, 0, 0.1], theta: 0.15, phi: 0.62, dist: 10.5, azimut: [-0.95, 0.95], polar: [0.35, 1.25], aspecto: 1.4});
+  const C = BAL.CORR, OX = C.MW / 2, OZ = C.MH / 2;
+  const base = new T.Mesh(new T.PlaneGeometry(C.MW + 0.6, C.MH + 0.6), new T.MeshStandardMaterial({color: 0xF2F5F5, roughness: 1}));
+  base.rotation.x = -Math.PI / 2; base.position.y = -0.005; v.scene.add(base);
+  const grilla = [];
+  for(let x = 0; x <= C.MW; x += 0.5) grilla.push(x - OX, 0, -OZ, x - OX, 0, OZ);
+  for(let z = 0; z <= C.MH; z += 0.5) grilla.push(-OX, 0, z - OZ, OX, 0, z - OZ);
+  v.scene.add(lineas(grilla, 0xC8D2D4, 0.7));
+  const geoCaja = new T.BoxGeometry(1, 1, 1); geoCaja.translate(0, 0.5, 0);
+  const matBarra = new T.MeshStandardMaterial({roughness: 0.55});
+  const ESPESOR = 0.35;
+  let barras = null, contorno = null, elegida = null;
+  const aro = new T.Group(); v.scene.add(aro);
+  const marcador = new T.Mesh(new T.SphereGeometry(0.07, 20, 12), new T.MeshStandardMaterial({color: 0xE87000})); aro.add(marcador);
+  let anillo = null, disco = null;
+  function limpiarAro(){ aro.visible = false; elegida = null; v.pedir(); }
+  // Círculo del ancho local de una pieza dibujado sobre la corrida (anillo y disco translúcido).
+  const matAnillo = {}, matDisco = new T.MeshBasicMaterial({color: 0xffffff, transparent: true, opacity: 0.4, side: T.DoubleSide, depthWrite: false});
+  function circulo(p, grupo, color = 0x17222C){
+    matAnillo[color] ??= new T.MeshBasicMaterial({color, side: T.DoubleSide});
+    const an = new T.Mesh(new T.RingGeometry(Math.max(0.01, p.r - 0.025), p.r + 0.025, 72), matAnillo[color]);
+    const di = new T.Mesh(new T.CircleGeometry(p.r, 72), matDisco);
+    for(const o of [an, di]){ o.rotation.x = -Math.PI / 2; o.position.set(p.centro[0] - OX, ESPESOR + 0.06, p.centro[1] - OZ); grupo.add(o); }
+    return [an, di];
+  }
+  const fijos = new T.Group(); v.scene.add(fijos);
+  function dibujarExtremos(){
+    fijos.children.slice().forEach(o => { fijos.remove(o); if(o.geometry) o.geometry.dispose(); });
+    const {min, max} = BAL.extremosCorrida();
+    for(const [p, txt] of [[min, 'b mín'], [max, 'b máx']]){
+      circulo(p, fijos);
+      const e = etiqueta(txt, 'marca3d'); e.position.set(p.centro[0] - OX, ESPESOR + 0.35, p.centro[1] - OZ - p.r); fijos.add(e);
+    }
+  }
+  function rehacer(){
+    if(barras){ v.scene.remove(barras); barras.dispose(); }
+    if(contorno){ v.scene.remove(contorno); contorno.geometry.dispose(); }
+    const P = C.piezas, m = new T.Object3D();
+    barras = new T.InstancedMesh(geoCaja, matBarra, P.length);
+    P.forEach((p, i) => {
+      m.position.set(p.x + p.w / 2 - OX, 0, p.y + p.h / 2 - OZ); m.scale.set(p.w * 0.95, ESPESOR, p.h * 0.95); m.updateMatrix();
+      barras.setMatrixAt(i, m.matrix);
+    });
+    barras.instanceMatrix.needsUpdate = true;
+    pintarPiezas();
+    v.scene.add(barras);
+    const s = [];
+    for(const [a, b, c, d] of BAL.rectsCorrida()) s.push(a - OX, 0.01, b - OZ, c - OX, 0.01, b - OZ, c - OX, 0.01, b - OZ, c - OX, 0.01, d - OZ,
+      c - OX, 0.01, d - OZ, a - OX, 0.01, d - OZ, a - OX, 0.01, d - OZ, a - OX, 0.01, b - OZ);
+    contorno = lineas(s, 0x17222C, 0.9); v.scene.add(contorno);
+    dibujarExtremos();
+    limpiarAro();
+  }
+  function pintarPiezas(){
+    const col = new T.Color();
+    C.piezas.forEach((p, i) => barras.setColorAt(i, col.set(BAL.colorK(p.k))));
+    barras.instanceColor.needsUpdate = true;
+  }
+  const ray = new T.Raycaster(), ndc = new T.Vector2();
+  function apuntar(ev){
+    if(!barras) return;
+    const r = v.renderer.domElement.getBoundingClientRect();
+    ndc.set((ev.clientX - r.left) / r.width * 2 - 1, -(ev.clientY - r.top) / r.height * 2 + 1);
+    ray.setFromCamera(ndc, v.camera);
+    const hit = ray.intersectObject(barras)[0];
+    if(!hit) return;
+    marcador.position.copy(hit.point);
+    const p = C.piezas[hit.instanceId];
+    if(p !== elegida){
+      elegida = p;
+      if(anillo){ aro.remove(anillo, disco); anillo.geometry.dispose(); disco.geometry.dispose(); }
+      [anillo, disco] = circulo(p, aro, 0xE87000);
+      BAL.lecturaCorrida(p.b);
+    }
+    aro.visible = true;
+    v.pedir();
+  }
+  const lienzoC = v.renderer.domElement;
+  let abajo = null;
+  lienzoC.addEventListener('pointermove', ev => { if(ev.pointerType === 'mouse' && !ev.buttons) apuntar(ev); });
+  lienzoC.addEventListener('pointerdown', ev => { abajo = [ev.clientX, ev.clientY]; });
+  lienzoC.addEventListener('pointerup', ev => { if(abajo && Math.hypot(ev.clientX - abajo[0], ev.clientY - abajo[1]) < 8 && ev.pointerType !== 'mouse') apuntar(ev); abajo = null; });
+  BAL.escuchar(c => {
+    if(BAL.toca(c, 'geo', 'anchoC')) rehacer();
+    else if(BAL.toca(c, 'suelo', 'k30')){ pintarPiezas(); limpiarAro(); }
+  });
+  rehacer();
+}
+
+/* ---------- 5. Winkler contra suelo continuo ---------- */
+function construirWinkler(){
+  const v = crearVista('vista-winkler', {fov: 30, objetivo: [0, -1.0, -1.1], theta: 0.42, phi: 1.2, dist: 14, azimut: [-0.25, 1.65], polar: [0.6, 1.35], aspecto: 1.3});
+  const NR = 19, PASO = 1 / 3, MED = (NR - 1) * PASO / 2, BASE = -2.0, W0 = 0.6, NN = NR * NR, SEG = 10;
+  let ci = 9, cj = 9, m = estado.modelo === 'continuo' ? 1 : 0;
+  const wW = new Float32Array(NN), wC = new Float32Array(NN), w = new Float32Array(NN);
+  function objetivos(){
+    let gc = 0;
+    const g = new Float32Array(NN);
+    for(let j = 0; j < NR; j++) for(let i = 0; i < NR; i++){
+      let s = 0;
+      for(let b = -1; b <= 1; b++) for(let a = -1; a <= 1; a++){ const d = Math.hypot((i - ci - a) * PASO, (j - cj - b) * PASO); s += 1 / Math.max(d, 0.2); }
+      g[j * NR + i] = s;
+      wW[j * NR + i] = (Math.abs(i - ci) <= 1 && Math.abs(j - cj) <= 1) ? W0 : 0;
+    }
+    gc = g[cj * NR + ci];
+    for(let q = 0; q < NN; q++) wC[q] = W0 * g[q] / gc;
+  }
+  objetivos();
+  const meta = q => wW[q] * (1 - m) + wC[q] * m;
+  for(let q = 0; q < NN; q++) w[q] = meta(q);
+  const X = i => i * PASO - MED;
+  // Winkler: placas sobre resortes independientes.
+  const placas = new T.InstancedMesh(new T.BoxGeometry(PASO * 0.82, 0.05, PASO * 0.82), new T.MeshStandardMaterial({color: 0xD9C49A, roughness: 0.8, transparent: true}), NN);
+  const resPos = new Float32Array(NN * SEG * 2 * 3);
+  const geoRes = new T.BufferGeometry(); geoRes.setAttribute('position', new T.BufferAttribute(resPos, 3).setUsage(T.DynamicDrawUsage));
+  const resortes = new T.LineSegments(geoRes, new T.LineBasicMaterial({color: 0x2F78AE, transparent: true}));
+  // Suelo continuo: superficie, faldón y base.
+  const sup = new T.PlaneGeometry(MED * 2, MED * 2, NR - 1, NR - 1); sup.rotateX(-Math.PI / 2);
+  const colSup = new Float32Array(NN * 3); sup.setAttribute('color', new T.BufferAttribute(colSup, 3));
+  const matSup = new T.MeshStandardMaterial({vertexColors: true, side: T.DoubleSide, roughness: 0.85, transparent: true});
+  const supMesh = new T.Mesh(sup, matSup);
+  const borde = [];
+  for(let i = 0; i < NR; i++) borde.push(i);
+  for(let j = 1; j < NR; j++) borde.push(j * NR + NR - 1);
+  for(let i = NR - 2; i >= 0; i--) borde.push((NR - 1) * NR + i);
+  for(let j = NR - 2; j >= 0; j--) borde.push(j * NR);
+  const fPos = new Float32Array(borde.length * 6), fIdx = [];
+  borde.forEach((_, q) => { if(q > 0){ const a = 2 * (q - 1), b = 2 * q; fIdx.push(a, a + 1, b, b, a + 1, b + 1); } });
+  const geoF = new T.BufferGeometry(); geoF.setAttribute('position', new T.BufferAttribute(fPos, 3)); geoF.setIndex(fIdx);
+  const matF = new T.MeshStandardMaterial({color: 0xC9AE7A, roughness: 1, side: T.DoubleSide, transparent: true});
+  const faldon = new T.Mesh(geoF, matF);
+  const basePl = new T.Mesh(new T.BoxGeometry(MED * 2 + 0.3, 0.1, MED * 2 + 0.3), new T.MeshStandardMaterial({color: 0x8F99A1, roughness: 0.8}));
+  basePl.position.y = BASE - 0.05;
+  const carga = new T.Group();
+  const losa = new T.Mesh(new T.BoxGeometry(PASO * 3, 0.12, PASO * 3), new T.MeshStandardMaterial({color: 0xE87000, roughness: 0.55})); losa.position.y = 0.06;
+  carga.add(losa);
+  for(const [a, b] of [[-1, -1], [1, -1], [-1, 1], [1, 1], [0, 0]]){
+    const f = new T.Group();
+    const vara = new T.Mesh(new T.CylinderGeometry(0.025, 0.025, 0.8, 10), new T.MeshStandardMaterial({color: 0xE87000})); vara.position.y = 0.72;
+    const punta = new T.Mesh(new T.ConeGeometry(0.08, 0.2, 14), new T.MeshStandardMaterial({color: 0xE87000})); punta.rotation.x = Math.PI; punta.position.y = 0.24;
+    f.add(vara, punta); f.position.set(a * PASO * 0.9, 0, b * PASO * 0.9); carga.add(f);
+  }
+  // Corte por el centro de la carga: se ve de frente cómo bajan los resortes o el perfil de la cubeta.
+  v.renderer.localClippingEnabled = true;
+  const corte = new T.Plane(new T.Vector3(0, 0, -1), 0);
+  const tapaPos = new Float32Array(NR * 6), tapaIdx = [];
+  for(let i = 1; i < NR; i++){ const a = 2 * (i - 1), b = 2 * i; tapaIdx.push(a, a + 1, b, b, a + 1, b + 1); }
+  const geoTapa = new T.BufferGeometry(); geoTapa.setAttribute('position', new T.BufferAttribute(tapaPos, 3)); geoTapa.setIndex(tapaIdx);
+  const matTapa = new T.MeshStandardMaterial({color: 0xCDB283, roughness: 1, side: T.DoubleSide, transparent: true});
+  const tapa = new T.Mesh(geoTapa, matTapa);
+  for(const mat of [placas.material, resortes.material, matSup, matF, basePl.material]) mat.clippingPlanes = [corte];
+  carga.traverse(o => { if(o.material) o.material.clippingPlanes = [corte]; });
+  v.scene.add(placas, resortes, supMesh, faldon, tapa, basePl, carga);
+  const etq = v.cont.querySelector('.tag');
+  const o3 = new T.Object3D(), cSuelo = new T.Color(0xE2CFA4), cHondo = new T.Color(0x3A7FC0), cTmp = new T.Color();
+  function aplicar(){
+    for(let j = 0; j < NR; j++) for(let i = 0; i < NR; i++){
+      const q = j * NR + i, top = -w[q], x = X(i), z = X(j);
+      o3.position.set(x, top + 0.025, z); o3.updateMatrix(); placas.setMatrixAt(q, o3.matrix);
+      const off = q * SEG * 6;
+      for(let s = 0; s < SEG; s++){
+        const y0 = top - (top - BASE) * s / SEG, y1 = top - (top - BASE) * (s + 1) / SEG;
+        const a0 = s === 0 ? 0 : (s % 2 ? 0.08 : -0.08), a1 = s === SEG - 1 ? 0 : ((s + 1) % 2 ? 0.08 : -0.08);
+        resPos.set([x + a0, y0, z, x + a1, y1, z], off + s * 6);
+      }
+      sup.attributes.position.setY(q, top);
+      cTmp.copy(cSuelo).lerp(cHondo, Math.min(1, w[q] / W0)); colSup.set([cTmp.r, cTmp.g, cTmp.b], q * 3);
+    }
+    const zc = X(cj) + PASO * 0.5; corte.constant = zc;
+    for(let i = 0; i < NR; i++){ const y = -(w[cj * NR + i] + w[Math.min(NR - 1, cj + 1) * NR + i]) / 2; tapaPos.set([X(i), y, zc, X(i), BASE, zc], i * 6); }
+    geoTapa.attributes.position.needsUpdate = true; geoTapa.computeVertexNormals(); matTapa.opacity = 0.92 * m; tapa.visible = m > 0.02;
+    borde.forEach((idx, q) => { fPos.set([X(idx % NR), -w[idx], X((idx / NR) | 0), X(idx % NR), BASE, X((idx / NR) | 0)], q * 6); });
+    placas.instanceMatrix.needsUpdate = true; geoRes.attributes.position.needsUpdate = true;
+    sup.attributes.position.needsUpdate = true; sup.attributes.color.needsUpdate = true; sup.computeVertexNormals();
+    geoF.attributes.position.needsUpdate = true; geoF.computeVertexNormals();
+    placas.material.opacity = 1 - m; placas.visible = m < 0.98;
+    resortes.material.opacity = 0.12 + 0.88 * (1 - m);
+    matSup.opacity = m; supMesh.visible = m > 0.02;
+    matF.opacity = 0.75 * m; faldon.visible = m > 0.02;
+    carga.position.set(X(ci), -Math.max(w[cj * NR + ci], w[cj * NR + ci + 1], w[(cj + 1) * NR + ci]), X(cj));
+  }
+  const rotular = () => { etq.textContent = estado.modelo === 'winkler' ? 'Winkler: solo bajan los resortes cargados' : 'Suelo real: se forma una cubeta'; };
+  v.alCuadro = () => {
+    const mm = estado.modelo === 'continuo' ? 1 : 0;
+    let mueve = Math.abs(mm - m) > 1e-3;
+    m += (mm - m) * 0.14;
+    for(let q = 0; q < NN; q++){ const d = meta(q) - w[q]; if(Math.abs(d) > 2e-4) mueve = true; w[q] += d * 0.14; }
+    if(mueve) aplicar();
+    return mueve;
+  };
+  function saltar(){ m = estado.modelo === 'continuo' ? 1 : 0; for(let q = 0; q < NN; q++) w[q] = meta(q); aplicar(); v.pedir(); }
+  const ir = () => BAL.REDUCIDO ? saltar() : v.animar();
+  const ray = new T.Raycaster(), ndc = new T.Vector2(), plano = new T.Plane(new T.Vector3(0, 1, 0), 0), punto = new T.Vector3();
+  const lienzoW = v.renderer.domElement;
+  let abajo = null;
+  lienzoW.addEventListener('pointerdown', ev => { abajo = [ev.clientX, ev.clientY]; });
+  lienzoW.addEventListener('pointerup', ev => {
+    if(!abajo || Math.hypot(ev.clientX - abajo[0], ev.clientY - abajo[1]) > 8){ abajo = null; return; }
+    abajo = null;
+    const r = lienzoW.getBoundingClientRect();
+    ndc.set((ev.clientX - r.left) / r.width * 2 - 1, -(ev.clientY - r.top) / r.height * 2 + 1);
+    ray.setFromCamera(ndc, v.camera);
+    if(!ray.ray.intersectPlane(plano, punto)) return;
+    ci = Math.min(NR - 2, Math.max(1, Math.round((punto.x + MED) / PASO)));
+    cj = Math.min(NR - 2, Math.max(1, Math.round((punto.z + MED) / PASO)));
+    objetivos(); ir();
+  });
+  BAL.escuchar(c => { if(c.has('modelo')){ rotular(); ir(); } });
+  rotular(); aplicar(); v.pedir();
+}
+
+if(T && conWebGL){
+  const constructores = {'vista-bulbo': construirBulbo, 'vista-contacto': construirContacto, 'vista-forma': construirGemelos,
+    'vista-corridas': construirCorridas, 'vista-winkler': construirWinkler};
+  const io = new IntersectionObserver(entradas => entradas.forEach(e => {
+    if(!e.isIntersecting) return;
+    io.unobserve(e.target);
+    try { constructores[e.target.id](); }
+    catch(err){ console.error(err); e.target.classList.add('sin3d'); e.target.querySelector('.aviso').textContent = 'No se pudo dibujar esta vista 3D.'; }
+  }), {rootMargin: '400px 0px'});
+  vistas.forEach(v => io.observe(v));
+}
+</script>
+</body>
+</html>
