@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aislación sísmica · Recursos de aprendizaje IEC</title>
+<meta name="description" content="Guía interactiva de la aislación sísmica: período, amortiguamiento, el aislador bilineal, los cuatro desplazamientos de NCh2745, la planta, la goma y el rango de propiedades.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --papel:#EDF1F0; --papel-2:#DEE6E5; --tarjeta:#FFFFFF;
+  --tinta:#17222C; --tinta-2:#56646F; --regla:#C8D2D4;
+  --iec:#E87000; --iec-hondo:#A94F00;
+  --iso-3:#2463AE;
+  --goma:#3B3F45; --plomo:#8E99A3; --mal:#B42318;
+  --sombra:0 1px 2px rgba(23,34,44,.06),0 14px 34px rgba(23,34,44,.09);
+  --gutter:clamp(16px,4vw,32px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;overflow-x:clip;background-color:var(--papel);color:var(--tinta);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:16px;line-height:1.55;
+  background-image:linear-gradient(var(--papel-2) 1px,transparent 1px),linear-gradient(90deg,var(--papel-2) 1px,transparent 1px);
+  background-size:32px 32px;background-position:-1px -1px}
+.envoltura{max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+a{color:var(--iec-hondo)}
+button,input{font:inherit}
+button:focus-visible,input:focus-visible,a:focus-visible,svg g[tabindex]:focus-visible{outline:2px solid var(--iec);outline-offset:2px}
+
+/* ---------- Barra superior ---------- */
+.barra{position:sticky;top:0;z-index:30;background:rgba(237,241,240,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--regla)}
+.barra .envoltura{display:flex;align-items:center;gap:24px;min-height:48px}
+.marca{font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-2);
+  white-space:nowrap;text-decoration:none}
+.marca b{color:var(--iec);font-weight:600;letter-spacing:.2em}
+.barra nav{display:flex;gap:18px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.barra nav::-webkit-scrollbar{display:none}
+.barra nav a{font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--tinta-2);
+  text-decoration:none;white-space:nowrap;padding:8px 0}
+.barra nav a:hover{color:var(--tinta)}
+.embebida .barra{display:none}
+
+/* ---------- Tipografía ---------- */
+h1,h2,h3{font-family:'Archivo',sans-serif;font-stretch:125%;margin:0;letter-spacing:-.012em}
+h1{font-weight:850;font-size:clamp(30px,3.4vw,48px);line-height:.98;font-stretch:108%}
+h1 em{font-style:normal;color:var(--iec)}
+h2{font-weight:800;font-size:clamp(26px,2.7vw,37px);line-height:1.04;margin-bottom:16px;font-stretch:110%}
+h3{font-weight:750;font-size:19px;font-stretch:112%;line-height:1.15}
+.ceja{font:500 11.5px/1.2 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--iso-3);
+  margin-bottom:14px;display:flex;gap:10px;align-items:center}
+.ceja::before{content:"";width:22px;height:2px;background:currentColor;flex:none}
+p{margin:0 0 14px;max-width:64ch}
+.lead{font-size:18px;color:var(--tinta-2)}
+.ayuda{font-size:13.5px;color:var(--tinta-2);margin:10px 0 0}
+
+/* ---------- Controles ---------- */
+.controles{display:grid;gap:16px;margin-top:22px}
+.control{max-width:440px}
+.control label,.control .rot{display:flex;justify-content:space-between;gap:12px;font:500 12px/1.3 'IBM Plex Mono',monospace;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:8px}
+.control output{color:var(--tinta);font-weight:600;white-space:nowrap;text-transform:none;letter-spacing:0}
+.control .sub{text-transform:none}
+input[type=range]{width:100%;accent-color:var(--iec);height:26px;margin:0}
+.segmentado{display:inline-flex;flex-wrap:wrap;border:1px solid var(--regla);border-radius:14px;background:var(--tarjeta);padding:3px;gap:2px;max-width:100%}
+.segmentado button{border:0;background:transparent;font:500 13.5px/1.2 'IBM Plex Sans',sans-serif;color:var(--tinta-2);padding:9px 15px;
+  border-radius:11px;cursor:pointer;transition:background .18s,color .18s;min-height:38px}
+.segmentado button[aria-pressed=true]{background:var(--tinta);color:#fff}
+.segmentado button:hover:not([aria-pressed=true]){color:var(--tinta)}
+
+/* ---------- Hero ---------- */
+.heroe{padding:40px 0 34px}
+.heroe .rejilla{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"texto vista" "mando vista";
+  grid-template-rows:auto 1fr;column-gap:44px;row-gap:0;align-items:start}
+.h-texto{grid-area:texto}.h-vista{grid-area:vista}.h-mando{grid-area:mando}
+.formula{display:inline-flex;align-items:center;gap:14px;margin:22px 0 10px;padding:12px 18px;background:var(--tarjeta);
+  border:1px solid var(--regla);border-radius:12px;box-shadow:var(--sombra);flex-wrap:wrap}
+.formula math{font-size:1.6em}
+.formula .def{font:400 13px/1.4 'IBM Plex Mono',monospace;color:var(--tinta-2)}
+.lienzo{background:var(--tarjeta);border:1px solid var(--regla);border-radius:18px;box-shadow:var(--sombra);padding:8px 10px 4px;overflow:hidden}
+.resultado{margin-top:14px;display:grid;grid-template-columns:minmax(0,1fr);background:var(--tarjeta);border:1px solid var(--regla);
+  border-left:4px solid var(--iec);border-radius:14px;box-shadow:var(--sombra);overflow:hidden}
+.res-k{padding:12px 18px 10px;border-bottom:1px solid var(--regla);font-size:14.5px}
+.res-k p{margin:0 0 4px;max-width:none}
+.res-otros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;padding:12px 18px}
+.res-item .tit{display:block;font:500 11.5px/1.3 'IBM Plex Mono',monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:4px}
+.res-item b{display:block;font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:24px;line-height:1.05}
+.res-item small{display:block;font:500 12px/1.35 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:4px}
+.resultado > a{grid-column:1 / -1;padding:8px 16px;border-top:1px solid var(--regla);font:500 12.5px 'IBM Plex Mono',monospace}
+.pasos-texto{margin:0 0 14px;padding-left:22px;max-width:64ch}
+.pasos-texto li{margin-bottom:8px;padding-left:4px}
+.pasos-texto li::marker{font:600 14px 'IBM Plex Mono',monospace;color:var(--iec-hondo)}
+/* Fórmulas fuera del texto corrido: el nombre a la izquierda y la ecuación a la derecha. */
+.formulas{margin:14px 0 6px;padding:4px 16px;background:var(--tarjeta);border:1px solid var(--regla);border-left:3px solid var(--iso-3);
+  border-radius:0 12px 12px 0;max-width:64ch}
+.formulas div{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 18px;padding:9px 0;border-top:1px dashed var(--regla)}
+.formulas div:first-child{border-top:0}
+.formulas dt{font-size:14.5px;line-height:1.4;color:var(--tinta-2)}
+.formulas dd{margin:0;max-width:100%;overflow-x:auto}
+.formulas math[display=block]{margin:0}
+.donde{font-size:13.5px;color:var(--tinta-2);margin:0 0 16px;max-width:64ch}
+.puntos{margin:0 0 14px;padding-left:20px;max-width:64ch}
+.puntos li{margin-bottom:7px;padding-left:2px}
+.puntos li::marker{color:var(--iec)}
+.nota .puntos,.ayuda .puntos{margin:6px 0 0;padding-left:18px}
+.nota .puntos li,.ayuda .puntos li{margin-bottom:4px}
+.ayuda.como-leer{max-width:64ch}
+
+/* ---------- Secciones ---------- */
+section.bloque{padding:64px 0;border-top:1px solid var(--regla)}
+.dos{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.3fr);gap:44px;align-items:start}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--regla);border-radius:16px;box-shadow:var(--sombra);padding:18px}
+svg.grafico{display:block;width:100%;height:auto}
+/* Figuras y tablas numeradas: se citan por número y el enlace salta a ellas y las marca un momento. */
+figure.fig{margin:0;scroll-margin-top:64px;border-radius:12px}
+.tarjeta figure.fig + figure.fig{margin-top:16px;padding-top:12px;border-top:1px solid var(--regla)}
+figcaption{font:400 12.5px/1.45 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:10px}
+figcaption b{color:var(--tinta);font-weight:600}
+figcaption.arriba{margin:16px 0 8px}
+.lienzo figcaption{padding:0 6px 8px}
+a.ref,a.fuente{color:var(--iec-hondo);text-underline-offset:2px}
+a.fuente::after{content:"\00a0↗";font-size:.85em}
+@keyframes destello{0%,55%{box-shadow:0 0 0 3px var(--iec)}100%{box-shadow:0 0 0 3px rgba(232,112,0,0)}}
+figure.fig.destacada,.gl.destacada{animation:destello 1.8s ease-out}
+/* Términos del glosario: subrayado de puntos, definición al pasar el mouse y salto con un clic. */
+a.term{color:inherit;text-decoration:underline dotted var(--iso-3);text-underline-offset:3px;cursor:help}
+a.term:hover{color:var(--iso-3)}
+#glosario h3{margin:30px 0 4px}
+.glosario{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px;margin:0}
+.gl{padding:10px 8px;border-top:1px dashed var(--regla);scroll-margin-top:64px;border-radius:8px}
+.gl dt{font:600 14px/1.35 'IBM Plex Mono',monospace;color:var(--tinta)}
+.gl dt span{font:500 14px 'IBM Plex Sans',sans-serif;color:var(--iso-3);margin-left:6px}
+.gl dd{margin:4px 0 0;font-size:14.5px;color:var(--tinta-2)}
+.globo{position:absolute;z-index:40;width:max-content;max-width:min(340px,calc(100vw - 16px));background:var(--tinta);color:#D6DEE2;
+  border-radius:12px;padding:10px 14px 11px;font-size:14px;line-height:1.45;box-shadow:0 10px 28px rgba(23,34,44,.3)}
+.globo b{display:block;color:#fff;font:600 13.5px/1.35 'IBM Plex Mono',monospace;margin-bottom:4px}
+.globo b span{font:500 13.5px 'IBM Plex Sans',sans-serif;color:var(--iec);margin-left:6px}
+.globo a{display:block;margin-top:8px;color:var(--iec);font:500 13px 'IBM Plex Mono',monospace}
+.volver{position:fixed;right:20px;bottom:20px;z-index:40;border:0;border-radius:999px;background:var(--tinta);color:#fff;padding:11px 18px;
+  font:500 14px/1.2 'IBM Plex Sans',sans-serif;box-shadow:0 8px 24px rgba(23,34,44,.3);cursor:pointer}
+.volver:hover{background:#26343F}
+.leyenda{display:flex;flex-wrap:wrap;gap:8px 18px;font:500 12px 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:10px}
+.leyenda i{display:inline-block;width:20px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.leyenda i.circ{width:11px;height:11px;border-radius:50%}
+.cifras{display:flex;gap:26px;flex-wrap:wrap;margin:18px 0 4px}
+.cifra .n{font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:30px;line-height:1}
+.cifra .l{font:500 11.5px/1.35 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:6px;max-width:30ch}
+.cifra.mal .n{color:var(--mal)}
+.nota{border-left:3px solid var(--iec);padding:10px 14px;background:rgba(232,112,0,.06);border-radius:0 10px 10px 0;font-size:14.5px;
+  max-width:64ch;margin-top:14px}
+.nota b{color:var(--iec-hondo)}
+.nota.fria{border-left-color:var(--iso-3);background:rgba(36,99,174,.06)}
+.nota.fria b{color:var(--iso-3)}
+.ec-rot{font:600 12.5px/1.35 'IBM Plex Mono',monospace;letter-spacing:.01em;color:var(--tinta-2);margin-top:22px}
+.ec-filas{display:grid;grid-template-columns:auto auto;justify-content:start;column-gap:.3em;row-gap:8px;align-items:center;margin:8px 0 4px;
+  max-width:100%;overflow-x:auto}
+.ec-filas div:first-child{text-align:right}
+math{font-family:'STIX Two Math','Cambria Math',math;font-size:1.3em}
+.ec-res{color:var(--iec)}
+.ec-uni{font-size:.8em;color:var(--tinta-2)}
+.lecturas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;margin-top:16px}
+.lectura .tit sub,.res-item .tit sub{text-transform:none}
+.lectura .tit{display:block;font:500 11.5px/1.3 'IBM Plex Mono',monospace;letter-spacing:.05em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:4px}
+.lectura b{display:block;font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:22px;line-height:1.05}
+.lectura small{display:block;font:500 12px/1.35 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:3px}
+.lectura.mal b{color:var(--mal)}
+.tabla2{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tabla2 span{font:500 12px/1.2 'IBM Plex Mono',monospace;padding:6px 8px;border:1px solid var(--regla);border-radius:8px;background:var(--tarjeta);
+  color:var(--tinta-2);text-align:center}
+.tabla2 span b{display:block;color:var(--tinta);font-size:13px;margin-top:2px}
+.tabla2 span.cerca{border-color:var(--iec);box-shadow:inset 0 0 0 1px var(--iec)}
+
+/* ---------- Resumen ---------- */
+table.resumen{border-collapse:collapse;width:100%;font-size:15px;background:var(--tarjeta);border-radius:14px;overflow:hidden;box-shadow:var(--sombra)}
+table.resumen th{font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:16px;text-align:left;padding:14px 18px;border-bottom:2px solid var(--tinta)}
+table.resumen th.sube{color:var(--iec-hondo)} table.resumen th.baja{color:var(--iso-3)}
+table.resumen td{padding:11px 18px;border-bottom:1px solid var(--regla);vertical-align:top;width:50%}
+table.resumen tr:last-child td{border-bottom:0}
+.manda{margin-top:28px;display:flex;gap:22px;align-items:center;background:var(--tinta);color:#fff;border-radius:16px;padding:22px 26px}
+.manda .grande{font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:900;font-size:clamp(22px,2.6vw,32px);line-height:1;color:var(--iec);flex:none;max-width:12ch}
+.manda p{margin:0;color:#D6DEE2;max-width:72ch}
+footer{padding:30px 0 50px;border-top:1px solid var(--regla);font:500 12px/1.6 'IBM Plex Mono',monospace;color:var(--tinta-2)}
+footer b{color:var(--iec)}
+
+@media (max-width:900px){
+  .heroe{padding-top:26px}
+  .heroe .rejilla{grid-template-columns:minmax(0,1fr);grid-template-areas:"texto" "vista" "mando";row-gap:18px}
+  .dos{grid-template-columns:minmax(0,1fr);gap:24px}
+  .glosario{grid-template-columns:minmax(0,1fr)}
+  .barra .envoltura{flex-wrap:wrap;gap:0;padding-top:10px}
+  .barra nav{width:100%;margin:0;padding:2px 0 4px}
+  section.bloque{padding:48px 0}
+}
+@media (max-width:560px){
+  h1{font-stretch:108%}
+  h2{font-stretch:112%}
+  .lead{font-size:16.5px}
+  .segmentado{display:flex}
+  .segmentado button{flex:1 1 auto;padding:9px 10px}
+  .res-otros,.lecturas{grid-template-columns:minmax(0,1fr)}
+  .formulas div{grid-template-columns:minmax(0,1fr)}
+  .manda{flex-direction:column;align-items:flex-start;gap:12px}
+  table.resumen{font-size:14px}
+  table.resumen th,table.resumen td{padding:10px 12px}
+  math{font-size:1.15em}
+  .tarjeta{padding:14px 12px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="barra"><div class="envoltura">
+  <a class="marca" href="./"><b>IEC</b> · Recursos de aprendizaje</a>
+  <nav aria-label="Secciones">
+    <a href="#periodo">Período</a><a href="#amortiguamiento">Amortiguamiento</a><a href="#bilineal">Aislador</a>
+    <a href="#desplazamientos">Desplazamientos</a><a href="#planta">Planta</a><a href="#goma">Goma</a><a href="#rango">Rango</a><a href="#resumen">Resumen</a><a href="#glosario">Glosario</a>
+  </nav>
+</div></div>
+
+<header class="heroe"><div class="envoltura rejilla">
+  <div class="h-texto">
+    <div class="ceja">Aislación sísmica</div>
+    <h1>Aislar es cambiar aceleración por <em>desplazamiento.</em></h1>
+    <div class="formula" aria-label="Período de la estructura aislada">
+      <math><mi>T</mi><mo>=</mo><mn>2</mn><mi>π</mi><msqrt><mfrac><mi>W</mi><mrow><mi>K</mi><mo>·</mo><mi>g</mi></mrow></mfrac></msqrt></math>
+      <span class="def">período de la estructura aislada:<br>el <a class="term" href="#gl-W">peso</a> sobre la <a class="term" href="#gl-KD">rigidez</a> de los aisladores</span>
+    </div>
+    <p class="lead">Entre la fundación y el edificio va una <a class="term" href="#gl-interfaz">capa de aisladores</a> mucho más flexible que la estructura. El <a class="term" href="#gl-T">período</a> se alarga, el suelo le transmite menos aceleración y el desplazamiento se junta en los aisladores: el edificio se mueve casi como un bloque.</p>
+  </div>
+  <div class="h-vista">
+    <figure class="fig lienzo" id="fig-1">
+      <svg id="g-heroe" class="grafico" viewBox="0 0 640 380" role="img" aria-label="Un edificio de base fija y uno aislado, oscilando con sus períodos"></svg>
+      <figcaption><b>Figura 1.</b> Edificio de base fija y edificio aislado, cada uno oscilando con su período. Desplazamientos exagerados, con la misma escala en los dos.</figcaption>
+    </figure>
+    <div class="resultado">
+      <div class="res-k" id="heroe-modos"></div>
+      <div class="res-otros">
+        <div class="res-item"><span class="tit">Aceleración del edificio</span><b id="heroe-acel">–</b><small id="heroe-acel-l"></small></div>
+        <div class="res-item"><span class="tit">Desplazamiento</span><b id="heroe-desp">–</b><small id="heroe-desp-l"></small></div>
+      </div>
+      <a class="ref" href="#fig-2">Ver el espectro en la Figura 2</a>
+    </div>
+  </div>
+  <div class="h-mando">
+    <div class="controles">
+      <div class="control">
+        <label for="Tf">Período de base fija <output id="Tf-out">1,00 s</output></label>
+        <input id="Tf" type="range" min="0.2" max="2" step="0.05" value="1">
+      </div>
+      <div class="control">
+        <label for="TD"><span>Período aislado T<sub class="sub">D</sub></span> <output id="TD-out">3,00 s</output></label>
+        <input id="TD" type="range" min="1.5" max="4.5" step="0.05" value="3">
+      </div>
+      <div class="control">
+        <span class="rot">Zona sísmica</span>
+        <div class="segmentado" role="group" aria-label="Zona sísmica">
+          <button data-zona data-v="1" aria-pressed="false">1 · Z = 3/4</button>
+          <button data-zona data-v="2" aria-pressed="true">2 · Z = 1</button>
+          <button data-zona data-v="3" aria-pressed="false">3 · Z = 5/4</button>
+        </div>
+      </div>
+      <div class="control">
+        <span class="rot">Suelo: tipo de NCh2745 · clase del DS61</span>
+        <div class="segmentado" role="group" aria-label="Suelo">
+          <button data-suelo data-v="I" aria-pressed="false">I · A</button>
+          <button data-suelo data-v="II" aria-pressed="true">II · B</button>
+          <button data-suelo data-v="III" aria-pressed="false">III · C y D</button>
+        </div>
+      </div>
+    </div>
+    <div class="ayuda como-leer"><b>Cómo leer esta guía</b><ul class="puntos"><li>La <a class="ref" href="#fig-1">Figura&nbsp;1</a> usa un modelo de dos grados de libertad (<a class="fuente" href="fuentes/lindenberg-2006-control-estructural-de-vibraciones.pdf#page=2" target="_blank" rel="noopener">capítulo 14 del apunte de TGB</a>): la superestructura como una masa sobre su rigidez de base fija, y la losa de aislación, con un cuarto de esa masa, sobre los aisladores. Muestra la respuesta del <a class="term" href="#gl-modos">modo 1</a> con el <a class="term" href="#gl-espectro">espectro de NCh2745</a> al 5&nbsp;%, sin el amortiguamiento de los aisladores (<a class="ref" href="#fig-4">Figura&nbsp;4</a>).</li><li>Los números entre paréntesis, como (7.3.1), son cláusulas de NCh2745:2013.</li><li>Un término subrayado con puntos muestra su definición al pasar el mouse, o con un toque en el celular. Todos están en el <a href="#glosario">Glosario</a>.</li><li>Después de saltar a una figura o al glosario, el botón «Volver a donde estaba» devuelve al punto de lectura.</li><li>La <a class="ref" href="#tab-2">Tabla&nbsp;2</a>, al final, resume lo que sube y lo que baja el desplazamiento.</li></ul></div>
+  </div>
+</div></header>
+
+<section class="bloque" id="periodo"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Variable · período</div>
+    <h2>Aislar es alargar el período.</h2>
+    <p>El <a class="term" href="#gl-espectro">espectro de diseño</a> de NCh2745 (8.4.1.1) se multiplica por el <a class="term" href="#gl-Z">factor de zona Z</a>: 3/4, 1 o 5/4 según la <a class="term" href="#gl-zona">zona sísmica</a>. Al alargar el período:</p><ul class="puntos"><li>la <a class="term" href="#gl-Sa">aceleración</a> baja: pasado el <a class="term" href="#gl-Tesq">plato</a>, cae como 1/T y después como 1/T² (<a class="ref" href="#fig-2">Figura&nbsp;2</a>);</li><li>el desplazamiento sube, hasta la rama de desplazamiento del espectro, donde se queda en un techo (<a class="ref" href="#fig-3">Figura&nbsp;3</a>).</li></ul>
+    <p><b>El techo es el desplazamiento del suelo.</b></p><ul class="puntos"><li>Empieza en <a class="term" href="#gl-Tesq">T<sub>d</sub></a>: entre 1,58 y 2,51 s, según el suelo.</li><li>Desde ahí, el <a class="term" href="#gl-Sd">espectro de desplazamiento</a> vale <a class="term" href="#gl-aDD">a<sub>D</sub>·D·Z</a>: 20, 30 o 33 cm por Z.</li><li>Son los mismos números del coeficiente <a class="term" href="#gl-CD">C<sub>D</sub></a> de 7.3.1 (200 Z, 300 Z y 330 Z mm). El desplazamiento de diseño mínimo es ese techo dividido por <a class="term" href="#gl-BD">B<sub>D</sub></a>, sin el período:</li></ul><dl class="formulas"><div><dt><a class="term" href="#gl-DD">Desplazamiento de diseño</a> mínimo (7.3.1)</dt><dd><math display="block"><msub><mi>D</mi><mtext>D</mtext></msub><mo>=</mo><mfrac><mrow><msub><mi>C</mi><mtext>D</mtext></msub></mrow><mrow><msub><mi>B</mi><mtext>D</mtext></msub></mrow></mfrac></math></dd></div></dl>
+    <div class="nota"><b>Prediseño.</b> Un criterio es apuntar a un <a class="term" href="#gl-TD">T<sub>D</sub></a> entre 2,5 y 3 veces el período de base fija: la franja de las figuras <a class="ref" href="#fig-2">2</a> y <a class="ref" href="#fig-3">3</a>, donde un clic cambia el período aislado. Para usar el análisis estático, NCh2745 pide además T<sub>D</sub> mayor que 3 veces ese período (6.5).</div>
+    <div class="nota fria"><b>No siempre conviene.</b><ul class="puntos"><li>La aislación rinde en estructuras rígidas sobre suelo firme.</li><li>Con un registro de mucha energía en períodos largos, alargar el período puede subir la aceleración: en el ejemplo del <a class="fuente" href="fuentes/lindenberg-2006-control-estructural-de-vibraciones.pdf#page=3" target="_blank" rel="noopener">apunte de TGB</a>, con el registro SCT de México 1985, de 0,3 g a 0,7 g.</li><li>NCh2745 exige un <a class="term" href="#gl-sitio">espectro de sitio</a> en <a class="term" href="#gl-suelo">suelo tipo IV</a> (E o F del DS61), a menos de 10 km de una falla activa o con un período aislado mayor que 3,5 s (8.4.1.1): la zona gris de las figuras.</li></ul></div>
+  </div>
+  <div class="tarjeta">
+    <figure class="fig" id="fig-2">
+      <svg id="g-sa" class="grafico" viewBox="0 0 600 230" role="img" aria-label="Espectro de pseudoaceleración de NCh2745 con los períodos de base fija y aislado"></svg>
+      <div class="leyenda">
+        <span><i class="circ" style="background:var(--iso-3)"></i>base fija</span>
+        <span><i class="circ" style="background:var(--iec)"></i>aislado</span>
+        <span><i style="background:rgba(232,112,0,.22);height:10px"></i>prediseño: 2,5 a 3 veces</span>
+        <span><i style="background:rgba(86,100,111,.14);height:10px"></i>espectro de sitio</span>
+      </div>
+      <figcaption><b>Figura 2.</b> Espectro de pseudoaceleración de NCh2745 al 5&nbsp;%, para la zona y el suelo elegidos arriba.</figcaption>
+    </figure>
+    <figure class="fig" id="fig-3">
+      <svg id="g-sd" class="grafico" viewBox="0 0 600 200" role="img" aria-label="Espectro de desplazamiento de NCh2745 con los períodos de base fija y aislado"></svg>
+      <figcaption><b>Figura 3.</b> Espectro de desplazamiento al 5&nbsp;%, con los colores de la <a class="ref" href="#fig-2">Figura&nbsp;2</a>. Sobre T<sub>d</sub> se queda en el techo a<sub>D</sub>·D·Z.</figcaption>
+    </figure>
+    <div class="cifras">
+      <div class="cifra"><div class="n" id="p-acel">–</div><div class="l">Sa aislado / Sa de base fija, del espectro</div></div>
+      <div class="cifra"><div class="n" id="p-sd">–</div><div class="l" id="p-sd-l">desplazamiento espectral aislado</div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="bloque" id="amortiguamiento"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Variable · amortiguamiento</div>
+    <h2>El amortiguamiento achica el desplazamiento.</h2>
+    <p>El núcleo de plomo, la goma de alto amortiguamiento o la fricción disipan energía en cada ciclo. NCh2745 lo cuenta dividiendo el espectro por <a class="term" href="#gl-BD">B<sub>D</sub></a>, que crece con el <a class="term" href="#gl-beta">amortiguamiento efectivo β</a> (<a class="ref" href="#tab-1">Tabla&nbsp;1</a>).</p>
+    <p><b>Dos amortiguamientos en un mismo análisis</b> (8.6.3.1, <a class="ref" href="#fig-4">Figura&nbsp;4</a>):</p><ul class="puntos"><li>los <a class="term" href="#gl-modos">modos fundamentales de la estructura aislada</a> usan el espectro dividido por B<sub>D</sub>;</li><li>los demás modos, el amortiguamiento de la superestructura.</li></ul><p>B<sub>D</sub> no puede pasar el de β = 30&nbsp;% (8.6.3.2): por eso el control llega hasta ahí.</p>
+    <div class="control" style="margin-top:18px">
+      <label for="betaD"><span>Amortiguamiento efectivo β<sub class="sub">D</sub></span> <output id="betaD-out">15&nbsp;%</output></label>
+      <input id="betaD" type="range" min="2" max="30" step="0.5" value="15">
+    </div>
+    <figure class="fig" id="tab-1">
+      <figcaption class="arriba"><b>Tabla 1.</b> B<sub>D</sub> según β, de NCh2745 (7.3.1). Marcadas, las filas que usa el β elegido.</figcaption>
+      <div class="tabla2" id="tabla2"></div>
+    </figure>
+    <div class="ec-rot">Desplazamiento de diseño mínimo (7.3.1)</div>
+    <div class="ec-filas" id="ec-dd"></div>
+  </div>
+  <div class="tarjeta">
+    <figure class="fig" id="fig-4">
+      <svg id="g-b" class="grafico" viewBox="0 0 600 300" role="img" aria-label="Espectro al 5 % y espectro dividido por BD"></svg>
+      <div class="leyenda">
+        <span><i style="background:var(--tinta-2)"></i>5&nbsp;%: modos de la superestructura</span>
+        <span><i style="background:var(--iec)"></i>÷ B<sub>D</sub>: modos aislados</span>
+      </div>
+      <figcaption><b>Figura 4.</b> El espectro de la <a class="ref" href="#fig-2">Figura&nbsp;2</a> al 5&nbsp;% y dividido por B<sub>D</sub>. Un clic cambia el período aislado.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section class="bloque" id="bilineal"><div class="envoltura dos">
+  <div>
+    <div class="ceja">El aislador</div>
+    <h2>Un aislador con plomo es una curva bilineal.</h2>
+    <p>El aislador con núcleo de plomo suma dos aportes (<a class="ref" href="#fig-5">Figura&nbsp;5</a>):</p><dl class="formulas"><div><dt><a class="term" href="#gl-Kp">Rigidez de postfluencia</a>, la de la goma</dt><dd><math display="block"><msub><mi>K</mi><mtext>p</mtext></msub><mo>=</mo><mfrac><mrow><mi>A</mi><mo>·</mo><mi>G</mi></mrow><mrow><msub><mi>H</mi><mtext>r</mtext></msub></mrow></mfrac></math></dd></div><div><dt><a class="term" href="#gl-Q">Resistencia característica</a>, la del plomo</dt><dd><math display="block"><mi>Q</mi><mo>=</mo><msub><mi>A</mi><mtext>p</mtext></msub><mo>·</mo><msub><mi>σ</mi><mtext>p</mtext></msub></math></dd></div><div><dt>Rigidez inicial, antes de que fluya el plomo (la que usa esta guía)</dt><dd><math display="block"><msub><mi>K</mi><mtext>e</mtext></msub><mo>=</mo><mn>10</mn><msub><mi>K</mi><mtext>p</mtext></msub></math></dd></div></dl><p class="donde">Con <a class="term" href="#gl-A">A y A<sub>p</sub></a> las áreas de goma y de plomo, <a class="term" href="#gl-G">G</a> el módulo de corte de la goma, <a class="term" href="#gl-geom">H<sub>r</sub></a> su altura total y <a class="term" href="#gl-sigmap">σ<sub>p</sub></a> la fluencia del plomo.</p>
+    <p><b>Al modelo lineal entran propiedades secantes</b>, válidas para un desplazamiento D:</p><ul class="puntos"><li>la <a class="term" href="#gl-Keff">rigidez efectiva K<sub>eff</sub></a>, la pendiente de la secante del ciclo;</li><li>el <a class="term" href="#gl-beta">amortiguamiento efectivo β<sub>eff</sub></a>, que sale del área del ciclo.</li></ul><p>Si D cambia, cambian las dos (<a class="ref" href="#fig-6">Figura&nbsp;6</a>). Por eso el diseño itera: se supone β, sale D, y con D se recalculan K<sub>eff</sub> y β.</p>
+    <div class="controles">
+      <div class="control">
+        <label for="Dciclo">Desplazamiento D <output id="Dciclo-out">0,18 m</output></label>
+        <input id="Dciclo" type="range" min="0.02" max="0.5" step="0.01" value="0.18">
+      </div>
+      <div class="control">
+        <label for="fiP"><span>Diámetro del núcleo de plomo φ<sub class="sub">p</sub></span> <output id="fiP-out">0,20 m</output></label>
+        <input id="fiP" type="range" min="0" max="0.3" step="0.01" value="0.2">
+      </div>
+    </div>
+    <p class="ayuda" id="plomo-ayuda"></p>
+    <div class="ec-filas" id="ec-keff" style="margin-top:18px"></div>
+    <div class="nota"><ul class="puntos"><li>Sin plomo, el ciclo es una recta: no disipa, y el modelo no cuenta el amortiguamiento propio de la goma.</li><li>La <a class="term" href="#gl-LRB">goma de alto amortiguamiento (HDR)</a> también se aproxima con un ciclo bilineal, con K<sub>eff</sub> = A·<a class="term" href="#gl-G">G<sub>eff</sub></a> / H<sub>r</sub> y <a class="term" href="#gl-Dy">D<sub>y</sub></a> entre 0,05 y 0,1 H<sub>r</sub>.</li></ul></div>
+  </div>
+  <div class="tarjeta">
+    <figure class="fig" id="fig-5">
+      <svg id="g-ciclo" class="grafico" viewBox="0 0 600 330" role="img" aria-label="Ciclo histerético bilineal del aislador con su rigidez efectiva"></svg>
+      <div class="leyenda">
+        <span><i style="background:var(--iec)"></i>ciclo a ± D</span>
+        <span><i style="height:0;border-top:2px dashed var(--tinta);background:none"></i>rigidez efectiva K<sub>eff</sub></span>
+        <span><i style="background:rgba(232,112,0,.2);height:10px"></i><a class="term" href="#gl-EDC">energía disipada por ciclo</a></span>
+        <span><i style="background:#B9C4C9"></i>primera carga</span>
+      </div>
+      <figcaption><b>Figura 5.</b> Ciclo bilineal del aislador con plomo de la <a class="ref" href="#fig-10">Figura&nbsp;10</a>, a ± D.</figcaption>
+    </figure>
+    <figure class="fig" id="fig-6">
+      <svg id="g-beta" class="grafico" viewBox="0 0 600 170" role="img" aria-label="Amortiguamiento efectivo en función del desplazamiento"></svg>
+      <figcaption><b>Figura 6.</b> Amortiguamiento efectivo del mismo aislador según el desplazamiento: sube mientras el plomo fluye y baja cuando la goma toma el ciclo.</figcaption>
+    </figure>
+    <div class="lecturas" id="lec-bilineal"></div>
+  </div>
+</div></section>
+
+<section class="bloque" id="desplazamientos"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Demanda</div>
+    <h2>Dos sismos, cuatro desplazamientos.</h2>
+    <p>NCh2745 fija dos niveles sísmicos, y cada uno da un desplazamiento (<a class="ref" href="#fig-8">Figura&nbsp;8</a>):</p><dl class="formulas"><div><dt><a class="term" href="#gl-SDI">Sismo de diseño</a> (SDI): 10&nbsp;% de probabilidad de excedencia en 50 años (3.10)</dt><dd><math display="block"><msub><mi>D</mi><mtext>D</mtext></msub><mo>=</mo><mfrac><mrow><msub><mi>C</mi><mtext>D</mtext></msub></mrow><mrow><msub><mi>B</mi><mtext>D</mtext></msub></mrow></mfrac></math></dd></div><div><dt><a class="term" href="#gl-SMP">Sismo máximo posible</a> (SMP): el mayor que puede ocurrir en el lugar; en las zonas 2 y 3, el de 10&nbsp;% en 100 años (3.11). Su espectro es el de diseño por <a class="term" href="#gl-MM">M<sub>M</sub></a> = 1,2</dt><dd><math display="block"><msub><mi>D</mi><mtext>M</mtext></msub><mo>=</mo><mfrac><mrow><msub><mi>C</mi><mtext>M</mtext></msub></mrow><mrow><msub><mi>B</mi><mtext>M</mtext></msub></mrow></mfrac></math></dd></div></dl><p class="donde">Con <a class="term" href="#gl-CD">C<sub>D</sub> y C<sub>M</sub></a> los coeficientes de desplazamiento y <a class="term" href="#gl-BD">B<sub>D</sub> y B<sub>M</sub></a> los factores por amortiguamiento. Con el SMP se diseña y se ensaya el sistema de aislación (8.4.1.3).</p>
+    <p><b>La torsión mueve más a los aisladores de las esquinas.</b></p><ul class="puntos"><li>El sistema gira además de trasladarse, y los aisladores lejos del centro de rigidez se desplazan más (<a class="ref" href="#fig-7">Figura&nbsp;7</a>).</li><li>La <a class="term" href="#gl-e">excentricidad e</a> es la real, entre el <a class="term" href="#gl-CM">centro de masa y el de rigidez</a>, más la accidental: 5&nbsp;% de la dimensión de la planta perpendicular al sismo (7.3.5).</li><li><a class="term" href="#gl-DTD">D<sub>TD</sub></a> y <a class="term" href="#gl-DTD">D<sub>TM</sub></a> pueden quedar bajo la ecuación si se demuestra que el sistema resiste la torsión, pero no bajo 1,1 D<sub>D</sub> y 1,1 D<sub>M</sub> (7.3.5.3).</li></ul>
+
+    <div class="controles">
+      <div class="control">
+        <label for="eReal">Excentricidad real, en X <output id="eReal-out">1,0 m</output></label>
+        <input id="eReal" type="range" min="0" max="4" step="0.1" value="1">
+      </div>
+      <div class="control">
+        <label for="betaM"><span>Amortiguamiento en el SMP β<sub class="sub">M</sub></span> <output id="betaM-out">12&nbsp;%</output></label>
+        <input id="betaM" type="range" min="2" max="30" step="0.5" value="12">
+      </div>
+    </div>
+    <p class="ayuda"><a class="term" href="#gl-beta">β<sub>M</sub></a> suele quedar bajo <a class="term" href="#gl-beta">β<sub>D</sub></a>: a más desplazamiento, el plomo pesa menos en el ciclo (<a class="ref" href="#fig-6">Figura&nbsp;6</a>). Para prediseñar se puede partir con D<sub>M</sub> ≈ 1,3 D<sub>D</sub> y ajustar cuando se conoce β<sub>M</sub>.</p>
+    <div class="ec-rot">Desplazamiento total de diseño, en la esquina (7.3.5)</div>
+    <div class="ec-filas" id="ec-dtd"></div>
+  </div>
+  <div class="tarjeta">
+    <figure class="fig" id="fig-7">
+      <svg id="g-planta-d" class="grafico" viewBox="0 0 600 340" role="img" aria-label="Planta aislada que se traslada y gira; color de cada aislador según cuánto se desplaza"></svg>
+      <div class="leyenda">
+        <span><i class="circ" style="background:var(--iec)"></i>centro de masa</span>
+        <span><i class="circ" style="background:#fff;border:2px solid var(--iso-3)"></i>centro de rigidez</span>
+        <span><i class="circ" style="background:rgba(232,112,0,.9)"></i>aislador que más se desplaza</span>
+        <span><i style="height:0;border-top:2px dashed var(--iec);background:none"></i>planta desplazada</span>
+      </div>
+      <figcaption><b>Figura 7.</b> Planta aislada de 40 × 24 m con sismo en Y: se traslada D<sub>D</sub> y gira por la excentricidad. Desplazamientos exagerados <span id="fig7-exa">15</span> veces.</figcaption>
+    </figure>
+    <figure class="fig" id="fig-8">
+      <svg id="g-cuatro" class="grafico" viewBox="0 0 600 170" role="img" aria-label="Los cuatro desplazamientos de NCh2745"></svg>
+      <figcaption><b>Figura 8.</b> Los cuatro desplazamientos de NCh2745, los totales en la esquina más alejada del centro de rigidez.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section class="bloque" id="planta"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Prediseño</div>
+    <h2>La rigidez se reparte en planta.</h2>
+    <p>El período objetivo fija la rigidez total del sistema:</p><dl class="formulas"><div><dt><a class="term" href="#gl-KD">Rigidez total</a> para llegar al período objetivo <a class="term" href="#gl-TD">T<sub>D</sub></a>, con el peso <a class="term" href="#gl-W">W</a></dt><dd><math display="block"><msub><mi>K</mi><mtext>D</mtext></msub><mo>=</mo><mfrac><mrow><mn>4</mn><msup><mi>π</mi><mn>2</mn></msup><mi>W</mi></mrow><mrow><mi>g</mi><msubsup><mi>T</mi><mtext>D</mtext><mn>2</mn></msubsup></mrow></mfrac></math></dd></div></dl><p>El prediseño la reparte en planta buscando tres cosas:</p>
+    <ol class="pasos-texto">
+      <li>Que la suma de las rigideces se acerque a K<sub>D</sub>, para quedar en el período objetivo.</li>
+      <li>Que el <a class="term" href="#gl-CM">centro de rigidez</a> de los aisladores caiga sobre el centro de masa: menos excentricidad, menos giro.</li>
+      <li><a class="term" href="#gl-omega">Rigidez torsional</a> alta: aisladores rígidos en el perímetro y flexibles al interior.</li>
+    </ol>
+    <p>Y pocos tipos de aislador: cada tipo distinto necesita sus propios ensayos de prototipo.</p>
+    <div class="controles">
+      <div class="control">
+        <span class="rot">Distribución</span>
+        <div class="segmentado" role="group" aria-label="Distribución de aisladores">
+          <button data-preset data-v="iguales" aria-pressed="true">Todos iguales</button>
+          <button data-preset data-v="perimetro" aria-pressed="false">Perímetro rígido</button>
+        </div>
+      </div>
+      <div class="control">
+        <label for="cmX">Corrimiento del centro de masa en X <output id="cmX-out">0,0 m</output></label>
+        <input id="cmX" type="range" min="0" max="4" step="0.1" value="0">
+      </div>
+    </div>
+    <p class="ayuda">Un clic en un aislador de la <a class="ref" href="#fig-9">Figura&nbsp;9</a> cambia su tipo: 1 flexible (<a class="term" href="#gl-Keff">K<sub>eff</sub></a> = 130 tonf/m), 2 intermedio (224) y 3 rígido (270). Rigideces efectivas de ejemplo, a <a class="term" href="#gl-DD">D<sub>D</sub></a>. W = 12.000 tonf, y el <a class="term" href="#gl-TD">T<sub>D</sub></a> objetivo es el de la <a class="ref" href="#fig-1">Figura&nbsp;1</a>.</p>
+    <div class="nota fria">En el <a class="fuente" href="fuentes/stagno-2002-hospital-militar.pdf#page=2" target="_blank" rel="noopener">Hospital Militar de La Reina</a> (proyectado entre 2000 y 2001), 50 de sus 164 aisladores elastoméricos llevan núcleo de plomo, ubicados para reducir los efectos torsionales de la planta.</div>
+  </div>
+  <div class="tarjeta">
+    <figure class="fig" id="fig-9">
+      <svg id="g-planta" class="grafico" viewBox="0 0 600 360" role="img" aria-label="Planta con 24 aisladores de tres tipos, centro de masa y centro de rigidez"></svg>
+      <div class="leyenda">
+        <span><i class="circ" style="background:#C9D3D8"></i>tipo 1</span>
+        <span><i class="circ" style="background:var(--plomo)"></i>tipo 2</span>
+        <span><i class="circ" style="background:var(--goma)"></i>tipo 3</span>
+        <span><i class="circ" style="background:var(--iec)"></i>centro de masa</span>
+        <span><i class="circ" style="background:#fff;border:2px solid var(--iso-3)"></i>centro de rigidez</span>
+      </div>
+      <figcaption><b>Figura 9.</b> Planta de prediseño de 40 × 24 m con 24 aisladores. Un clic en un aislador cambia su tipo.</figcaption>
+    </figure>
+    <div class="lecturas" id="lec-planta"></div>
+  </div>
+</div></section>
+
+<section class="bloque" id="goma"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Verificación del aislador</div>
+    <h2>La goma se deforma por tres causas.</h2>
+    <p>Las tres <a class="term" href="#gl-gamma">deformaciones de corte</a> se suman y la suma se compara con la <a class="term" href="#gl-eps">deformación de rotura</a> de la goma (<a class="ref" href="#fig-11">Figura&nbsp;11</a>):</p><dl class="formulas"><div><dt>Por el desplazamiento lateral D</dt><dd><math display="block"><msub><mi>γ</mi><mtext>s</mtext></msub><mo>=</mo><mfrac><mrow><mi>D</mi></mrow><mrow><msub><mi>H</mi><mtext>r</mtext></msub></mrow></mfrac></math></dd></div><div><dt>Por la compresión P, que abomba la goma entre las placas de acero</dt><dd><math display="block"><msub><mi>γ</mi><mtext>c</mtext></msub><mo>=</mo><mfrac><mrow><mi>P</mi></mrow><mrow><mi>A</mi><mo>·</mo><mi>G</mi><mo>·</mo><mi>S</mi></mrow></mfrac></math></dd></div><div><dt>Por el giro θ de los extremos</dt><dd><math display="block"><msub><mi>γ</mi><mtext>r</mtext></msub><mo>=</mo><mfrac><mrow><msub><mi>D</mi><mtext>r</mtext></msub><mo>·</mo><msup><mi>φ</mi><mn>2</mn></msup><mo>·</mo><mi>θ</mi></mrow><mrow><msub><mi>H</mi><mtext>r</mtext></msub><mo>·</mo><msub><mi>e</mi><mtext>r</mtext></msub></mrow></mfrac></math></dd></div><div><dt>La suma, contra la rotura ε<sub>o</sub> con un <a class="term" href="#gl-FS">factor de seguridad</a></dt><dd><math display="block"><msub><mi>γ</mi><mtext>s</mtext></msub><mo>+</mo><msub><mi>γ</mi><mtext>c</mtext></msub><mo>+</mo><msub><mi>γ</mi><mtext>r</mtext></msub><mo>≤</mo><mfrac><mrow><mn>0,85</mn><mspace width="0.15em"></mspace><msub><mi>ε</mi><mtext>o</mtext></msub></mrow><mrow><mtext>FS</mtext></mrow></mfrac></math></dd></div></dl><p class="donde">Con <a class="term" href="#gl-geom">H<sub>r</sub> y e<sub>r</sub></a> la altura total de goma y el espesor de una capa, φ el diámetro, <a class="term" href="#gl-G">G</a> el módulo de corte, <a class="term" href="#gl-S">S</a> el factor de forma y <a class="term" href="#gl-Dr">D<sub>r</sub></a> = 0,375 en aisladores circulares.</p>
+    <p><b>El <a class="term" href="#gl-S">factor de forma S</a> manda en la compresión.</b></p><ul class="puntos"><li>S es el área cargada de una capa sobre su área libre para abombarse.</li><li>Capas delgadas dan un S alto: el aislador queda rígido en vertical y blando en horizontal.</li><li>NCh2745 pide una <a class="term" href="#gl-Kv">frecuencia vertical</a> mayor que 10 Hz (7.2).</li></ul>
+    <p><b>Desplazado, <a class="term" href="#gl-aislador">el aislador</a> apoya en menos área.</b></p><ul class="puntos"><li>Las placas superior e inferior quedan corridas y la carga baja por el <a class="term" href="#gl-Ar">traslape</a> (<a class="ref" href="#fig-10">Figura&nbsp;10</a>).</li><li>La <a class="term" href="#gl-Pcr">carga crítica</a> baja en la misma proporción.</li><li>NCh2745 pide verificar la estabilidad con la carga máxima en el <a class="term" href="#gl-DTD">desplazamiento total máximo D<sub>TM</sub></a> (6.2 y 10.2.6).</li></ul>
+    <div class="controles">
+      <div class="control">
+        <label for="fi">Diámetro del aislador φ <output id="fi-out">0,75 m</output></label>
+        <input id="fi" type="range" min="0.6" max="1.2" step="0.05" value="0.75">
+      </div>
+      <div class="control">
+        <label for="nr">Capas de goma de 8 mm <output id="nr-out">20 · H<sub>r</sub> = 0,16 m</output></label>
+        <input id="nr" type="range" min="10" max="40" step="1" value="20">
+      </div>
+      <div class="control">
+        <label for="Pmax">Carga axial máxima P <output id="Pmax-out">700 tonf</output></label>
+        <input id="Pmax" type="range" min="200" max="1500" step="25" value="700">
+      </div>
+      <div class="control">
+        <span class="rot">Módulo de corte de la goma G</span>
+        <div class="segmentado" role="group" aria-label="Módulo de corte de la goma">
+          <button data-G data-v="40" aria-pressed="false">4 kgf/cm²</button>
+          <button data-G data-v="60" aria-pressed="true">6 kgf/cm²</button>
+          <button data-G data-v="80" aria-pressed="false">8 kgf/cm²</button>
+        </div>
+      </div>
+    </div>
+    <p class="ayuda" id="goma-ayuda"></p>
+  </div>
+  <div class="tarjeta">
+    <figure class="fig" id="fig-10">
+      <svg id="g-aislador" class="grafico" viewBox="0 0 600 320" role="img" aria-label="Aislador deformado en elevación y área de traslape en planta, a escala"></svg>
+      <figcaption><b>Figura 10.</b> El aislador en D<sub>TM</sub>, a escala: en elevación, la goma corrida con el núcleo de plomo; en planta, las dos placas corridas y su traslape.</figcaption>
+    </figure>
+    <figure class="fig" id="fig-11">
+      <svg id="g-gammas" class="grafico" viewBox="0 0 600 150" role="img" aria-label="Suma de deformaciones de la goma contra el límite"></svg>
+      <figcaption><b>Figura 11.</b> Deformaciones de corte de la goma en D<sub>TM</sub> con la carga máxima, contra 0,85 ε<sub>o</sub> y contra ese límite con FS = 1,5.</figcaption>
+    </figure>
+    <div class="lecturas" id="lec-goma"></div>
+    <div class="nota">Valores de referencia, a decisión del diseñador: FS de la goma entre 1,3 y 1,5; FS de estabilidad sin deformar entre 2,5 y 3,0, y en D<sub>TM</sub> entre 1,0 y 2,0.</div>
+  </div>
+</div></section>
+
+<section class="bloque" id="rango"><div class="envoltura dos">
+  <div>
+    <div class="ceja">Propiedades de diseño</div>
+    <h2>Dos rigideces, dos usos.</h2>
+    <p>Las propiedades de un aislador no son un número: varían de un aislador a otro y de un ciclo de ensayo a otro. NCh2745 trabaja con el rango que sale de los ensayos de prototipo (14), <a class="term" href="#gl-KD">K<sub>Dmin</sub> y K<sub>Dmax</sub></a>.</p>
+    <p>Cada una tiene su uso:</p><dl class="formulas"><div><dt><b>El período sale de la mínima</b> (7.3.2)</dt><dd><math display="block"><msub><mi>T</mi><mtext>D</mtext></msub><mo>=</mo><mn>2</mn><mi>π</mi><msqrt><mfrac><mrow><mi>W</mi></mrow><mrow><msub><mi>K</mi><mtext>Dmin</mtext></msub><mo>·</mo><mi>g</mi></mrow></mfrac></msqrt></math></dd></div><div><dt><b>Las fuerzas, de la máxima</b> (7.4): <a class="term" href="#gl-Vb">corte</a> del sistema de aislación, con <a class="term" href="#gl-Rb">R<sub>b</sub></a> = 1,0, y de la fundación, con R<sub>b</sub> ≤ 1,5</dt><dd><math display="block"><msub><mi>V</mi><mtext>b</mtext></msub><mo>=</mo><mfrac><mrow><msub><mi>K</mi><mtext>Dmax</mtext></msub><mo>·</mo><msub><mi>D</mi><mtext>D</mtext></msub></mrow><mrow><msub><mi>R</mi><mtext>b</mtext></msub></mrow></mfrac></math></dd></div><div><dt>Corte de la superestructura, con <a class="term" href="#gl-Rb">R<sub>s</sub></a> según su sistema</dt><dd><math display="block"><msub><mi>V</mi><mtext>s</mtext></msub><mo>=</mo><mfrac><mrow><msub><mi>K</mi><mtext>Dmax</mtext></msub><mo>·</mo><msub><mi>D</mi><mtext>D</mtext></msub></mrow><mrow><msub><mi>R</mi><mtext>s</mtext></msub></mrow></mfrac></math></dd></div></dl><p class="donde">Un modelo lineal para las fuerzas usa la rigidez efectiva máxima (8.5.3.2).</p>
+    <p><a class="term" href="#gl-Vb">V<sub>s</sub></a> tiene tres mínimos (7.4.3.2):</p><ul class="puntos"><li>la fuerza de NCh433 para una estructura de base fija de igual peso y período T<sub>D</sub>, con I = 1 y S = 1;</li><li>el corte del viento;</li><li>1,5 veces la fuerza que activa el sistema de aislación: con núcleos de plomo, la suma de sus capacidades (comentario de 7.4.3.2).</li></ul><p>La <a class="ref" href="#fig-12">Figura&nbsp;12</a> dibuja solo el primero: con períodos largos, la fuerza de NCh433 queda en su corte mínimo, <a class="term" href="#gl-A0">A<sub>0</sub></a>·<a class="term" href="#gl-W">W</a> / (6g).</p>
+    <div class="control" style="margin-top:18px">
+      <label for="variacion"><span>Variación de K<sub class="sub">D</sub> respecto de la nominal</span> <output id="variacion-out">± 15&nbsp;%</output></label>
+      <input id="variacion" type="range" min="0" max="40" step="1" value="15">
+    </div>
+    <div class="nota"><b>Con el sistema completo, además:</b><ul class="puntos"><li>fuerza de restitución F(<a class="term" href="#gl-DTD">D<sub>TD</sub></a>) − F(0,5 D<sub>TD</sub>) ≥ 0,025 W (10.2.4);</li><li>anclajes diseñados con las fuerzas del SMP, sin factor de reducción (10.2.10).</li></ul></div>
+  </div>
+  <div class="tarjeta">
+    <figure class="fig" id="fig-12">
+      <svg id="g-cortes" class="grafico" viewBox="0 0 600 260" role="img" aria-label="Cortes de diseño como fracción del peso, contra el corte mínimo"></svg>
+      <figcaption><b>Figura 12.</b> Cortes de diseño con K<sub>Dmax</sub>, en porcentaje de W, contra el corte mínimo de NCh433. Usa la planta de la <a class="ref" href="#fig-9">Figura&nbsp;9</a>.</figcaption>
+    </figure>
+    <div class="lecturas" id="lec-rango"></div>
+    <div class="ec-filas" id="ec-vs" style="margin-top:14px"></div>
+  </div>
+</div></section>
+
+<section class="bloque" id="resumen"><div class="envoltura">
+  <div class="ceja">Resumen</div>
+  <h2 style="margin-bottom:22px">Qué mueve el desplazamiento</h2>
+  <figure class="fig" id="tab-2">
+  <figcaption class="arriba"><b>Tabla 2.</b> Lo que sube y lo que baja el desplazamiento del sistema de aislación.</figcaption>
+  <table class="resumen">
+    <thead><tr><th class="sube">Más desplazamiento</th><th class="baja">Menos desplazamiento</th></tr></thead>
+    <tbody>
+      <tr><td>Período aislado más largo, hasta llegar a la rama de desplazamiento del espectro</td><td>Más amortiguamiento: B<sub>D</sub> más alto, con tope en el de 30&nbsp;% en el análisis espectral</td></tr>
+      <tr><td>Suelo más blando y zona más alta: C<sub>D</sub> = 330 Z mm en suelo III (C o D)</td><td>Suelo firme y zona baja: C<sub>D</sub> = 200 Z mm en suelo I (A)</td></tr>
+      <tr><td>Excentricidad entre el centro de masa y el de rigidez: las esquinas se mueven más</td><td>Aisladores rígidos en el perímetro y centro de rigidez sobre el centro de masa</td></tr>
+      <tr><td>El SMP: espectro por 1,2 y menos amortiguamiento (β<sub>M</sub> bajo β<sub>D</sub>)</td><td>Más plomo: más amortiguamiento, a cambio de más fuerza de activación</td></tr>
+    </tbody>
+  </table>
+  </figure>
+  <div class="manda">
+    <div class="grande">La norma y los ensayos mandan.</div>
+    <p>Esta guía muestra tendencias con valores de ejemplo y fórmulas de prediseño. En un proyecto, el espectro sale de NCh2745 o de un estudio de sitio, las propiedades de diseño de los aisladores salen de sus ensayos de prototipo, y el diseño del sistema de aislación y sus programas de ensayo los revisa un grupo independiente (13.1).</p>
+  </div>
+</div></section>
+
+<section class="bloque" id="glosario"><div class="envoltura">
+  <div class="ceja">Glosario</div>
+  <h2 style="margin-bottom:8px">Símbolos y conceptos</h2>
+  <p class="ayuda" style="margin-bottom:6px">Entre paréntesis, la cláusula de NCh2745:2013 que lo define o lo usa.</p>
+  <h3>Sismo y espectro</h3>
+  <dl class="glosario">
+<div class="gl" id="gl-zona"><dt>Zona sísmica</dt><dd>Zonas 1, 2 y 3 de la zonificación de NCh433; la 3 es la de mayor sismicidad.</dd></div>
+<div class="gl" id="gl-Z"><dt>Z <span>factor de zona</span></dt><dd>Multiplica el espectro de diseño y los desplazamientos mínimos de NCh2745 según la zona: 3/4 en la zona 1, 1 en la 2 y 5/4 en la 3 (Tabla 5 de NCh2745).</dd></div>
+<div class="gl" id="gl-A0"><dt>A<sub>0</sub> <span>aceleración efectiva</span></dt><dd>Aceleración efectiva máxima del suelo de NCh433: 0,2 g, 0,3 g y 0,4 g en las zonas 1, 2 y 3. Fija el corte mínimo de NCh433, A<sub>0</sub>·W / (6g).</dd></div>
+<div class="gl" id="gl-suelo"><dt>Tipo de suelo</dt><dd>NCh2745 usa los tipos I a IV de NCh433:1996. Equivalen a las clases del DS61: I = A, II = B, III = C y D, IV = E y F.</dd></div>
+<div class="gl" id="gl-T"><dt>T <span>período</span></dt><dd>Duración de un ciclo de vibración libre de un modo. El de base fija es el de la estructura empotrada en su base, sin aisladores.</dd></div>
+<div class="gl" id="gl-TD"><dt>T<sub>D</sub>, T<sub>M</sub> <span>períodos efectivos</span></dt><dd>Períodos del sistema aislado en el desplazamiento de diseño y en el máximo: T<sub>D</sub> = 2π √(W / (K<sub>Dmin</sub>·g)) (7.3.2); T<sub>M</sub>, igual con K<sub>Mmin</sub> (7.3.4).</dd></div>
+<div class="gl" id="gl-espectro"><dt>Espectro de diseño</dt><dd>Respuesta máxima de un oscilador de un grado de libertad según su período. El de NCh2745 (8.4.1.1) tiene un plato de aceleración entre T<sub>b</sub> y T<sub>c</sub>, una rama de velocidad hasta T<sub>d</sub> y una rama de desplazamiento después.</dd></div>
+<div class="gl" id="gl-Tesq"><dt>T<sub>b</sub>, T<sub>c</sub>, T<sub>d</sub> <span>períodos de esquina del espectro</span></dt><dd>Separan las ramas del espectro de diseño: el plato de aceleración va de T<sub>b</sub> a T<sub>c</sub>, la rama de velocidad de T<sub>c</sub> a T<sub>d</sub> y la de desplazamiento sigue desde T<sub>d</sub>. T<sub>d</sub> vale 2,51, 2,00 y 1,58 s en los suelos I, II y III (Tabla 6 de NCh2745).</dd></div>
+<div class="gl" id="gl-Sa"><dt>Sa <span>pseudoaceleración</span></dt><dd>Ordenada del espectro de aceleraciones, en g.</dd></div>
+<div class="gl" id="gl-Sd"><dt>Sd <span>desplazamiento espectral</span></dt><dd>Sd = Sa·T² / (4π²): el desplazamiento máximo del oscilador respecto del suelo.</dd></div>
+<div class="gl" id="gl-aDD"><dt>a<sub>D</sub>·D <span>techo de desplazamiento</span></dt><dd>Valor del espectro de desplazamiento en su rama de desplazamiento: 20, 30 y 33 cm en los suelos I, II y III, por Z.</dd></div>
+<div class="gl" id="gl-SDI"><dt>SDI <span>sismo de diseño</span></dt><dd>Movimiento del suelo con al menos 10&nbsp;% de probabilidad de excedencia en 50 años (3.10). Da D<sub>D</sub> y las fuerzas de diseño.</dd></div>
+<div class="gl" id="gl-SMP"><dt>SMP <span>sismo máximo posible</span></dt><dd>El mayor movimiento que puede ocurrir en el lugar (3.11). Su espectro es el del SDI por M<sub>M</sub> = 1,2 (8.4.1.3). Con él se diseña y se ensaya el sistema de aislación.</dd></div>
+<div class="gl" id="gl-sitio"><dt>Espectro de sitio</dt><dd>Espectro propio del lugar, de un estudio de peligro sísmico. Obligatorio en suelo IV, a menos de 10 km de una falla activa o con período aislado mayor que 3,5 s (8.4.1.1).</dd></div>
+  </dl>
+  <h3>Amortiguamiento y desplazamientos</h3>
+  <dl class="glosario">
+<div class="gl" id="gl-beta"><dt>β <span>amortiguamiento efectivo</span></dt><dd>Fracción del amortiguamiento crítico que equivale a la energía que disipa el sistema de aislación en un ciclo: β<sub>D</sub> en D<sub>D</sub> y β<sub>M</sub> en D<sub>M</sub>. Un edificio sin aislación se calcula con 5&nbsp;%.</dd></div>
+<div class="gl" id="gl-BD"><dt>B<sub>D</sub>, B<sub>M</sub> <span>factores por amortiguamiento</span></dt><dd>Dividen el espectro según β<sub>D</sub> y β<sub>M</sub>: 1,00 con 5&nbsp;% y 1,67 con 15&nbsp;% (Tabla 1 de esta guía).</dd></div>
+<div class="gl" id="gl-CD"><dt>C<sub>D</sub>, C<sub>M</sub> <span>coeficientes de desplazamiento</span></dt><dd>C<sub>D</sub> = 200 Z, 300 Z o 330 Z mm en los suelos I, II y III (7.3.1); C<sub>M</sub> = M<sub>M</sub>·C<sub>D</sub> (7.3.3).</dd></div>
+<div class="gl" id="gl-MM"><dt>M<sub>M</sub></dt><dd>Factor que lleva el espectro del SDI al del SMP: 1,2 en todas las zonas (Tabla 3 de NCh2745).</dd></div>
+<div class="gl" id="gl-DD"><dt>D<sub>D</sub>, D<sub>M</sub> <span>desplazamientos de diseño y máximo</span></dt><dd>Desplazamientos del sistema de aislación sin la torsión: D<sub>D</sub> = C<sub>D</sub> / B<sub>D</sub> (7.3.1) y D<sub>M</sub> = C<sub>M</sub> / B<sub>M</sub> (7.3.3).</dd></div>
+<div class="gl" id="gl-DTD"><dt>D<sub>TD</sub>, D<sub>TM</sub> <span>desplazamientos totales</span></dt><dd>D<sub>D</sub> y D<sub>M</sub> con el efecto de la torsión, en el aislador que se considera (7.3.5).</dd></div>
+<div class="gl" id="gl-e"><dt>e <span>excentricidad</span></dt><dd>Distancia entre el centro de masa y el centro de rigidez del sistema de aislación, más la accidental: 5&nbsp;% de la dimensión de la planta perpendicular al sismo (7.3.5).</dd></div>
+<div class="gl" id="gl-CM"><dt>CM y CR <span>centro de masa y centro de rigidez</span></dt><dd>Donde actúa la fuerza de inercia del edificio y donde actúa la resultante de las rigideces de los aisladores. Si no coinciden, la planta gira.</dd></div>
+<div class="gl" id="gl-omega"><dt>Ω <span>razón de frecuencias</span></dt><dd>Frecuencia de giro sobre frecuencia de traslación del sistema aislado, sin acoplar (comentario de 7.3.5). Cerca de 1, giro y traslación se mezclan.</dd></div>
+<div class="gl" id="gl-modos"><dt>Modos aislados</dt><dd>Modos fundamentales de la estructura aislada: traslación y giro sobre los aisladores, con la superestructura casi rígida (8.6.3.1). Los demás son modos de la superestructura.</dd></div>
+  </dl>
+  <h3>El aislador</h3>
+  <dl class="glosario">
+<div class="gl" id="gl-aislador"><dt>Aislador elastomérico</dt><dd>Capas de goma intercaladas con láminas de acero, entre dos placas de anclaje. Las láminas dan rigidez vertical; la goma, flexibilidad horizontal.</dd></div>
+<div class="gl" id="gl-LRB"><dt>LRB y HDR</dt><dd>LRB: aislador con núcleo de plomo, que fluye y disipa energía. HDR: goma de alto amortiguamiento, que disipa por sí misma. Sin plomo ni aditivos, la goma es natural y casi no disipa.</dd></div>
+<div class="gl" id="gl-interfaz"><dt>Interfaz de aislación</dt><dd>El plano de los aisladores. Sobre ella está la superestructura; bajo ella, la subestructura y la fundación.</dd></div>
+<div class="gl" id="gl-W"><dt>W <span>peso sísmico</span></dt><dd>Carga muerta sísmica de NCh433. Para el sistema de aislación, la de la superestructura (cláusula 4 de NCh2745).</dd></div>
+<div class="gl" id="gl-Keff"><dt>K<sub>eff</sub> <span>rigidez efectiva</span></dt><dd>Fuerza sobre desplazamiento: la pendiente de la secante del ciclo (3.9).</dd></div>
+<div class="gl" id="gl-KD"><dt>K<sub>D</sub>, K<sub>Dmin</sub>, K<sub>Dmax</sub> <span>rigidez del sistema</span></dt><dd>Rigidez efectiva del sistema de aislación en D<sub>D</sub>: la suma de la de sus aisladores. Los ensayos de prototipo dan un rango; la mínima fija el período y la máxima, las fuerzas (14, 7.3.2 y 7.4).</dd></div>
+<div class="gl" id="gl-Kp"><dt>K<sub>p</sub>, K<sub>e</sub> <span>rigideces del ciclo</span></dt><dd>K<sub>p</sub>: de postfluencia, la de la goma, A·G / H<sub>r</sub>. K<sub>e</sub>: inicial, antes de que fluya el plomo; esta guía usa 10 K<sub>p</sub>.</dd></div>
+<div class="gl" id="gl-Q"><dt>Q <span>resistencia característica</span></dt><dd>Fuerza del ciclo a desplazamiento nulo: la que aporta el plomo, Q = A<sub>p</sub>·σ<sub>p</sub>.</dd></div>
+<div class="gl" id="gl-Dy"><dt>D<sub>y</sub>, F<sub>y</sub> <span>fluencia</span></dt><dd>Desplazamiento y fuerza en que el aislador pasa de K<sub>e</sub> a K<sub>p</sub>.</dd></div>
+<div class="gl" id="gl-EDC"><dt>EDC <span>energía disipada por ciclo</span></dt><dd>El área del ciclo: 4Q (D − D<sub>y</sub>).</dd></div>
+  </dl>
+  <h3>La goma</h3>
+  <dl class="glosario">
+<div class="gl" id="gl-geom"><dt>φ, φ<sub>p</sub>, H<sub>r</sub>, e<sub>r</sub>, n<sub>r</sub> <span>geometría</span></dt><dd>Diámetro del aislador y del núcleo de plomo; altura total de goma, H<sub>r</sub> = n<sub>r</sub>·e<sub>r</sub>, con n<sub>r</sub> capas de espesor e<sub>r</sub>.</dd></div>
+<div class="gl" id="gl-A"><dt>A, A<sub>p</sub> <span>áreas</span></dt><dd>Área de goma de una capa, sin el núcleo, y área del núcleo de plomo.</dd></div>
+<div class="gl" id="gl-G"><dt>G <span>módulo de corte</span></dt><dd>Rigidez de la goma al corte. En esta guía, 4, 6 u 8 kgf/cm².</dd></div>
+<div class="gl" id="gl-sigmap"><dt>σ<sub>p</sub> <span>fluencia del plomo</span></dt><dd>Tensión con que fluye el plomo: unos 80 a 100 kgf/cm²; esta guía usa 80.</dd></div>
+<div class="gl" id="gl-S"><dt>S <span>factor de forma</span></dt><dd>Área cargada de una capa sobre su área libre para abombarse. Con núcleo de plomo, S = A / (π·φ·e<sub>r</sub>).</dd></div>
+<div class="gl" id="gl-Kv"><dt>K<sub>v</sub>, f<sub>v</sub> <span>rigidez y frecuencia verticales</span></dt><dd>K<sub>v</sub> = E<sub>c</sub>·A / H<sub>r</sub>, con E<sub>c</sub> el módulo de compresión de la goma confinada, que crece con S; la frecuencia vertical de la estructura sobre los aisladores debe pasar de 10 Hz (7.2).</dd></div>
+<div class="gl" id="gl-gamma"><dt>γ<sub>s</sub>, γ<sub>c</sub>, γ<sub>r</sub> <span>deformaciones de corte</span></dt><dd>De la goma, por el desplazamiento lateral, por la compresión y por el giro de los extremos.</dd></div>
+<div class="gl" id="gl-Dr"><dt>D<sub>r</sub>, θ <span>coeficiente de forma y giro</span></dt><dd>Entran en γ<sub>r</sub>: D<sub>r</sub> vale 0,375 en aisladores circulares (AASHTO 2014), y θ es el giro de los extremos del aislador, 0,003 rad en esta guía.</dd></div>
+<div class="gl" id="gl-eps"><dt>ε<sub>o</sub> <span>deformación de rotura</span></dt><dd>Deformación con que se rompe la goma. En esta guía, 600&nbsp;%.</dd></div>
+<div class="gl" id="gl-FS"><dt>FS <span>factor de seguridad</span></dt><dd>Capacidad sobre demanda.</dd></div>
+<div class="gl" id="gl-Pcr"><dt>P<sub>cr</sub> <span>carga crítica</span></dt><dd>Carga axial de pandeo del aislador, con la fórmula de EN 15129.</dd></div>
+<div class="gl" id="gl-Ar"><dt>A<sub>r</sub> <span>área de traslape</span></dt><dd>Área común de las placas superior e inferior con el aislador desplazado, sin el núcleo de plomo.</dd></div>
+  </dl>
+  <h3>Fuerzas</h3>
+  <dl class="glosario">
+<div class="gl" id="gl-Vb"><dt>V<sub>b</sub>, V<sub>s</sub> <span>cortes de diseño</span></dt><dd>V<sub>b</sub>: del sistema de aislación y de lo que está bajo él. V<sub>s</sub>: de la superestructura. Los dos valen K<sub>Dmax</sub>·D<sub>D</sub> dividido por R<sub>b</sub> o R<sub>s</sub> (7.4).</dd></div>
+<div class="gl" id="gl-Rb"><dt>R<sub>b</sub>, R<sub>s</sub> <span>factores de reducción</span></dt><dd>R<sub>b</sub> = 1,0 para el sistema de aislación y hasta 1,5 para la fundación. R<sub>s</sub> según el sistema estructural: 2,0 en marcos y muros de hormigón armado (Tabla 4 de NCh2745).</dd></div>
+  </dl>
+</div></section>
+
+<footer><div class="envoltura"><b>IEC</b> · Recursos de aprendizaje · Aislación sísmica. Valores de ejemplo: W = 12.000 tonf en una planta de 40 × 24 m con 24 aisladores; aislador de goma con núcleo de plomo, capas de 8 mm, σ<sub>p</sub> = 80 kgf/cm², ε<sub>o</sub> = 600&nbsp;%, giro θ = 0,003 rad y módulo volumétrico de la goma 200.000 tonf/m² (unos 2.000 MPa). Norma: NCh2745:2013, con su espectro de diseño (8.4.1.1). Fórmulas del aislador: AASHTO (2014) y EN 15129. Modelo de dos grados de libertad: J. Lindenberg, <a class="fuente" href="fuentes/lindenberg-2006-control-estructural-de-vibraciones.pdf" target="_blank" rel="noopener">«Control estructural de vibraciones»</a>, cap. 14 de T. Guendelman, Análisis estático y dinámico de estructuras (2006). Caso: P. Stagno et al. (2002), <a class="fuente" href="fuentes/stagno-2002-hospital-militar.pdf" target="_blank" rel="noopener">«Análisis y diseño del Hospital Militar»</a>, 8.as Jornadas Chilenas de Sismología e Ingeniería Antisísmica, Valparaíso.</div></footer>
+
+<div id="globo" class="globo" role="tooltip" hidden></div>
+<button id="volver" class="volver" type="button" hidden>↩ Volver a donde estaba</button>
+
+<script>
+'use strict';
+(() => {
+const REDUCIDO = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const NS = 'http://www.w3.org/2000/svg';
+const $ = id => document.getElementById(id);
+const TINTA = css('--tinta'), TINTA2 = css('--tinta-2'), IEC = css('--iec'), IEC_H = css('--iec-hondo'), AZUL = css('--iso-3'),
+  GOMA = css('--goma'), PLOMO = css('--plomo'), MAL = css('--mal'), REJILLA = '#E3E9EC';
+function el(tag, attrs, padre){
+  const e = document.createElementNS(NS, tag);
+  for(const k in attrs) e.setAttribute(k, attrs[k]);
+  if(padre) padre.appendChild(e);
+  return e;
+}
+const fmt = (v, d) => Number(v).toFixed(d).replace('.', ',');
+const fmtPct = v => fmt(v, v % 1 ? 1 : 0) + '&nbsp;%';
+const miles = v => Math.round(v).toLocaleString('es-CL');
+// Texto SVG; un «_x» marca un subíndice hasta el siguiente espacio («K_eff = 300» pone eff abajo).
+const texto = (padre, x, y, t, extra = {}) => {
+  const e = el('text', Object.assign({x, y, 'font-size': 12, fill: TINTA2, 'font-family': 'IBM Plex Mono'}, extra), padre);
+  if(!t.includes('_')){ e.textContent = t; return e; }
+  for(const [i, trozo] of t.split(/_(\S+)/).entries()){
+    if(!trozo) continue;
+    const ts = el('tspan', i % 2 ? {'font-size': '0.75em', dy: '0.3em'} : {dy: i ? '-0.3em' : '0'}, e);
+    ts.textContent = trozo;
+  }
+  return e;
+};
+const G = 9.81, G_CM = 981, PI2 = 4 * Math.PI ** 2;   // g en m/s² y en cm/s²
+
+/* ---------- Norma: NCh2745:2013 ---------- */
+// Tabla 6 (Z = 1): períodos en s, plato aA·A en cm/s², rama de velocidad aV·V en cm/s y de desplazamiento aD·D en cm.
+// pga: aceleración máxima del suelo del espectro base, según el comentario de 8.4.1 (0,40, 0,41 y 0,45 g).
+// CD de 7.3.1 en mm por Z.
+const SUELOS = {
+  I: {Ta: 0.03, Tb: 0.11, Tc: 0.29, Td: 2.51, pga: 0.40 * G_CM, aA: 1085, aV: 50, aD: 20, CD: 200},
+  II: {Ta: 0.03, Tb: 0.20, Tc: 0.54, Td: 2.00, pga: 0.41 * G_CM, aA: 1100, aV: 94, aD: 30, CD: 300},
+  III: {Ta: 0.03, Tb: 0.375, Tc: 0.68, Td: 1.58, pga: 0.45 * G_CM, aA: 1212, aV: 131, aD: 33, CD: 330}};
+const ZONA = {1: {Z: 0.75, A0: 0.2}, 2: {Z: 1, A0: 0.3}, 3: {Z: 1.25, A0: 0.4}};
+const MM = 1.2, RS = 2;
+const TABLA2 = [[2, 0.65], [5, 1.00], [10, 1.37], [15, 1.67], [20, 1.94], [25, 2.17], [30, 2.38], [50, 3.02]];
+function factorB(beta){
+  if(beta <= TABLA2[0][0]) return TABLA2[0][1];
+  for(let i = 1; i < TABLA2.length; i++){
+    const [b1, f1] = TABLA2[i], [b0, f0] = TABLA2[i - 1];
+    if(beta <= b1) return f0 + (f1 - f0) * (beta - b0) / (b1 - b0);
+  }
+  return TABLA2[TABLA2.length - 1][1];
+}
+// Pseudoaceleración del espectro de diseño de NCh2745, 8.4.1.1 (cm/s², 5 %), escalada por Z.
+function Sa(T){
+  const s = SUELOS[estado.suelo];
+  let a;
+  if(T <= s.Ta) a = s.pga;
+  else if(T <= s.Tb) a = s.pga + (s.aA - s.pga) * (T - s.Ta) / (s.Tb - s.Ta);
+  else if(T <= s.Tc) a = s.aA;
+  else if(T <= s.Td) a = 2 * Math.PI / T * s.aV;
+  else a = PI2 / (T * T) * s.aD;
+  return a * ZONA[estado.zona].Z;
+}
+const Sd = T => Sa(T) * T * T / PI2;   // cm
+const g = a => a / G_CM;
+
+/* ---------- Ejemplo ---------- */
+const PLANTA = {Lx: 40, Ly: 24, W: 12000, xs: [-20, -12, -4, 4, 12, 20], ys: [-12, -4, 4, 12]};
+// 7.3.5: amplificación del desplazamiento de un aislador a distancia y del centro de rigidez, con excentricidad e.
+const factorTorsion = (y, e) => 1 + y * 12 * e / (PLANTA.Lx ** 2 + PLANTA.Ly ** 2);
+const periodoAislado = K => 2 * Math.PI * Math.sqrt(PLANTA.W / (G * K));
+PLANTA.pos = PLANTA.ys.flatMap(y => PLANTA.xs.map(x => ({x, y})));
+const N_AIS = PLANTA.pos.length;
+const enPerimetro = p => Math.abs(p.x) === PLANTA.xs[PLANTA.xs.length - 1] || Math.abs(p.y) === PLANTA.ys[PLANTA.ys.length - 1];
+const TIPOS_K = {1: 130, 2: 224, 3: 270};
+const PRESETS = {iguales: () => PLANTA.pos.map(() => 2), perimetro: () => PLANTA.pos.map(p => enPerimetro(p) ? 3 : 1)};
+// Aislador: capas de goma de 8 mm, fluencia del plomo 80 kgf/cm², módulo volumétrico de la goma 2000 MPa,
+// deformación de rotura 600 %, giro 0,003 rad y Dr = 0,375 (circular, AASHTO 2014).
+const ER = 0.008, SIGMA_P = 800, K_GOMA = 200000, EPS_O = 6, THETA = 0.003, DR = 0.375;
+
+/* ---------- Estado ---------- */
+const estado = {zona: 2, suelo: 'II', Tf: 1, TD: 3, betaD: 15, betaM: 12, D: 0.18, fi: 0.75, fiP: 0.2, nr: 20, G: 60,
+  P: 700, eReal: 1, tipos: PRESETS.iguales(), cmX: 0, variacion: 15};
+const oyentes = [];
+let pend = null;
+// Solo se avisan las claves que de verdad cambiaron: un clic o una tecla sin efecto no redibuja nada.
+function cambiar(p){
+  const claves = Object.keys(p).filter(k => JSON.stringify(estado[k]) !== JSON.stringify(p[k]));
+  if(!claves.length) return;
+  claves.forEach(k => { estado[k] = p[k]; });
+  if(!pend){
+    pend = new Set();
+    requestAnimationFrame(() => { const c = pend; pend = null; oyentes.forEach(f => f(c)); });
+  }
+  claves.forEach(k => pend.add(k));
+}
+const escuchar = f => oyentes.push(f);
+const toca = (c, ...ks) => ks.some(k => c.has(k));
+function enlazarSegmentado(selector, clave, conv = v => v){
+  const botones = document.querySelectorAll(selector);
+  botones.forEach(b => b.addEventListener('click', () => cambiar({[clave]: conv(b.dataset.v)})));
+  escuchar(c => { if(c.has(clave)) botones.forEach(b => b.setAttribute('aria-pressed', String(conv(b.dataset.v) === estado[clave]))); });
+}
+function enlazarRango(id, clave, formato){
+  const r = $(id), out = $(id + '-out');
+  r.addEventListener('input', () => cambiar({[clave]: +r.value}));
+  escuchar(c => { if(c.has(clave)){ r.value = estado[clave]; out.innerHTML = formato(estado[clave]); } });
+}
+
+/* ---------- Cálculos ---------- */
+// Dos grados de libertad (cap. 14 de TGB): superestructura de masa 1 sobre ks y losa de aislación de masa MU sobre kb.
+const MU = 0.25;
+function dosGdl(){
+  const ks = PI2 / estado.Tf ** 2, kb = (1 + MU) * PI2 / estado.TD ** 2;
+  const b = MU * ks + kb + ks, raiz = Math.sqrt(b * b - 4 * MU * kb * ks);
+  const modo = w => {
+    const fs = ks / (ks - w), num = MU + fs, den = MU + fs * fs;
+    return {w, T: 2 * Math.PI / Math.sqrt(w), fb: 1, fs, gamma: num / den, masa: num * num / (den * (1 + MU))};
+  };
+  return [modo((b - raiz) / (2 * MU)), modo((b + raiz) / (2 * MU))];
+}
+function demanda(){
+  const s = SUELOS[estado.suelo], z = ZONA[estado.zona].Z;
+  const BD = factorB(estado.betaD), BM = factorB(estado.betaM);
+  const CD = s.CD * z / 1000, CM = MM * CD;
+  const DD = CD / BD, DM = CM / BM;
+  // Sismo en Y: la dimensión perpendicular es Lx, y la distancia y de 7.3.5 se mide en X.
+  const e = estado.eReal + 0.05 * PLANTA.Lx, y = PLANTA.Lx / 2;
+  const fT = factorTorsion(y, e);
+  return {BD, BM, CD, CM, DD, DM, e, y, fT, DTD: DD * fT, DTM: DM * fT};
+}
+function aislador(){
+  const {fi, fiP, nr, G: Gm} = estado;
+  const Hr = nr * ER, Ap = Math.PI / 4 * fiP * fiP, A = Math.PI / 4 * fi * fi - Ap;
+  const Kp = A * Gm / Hr, Ke = 10 * Kp, Q = Ap * SIGMA_P;
+  const Dy = Q / (Ke - Kp);
+  // El núcleo de plomo llena el hueco: solo abomba el borde exterior de cada capa.
+  const S = A / (Math.PI * fi * ER);
+  return {Hr, A, Ap, Kp, Ke, Q, Dy, Fy: Ke * Dy, S};
+}
+const fuerza = (a, D) => D <= a.Dy ? a.Ke * D : a.Q + a.Kp * D;
+const kEff = (a, D) => fuerza(a, D) / D;
+const betaEff = (a, D) => D <= a.Dy ? 0 : 4 * a.Q * (D - a.Dy) / (2 * Math.PI * kEff(a, D) * D * D);
+function sistema(){
+  const ais = PLANTA.pos.map((p, i) => Object.assign({k: TIPOS_K[estado.tipos[i]], tipo: estado.tipos[i]}, p));
+  const K = ais.reduce((s, a) => s + a.k, 0);
+  const crx = ais.reduce((s, a) => s + a.k * a.x, 0) / K, cry = ais.reduce((s, a) => s + a.k * a.y, 0) / K;
+  const Kt = ais.reduce((s, a) => s + a.k * ((a.x - crx) ** 2 + (a.y - cry) ** 2), 0);
+  const r2 = (PLANTA.Lx ** 2 + PLANTA.Ly ** 2) / 12;
+  const ex = estado.cmX - crx, ey = -cry;
+  const yMax = Math.max(...ais.map(a => Math.abs(a.x - crx)));
+  const fT = factorTorsion(yMax, Math.abs(ex) + 0.05 * PLANTA.Lx);
+  return {ais, K, crx, cry, ex, ey, fT, omega: Math.sqrt(Kt / (K * r2)),
+    TD: periodoAislado(K), Kobj: PI2 * PLANTA.W / (G * estado.TD ** 2)};
+}
+
+/* ---------- Ecuaciones (MathML) ---------- */
+const filasEc = filas => filas.map(f => `<div>${f ? `<math displaystyle="true">${f}</math>` : ''}</div>`).join('');
+const sb = (a, b) => `<msub><mi>${a}</mi><mtext>${b}</mtext></msub>`;
+const resEc = (v, u) => `<mo>=</mo><mn class="ec-res">${v}</mn>` + (u ? `<mspace width="0.35em"></mspace><mtext class="ec-uni">${u}</mtext>` : '');
+const lectura = (tit, val, nota = '', mal = false) => `<div class="lectura${mal ? ' mal' : ''}"><span class="tit">${tit}</span><b>${val}</b>${nota ? `<small>${nota}</small>` : ''}</div>`;
+
+/* ---------- Lienzos SVG ---------- */
+// Cada gráfico se dibuja al ancho real de su contenedor, así el texto queda siempre en 12 px.
+function lienzo(id, alto, dibujarFigura){
+  const svg = $(id), l = {svg, w: 0, h: 0};
+  const dibujar = () => { svg.innerHTML = ''; dibujarFigura(l); };
+  const medir = () => {
+    const w = Math.round(svg.getBoundingClientRect().width);
+    if(!w || w === l.w) return;
+    l.w = w; l.h = Math.round(alto(w));
+    svg.setAttribute('viewBox', `0 0 ${l.w} ${l.h}`);
+    dibujar(l);
+  };
+  // El cambio de alto del viewBox vuelve a disparar el observador: en el cuadro siguiente, con el mismo ancho, no hace nada.
+  new ResizeObserver(() => requestAnimationFrame(medir)).observe(svg);
+  l.redibujar = () => { if(l.w) dibujar(l); };
+  return l;
+}
+function marcas(min, max, n = 4){
+  const paso0 = (max - min) / n, e = 10 ** Math.floor(Math.log10(paso0)), f = paso0 / e;
+  const paso = ([1, 2, 2.5, 5].find(n => f <= n) ?? 10) * e, r = [];
+  for(let v = Math.ceil(min / paso - 1e-9) * paso; v <= max + 1e-9; v += paso) r.push(+v.toFixed(10));
+  return r;
+}
+function marco(l, op){
+  const svg = l.svg;
+  const P = {x0: op.izq || 50, x1: l.w - (op.der || 24), y0: op.arriba || 26, y1: l.h - (op.abajo || 34)};
+  const X = v => P.x0 + (v - op.x[0]) / (op.x[1] - op.x[0]) * (P.x1 - P.x0);
+  const Y = v => P.y1 - (v - op.y[0]) / (op.y[1] - op.y[0]) * (P.y1 - P.y0);
+  for(const v of op.yt){
+    el('line', {x1: P.x0, x2: P.x1, y1: Y(v), y2: Y(v), stroke: v === 0 && op.y[0] < 0 ? '#B9C4C9' : REJILLA}, svg);
+    texto(svg, P.x0 - 8, Y(v) + 4, op.fy(v), {'text-anchor': 'end'});
+  }
+  for(const v of op.xt){
+    el('line', {x1: X(v), x2: X(v), y1: P.y0, y2: P.y1, stroke: v === 0 && op.x[0] < 0 ? '#B9C4C9' : REJILLA}, svg);
+    texto(svg, X(v), P.y1 + 18, op.fx(v), {'text-anchor': 'middle'});
+  }
+  if(op.ry) texto(svg, P.x0 - 8, P.y0 - 12, op.ry, {fill: TINTA, 'font-weight': 600});
+  if(op.rx) texto(svg, P.x1, l.h - 2, op.rx, {'text-anchor': 'end'});
+  return {svg, P, X, Y};
+}
+const trazo = (f, a, b, X, Y, n = 200) => {
+  let d = '';
+  for(let i = 0; i <= n; i++){ const v = a + (b - a) * i / n; d += (i ? 'L' : 'M') + X(v).toFixed(1) + ',' + Y(f(v)).toFixed(1); }
+  return d;
+};
+function punto(m, x, y, color, rotulo, arriba = true){
+  el('line', {x1: m.X(x), x2: m.X(x), y1: m.Y(y), y2: m.P.y1, stroke: color, 'stroke-dasharray': '3 4'}, m.svg);
+  el('circle', {cx: m.X(x), cy: m.Y(y), r: 6.5, fill: color, stroke: '#fff', 'stroke-width': 2.5}, m.svg);
+  if(rotulo){
+    const derecha = m.X(x) < (m.P.x0 + m.P.x1) / 2;
+    texto(m.svg, m.X(x) + (derecha ? 11 : -11), m.Y(y) + (arriba ? -11 : 20), rotulo,
+      {'text-anchor': derecha ? 'start' : 'end', fill: color, 'font-weight': 600});
+  }
+}
+// Zona de clic que fija el período aislado.
+function clicPeriodo(m){
+  const r = el('rect', {x: m.P.x0, y: m.P.y0, width: m.P.x1 - m.P.x0, height: m.P.y1 - m.P.y0, fill: 'transparent', style: 'cursor:pointer'}, m.svg);
+  r.addEventListener('click', ev => {
+    const p = m.svg.createSVGPoint(); p.x = ev.clientX; p.y = ev.clientY;
+    const w = p.matrixTransform(m.svg.getScreenCTM().inverse());
+    const T = (w.x - m.P.x0) / (m.P.x1 - m.P.x0) * 5;
+    cambiar({TD: Math.min(4.5, Math.max(1.5, Math.round(T / 0.05) * 0.05))});
+  });
+}
+
+/* ---------- Hero: dos edificios ---------- */
+enlazarRango('Tf', 'Tf', v => fmt(v, 2) + ' s');
+enlazarRango('TD', 'TD', v => fmt(v, 2) + ' s');
+enlazarSegmentado('[data-zona]', 'zona', Number);
+enlazarSegmentado('[data-suelo]', 'suelo');
+const heroe = {resp: null, partes: null};
+function respuestaHeroe(){
+  const [m1, m2] = dosGdl(), S = Sd(m1.T);
+  const ub = m1.gamma * m1.fb * S, us = m1.gamma * m1.fs * S;
+  heroe.resp = {m1, m2, uf: Sd(estado.Tf), ub, ud: us - ub, aF: Sa(estado.Tf), aA: m1.gamma * m1.fs * Sa(m1.T)};
+  const r = heroe.resp;
+  $('heroe-modos').innerHTML = `<p><b>Modo 1, T₁ = ${fmt(m1.T, 2)} s:</b> el edificio sobre los aisladores. Mueve el ${fmt(m1.masa * 100, 1)}&nbsp;% de la masa, y el ${fmt(100 * r.ub / (r.ub + r.ud), 0)}&nbsp;% de su deformación está en los aisladores.</p>` +
+    `<p><b>Modo 2, T₂ = ${fmt(m2.T, 2)} s:</b> la superestructura vibrando sobre los aisladores, con el ${fmt(m2.masa * 100, 1)}&nbsp;% de la masa.</p>`;
+  $('heroe-acel').textContent = `${fmt(g(r.aF), 2)} g → ${fmt(g(r.aA), 2)} g`;
+  $('heroe-acel-l').textContent = `base fija → aislado: ${fmt(r.aF / r.aA, 1)} veces menos`;
+  $('heroe-desp').textContent = `${fmt(r.ub, 0)} cm en los aisladores`;
+  $('heroe-desp-l').textContent = `El edificio se deforma ${fmt(r.ud, 1)} cm; en base fija, ${fmt(r.uf, 1)} cm.`;
+}
+const lHeroe = lienzo('g-heroe', w => Math.min(400, Math.max(290, w * 0.62)), l => {
+  const svg = l.svg;
+  const N = 5, suelo = l.h - 52, bw = Math.min(150, l.w * 0.28), sh = Math.min(48, (suelo - 70) / (N + 0.5));
+  for(let x = 10; x < l.w - 10; x += 12) el('line', {x1: x, y1: suelo + 1, x2: x - 8, y2: suelo + 9, stroke: '#B9C4C9'}, svg);
+  el('line', {x1: 8, x2: l.w - 8, y1: suelo, y2: suelo, stroke: TINTA, 'stroke-width': 2}, svg);
+  const edificio = (cx, aislado, color) => {
+    const x0 = cx - bw / 2, base = aislado ? suelo - 20 : suelo;
+    const pisos = Array.from({length: N + 1}, (_, i) => base - i * sh);
+    const gr = el('g', {}, svg);
+    const ais = aislado ? [0, 0.5, 1].map(() => el('polygon', {fill: GOMA}, gr)) : [];
+    const cols = [0, 0.5, 1].map(() => el('polyline', {fill: 'none', stroke: color, 'stroke-width': 3, 'stroke-linejoin': 'round'}, gr));
+    const losas = pisos.map((_, i) => el('line', {stroke: color, 'stroke-width': i ? 4 : 6, 'stroke-linecap': 'round'}, gr));
+    return {x0, base, pisos, ais, cols, losas};
+  };
+  const cx = [l.w * 0.27, l.w * 0.73];
+  heroe.partes = {N, bw, suelo, f: edificio(cx[0], false, AZUL), a: edificio(cx[1], true, IEC)};
+  texto(svg, cx[0], suelo + 24, 'Base fija', {'text-anchor': 'middle', fill: AZUL, 'font-weight': 600, 'font-size': 13});
+  texto(svg, cx[1], suelo + 24, 'Aislado', {'text-anchor': 'middle', fill: IEC_H, 'font-weight': 600, 'font-size': 13});
+  heroe.etqF = texto(svg, cx[0], suelo + 41, '', {'text-anchor': 'middle'});
+  heroe.etqA = texto(svg, cx[1], suelo + 41, '', {'text-anchor': 'middle'});
+  rotularHeroe(); posarHeroe(tiempo());
+});
+function rotularHeroe(){
+  if(!heroe.etqF || !heroe.resp) return;
+  heroe.etqF.textContent = `T = ${fmt(estado.Tf, 2)} s`;
+  heroe.etqA.textContent = `T₁ = ${fmt(heroe.resp.m1.T, 2)} s`;
+}
+function posarEdificio(e, desp, bw){
+  const xs = [0, bw / 2, bw];
+  e.cols.forEach((c, k) => c.setAttribute('points', e.pisos.map((y, i) => `${(e.x0 + xs[k] + desp(i)).toFixed(1)},${y.toFixed(1)}`).join(' ')));
+  e.losas.forEach((ln, i) => {
+    const d = desp(i);
+    ln.setAttribute('x1', (e.x0 - 7 + d).toFixed(1)); ln.setAttribute('x2', (e.x0 + bw + 7 + d).toFixed(1));
+    ln.setAttribute('y1', e.pisos[i]); ln.setAttribute('y2', e.pisos[i]);
+  });
+  const suelo = heroe.partes.suelo, d0 = desp(0);
+  e.ais.forEach((p, k) => {
+    const x = e.x0 + xs[k];
+    p.setAttribute('points', `${x - 9},${suelo} ${x + 9},${suelo} ${x + 9 + d0},${e.base + 3} ${x - 9 + d0},${e.base + 3}`);
+  });
+}
+function posarHeroe(t){
+  const p = heroe.partes, r = heroe.resp;
+  if(!p || !r) return;
+  // Una sola escala para los dos edificios, para comparar; con un piso de 12 cm, para no exagerar respuestas chicas.
+  const esc = p.bw * 0.4 / Math.max(12, r.uf, r.ub + r.ud);
+  const sF = REDUCIDO ? 1 : Math.sin(2 * Math.PI * t / estado.Tf), sA = REDUCIDO ? 1 : Math.sin(2 * Math.PI * t / r.m1.T);
+  posarEdificio(p.f, i => r.uf * esc * i / p.N * sF, p.bw);
+  posarEdificio(p.a, i => (r.ub + r.ud * i / p.N) * esc * sA, p.bw);
+}
+const t0 = performance.now(), tiempo = () => (performance.now() - t0) / 1000;
+let animando = false, enVista = true;
+function cuadro(){
+  if(!enVista || REDUCIDO){ animando = false; return; }
+  posarHeroe(tiempo());
+  requestAnimationFrame(cuadro);
+}
+function animar(){ if(!animando && enVista && !REDUCIDO){ animando = true; requestAnimationFrame(cuadro); } }
+new IntersectionObserver(es => { enVista = es[0].isIntersecting; animar(); }).observe($('g-heroe'));
+escuchar(c => {
+  if(!toca(c, 'Tf', 'TD', 'zona', 'suelo')) return;
+  respuestaHeroe(); rotularHeroe(); posarHeroe(tiempo());
+});
+
+/* ---------- Período ---------- */
+function ejesEspectro(l, op){
+  const m = marco(l, Object.assign({x: [0, 5], xt: [0, 1, 2, 3, 4, 5], fx: v => v + ' s', rx: 'período T'}, op));
+  const Tf = estado.Tf;
+  if(2.5 * Tf < 5){
+    const a = m.X(2.5 * Tf), b = m.X(Math.min(5, 3 * Tf));
+    el('rect', {x: a, y: m.P.y0, width: Math.max(0, b - a), height: m.P.y1 - m.P.y0, fill: 'rgba(232,112,0,.14)'}, m.svg);
+  }
+  // Sobre 3,5 s de período aislado, NCh2745 exige espectro de sitio (8.4.1.1).
+  el('rect', {x: m.X(3.5), y: m.P.y0, width: m.P.x1 - m.X(3.5), height: m.P.y1 - m.P.y0, fill: 'rgba(86,100,111,.07)'}, m.svg);
+  texto(m.svg, m.P.x1 - 4, op.sitioAbajo ? m.P.y1 - 8 : m.P.y0 + 14, l.w < 480 ? 'sitio' : 'espectro de sitio', {'text-anchor': 'end', 'font-size': 11});
+  return m;
+}
+const lSa = lienzo('g-sa', w => w < 480 ? 210 : 230, l => {
+  const s = SUELOS[estado.suelo], z = ZONA[estado.zona].Z, ymax = g(s.aA * z) * 1.15;
+  const m = ejesEspectro(l, {y: [0, ymax], yt: marcas(0, ymax), fy: v => fmt(v, 2), ry: 'Sa (g) · 5 %'});
+  el('path', {d: trazo(T => g(Sa(T)), 0, 5, m.X, m.Y), fill: 'none', stroke: TINTA, 'stroke-width': 2.4}, m.svg);
+  punto(m, estado.Tf, g(Sa(estado.Tf)), AZUL, `${fmt(g(Sa(estado.Tf)), 2)} g`);
+  punto(m, estado.TD, g(Sa(estado.TD)), IEC, `${fmt(g(Sa(estado.TD)), 2)} g`);
+  clicPeriodo(m);
+});
+const lSd = lienzo('g-sd', w => w < 480 ? 190 : 200, l => {
+  const s = SUELOS[estado.suelo], z = ZONA[estado.zona].Z, techo = s.aD * z, ymax = techo * 1.2;
+  const m = ejesEspectro(l, {y: [0, ymax], yt: marcas(0, ymax), fy: v => fmt(v, 0), ry: 'Sd (cm) · 5 %', sitioAbajo: true});
+  el('line', {x1: m.X(s.Td), x2: m.P.x1, y1: m.Y(techo), y2: m.Y(techo), stroke: TINTA2, 'stroke-dasharray': '2 5'}, m.svg);
+  texto(m.svg, m.P.x1 - 4, m.Y(techo) - 8, `techo: a_D ·D·Z = ${fmt(techo, 1)} cm`, {'text-anchor': 'end'});
+  el('path', {d: trazo(Sd, 0, 5, m.X, m.Y), fill: 'none', stroke: TINTA, 'stroke-width': 2.4}, m.svg);
+  punto(m, estado.Tf, Sd(estado.Tf), AZUL, `${fmt(Sd(estado.Tf), 1)} cm`, false);
+  punto(m, estado.TD, Sd(estado.TD), IEC, `${fmt(Sd(estado.TD), 1)} cm`, false);
+  clicPeriodo(m);
+});
+escuchar(c => {
+  if(!toca(c, 'Tf', 'TD', 'zona', 'suelo')) return;
+  lSa.redibujar(); lSd.redibujar();
+  $('p-acel').textContent = '1/' + fmt(Sa(estado.Tf) / Sa(estado.TD), 1);
+  $('p-sd').textContent = fmt(Sd(estado.TD), 1) + ' cm';
+  $('p-sd-l').textContent = `desplazamiento espectral aislado, al 5 % (base fija: ${fmt(Sd(estado.Tf), 1)} cm)`;
+});
+
+/* ---------- Amortiguamiento ---------- */
+enlazarRango('betaD', 'betaD', fmtPct);
+const lB = lienzo('g-b', w => w < 480 ? 260 : 300, l => {
+  const s = SUELOS[estado.suelo], z = ZONA[estado.zona].Z, BD = factorB(estado.betaD), ymax = g(s.aA * z) * Math.max(1, 1 / BD) * 1.15;
+  const m = ejesEspectro(l, {y: [0, ymax], yt: marcas(0, ymax), fy: v => fmt(v, 2), ry: 'Sa (g)'});
+  el('path', {d: trazo(T => g(Sa(T)), 0, 5, m.X, m.Y), fill: 'none', stroke: TINTA2, 'stroke-width': 1.8}, m.svg);
+  el('path', {d: trazo(T => g(Sa(T)) / BD, 0, 5, m.X, m.Y), fill: 'none', stroke: IEC, 'stroke-width': 3, 'stroke-linecap': 'round'}, m.svg);
+  texto(m.svg, m.X(1.25), m.Y(g(Sa(1.25))) - 10, '5 %', {fill: TINTA2, 'font-weight': 600});
+  texto(m.svg, m.X(1.25) - 8, m.Y(g(Sa(1.25)) / BD) + 20, `÷ ${fmt(BD, 2)}`, {fill: IEC_H, 'font-weight': 600});
+  punto(m, estado.Tf, g(Sa(estado.Tf)), AZUL, 'superestructura');
+  punto(m, estado.TD, g(Sa(estado.TD)) / BD, IEC, 'modos aislados', false);
+  clicPeriodo(m);
+});
+escuchar(c => {
+  if(!toca(c, 'betaD', 'Tf', 'TD', 'zona', 'suelo')) return;
+  lB.redibujar();
+  const d = demanda(), z = ZONA[estado.zona].Z, CD = SUELOS[estado.suelo].CD;
+  // Tabla 1 de la guía, con la fila igual al β elegido o el par de filas entre las que se interpola.
+  const bta = estado.betaD, cerca = b => b === bta || TABLA2.some(([b0], i) => TABLA2[i + 1] && b0 < bta && bta < TABLA2[i + 1][0] && (b === b0 || b === TABLA2[i + 1][0]));
+  const interpolado = TABLA2.every(([b]) => b !== bta)
+    ? `<span class="cerca" style="background:var(--tinta);color:#fff;border-color:var(--tinta)">interpolado: β ${fmtPct(bta)}<b style="color:var(--iec)">${fmt(d.BD, 2)}</b></span>` : '';
+  // El control llega a 30 % (8.6.3.2): la fila de 50 % no se muestra.
+  $('tabla2').innerHTML = TABLA2.filter(([b]) => b <= 30).map(([b, f]) => `<span${cerca(b) ? ' class="cerca"' : ''}>β ${b} %<b>${fmt(f, 2)}</b></span>`).join('') + interpolado;
+  $('ec-dd').innerHTML = filasEc([
+    sb('D', 'D'), `<mo>=</mo><mfrac>${sb('C', 'D')}${sb('B', 'D')}</mfrac>`,
+    '', `<mo>=</mo><mfrac><mrow><mn>${CD}</mn><mo>·</mo><mn>${fmt(z, 2)}</mn></mrow><mn>${fmt(d.BD, 2)}</mn></mfrac>`,
+    '', resEc(miles(d.DD * 1000), 'mm')]);
+});
+
+/* ---------- Aislador bilineal ---------- */
+enlazarRango('Dciclo', 'D', v => fmt(v, 2) + ' m');
+enlazarRango('fiP', 'fiP', v => fmt(v, 2) + ' m');
+const DMAX = 0.5;
+const lCiclo = lienzo('g-ciclo', w => w < 480 ? 290 : 330, l => {
+  const a = aislador(), D = estado.D, Fm = fuerza(a, DMAX) * 1.08;
+  const m = marco(l, {x: [-DMAX, DMAX], y: [-Fm, Fm], xt: marcas(-DMAX, DMAX, 4), yt: marcas(-Fm, Fm, 4),
+    fx: v => fmt(v, 2), fy: v => miles(v), ry: 'F (tonf)', rx: 'desplazamiento (m)', izq: 56});
+  const pt = (x, y) => `${m.X(x).toFixed(1)},${m.Y(y).toFixed(1)}`;
+  // Curva de primera carga.
+  el('polyline', {points: [pt(-DMAX, -fuerza(a, DMAX)), pt(-a.Dy, -a.Fy), pt(0, 0), pt(a.Dy, a.Fy), pt(DMAX, fuerza(a, DMAX))].join(' '),
+    fill: 'none', stroke: '#B9C4C9', 'stroke-width': 1.5}, m.svg);
+  const Fd = fuerza(a, D);
+  if(D > a.Dy){
+    // Paralelogramo del ciclo a ±D: descarga con Ke, rama inferior con Kp, recarga con Ke.
+    const v = [[D, Fd], [D - 2 * a.Dy, a.Kp * (D - 2 * a.Dy) - a.Q], [-D, -Fd], [-D + 2 * a.Dy, a.Kp * (-D + 2 * a.Dy) + a.Q]];
+    el('polygon', {points: v.map(p => pt(...p)).join(' '), fill: 'rgba(232,112,0,.2)', stroke: IEC, 'stroke-width': 3, 'stroke-linejoin': 'round'}, m.svg);
+  } else {
+    el('line', {x1: m.X(-D), y1: m.Y(-Fd), x2: m.X(D), y2: m.Y(Fd), stroke: IEC, 'stroke-width': 3}, m.svg);
+  }
+  el('line', {x1: m.X(-D), y1: m.Y(-Fd), x2: m.X(D), y2: m.Y(Fd), stroke: TINTA, 'stroke-width': 1.6, 'stroke-dasharray': '6 5'}, m.svg);
+  el('circle', {cx: m.X(D), cy: m.Y(Fd), r: 6, fill: IEC, stroke: '#fff', 'stroke-width': 2.5}, m.svg);
+  texto(m.svg, m.X(D) - 10, m.Y(Fd) - 12, `K_eff = ${miles(kEff(a, D))} tonf/m`, {'text-anchor': 'end', fill: TINTA, 'font-weight': 600});
+  if(a.Q > 0){
+    el('circle', {cx: m.X(0), cy: m.Y(a.Q), r: 4, fill: IEC_H}, m.svg);
+    texto(m.svg, m.P.x0 + 8, m.P.y0 + 12, `Q = ${fmt(a.Q, 1)} tonf · D_y = ${fmt(a.Dy * 100, 1)} cm`, {fill: IEC_H});
+  }
+});
+const lBeta = lienzo('g-beta', () => 170, l => {
+  const a = aislador();
+  let bmax = 0.1;
+  for(let D = 0.005; D <= DMAX; D += 0.005) bmax = Math.max(bmax, betaEff(a, D) * 1.15);
+  const m = marco(l, {x: [0, DMAX], y: [0, bmax], xt: marcas(0, DMAX, 5), yt: marcas(0, bmax, 3),
+    fx: v => fmt(v, 1), fy: v => fmt(v * 100, 0) + ' %', ry: 'β_eff', rx: 'D (m)', abajo: 32, izq: 56});
+  el('path', {d: trazo(D => betaEff(a, D), 0.005, DMAX, m.X, m.Y), fill: 'none', stroke: IEC, 'stroke-width': 2.6}, m.svg);
+  el('circle', {cx: m.X(estado.D), cy: m.Y(betaEff(a, estado.D)), r: 6, fill: IEC, stroke: '#fff', 'stroke-width': 2.5}, m.svg);
+});
+escuchar(c => {
+  if(!toca(c, 'D', 'fiP', 'fi', 'nr', 'G', 'betaD', 'eReal', 'zona', 'suelo')) return;
+  if(toca(c, 'D', 'fiP', 'fi', 'nr', 'G')){ lCiclo.redibujar(); lBeta.redibujar(); }
+  const a = aislador(), D = estado.D, K = kEff(a, D), b = betaEff(a, D), d = demanda();
+  const minimo = estado.fi / 6;
+  $('plomo-ayuda').innerHTML = estado.fiP === 0 ? 'Sin núcleo de plomo: goma natural.'
+    : `φ<sub>p</sub> = φ / ${fmt(estado.fi / estado.fiP, 1)}.` + (estado.fiP < minimo ? ` Más chico que φ/6 = ${fmt(minimo, 2)} m, el mínimo recomendado.` : '') +
+      ` Aislador de φ = ${fmt(estado.fi, 2)} m y H<sub>r</sub> = ${fmt(a.Hr, 2)} m, el de la <a class="ref" href="#fig-10">Figura&nbsp;10</a>.`;
+  $('ec-keff').innerHTML = filasEc([
+    sb('K', 'eff'), `<mo>=</mo><mfrac><mrow><mi>Q</mi><mo>+</mo>${sb('K', 'p')}<mi>D</mi></mrow><mi>D</mi></mfrac>`,
+    '', `<mo>=</mo><mfrac><mrow><mn>${fmt(a.Q, 1)}</mn><mo>+</mo><mn>${miles(a.Kp)}</mn><mo>·</mo><mn>${fmt(D, 2)}</mn></mrow><mn>${fmt(D, 2)}</mn></mfrac>`,
+    '', resEc(miles(K), 'tonf/m'),
+    sb('β', 'eff'), `<mo>=</mo><mfrac><mrow><mn>4</mn><mi>Q</mi><mo>(</mo><mi>D</mi><mo>−</mo>${sb('D', 'y')}<mo>)</mo></mrow><mrow><mn>2</mn><mi>π</mi>${sb('K', 'eff')}<msup><mi>D</mi><mn>2</mn></msup></mrow></mfrac>`,
+    '', resEc(fmt(b * 100, 1), '%')]);
+  const restit = fuerza(a, d.DTD) - fuerza(a, 0.5 * d.DTD), minRest = 0.025 * PLANTA.W / N_AIS;
+  $('lec-bilineal').innerHTML =
+    lectura('Rigideces', `${miles(a.Kp)} / ${miles(a.Ke)}`, 'K<sub>p</sub> y K<sub>e</sub> (tonf/m)') +
+    lectura('Fluencia', `${fmt(a.Dy * 100, 1)} cm`, `D<sub>y</sub>; F<sub>y</sub> = ${fmt(a.Fy, 1)} tonf`) +
+    lectura('Energía por ciclo', `${fmt(4 * a.Q * Math.max(0, D - a.Dy), 1)} tonf·m`, 'EDC = 4Q (D − D<sub>y</sub>)') +
+    lectura('Restitución (10.2.4)', `${fmt(restit, 1)} tonf`, `F(D<sub>TD</sub>) − F(0,5 D<sub>TD</sub>), con D<sub>TD</sub> = ${fmt(d.DTD, 2)} m. Con 24 aisladores iguales, el 0,025 W del sistema toca a ${fmt(minRest, 1)} tonf cada uno`, restit < minRest);
+});
+
+/* ---------- Cuatro desplazamientos ---------- */
+enlazarRango('eReal', 'eReal', v => fmt(v, 1) + ' m');
+enlazarRango('betaM', 'betaM', fmtPct);
+// Planta a escala; margenArriba deja lugar para el contorno desplazado.
+function escalaPlanta(l, margenAbajo = 30, margenArriba = 0){
+  const s = Math.min((l.w - 40) / PLANTA.Lx, (l.h - 40 - margenAbajo - margenArriba) / PLANTA.Ly);
+  const cx = l.w / 2, cy = (l.h - margenAbajo + margenArriba) / 2 + 6;
+  return {s, P: (x, y) => [cx + x * s, cy - y * s]};
+}
+const lPlantaD = lienzo('g-planta-d', w => Math.min(360, Math.max(250, w * 0.6)), l => {
+  const svg = l.svg;
+  // Exageración: la mayor de la lista que deja el desplazamiento dibujado en unos 3,7 m de la planta.
+  const d = demanda(), {s, P} = escalaPlanta(l, 10, 56), EXA = [15, 10, 5, 3, 2].find(x => x * d.DTD <= 3.7) || 1;
+  $('fig7-exa').textContent = EXA;
+  const theta = d.DD * (factorTorsion(1, d.e) - 1);   // giro: corrimiento extra por metro de distancia al centro de rigidez
+  // Posición desplazada: traslación DD en Y y giro θ en torno al centro de rigidez (al centro de la planta), exagerados.
+  const mover = (x, y) => [x - EXA * theta * y, y + EXA * (d.DD + theta * x)];
+  const bx = PLANTA.Lx / 2, by = PLANTA.Ly / 2, esquinas = [[-bx, -by], [bx, -by], [bx, by], [-bx, by]];
+  el('polygon', {points: esquinas.map(([x, y]) => P(x, y).join(',')).join(' '), fill: '#F4F7F7', stroke: '#B9C4C9', 'stroke-width': 1.5}, svg);
+  el('polygon', {points: esquinas.map(([x, y]) => P(...mover(x, y)).join(',')).join(' '), fill: 'none', stroke: IEC, 'stroke-width': 2, 'stroke-dasharray': '7 5'}, svg);
+  const fmax = d.fT;
+  for(const p of PLANTA.pos){
+    const f = factorTorsion(Math.abs(p.x), d.e), t = (f - 1) / Math.max(1e-6, fmax - 1);
+    const [x, y] = P(p.x, p.y);
+    el('circle', {cx: x, cy: y, r: Math.max(5, s * 0.75), fill: `rgba(232,112,0,${(0.15 + 0.85 * t).toFixed(2)})`, stroke: GOMA, 'stroke-width': 1.2}, svg);
+  }
+  const [cmx, cmy] = P(estado.eReal, 0), [crx, cry] = P(0, 0);
+  el('circle', {cx: crx, cy: cry, r: 7, fill: '#fff', stroke: AZUL, 'stroke-width': 2.5}, svg);
+  el('rect', {x: cmx - 5.5, y: cmy - 5.5, width: 11, height: 11, fill: IEC, stroke: '#fff', 'stroke-width': 1.5, transform: `rotate(45 ${cmx} ${cmy})`}, svg);
+});
+const lCuatro = lienzo('g-cuatro', () => 170, l => {
+  const svg = l.svg;
+  const d = demanda(), filas = [['D_D', d.DD, 'SDI'], ['D_TD', d.DTD, 'SDI con torsión'], ['D_M', d.DM, 'SMP'], ['D_TM', d.DTM, 'SMP con torsión']];
+  const x0 = 66, x1 = l.w - 64, vmax = d.DTM * 1.08;
+  filas.forEach(([n, v, desc], i) => {
+    const y = 14 + i * 38, wv = (x1 - x0) * v / vmax;
+    texto(svg, 4, y + 16, n, {fill: TINTA, 'font-weight': 600, 'font-size': 13});
+    el('rect', {x: x0, y, width: x1 - x0, height: 22, rx: 6, fill: '#F1F4F5'}, svg);
+    el('rect', {x: x0, y, width: Math.max(2, wv), height: 22, rx: 6, fill: i < 2 ? AZUL : IEC, opacity: i % 2 ? 1 : 0.7}, svg);
+    texto(svg, x0 + wv + 8, y + 16, `${fmt(v * 100, 1)} cm`, {fill: TINTA, 'font-weight': 600});
+    if(wv > 150) texto(svg, x0 + 8, y + 16, desc, {fill: '#fff'});
+  });
+});
+escuchar(c => {
+  if(!toca(c, 'eReal', 'betaD', 'betaM', 'zona', 'suelo')) return;
+  lPlantaD.redibujar(); lCuatro.redibujar();
+  const d = demanda();
+  $('ec-dtd').innerHTML = filasEc([
+    sb('D', 'TD'), `<mo>=</mo>${sb('D', 'D')}<mrow><mo>[</mo><mn>1</mn><mo>+</mo><mi>y</mi><mfrac><mrow><mn>12</mn><mi>e</mi></mrow><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mfrac><mo>]</mo></mrow>`,
+    '', `<mo>=</mo><mn>${miles(d.DD * 1000)}</mn><mrow><mo>[</mo><mn>1</mn><mo>+</mo><mn>${fmt(d.y, 0)}</mn><mfrac><mrow><mn>12</mn><mo>·</mo><mn>${fmt(d.e, 1)}</mn></mrow><mrow><msup><mn>${PLANTA.Lx}</mn><mn>2</mn></msup><mo>+</mo><msup><mn>${PLANTA.Ly}</mn><mn>2</mn></msup></mrow></mfrac><mo>]</mo></mrow>`,
+    '', resEc(miles(d.DTD * 1000), 'mm')]) +
+    `<div></div><div class="ec-uni" style="font:500 12px 'IBM Plex Mono',monospace">e = ${fmt(estado.eReal, 1)} m real + 5 % de ${PLANTA.Lx} m = ${fmt(d.e, 1)} m</div>`;
+});
+
+/* ---------- Planta ---------- */
+enlazarRango('cmX', 'cmX', v => fmt(v, 1) + ' m');
+const botonesPreset = document.querySelectorAll('[data-preset]');
+botonesPreset.forEach(b => b.addEventListener('click', () => cambiar({tipos: PRESETS[b.dataset.v]()})));
+const COLOR_TIPO = {1: '#C9D3D8', 2: PLOMO, 3: GOMA};
+let focoAislador = null;   // el redibujo recrea los aisladores: se devuelve el foco al que se cambió
+const lPlanta = lienzo('g-planta', w => Math.min(380, Math.max(260, w * 0.64)), l => {
+  const svg = l.svg;
+  const si = sistema(), {s, P} = escalaPlanta(l, 6);
+  const bx = PLANTA.Lx / 2, by = PLANTA.Ly / 2, [x0, y0] = P(-bx, by), [x1, y1] = P(bx, -by);
+  el('rect', {x: x0, y: y0, width: x1 - x0, height: y1 - y0, fill: '#F4F7F7', stroke: '#B9C4C9', 'stroke-width': 1.5}, svg);
+  for(const x of PLANTA.xs){ const [a, b] = P(x, by), [, c] = P(x, -by); el('line', {x1: a, x2: a, y1: b, y2: c, stroke: REJILLA}, svg); }
+  for(const y of PLANTA.ys){ const [a, b] = P(-bx, y), [c] = P(bx, y); el('line', {x1: a, x2: c, y1: b, y2: b, stroke: REJILLA}, svg); }
+  si.ais.forEach((a, i) => {
+    const [x, y] = P(a.x, a.y), r = Math.max(7, s * (0.45 + 0.17 * a.tipo));
+    const gr = el('g', {tabindex: 0, role: 'button', 'aria-label': `Aislador en x = ${a.x} m, y = ${a.y} m, tipo ${a.tipo}. Cambiar tipo`, style: 'cursor:pointer'}, svg);
+    el('circle', {cx: x, cy: y, r: r + 5, fill: 'transparent'}, gr);
+    el('circle', {cx: x, cy: y, r, fill: COLOR_TIPO[a.tipo], stroke: TINTA, 'stroke-width': 1}, gr);
+    texto(gr, x, y + 4, String(a.tipo), {'text-anchor': 'middle', fill: a.tipo === 1 ? TINTA : '#fff', 'font-weight': 600, 'font-size': 11, 'pointer-events': 'none'});
+    const ciclar = () => { const t = estado.tipos.slice(); t[i] = t[i] % 3 + 1; cambiar({tipos: t}); };
+    gr.addEventListener('click', ciclar);
+    gr.addEventListener('keydown', ev => { if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); focoAislador = i; ciclar(); } });
+    if(i === focoAislador){ gr.focus(); focoAislador = null; }
+  });
+  const [mx, my] = P(estado.cmX, 0), [rx, ry] = P(si.crx, si.cry);
+  if(Math.hypot(mx - rx, my - ry) > 2) el('line', {x1: mx, y1: my, x2: rx, y2: ry, stroke: TINTA, 'stroke-width': 1.5, 'stroke-dasharray': '3 3'}, svg);
+  el('circle', {cx: rx, cy: ry, r: 8, fill: '#fff', stroke: AZUL, 'stroke-width': 3}, svg);
+  el('rect', {x: mx - 6, y: my - 6, width: 12, height: 12, fill: IEC, stroke: '#fff', 'stroke-width': 1.5, transform: `rotate(45 ${mx} ${my})`}, svg);
+});
+escuchar(c => {
+  if(!toca(c, 'tipos', 'cmX', 'TD')) return;
+  lPlanta.redibujar();
+  botonesPreset.forEach(b => b.setAttribute('aria-pressed', String(JSON.stringify(PRESETS[b.dataset.v]()) === JSON.stringify(estado.tipos))));
+  const si = sistema(), dif = si.K / si.Kobj - 1, pct = Math.round(dif * 100), signo = pct > 0 ? '+' : pct < 0 ? '−' : '';
+  $('lec-planta').innerHTML =
+    lectura('Rigidez total', `${miles(si.K)} tonf/m`, `objetivo K<sub>D</sub> = ${miles(si.Kobj)} (T<sub>D</sub> = ${fmt(estado.TD, 2)} s): ${signo}${Math.abs(pct)} %`, Math.abs(dif) > 0.1) +
+    lectura('Período con esta planta', `${fmt(si.TD, 2)} s`, 'T = 2π √(W / (K g))') +
+    lectura('Excentricidad', `${fmt(Math.hypot(si.ex, si.ey), 2)} m`, `centro de masa − centro de rigidez; en X: ${fmt(si.ex, 2)} m`, Math.abs(si.ex) > 0.05 * PLANTA.Lx) +
+    lectura('Rigidez torsional Ω', fmt(si.omega, 2), 'frecuencia de giro / de traslación. Sobre 1, el giro queda separado de la traslación') +
+    lectura('Esquina, sismo en Y', `D<sub>TD</sub> = ${fmt(si.fT, 2)} D<sub>D</sub>`, 'ecuación (5), con la excentricidad de esta planta más el 5 % accidental. La norma la da para rigidez uniforme en planta (7.3.5.2): con otra distribución, es solo una referencia');
+});
+
+/* ---------- Goma ---------- */
+enlazarRango('fi', 'fi', v => fmt(v, 2) + ' m');
+enlazarRango('nr', 'nr', v => `${v} · H<sub>r</sub> = ${fmt(v * ER, 2)} m`);
+enlazarRango('Pmax', 'P', v => miles(v) + ' tonf');
+enlazarSegmentado('[data-G]', 'G', Number);
+function verificacion(){
+  const a = aislador(), d = demanda(), D = d.DTM, fi = estado.fi, Gm = estado.G;
+  const gs = D / a.Hr, gc = estado.P / (a.A * Gm * a.S), gr = DR * fi * fi * THETA / (a.Hr * ER);
+  const Ec = 1 / (1 / (3 * Gm * (1 + 2 * a.S * a.S)) + 1 / K_GOMA), Kv = Ec * a.A / a.Hr;
+  const Psis = PLANTA.W / N_AIS, fv = Math.sqrt(Kv * G / Psis) / (2 * Math.PI);
+  const Pcr = 1.1 * Gm * a.A * fi * a.S / a.Hr;
+  // Área de traslape de las dos placas corridas en D: área común de dos círculos, menos el plomo.
+  const Dt = Math.min(D, fi * 0.999);
+  const traslape = 0.5 * (fi * fi * Math.acos(Dt / fi) - Dt * Math.sqrt(fi * fi - Dt * Dt));
+  const Ar = Math.max(0, traslape - a.Ap), PcrD = Pcr * Ar / a.A;
+  return {a, D, gs, gc, gr, suma: gs + gc + gr, FSgoma: 0.85 * EPS_O / (gs + gc + gr), Kv, fv, Pcr, Ar, PcrD,
+    FS0: Pcr / estado.P, FSD: PcrD / estado.P};
+}
+const lAislador = lienzo('g-aislador', w => w < 520 ? 300 : 270, l => {
+  const svg = l.svg;
+  const v = verificacion(), a = v.a, fi = estado.fi, D = Math.min(v.D, fi);
+  // Angosto: la planta arriba y la elevación abajo; ancho: lado a lado.
+  const angosto = l.w < 520, zona = angosto ? l.w : l.w * 0.56;
+  // Elevación, a escala: H_r y φ con la misma escala que D.
+  const placa = 0.035, alto = a.Hr + 2 * placa;
+  const s = Math.min((zona - 40) / (fi + D), (angosto ? l.h - 210 : l.h - 90) / alto);
+  const xb = 20 + (zona - 40 - s * (fi + D)) / 2, yb = l.h - 40;
+  const capas = Math.min(estado.nr, 40), hc = a.Hr * s / capas;
+  const corte = y => D * y / a.Hr;   // corrimiento (px) a la altura y (px) de la goma: lineal
+  const ybase = yb - placa * s;
+  el('rect', {x: xb - 8, y: ybase, width: fi * s + 16, height: placa * s, fill: '#9AA5AD'}, svg);
+  for(let i = 0; i < capas; i++){
+    const y0 = ybase - i * hc, y1 = y0 - hc, c0 = corte(i * hc), c1 = corte((i + 1) * hc);
+    el('polygon', {points: `${xb + c0},${y0} ${xb + fi * s + c0},${y0} ${xb + fi * s + c1},${y1} ${xb + c1},${y1}`,
+      fill: i % 2 ? GOMA : '#4A4F56', stroke: i % 2 ? 'none' : '#C3CBD0', 'stroke-width': 0.6}, svg);
+  }
+  if(estado.fiP > 0){
+    const xp = xb + (fi - estado.fiP) / 2 * s, wp = estado.fiP * s, yt = ybase - a.Hr * s;
+    el('polygon', {points: `${xp},${ybase} ${xp + wp},${ybase} ${xp + wp + D * s},${yt} ${xp + D * s},${yt}`, fill: PLOMO, opacity: 0.85}, svg);
+  }
+  const ytop = ybase - a.Hr * s;
+  el('rect', {x: xb - 8 + D * s, y: ytop - placa * s, width: fi * s + 16, height: placa * s, fill: '#9AA5AD'}, svg);
+  el('line', {x1: xb + fi * s, x2: xb + fi * s + D * s, y1: ytop - placa * s - 10, y2: ytop - placa * s - 10, stroke: IEC, 'stroke-width': 2}, svg);
+  texto(svg, Math.min(l.w - 70, xb + fi * s + D * s / 2), ytop - placa * s - 16, `D_TM = ${fmt(D * 100, 1)} cm`, {'text-anchor': 'middle', fill: IEC_H, 'font-weight': 600});
+  texto(svg, xb, yb + 22, `φ = ${fmt(fi, 2)} m · H_r = ${fmt(a.Hr, 2)} m`, {});
+  // Planta: las dos placas corridas en D y el traslape que trabaja.
+  const r = fi / 2, sp = angosto ? Math.min((l.w - 40) / (fi + D), (l.h * 0.36) / fi) : Math.min((l.w - zona - 30) / (fi + D), (l.h - 90) / fi);
+  const cx0 = angosto ? (l.w - (fi + D) * sp) / 2 + r * sp : zona + 10 + r * sp, cy = angosto ? l.h * 0.2 + 6 : (l.h - 40) / 2 + 10;
+  const defs = el('defs', {}, svg), cp = el('clipPath', {id: 'clip-traslape'}, defs);
+  el('circle', {cx: cx0, cy, r: r * sp}, cp);
+  el('circle', {cx: cx0, cy, r: r * sp, fill: 'none', stroke: '#9AA5AD', 'stroke-width': 1.5}, svg);
+  el('circle', {cx: cx0 + D * sp, cy, r: r * sp, fill: 'none', stroke: '#9AA5AD', 'stroke-width': 1.5, 'stroke-dasharray': '5 4'}, svg);
+  el('circle', {cx: cx0 + D * sp, cy, r: r * sp, fill: 'rgba(232,112,0,.35)', 'clip-path': 'url(#clip-traslape)'}, svg);
+  if(estado.fiP > 0) el('circle', {cx: cx0 + D * sp / 2, cy, r: estado.fiP / 2 * sp, fill: '#fff', stroke: PLOMO}, svg);
+  texto(svg, cx0 + D * sp / 2, cy + r * sp + 18, `traslape: ${fmt(100 * v.Ar / a.A, 0)} % del área`, {'text-anchor': 'middle', fill: IEC_H, 'font-weight': 600});
+});
+const lGammas = lienzo('g-gammas', () => 150, l => {
+  const svg = l.svg;
+  const v = verificacion(), lim = 0.85 * EPS_O, vmax = Math.max(lim, v.suma) * 1.06, x0 = 10, x1 = l.w - 10, X = u => x0 + (x1 - x0) * u / vmax;
+  const partes = [['γ_s', v.gs, IEC], ['γ_c', v.gc, AZUL], ['γ_r', v.gr, PLOMO]];
+  texto(svg, x0, 18, 'γ_s + γ_c + γ_r', {fill: TINTA, 'font-weight': 600});
+  let u = 0;
+  for(const [n, val, col] of partes){
+    el('rect', {x: X(u), y: 30, width: Math.max(0, X(u + val) - X(u)), height: 30, fill: col}, svg);
+    if(X(u + val) - X(u) > 34) texto(svg, (X(u) + X(u + val)) / 2, 50, n, {'text-anchor': 'middle', fill: '#fff', 'font-weight': 600});
+    u += val;
+  }
+  [[lim, '0,85 ε_o', 86], [lim / 1.5, 'con FS = 1,5', 104]].forEach(([val, rot, yt], i) => {
+    el('line', {x1: X(val), x2: X(val), y1: 24, y2: 70, stroke: TINTA, 'stroke-width': 2, 'stroke-dasharray': i ? '4 3' : ''}, svg);
+    const aLaIzquierda = X(val) > 170;   // el rótulo va a la izquierda de su línea salvo que no quepa
+    texto(svg, X(val) + (aLaIzquierda ? -4 : 4), yt, `${rot} = ${fmt(val, 2)}`, {'text-anchor': aLaIzquierda ? 'end' : 'start', fill: TINTA});
+  });
+  texto(svg, x0, 136, `γ_s ${fmt(v.gs, 2)} · γ_c ${fmt(v.gc, 2)} · γ_r ${fmt(v.gr, 2)} · suma ${fmt(v.suma, 2)}`, {});
+});
+escuchar(c => {
+  if(!toca(c, 'fi', 'fiP', 'nr', 'G', 'P', 'eReal', 'betaM', 'betaD', 'zona', 'suelo')) return;
+  lAislador.redibujar(); lGammas.redibujar();
+  const v = verificacion();
+  $('goma-ayuda').innerHTML = `D<sub>TM</sub> = ${fmt(v.D, 3)} m es el de la <a class="ref" href="#fig-8">Figura&nbsp;8</a>, y el núcleo de plomo (φ<sub>p</sub> = ${fmt(estado.fiP, 2)} m), el del control junto a la <a class="ref" href="#fig-5">Figura&nbsp;5</a>.`;
+  $('lec-goma').innerHTML =
+    lectura('Factor de forma S', fmt(v.a.S, 1), 'área cargada / área libre de una capa') +
+    lectura('FS de la goma', fmt(v.FSgoma, 2), '0,85 ε<sub>o</sub> / (γ<sub>s</sub> + γ<sub>c</sub> + γ<sub>r</sub>)', v.FSgoma < 1.3) +
+    lectura('Rigidez vertical', `${miles(v.Kv)} tonf/m`, `frecuencia vertical ${fmt(v.fv, 1)} Hz con W / 24 (mínimo 10 Hz, 7.2)`, v.fv < 10) +
+    lectura('Carga crítica', `${miles(v.Pcr)} tonf`, `sin deformar: FS = ${fmt(v.FS0, 2)}`, v.FS0 < 2.5) +
+    lectura('Carga crítica en D<sub>TM</sub>', `${miles(v.PcrD)} tonf`, `con el traslape: FS = ${fmt(v.FSD, 2)}`, v.FSD < 1) +
+    lectura('Rigidez lateral K<sub>p</sub>', `${miles(v.a.Kp)} tonf/m`, 'A·G / H<sub>r</sub>: baja con más goma, sube con más diámetro');
+});
+
+/* ---------- Rango de propiedades ---------- */
+enlazarRango('variacion', 'variacion', v => `± ${v} %`);
+function cortes(){
+  const si = sistema(), d = demanda(), vr = estado.variacion / 100, W = PLANTA.W;
+  const Kmin = si.K * (1 - vr), Kmax = si.K * (1 + vr);
+  return {si, d, Kmin, Kmax, W, Tmin: periodoAislado(Kmin), Tmax: periodoAislado(Kmax),
+    Vb1: Kmax * d.DD, Vb15: Kmax * d.DD / 1.5, Vs: Kmax * d.DD / RS, Vmin: ZONA[estado.zona].A0 / 6 * W};
+}
+const lCortes = lienzo('g-cortes', w => w < 480 ? 230 : 260, l => {
+  const svg = l.svg;
+  const c = cortes(), barras = [['V_b · aislación', c.Vb1, 'R_b = 1,0', IEC], ['V_b · fundación', c.Vb15, 'R_b = 1,5', IEC_H], ['V_s · superestructura', c.Vs, `R_s = ${fmt(RS, 1)}`, AZUL]];
+  const x0 = 12, x1 = l.w - 12, vmax = Math.max(c.Vb1, c.Vmin) / c.W * 1.25, X = u => x0 + (x1 - x0) * u / vmax;
+  const alto = (l.h - 60) / 3;
+  barras.forEach(([n, V, r, col], i) => {
+    const y = 10 + i * alto, u = V / c.W;
+    texto(svg, x0, y + 14, `${n} (${r})`, {fill: TINTA, 'font-weight': 600});
+    el('rect', {x: x0, y: y + 22, width: x1 - x0, height: alto - 36, rx: 6, fill: '#F1F4F5'}, svg);
+    el('rect', {x: x0, y: y + 22, width: X(u) - x0, height: alto - 36, rx: 6, fill: col}, svg);
+    const adentro = X(u) + 150 > x1;
+    texto(svg, adentro ? X(u) - 8 : X(u) + 8, y + 22 + (alto - 36) / 2 + 4, `${fmt(u * 100, 1)} % W · ${miles(V)} tonf`,
+      {fill: adentro ? '#fff' : TINTA, 'font-weight': 600, 'text-anchor': adentro ? 'end' : 'start'});
+  });
+  const xm = X(c.Vmin / c.W);
+  el('line', {x1: xm, x2: xm, y1: 6, y2: l.h - 36, stroke: TINTA, 'stroke-width': 2, 'stroke-dasharray': '5 4'}, svg);
+  // Rótulo del mínimo: a la derecha de la línea si cabe, si no a su izquierda, y si tampoco, contra el borde.
+  const largo = 7.3 * 31, cabeDerecha = xm + largo < l.w - 8, cabeIzquierda = xm - largo > 8;
+  texto(svg, cabeDerecha || cabeIzquierda ? xm : l.w - 8, l.h - 20, `mínimo NCh433: A_0 /6g = ${fmt(c.Vmin / c.W * 100, 1)} % W`,
+    {'text-anchor': cabeDerecha ? 'start' : 'end', fill: TINTA});
+});
+escuchar(c => {
+  if(!toca(c, 'variacion', 'tipos', 'cmX', 'betaD', 'zona', 'suelo', 'TD')) return;
+  lCortes.redibujar();
+  const k = cortes(), manda = k.Vs < k.Vmin;
+  $('lec-rango').innerHTML =
+    lectura('K<sub>Dmin</sub> / K<sub>Dmax</sub>', `${miles(k.Kmin)} / ${miles(k.Kmax)}`, `tonf/m; nominal ${miles(k.si.K)}, la de la planta`) +
+    lectura('Período T<sub>D</sub>', `${fmt(k.Tmin, 2)} s`, `con K<sub>Dmin</sub>; con K<sub>Dmax</sub>, ${fmt(k.Tmax, 2)} s`) +
+    lectura('Desplazamiento D<sub>D</sub>', `${fmt(k.d.DD * 100, 1)} cm`, 'C<sub>D</sub> / B<sub>D</sub> (7.3.1), con el B<sub>D</sub> de la <a class="ref" href="#tab-1">Tabla&nbsp;1</a>') +
+    lectura('Corte V<sub>s</sub>, contra NCh433', manda ? `${miles(k.Vmin)} tonf` : `${miles(k.Vs)} tonf`,
+      (manda ? `manda el mínimo de NCh433: V<sub>s</sub> = ${miles(k.Vs)} tonf queda bajo A<sub>0</sub>·W/6g.` : 'V<sub>s</sub> queda sobre el mínimo de NCh433.') +
+      ' Falta compararlo con el viento y con 1,5 veces la fuerza de activación');
+  $('ec-vs').innerHTML = filasEc([
+    sb('V', 's'), `<mo>=</mo><mfrac><mrow>${sb('K', 'Dmax')}<mo>·</mo>${sb('D', 'D')}</mrow>${sb('R', 's')}</mfrac>`,
+    '', `<mo>=</mo><mfrac><mrow><mn>${miles(k.Kmax)}</mn><mo>·</mo><mn>${fmt(k.d.DD, 3)}</mn></mrow><mn>${RS}</mn></mfrac>`,
+    '', resEc(miles(k.Vs), 'tonf')]);
+});
+
+oyentes.forEach(f => f(new Set(Object.keys(estado))));
+animar();
+const EMBEBIDA = window.self !== window.top, CON_MOUSE = matchMedia('(hover: hover)').matches;
+
+/* ---------- Globo con la definición de un término ---------- */
+// Con mouse, aparece al pasar sobre el término y un clic lleva al glosario. Al tacto, el primer toque solo muestra el globo,
+// que trae el enlace al glosario.
+const globo = $('globo');
+let terminoAbierto = null;
+function mostrarGlobo(a){
+  const id = a.getAttribute('href').slice(1), entrada = document.getElementById(id);
+  if(!entrada) return;
+  globo.innerHTML = `<b>${entrada.querySelector('dt').innerHTML}</b>${entrada.querySelector('dd').innerHTML}` +
+    (CON_MOUSE ? '' : `<a class="ref" href="#${id}">Ver en el glosario</a>`);
+  globo.hidden = false;
+  a.setAttribute('aria-describedby', 'globo');
+  terminoAbierto = a;
+  const r = a.getBoundingClientRect(), w = globo.offsetWidth, h = globo.offsetHeight;
+  const x = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), document.documentElement.clientWidth - w - 8);
+  const arriba = r.top - h - 10 > 56;   // arriba del término si cabe bajo la barra; si no, abajo
+  globo.style.left = (x + window.scrollX) + 'px';
+  globo.style.top = (window.scrollY + (arriba ? r.top - h - 10 : r.bottom + 10)) + 'px';
+}
+function cerrarGlobo(){
+  if(!terminoAbierto) return;
+  terminoAbierto.removeAttribute('aria-describedby');
+  terminoAbierto = null;
+  globo.hidden = true;
+}
+document.querySelectorAll('a.term').forEach(a => {
+  a.addEventListener('pointerenter', ev => { if(ev.pointerType === 'mouse') mostrarGlobo(a); });
+  a.addEventListener('pointerleave', ev => { if(ev.pointerType === 'mouse') cerrarGlobo(); });
+  // Al tacto, el toque también enfoca el enlace: ese foco no abre el globo, lo abre el clic.
+  a.addEventListener('focus', () => { if(CON_MOUSE || a.matches(':focus-visible')) mostrarGlobo(a); });
+  a.addEventListener('blur', () => { if(CON_MOUSE) cerrarGlobo(); });
+});
+document.addEventListener('keydown', ev => { if(ev.key === 'Escape') cerrarGlobo(); });
+
+/* ---------- Saltos internos y «Volver a donde estaba» ---------- */
+// Figura N, Tabla N y términos: el destino se marca un momento y aparece un botón para volver. Dentro de la documentación
+// la guía no tiene scroll propio: avisa a la página la posición del destino, y el salto y el botón los pone la página (guias.js).
+const volver = $('volver');
+let volverA = null;
+volver.addEventListener('click', () => {
+  window.scrollTo({top: volverA, behavior: REDUCIDO ? 'auto' : 'smooth'});
+  volver.hidden = true;
+});
+document.addEventListener('click', ev => {
+  const a = ev.target.closest('a[href^="#"]');
+  if(!a){ if(!ev.target.closest('#globo')) cerrarGlobo(); return; }
+  if(a.classList.contains('term') && !CON_MOUSE && terminoAbierto !== a){
+    ev.preventDefault();
+    mostrarGlobo(a);
+    return;
+  }
+  cerrarGlobo();
+  const destino = document.getElementById(a.getAttribute('href').slice(1));
+  if(!destino) return;
+  if(destino.classList.contains('fig') || destino.classList.contains('gl')){
+    destino.classList.remove('destacada');
+    void destino.offsetWidth;   // reinicia la animación si se vuelve a citar la misma figura
+    destino.classList.add('destacada');
+  }
+  if(EMBEBIDA){
+    ev.preventDefault();
+    parent.postMessage({irGuia: destino.getBoundingClientRect().top + window.scrollY}, '*');
+  } else {
+    if(volver.hidden) volverA = window.scrollY;   // con saltos encadenados se vuelve al punto de lectura original
+    volver.hidden = false;
+  }
+});
+// Dentro de la documentación (iframe): sin la barra propia, y avisando el alto para que la página tenga un solo scroll.
+if(EMBEBIDA){
+  document.documentElement.classList.add('embebida');
+  // Se mide el body y no el scrollHeight del documento, que nunca baja del alto actual del iframe y no lo dejaría achicarse.
+  const avisar = () => parent.postMessage({altoGuia: Math.ceil(document.body.getBoundingClientRect().height)}, '*');
+  new ResizeObserver(avisar).observe(document.body);
+}
+})();
+</script>
+</body>
+</html>
