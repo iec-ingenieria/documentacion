@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curva de interacción · Recursos de aprendizaje IEC</title>
+<meta name="description" content="Curva y superficie de interacción de una sección de hormigón armado según ACI 318S-08: secciones tipo, curvas M3–P y M2–P, superficie 3D y contorno a P constante.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --papel:#EDF1F0; --papel-2:#DEE6E5; --tarjeta:#FFFFFF;
+  --tinta:#17222C; --tinta-2:#56646F; --regla:#C8D2D4;
+  --iec:#E87000; --iec-hondo:#A94F00;
+  --m3:#2463AE; --m2:#17222C; --comp:#3B82C4; --trac:#D9663A; --neutro:#0097A7;
+  --sombra:0 1px 2px rgba(23,34,44,.06),0 14px 34px rgba(23,34,44,.09);
+  --gutter:clamp(16px,4vw,32px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;overflow-x:clip;background-color:var(--papel);color:var(--tinta);font:15px/1.55 'IBM Plex Sans',system-ui,sans-serif;
+  background-image:linear-gradient(var(--papel-2) 1px,transparent 1px),linear-gradient(90deg,var(--papel-2) 1px,transparent 1px);
+  background-size:32px 32px;background-position:-1px -1px}
+.envoltura{max-width:1480px;margin:0 auto;padding:0 var(--gutter)}
+button,input{font:inherit}
+button:focus-visible,input:focus-visible{outline:2px solid var(--iec);outline-offset:2px}
+.barra{border-bottom:1px solid var(--regla);background:rgba(237,241,240,.92)}
+.barra .envoltura{display:flex;align-items:center;min-height:48px;font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinta-2)}
+.barra b{color:var(--iec);font-weight:600;letter-spacing:.2em;margin-right:8px}
+.embebida .barra{display:none}
+
+/* ---------- Introducción ---------- */
+.intro{padding-top:34px;padding-bottom:22px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px 44px;align-items:end}
+.ceja{font:500 11.5px/1.2 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--m3);margin-bottom:14px;
+  display:flex;gap:10px;align-items:center}
+.ceja::before{content:"";width:22px;height:2px;background:currentColor;flex:none}
+h1,h2{font-family:'Archivo',sans-serif;font-stretch:125%;margin:0;letter-spacing:-.012em}
+h1{font-weight:850;font-size:clamp(30px,3.6vw,48px);line-height:1}
+h1 em{font-style:normal;color:var(--iec)}
+.lead{font-size:17px;color:var(--tinta-2);margin:0;max-width:62ch}
+.aviso-did{border-left:3px solid var(--iec);padding:10px 14px;background:rgba(232,112,0,.07);border-radius:0 10px 10px 0;font-size:14px;
+  margin-top:14px;max-width:62ch}
+.aviso-did b{color:var(--iec-hondo)}
+
+/* ---------- App ---------- */
+.app{display:grid;grid-template-columns:320px minmax(0,1fr);gap:18px;align-items:start;padding-bottom:40px}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--regla);border-radius:14px;box-shadow:var(--sombra);padding:14px 16px;margin-bottom:14px}
+.tarjeta h2{font:600 12.5px/1.3 'IBM Plex Mono',monospace;letter-spacing:.02em;color:var(--tinta-2);margin:0 0 10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+label.f{display:flex;flex-direction:column;gap:3px;font:500 12px 'IBM Plex Mono',monospace;color:var(--tinta-2)}
+input[inputmode=decimal],select{width:100%;padding:6px 8px;border:1px solid var(--regla);border-radius:8px;background:#fff;color:var(--tinta);
+  font:500 13.5px 'IBM Plex Mono',monospace}
+input[inputmode=decimal]:focus,select:focus{border-color:var(--iec);outline:none}
+input[inputmode=decimal]:disabled{background:var(--papel);color:var(--tinta-2);opacity:.6}
+.formas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-bottom:12px}
+.formas button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 2px 6px;background:var(--papel);border:1px solid var(--regla);
+  border-radius:9px;color:var(--tinta-2);font:500 11px/1.1 'IBM Plex Sans',sans-serif;cursor:pointer}
+.formas button:hover{border-color:var(--tinta-2)}
+.formas button[aria-pressed=true]{border-color:var(--iec);background:rgba(232,112,0,.08);color:var(--tinta)}
+.formas svg{width:28px;height:28px}
+.formas path{fill:var(--tinta-2);opacity:.5}
+.formas button[aria-pressed=true] path{fill:var(--iec);opacity:1}
+.check{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:var(--tinta);cursor:pointer;margin-top:6px}
+.check input{accent-color:var(--iec);width:16px;height:16px;margin-top:2px;flex:none}
+.nota-c{color:var(--tinta-2);font-size:12.5px;margin-top:8px;line-height:1.45}
+.vistas{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.celda{background:var(--tarjeta);border:1px solid var(--regla);border-radius:14px;box-shadow:var(--sombra);padding:12px 14px;min-width:0;display:flex;flex-direction:column}
+.celda h2{font:600 12.5px/1.3 'IBM Plex Mono',monospace;color:var(--tinta-2);margin:0 0 8px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.celda h2 .val{color:var(--iec-hondo);margin-left:auto}
+/* Alto CSS explícito: sin él, el alto sale de la proporción del bitmap y el lienzo crece en cada repintado. */
+.celda canvas{width:100%;height:300px;flex:1 1 auto;display:block;border-radius:8px}
+#d3Canvas{cursor:grab;touch-action:pan-y}
+#d3Canvas:active{cursor:grabbing}
+.control-p{display:flex;align-items:center;gap:10px;margin:0 0 8px;font:500 12px 'IBM Plex Mono',monospace;color:var(--tinta-2)}
+.control-p input{flex:1;accent-color:var(--iec)}
+.control-p output{color:var(--tinta);font-weight:600;min-width:64px;text-align:right}
+.leyenda-sec{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:8px;font:500 11.5px 'IBM Plex Mono',monospace;color:var(--tinta-2)}
+.leyenda-sec span{display:inline-flex;align-items:center;gap:6px}
+.leyenda-sec i{display:inline-block;width:12px;height:12px;border-radius:3px;border:1px solid rgba(0,0,0,.18)}
+.leyenda-sec i.punto{border-radius:50%}
+.leyenda-sec.apagada{opacity:.3}
+/* El error va sobre el lienzo de la sección, que en ese estado queda vacío: así no cambia el alto de nada. */
+.marco{position:relative;flex:1 1 auto;display:flex;flex-direction:column}
+.error-sec{position:absolute;left:16px;right:16px;top:50%;transform:translateY(-50%);text-align:center;color:var(--trac);
+  font:600 12.5px/1.5 'IBM Plex Mono',monospace}
+.error-sec:empty{display:none}
+.como{font-size:13.5px;line-height:1.5;overflow-y:auto}
+.como ol{margin:0;padding-left:20px}
+.como li{margin-bottom:7px}
+.como li::marker{font:600 12.5px 'IBM Plex Mono',monospace;color:var(--iec-hondo)}
+.como math{font-size:1.12em}
+/* Figuras numeradas: cada gráfico es una figura que se cita por número; el enlace salta a ella y la marca un momento. */
+figure.fig{margin:0;scroll-margin-top:16px}
+figcaption{font:400 12.5px/1.45 'IBM Plex Mono',monospace;color:var(--tinta-2);margin-top:10px}
+figcaption b{color:var(--tinta);font-weight:600}
+a.ref{color:var(--iec-hondo);text-underline-offset:2px}
+@keyframes destello{0%,55%{box-shadow:0 0 0 3px var(--iec)}100%{box-shadow:0 0 0 3px rgba(232,112,0,0)}}
+figure.fig.destacada,.gl.destacada{animation:destello 1.8s ease-out}
+/* Términos del glosario: subrayado de puntos, definición al pasar el mouse y salto con un clic. */
+a.term{color:inherit;text-decoration:underline dotted var(--iec-hondo);text-underline-offset:3px;cursor:help}
+a.term:hover{color:var(--iec-hondo)}
+#glosario{padding-top:10px;padding-bottom:40px}
+#glosario h2{font-weight:850;font-size:clamp(24px,2.6vw,32px);line-height:1.05}
+#glosario h3{margin:28px 0 4px;font:600 13px/1.3 'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--tinta-2)}
+.glosario{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px;margin:0}
+.gl{padding:10px 8px;border-top:1px dashed var(--regla);scroll-margin-top:16px;border-radius:8px}
+.gl dt{font:600 14px/1.35 'IBM Plex Mono',monospace;color:var(--tinta)}
+.gl dt span{font:500 14px 'IBM Plex Sans',sans-serif;color:var(--iec-hondo);margin-left:6px}
+.gl dd{margin:4px 0 0;font-size:14.5px;color:var(--tinta-2)}
+.globo{position:absolute;z-index:40;width:max-content;max-width:min(340px,calc(100vw - 16px));background:var(--tinta);color:#D6DEE2;
+  border-radius:12px;padding:10px 14px 11px;font-size:14px;line-height:1.45;box-shadow:0 10px 28px rgba(23,34,44,.3)}
+.globo b{display:block;color:#fff;font:600 13.5px/1.35 'IBM Plex Mono',monospace;margin-bottom:4px}
+.globo b span{font:500 13.5px 'IBM Plex Sans',sans-serif;color:var(--iec);margin-left:6px}
+.globo a{display:block;margin-top:8px;color:var(--iec);font:500 13px 'IBM Plex Mono',monospace}
+.volver{position:fixed;right:20px;bottom:20px;z-index:40;border:0;border-radius:999px;background:var(--tinta);color:#fff;padding:11px 18px;
+  font:500 14px/1.2 'IBM Plex Sans',sans-serif;box-shadow:0 8px 24px rgba(23,34,44,.3);cursor:pointer}
+.volver:hover{background:#26343F}
+footer{padding:24px 0 40px;border-top:1px solid var(--regla);font:500 12px/1.6 'IBM Plex Mono',monospace;color:var(--tinta-2)}
+footer b{color:var(--iec)}
+@media (max-width:900px){
+  .intro{grid-template-columns:minmax(0,1fr);padding-top:24px}
+  .celda canvas{height:min(300px,78vw)}
+  .app{grid-template-columns:minmax(0,1fr)}
+  .vistas{grid-template-columns:minmax(0,1fr)}
+  .glosario{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="barra"><div class="envoltura"><b>IEC</b> Recursos de aprendizaje</div></div>
+
+<header class="intro envoltura">
+  <div>
+    <div class="ceja">Curva de interacción · ACI 318S-08</div>
+    <h1>Una sección no resiste un momento: resiste una <em>superficie.</em></h1>
+  </div>
+  <div>
+    <p class="lead">Cada punto de la <a class="term" href="#gl-curva">curva</a> es un equilibrio de la sección para una posición del <a class="term" href="#gl-eje">eje neutro</a>: el hormigón comprimido y las barras según su deformación (<a class="ref" href="#fig-4">Figura 4</a>). Al girar el eje neutro, las curvas forman la <a class="term" href="#gl-superficie">superficie</a> <a class="term" href="#gl-M3">M3</a>–<a class="term" href="#gl-M2">M2</a>–<a class="term" href="#gl-P">P</a> (<a class="ref" href="#fig-2">Figura 2</a>).</p>
+    <div class="aviso-did"><b>Material didáctico.</b> Las curvas siguen el procedimiento de <a class="term" href="#gl-aci">ACI 318S-08</a> y del motor de <a class="term" href="#gl-curvaw">curvaw</a>, pero esta página no reemplaza a curvaw ni al cálculo del proyecto. Los términos subrayados con puntos muestran su definición (al tocarlos, en pantallas táctiles) y el <a class="ref" href="#glosario">glosario</a> las reúne; tras un salto a una figura o al glosario aparece «Volver a donde estaba».</div>
+  </div>
+</header>
+
+<main class="app envoltura">
+  <aside>
+    <div class="tarjeta">
+      <h2>Materiales (tonf/m²)</h2>
+      <div class="grid2">
+        <label class="f">f'c<input inputmode="decimal" autocomplete="off" id="fc" value="2500"></label>
+        <label class="f">fy<input inputmode="decimal" autocomplete="off" id="fy" value="42000"></label>
+        <label class="f">E acero<input inputmode="decimal" autocomplete="off" id="Es" value="21000000"></label>
+        <label class="f">εu hormigón<input inputmode="decimal" autocomplete="off" id="eu" value="0,003"></label>
+      </div>
+      <div class="nota-c"><a class="term" href="#gl-fc">f'c</a> es la resistencia del hormigón; <a class="term" href="#gl-fy">fy</a>, la fluencia del acero; <a class="term" href="#gl-E">E</a>, su módulo de elasticidad; <a class="term" href="#gl-eu">εu</a>, la deformación máxima del hormigón comprimido. Valores de ejemplo: <a class="term" href="#gl-grados">H25</a> (f'c 2500 ≈ 25 MPa), A630-420H (fy 42000 ≈ 420 MPa), E 2,1·10⁷ ≈ 210 GPa. Los decimales van con coma o con punto.</div>
+    </div>
+    <div class="tarjeta">
+      <h2>Sección</h2>
+      <div class="formas" id="formas" role="group" aria-label="Forma de la sección"></div>
+      <div class="grid2">
+        <label class="f"><span id="etq-dimB">ancho b (m)</span><input inputmode="decimal" autocomplete="off" id="dimB"></label>
+        <label class="f"><span id="etq-dimH">alto h (m)</span><input inputmode="decimal" autocomplete="off" id="dimH"></label>
+        <label class="f"><span id="etq-dimE">espesor e (m)</span><input inputmode="decimal" autocomplete="off" id="dimE"></label>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <h2>Armadura en el perímetro</h2>
+      <div class="grid2">
+        <label class="f">ø (mm)<select id="diam"><option>10</option><option>12</option><option selected>16</option><option>18</option><option>22</option><option>25</option><option>28</option><option>32</option></select></label>
+        <label class="f">separación máx. (m)<input inputmode="decimal" autocomplete="off" id="sep" value="0,20"></label>
+        <label class="f">recubrimiento (m)<input inputmode="decimal" autocomplete="off" id="recub" value="0,05"></label>
+      </div>
+      <div class="nota-c"><a class="term" href="#gl-diam">ø</a> es el diámetro de las barras. El <a class="term" href="#gl-recub">recubrimiento</a> se mide del borde al eje de la barra. Cada lado lleva barra en sus esquinas y, entre ellas, partes iguales sin pasar la <a class="term" href="#gl-sep">separación máxima</a>. La circular y la elipse llevan al menos 4 barras (<a class="term" href="#gl-aci">ACI 318S-08</a> 10.9.2).</div>
+    </div>
+    <div class="tarjeta">
+      <h2>Vista</h2>
+      <label class="check"><input type="checkbox" id="chkNominal"> Mostrar la curva nominal (Mn, Pn) junto a la de diseño</label>
+      <label class="check"><input type="checkbox" id="chkZonas" checked> Eje neutro en la sección: flexión M3 con el nivel de P elegido</label>
+      <div class="nota-c">La <a class="term" href="#gl-nominal">curva nominal</a> se superpone a la de diseño en la <a class="ref" href="#fig-4">Figura 4</a> y la <a class="ref" href="#fig-5">Figura 5</a>; las zonas comprimida y traccionada y el eje neutro se dibujan en la <a class="ref" href="#fig-1">Figura 1</a>.</div>
+    </div>
+  </aside>
+
+  <section class="vistas">
+    <figure class="celda fig" id="fig-1">
+      <div class="marco">
+        <canvas id="secCanvas" aria-label="Sección transversal con sus barras"></canvas>
+        <div class="error-sec" id="secError" role="alert"></div>
+      </div>
+      <div class="leyenda-sec" id="secLegend"></div>
+      <figcaption><b>Figura 1.</b> Sección transversal con sus barras; por el <a class="term" href="#gl-centroide">centroide</a> pasan los ejes de M3 y de M2. Con la casilla de «Vista» activa, marca las zonas y el eje neutro al nivel de P de la <a class="ref" href="#fig-2">Figura 2</a>.</figcaption>
+    </figure>
+    <figure class="celda fig" id="fig-2">
+      <div class="control-p"><label for="sliderP">Nivel de P</label><input type="range" id="sliderP" min="0" max="100" value="45"><output id="sliderVal">–</output></div>
+      <canvas id="d3Canvas" aria-label="Superficie de interacción M3–M2–P de diseño"></canvas>
+      <figcaption><b>Figura 2.</b> Superficie de interacción de diseño M3–M2–P; arrastrar para girar. El <a class="term" href="#gl-nivel">nivel de P</a> del control marca el contorno de la <a class="ref" href="#fig-3">Figura 3</a>; las dos curvas dibujadas sobre la superficie son las de la <a class="ref" href="#fig-4">Figura 4</a> y la <a class="ref" href="#fig-5">Figura 5</a>.</figcaption>
+    </figure>
+    <figure class="celda fig" id="fig-3">
+      <canvas id="contornoCanvas" aria-label="Contorno de la superficie a P constante en el plano M3–M2"></canvas>
+      <figcaption><b>Figura 3.</b> <a class="term" href="#gl-contorno">Contorno a P constante</a>: corte de la superficie de la <a class="ref" href="#fig-2">Figura 2</a> al nivel de P elegido, en el plano φM3–φM2.</figcaption>
+    </figure>
+    <figure class="celda fig" id="fig-4">
+      <canvas id="m3Canvas" aria-label="Curva de interacción M3–P"></canvas>
+      <figcaption><b>Figura 4.</b> M3 contra P: <a class="term" href="#gl-diseno">curva de diseño</a> con el eje neutro horizontal, y la nominal si se activa en «Vista». La línea punteada es el nivel de P.</figcaption>
+    </figure>
+    <figure class="celda fig" id="fig-5">
+      <canvas id="m2Canvas" aria-label="Curva de interacción M2–P"></canvas>
+      <figcaption><b>Figura 5.</b> M2 contra P: lo mismo que la <a class="ref" href="#fig-4">Figura 4</a> con el eje neutro girado 90°, vertical.</figcaption>
+    </figure>
+    <div class="celda como">
+      <h2>Cómo se calcula</h2>
+      <ol>
+        <li>Para cada <a class="term" href="#gl-c">profundidad c</a> del <a class="term" href="#gl-eje">eje neutro</a>, la <a class="term" href="#gl-eps">deformación</a> varía lineal en la sección y vale <math><msub><mi>ε</mi><mi>u</mi></msub></math> en la fibra más comprimida (0,003 en ACI 318S-08).</li>
+        <li>El hormigón comprimido se reemplaza por el <a class="term" href="#gl-whitney">bloque de Whitney</a>: <math><mn>0,85</mn><mo>·</mo><msubsup><mi>f</mi><mi>c</mi><mo>′</mo></msubsup></math> sobre la altura <a class="term" href="#gl-a"><math><mi>a</mi><mo>=</mo><msub><mi>β</mi><mn>1</mn></msub><mo>·</mo><mi>c</mi></math></a>. <a class="term" href="#gl-b1"><math><msub><mi>β</mi><mn>1</mn></msub><mo>=</mo><mn>0,85</mn></math></a> hasta 28 MPa y baja 0,05 cada 7 MPa, con mínimo 0,65.</li>
+        <li>Cada barra aporta <a class="term" href="#gl-fs"><math><msub><mi>f</mi><mi>s</mi></msub><mo>·</mo><msub><mi>A</mi><mi>s</mi></msub></math></a>, con <math><msub><mi>f</mi><mi>s</mi></msub><mo>=</mo><msub><mi>E</mi><mi>s</mi></msub><mo>·</mo><mi>ε</mi></math> acotada a ±fy.</li>
+        <li>La suma de fuerzas da <a class="term" href="#gl-Pn">P<sub>n</sub></a> y la de momentos respecto del <a class="term" href="#gl-centroide">centroide</a> da <a class="term" href="#gl-Mn">M<sub>n</sub></a>: un punto de la curva. Barrer c dibuja la curva completa (<a class="ref" href="#fig-4">Figura 4</a>).</li>
+        <li><a class="term" href="#gl-phi">φ</a> va de 0,65 con la sección comprimida a 0,90 cuando la barra más traccionada llega a 0,005, lineal entre <a class="term" href="#gl-ey">ε<sub>y</sub></a> y 0,005. El <a class="term" href="#gl-techo">techo de diseño</a> es <math><mi>φ</mi><msub><mi>P</mi><mrow><mi>n</mi><mo>,</mo><mtext>máx</mtext></mrow></msub><mo>=</mo><mn>0,80</mn><mo>·</mo><mn>0,65</mn><mo>·</mo><msub><mi>P</mi><mn>0</mn></msub></math>, con <a class="term" href="#gl-P0">P<sub>0</sub></a> la resistencia axial sin momento.</li>
+        <li>Con el eje neutro <a class="term" href="#gl-giro">girado</a>, el momento resistente es un vector que en una sección alargada o asimétrica no apunta en la dirección del giro: su componente paralela al eje neutro lo ubica en el plano M3–M2 (<a class="ref" href="#fig-3">Figura 3</a>).</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<section class="envoltura" id="glosario">
+  <div class="ceja">Glosario</div>
+  <h2>Símbolos y conceptos</h2>
+  <h3>Materiales y deformaciones</h3>
+  <dl class="glosario">
+<div class="gl" id="gl-fc"><dt>f'c <span>resistencia del hormigón</span></dt><dd>Resistencia a compresión del hormigón, en tonf/m².</dd></div>
+<div class="gl" id="gl-fy"><dt>fy <span>fluencia del acero</span></dt><dd>Tensión de fluencia del acero de las barras, en tonf/m². La tensión de una barra no pasa de ±fy.</dd></div>
+<div class="gl" id="gl-E"><dt>E, E<sub>s</sub> <span>módulo del acero</span></dt><dd>Módulo de elasticidad del acero, en tonf/m². La tensión de una barra es E<sub>s</sub>·ε mientras no llegue a fy.</dd></div>
+<div class="gl" id="gl-grados"><dt>H25, A630-420H</dt><dd>Designaciones de los materiales de ejemplo: H25 equivale a f'c ≈ 25 MPa (2500 tonf/m²) y A630-420H, a fy ≈ 420 MPa (42000 tonf/m²).</dd></div>
+<div class="gl" id="gl-eps"><dt>ε <span>deformación</span></dt><dd>Deformación unitaria. Varía lineal en la sección: vale ε<sub>u</sub> en la fibra más comprimida y cero en el eje neutro. Positiva en compresión.</dd></div>
+<div class="gl" id="gl-eu"><dt>ε<sub>u</sub> <span>deformación máxima del hormigón</span></dt><dd>Deformación del hormigón en la fibra más comprimida: 0,003 en ACI 318S-08.</dd></div>
+<div class="gl" id="gl-ey"><dt>ε<sub>y</sub></dt><dd>Deformación de fluencia del acero: fy / E<sub>s</sub>.</dd></div>
+<div class="gl" id="gl-fs"><dt>f<sub>s</sub>, A<sub>s</sub></dt><dd>Tensión y área de una barra. f<sub>s</sub> = E<sub>s</sub>·ε acotada a ±fy; A<sub>s</sub> = π·ø² / 4. Cada barra aporta f<sub>s</sub>·A<sub>s</sub>.</dd></div>
+  </dl>
+  <h3>Equilibrio de la sección</h3>
+  <dl class="glosario">
+<div class="gl" id="gl-eje"><dt>Eje neutro</dt><dd>Línea de la sección donde la deformación es nula. De un lado queda la zona comprimida y del otro la traccionada (<a class="ref" href="#fig-1">Figura 1</a>). Cada posición del eje neutro da un equilibrio y un punto de la curva.</dd></div>
+<div class="gl" id="gl-c"><dt>c <span>profundidad del eje neutro</span></dt><dd>Profundidad del eje neutro: distancia desde la fibra más comprimida hasta él.</dd></div>
+<div class="gl" id="gl-a"><dt>a <span>altura del bloque</span></dt><dd>Altura del bloque de compresión: a = β<sub>1</sub>·c.</dd></div>
+<div class="gl" id="gl-b1"><dt>β<sub>1</sub> <span>factor del bloque</span></dt><dd>Relaciona la altura del bloque con c. Vale 0,85 hasta 28 MPa, baja 0,05 cada 7 MPa, con mínimo 0,65.</dd></div>
+<div class="gl" id="gl-whitney"><dt>Bloque de Whitney</dt><dd>Reemplaza el hormigón comprimido por una tensión uniforme de 0,85·f'c sobre la altura a = β<sub>1</sub>·c, medida desde la fibra más comprimida.</dd></div>
+<div class="gl" id="gl-centroide"><dt>Centroide</dt><dd>Centro geométrico de la sección de hormigón, sin descontar las barras. Los momentos se toman respecto de él.</dd></div>
+<div class="gl" id="gl-Pn"><dt>P<sub>n</sub></dt><dd>Resistencia axial nominal de un equilibrio: suma de las fuerzas del bloque de hormigón comprimido y de las barras.</dd></div>
+<div class="gl" id="gl-Mn"><dt>M<sub>n</sub></dt><dd>Resistencia nominal a flexión de un equilibrio: suma de los momentos de esas fuerzas respecto del centroide.</dd></div>
+<div class="gl" id="gl-P0"><dt>P<sub>0</sub> <span>compresión pura</span></dt><dd>Resistencia axial nominal en compresión pura: 0,85·f'c por el área de hormigón sin las barras, más fy por el área de acero.</dd></div>
+<div class="gl" id="gl-techo"><dt>Techo de compresión</dt><dd>Límite de P en compresión. El nominal es 0,80·P<sub>0</sub> (ACI 318S-08 10.3.6.2); el de diseño, 0,80·0,65·P<sub>0</sub>. Corta la curva con un tramo horizontal.</dd></div>
+<div class="gl" id="gl-phi"><dt>φ <span>factor de reducción</span></dt><dd>Factor de reducción de resistencia: 0,65 con la sección comprimida; sube lineal entre ε<sub>y</sub> y 0,005 de la barra más traccionada y vale 0,90 desde 0,005. Multiplica P<sub>n</sub> y M<sub>n</sub> para dar la curva de diseño.</dd></div>
+  </dl>
+  <h3>Ejes, curvas y superficie</h3>
+  <dl class="glosario">
+<div class="gl" id="gl-P"><dt>P <span>fuerza axial</span></dt><dd>Fuerza axial. Positiva en compresión y negativa en tracción: la curva va de la tracción pura, con P negativo, al techo de compresión. En tonf.</dd></div>
+<div class="gl" id="gl-M3"><dt>M3</dt><dd>Momento de flexión con eje neutro horizontal: la sección gira en torno a su eje horizontal por el centroide (trazo punteado horizontal de la <a class="ref" href="#fig-1">Figura 1</a>). En tonf·m.</dd></div>
+<div class="gl" id="gl-M2"><dt>M2</dt><dd>Momento de flexión con eje neutro vertical: la sección gira en torno a su eje vertical por el centroide (trazo punteado vertical de la <a class="ref" href="#fig-1">Figura 1</a>). En tonf·m.</dd></div>
+<div class="gl" id="gl-curva"><dt>Curva de interacción</dt><dd>Pares (M, P) de la sección, uno por cada posición del eje neutro. M3 contra P (<a class="ref" href="#fig-4">Figura 4</a>) y M2 contra P (<a class="ref" href="#fig-5">Figura 5</a>) son las de los ejes horizontal y vertical.</dd></div>
+<div class="gl" id="gl-nominal"><dt>Curva nominal</dt><dd>La de (M<sub>n</sub>, P<sub>n</sub>), sin factor φ y con el techo nominal 0,80·P<sub>0</sub>. Se superpone con la casilla de «Vista».</dd></div>
+<div class="gl" id="gl-diseno"><dt>Curva de diseño</dt><dd>La de (φM<sub>n</sub>, φP<sub>n</sub>): φ punto a punto y el techo 0,80·φ·P<sub>0</sub> con el φ de compresión (0,65).</dd></div>
+<div class="gl" id="gl-giro"><dt>Giro del eje neutro</dt><dd>Ángulo del eje neutro respecto de la horizontal. La superficie se arma con 36 giros, cada 5° entre 0 y 175°, y cada curva incluye además el sentido opuesto; cada punto se lleva al plano M3–M2 con sus dos componentes.</dd></div>
+<div class="gl" id="gl-superficie"><dt>Superficie de interacción</dt><dd>Las curvas de todos los giros del eje neutro reunidas en M3–M2–P (<a class="ref" href="#fig-2">Figura 2</a>).</dd></div>
+<div class="gl" id="gl-nivel"><dt>Nivel de P</dt><dd>Valor de P que fija el control de la <a class="ref" href="#fig-2">Figura 2</a>, entre el mínimo y el techo de la superficie. Da el contorno de la <a class="ref" href="#fig-3">Figura 3</a>, la línea de la <a class="ref" href="#fig-4">Figura 4</a> y la <a class="ref" href="#fig-5">Figura 5</a>, y el eje neutro de la <a class="ref" href="#fig-1">Figura 1</a>.</dd></div>
+<div class="gl" id="gl-contorno"><dt>Contorno a P constante</dt><dd>Sección de la superficie de interacción con un plano de P fijo: en el plano φM3–φM2, el borde de los momentos resistentes con ese axial (<a class="ref" href="#fig-3">Figura 3</a>).</dd></div>
+  </dl>
+  <h3>Armadura, unidades y normativa</h3>
+  <dl class="glosario">
+<div class="gl" id="gl-diam"><dt>ø <span>diámetro de barra</span></dt><dd>Diámetro de las barras, en mm. Todas las barras de la sección tienen el mismo.</dd></div>
+<div class="gl" id="gl-recub"><dt>Recubrimiento al eje</dt><dd>Distancia del borde del hormigón al eje de la barra, no a su cara. Tiene que ser al menos ø/2.</dd></div>
+<div class="gl" id="gl-sep"><dt>Separación máxima</dt><dd>Largo máximo entre barras de un lado: los tramos son iguales y no la pasan. Debe ser al menos ø más el espacio libre de ACI 318S-08 7.6.3, el mayor entre 1,5ø y 40 mm.</dd></div>
+<div class="gl" id="gl-unidades"><dt>Unidades</dt><dd>Longitudes en m, tensiones en tonf/m², fuerzas en tonf y momentos en tonf·m. Equivalencias de los ejemplos: 2500 tonf/m² ≈ 25 MPa; E 2,1·10⁷ tonf/m² ≈ 210 GPa.</dd></div>
+<div class="gl" id="gl-aci"><dt>ACI 318S-08</dt><dd>Reglamento en que se basa el procedimiento. La página cita 7.6.3 (espacio libre entre barras), 10.9.2 (al menos 4 barras en la sección circular y la elipse) y 10.3.6.2 (techo nominal 0,80·P<sub>0</sub>).</dd></div>
+<div class="gl" id="gl-curvaw"><dt>curvaw</dt><dd>Programa de curvas de interacción cuyo motor de cálculo se porta a esta página. La página es didáctica y no lo reemplaza.</dd></div>
+  </dl>
+</section>
+
+<footer><div class="envoltura"><b>IEC</b> · Recursos de aprendizaje · ACI 318S-08, 10.2, 10.3.6.2 y 9.3.2. <a class="term" href="#gl-unidades">Unidades</a>: m, tonf/m², tonf y tonf·m.</div></footer>
+
+<div id="globo" class="globo" role="tooltip" hidden></div>
+<button id="volver" class="volver" type="button" hidden>↩ Volver a donde estaba</button>
+
+<script>
+'use strict';
+(() => {
+/* =========================================================================
+   NÚCLEO — port del motor de curvaw (curva_interaccion.py y curva_3d.py).
+   Unidades: longitud en m, tensión en tonf/m² → P en tonf y M en tonf·m.
+   Los polígonos llegan cerrados (último vértice = primero).
+   ========================================================================= */
+const FI_COMPRESION = 0.65;
+// Barrido del eje neutro bajo la sección (c > h) en pasos geométricos hasta c = 4h: así cada
+// rama llega al techo nominal por cálculo y no por extrapolación del último tramo.
+const RAZONES_C_SOBRE_H = Array.from({length: 24}, (_, i) => Math.pow(4, (i + 1) / 24));
+function beta1(fc){ return fc <= 2800 ? 0.85 : Math.max(0.85 - 0.05 / 700 * (fc - 2800), 0.65); }
+function factorReduccion(eTrac, fy, E){
+  const ey = fy / E;
+  if(eTrac >= 0.005) return 0.9;
+  if(eTrac > ey) return 0.25 * (eTrac - 0.005) / (0.005 - ey) + 0.9;
+  return FI_COMPRESION;
+}
+const fuerzaBarra = (area, fy, E, es) => Math.abs(es) <= fy / E ? E * es * area : fy * area * Math.sign(es);
+const areaBarra = d => d * d * Math.PI / 4;
+function areaPoligono(v){ let s = 0; for(let i = 0; i < v.length; i++){ const j = (i + 1) % v.length; s += v[i][0] * v[j][1] - v[j][0] * v[i][1]; } return Math.abs(s) / 2; }
+function centroide(v){
+  let A = 0, cx = 0, cy = 0;
+  for(let i = 0; i < v.length; i++){ const j = (i + 1) % v.length, cr = v[i][0] * v[j][1] - v[j][0] * v[i][1]; A += cr; cx += (v[i][0] + v[j][0]) * cr; cy += (v[i][1] + v[j][1]) * cr; }
+  A /= 2;
+  if(Math.abs(A) < 1e-12) return [v.reduce((s, p) => s + p[0], 0) / v.length, v.reduce((s, p) => s + p[1], 0) / v.length];
+  return [cx / (6 * A), cy / (6 * A)];
+}
+// Puntos del contorno cada sep (1 % del lado menor del rectángulo envolvente): el bloque comprimido es el polígono de los que quedan sobre su borde.
+function discretizaPoligono(v){
+  const xs = v.map(p => p[0]), ys = v.map(p => p[1]);
+  const sep = Math.min(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys)) / 100;
+  const o = [[v[0][0], v[0][1]]];
+  for(let i = 0; i < v.length - 1; i++){
+    const n = Math.floor(Math.hypot(v[i + 1][0] - v[i][0], v[i + 1][1] - v[i][1]) / sep) + 1;
+    for(let k = 1; k < n; k++){ const t = k / (n - 1); o.push([v[i][0] + (v[i + 1][0] - v[i][0]) * t, v[i][1] + (v[i + 1][1] - v[i][1]) * t]); }
+    if(n <= 1) o.push([v[i + 1][0], v[i + 1][1]]);
+  }
+  return o;
+}
+const giro2d = (pts, ang) => { const c = Math.cos(ang), s = Math.sin(ang); return pts.map(p => [c * p[0] - s * p[1], s * p[0] + c * p[1]]); };
+const rotBarras = (b, ang) => giro2d(b, ang).map((r, i) => [r[0], r[1], ...b[i].slice(2)]);
+const cerrarAnillo = v => { const f = v[0], l = v[v.length - 1]; return (f[0] !== l[0] || f[1] !== l[1]) ? [...v, [f[0], f[1]]] : v; };
+const rev = a => a.slice().reverse();
+
+// Momento positivo: para cada altura del eje neutro, Mn (perpendicular al eje), Mn∥ (paralelo), Pn, φ y c.
+function puntosCurvaInteraccion(fc, eu, vertices, barras){
+  const [xcg, ycg] = centroide(vertices);
+  const ys = vertices.map(v => v[1]), ymax = Math.max(...ys), ymin = Math.min(...ys), h = ymax - ymin;
+  if(h < 1e-12) throw new Error('La sección tiene altura cero.');
+  const dy = h / 100, ab = barras.map(b => areaBarra(b[2])), vd = discretizaPoligono(vertices), b1 = beta1(fc);
+  const alturas = [...rev(RAZONES_C_SOBRE_H.map(r => ymax - h * r))];
+  for(let y = ymin; y < ymax - dy - 1e-12; y += dy) alturas.push(y);
+  const mn = [], par = [], pn = [], fi = [], en = [];
+  for(const y of alturas){
+    const yy = ymax - b1 * (ymax - y);
+    const comp = vd.filter(p => p[1] > yy);
+    const [xc, yc] = comp.length >= 3 ? centroide(comp) : [xcg, ycg];
+    let aac = 0; barras.forEach((b, j) => { if(b[1] > yy) aac += ab[j]; });
+    const aha = comp.length >= 3 ? areaPoligono(comp) - aac : 0;
+    let mas = 0, mpar = 0, pas = 0, esMin = Infinity, im = 0;
+    barras.forEach((b, j) => {
+      const es = eu * (b[1] - y) / (ymax - y), fb = fuerzaBarra(ab[j], b[3], b[4], es);
+      mas += fb * (b[1] - ycg); mpar += fb * (b[0] - xcg); pas += fb;
+      if(es < esMin){ esMin = es; im = j; }
+    });
+    mn.push(aha * 0.85 * fc * (yc - ycg) + mas);
+    par.push(aha * 0.85 * fc * (xc - xcg) + mpar);
+    pn.push(aha * 0.85 * fc + pas);
+    fi.push(barras.length ? factorReduccion(Math.max(-esMin, 0), barras[im][3], barras[im][4]) : FI_COMPRESION);
+    en.push(ymax - y);
+  }
+  return {mn, par, pn, fi, en};
+}
+function compresionMaxima(fc, v, b){
+  let aac = 0, pas = 0; for(const x of b){ const a = areaBarra(x[2]); aac += a; pas += a * x[3]; }
+  return 0.85 * fc * (areaPoligono(v) - aac) + pas;
+}
+function traccionMaxima(v, b){
+  const [xcg, ycg] = centroide(v); let m = 0, mp = 0, p = 0;
+  for(const x of b){ const f = areaBarra(x[2]) * x[3]; m += f * (x[1] - ycg); mp += f * (x[0] - xcg); p += f; }
+  return {mmin: -m, mminPar: -mp, pmin: -p};
+}
+// Trunca o extrapola una rama ascendente en P para que termine justo en P = pCap; las series la acompañan punto a punto.
+function cerrarEnCap(pn, pCap, ...series){
+  const n = pn.length;
+  if(!n) return [[], ...series.map(() => [])];
+  if(n === 1) return [[pCap], ...series.map(s => [s[0]])];
+  const i = pn.findIndex(v => v >= pCap);
+  let k, finales;
+  if(i >= 0){
+    k = i;
+    if(i === 0) finales = series.map(s => s[0]);
+    else { const t = (pCap - pn[i - 1]) / (pn[i] - pn[i - 1]); finales = series.map(s => s[i - 1] + t * (s[i] - s[i - 1])); }
+  } else {
+    const dp = pn[n - 1] - pn[n - 2];
+    if(dp === 0) return [pn.slice(), ...series.map(s => s.slice())];
+    k = n; const t = (pCap - pn[n - 2]) / dp; finales = series.map(s => s[n - 2] + t * (s[n - 1] - s[n - 2]));
+  }
+  return [[...pn.slice(0, k), pCap], ...series.map((s, j) => [...s.slice(0, k), finales[j]])];
+}
+// Curva nominal cerrada (momento positivo y negativo), con el techo nominal 0,8·P0 de ACI 10.3.6.2.
+function curvaInteraccionNominal(fc, eu, v, b){
+  const p0 = compresionMaxima(fc, v, b), {mmin, mminPar, pmin} = traccionMaxima(v, b), pCap = 0.8 * p0;
+  const c0 = puntosCurvaInteraccion(fc, eu, v, b);
+  const c180 = puntosCurvaInteraccion(fc, eu, giro2d(v, Math.PI), rotBarras(b, Math.PI));
+  const [pP, mP, fP, aP] = cerrarEnCap(rev(c0.pn), pCap, rev(c0.mn), rev(c0.fi), rev(c0.par));
+  const [pN, mN, fN, aN] = cerrarEnCap(rev(c180.pn), pCap, rev(c180.mn), rev(c180.fi), rev(c180.par));
+  return {
+    mn: [mmin, ...mP, ...rev(mN).map(x => -x), mmin], par: [mminPar, ...aP, ...rev(aN).map(x => -x), mminPar],
+    pn: [pmin, ...pP, ...rev(pN), pmin], fi: [0.9, ...fP, ...rev(fN), 0.9]
+  };
+}
+// Recorta la curva cerrada al semiplano P <= pCap (tapa horizontal donde sobresale).
+function recortarEnCap(m, p, par, pCap){
+  if(m.length < 3 || Math.max(...p) <= pCap * (1 + 1e-12)) return {m, p, par};
+  const cerrada = m[0] === m[m.length - 1] && p[0] === p[p.length - 1];
+  const M = cerrada ? m.slice(0, -1) : m, P = cerrada ? p.slice(0, -1) : p, A = cerrada ? par.slice(0, -1) : par, n = P.length;
+  const om = [], op = [], oa = [];
+  for(let i = 0; i < n; i++){
+    const di = P[i] <= pCap;
+    if(di){ om.push(M[i]); op.push(P[i]); oa.push(A[i]); }
+    if(!cerrada && i === n - 1) break;
+    const j = (i + 1) % n;
+    if(di !== (P[j] <= pCap)){
+      const t = (pCap - P[i]) / (P[j] - P[i]);
+      if(t > 0 && t < 1){ om.push(M[i] + t * (M[j] - M[i])); op.push(pCap); oa.push(A[i] + t * (A[j] - A[i])); }
+    }
+  }
+  if(cerrada && om.length){ om.push(om[0]); op.push(op[0]); oa.push(oa[0]); }
+  return {m: om, p: op, par: oa};
+}
+// Curva de diseño: φ punto a punto y techo 0,80·φ·P0 con el φ de compresión controlada.
+function curvaInteraccionDiseno(nom){
+  const r = recortarEnCap(nom.mn.map((v, i) => nom.fi[i] * v), nom.pn.map((v, i) => nom.fi[i] * v),
+    nom.par.map((v, i) => nom.fi[i] * v), FI_COMPRESION * Math.max(...nom.pn));
+  return {fimn: r.m, fipn: r.p, fipar: r.par};
+}
+function curvaEje(fc, eu, verts, barras, rot){
+  const nom = curvaInteraccionNominal(fc, eu, rot ? giro2d(verts, rot) : verts, rot ? rotBarras(barras, rot) : barras);
+  return {nom, dis: curvaInteraccionDiseno(nom)};
+}
+// Curvas girando el eje neutro: cada punto se ubica en el plano M3–M2 con sus dos componentes, deshaciendo el giro.
+function curvas3d(fc, eu, verts, barras, nAng){
+  return Array.from({length: nAng}, (_, k) => {
+    const ang = k * 180 / nAng, r = ang * Math.PI / 180, c = Math.cos(r), s = Math.sin(r);
+    const {dis} = curvaEje(fc, eu, verts, barras, r);
+    return {ang, fipn: dis.fipn, fim3: dis.fimn.map((m, i) => m * c - dis.fipar[i] * s), fim2: dis.fimn.map((m, i) => m * s + dis.fipar[i] * c)};
+  });
+}
+// Cruces de una curva cerrada con el nivel P: puntos (M3, M2) interpolados en cada tramo que lo atraviesa.
+function crucesANivel(cv, P){
+  const out = [];
+  for(let i = 0; i < cv.fipn.length - 1; i++){
+    const p0 = cv.fipn[i], p1 = cv.fipn[i + 1];
+    if((p0 - P) * (p1 - P) <= 0 && p0 !== p1){ const t = (P - p0) / (p1 - p0); out.push([cv.fim3[i] + t * (cv.fim3[i + 1] - cv.fim3[i]), cv.fim2[i] + t * (cv.fim2[i + 1] - cv.fim2[i])]); }
+  }
+  return out;
+}
+function envolventeConvexa(pts){
+  if(pts.length < 3) return pts.slice();
+  const p = pts.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1]), cruz = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
+  const lo = [], hi = [];
+  for(const q of p){ while(lo.length >= 2 && cruz(lo[lo.length - 2], lo[lo.length - 1], q) <= 0) lo.pop(); lo.push(q); }
+  for(let i = p.length - 1; i >= 0; i--){ const q = p[i]; while(hi.length >= 2 && cruz(hi[hi.length - 2], hi[hi.length - 1], q) <= 0) hi.pop(); hi.push(q); }
+  lo.pop(); hi.pop(); return lo.concat(hi);
+}
+const contornoAP = (curvas, P) => envolventeConvexa(curvas.flatMap(c => crucesANivel(c, P)));
+// Remuestrea un polígono convexo a N puntos en azimut desde su centroide (para tejer el manto entre niveles).
+function remuestrear(poly, N){
+  if(!poly.length) return Array.from({length: N}, () => [0, 0]);
+  let cx = 0, cy = 0; for(const p of poly){ cx += p[0]; cy += p[1]; } cx /= poly.length; cy /= poly.length;
+  if(poly.length < 3) return Array.from({length: N}, () => [cx, cy]);
+  return Array.from({length: N}, (_, k) => {
+    const th = k / N * 2 * Math.PI, dx = Math.cos(th), dy = Math.sin(th); let mejor = 0;
+    for(let i = 0; i < poly.length; i++){
+      const a = poly[i], b = poly[(i + 1) % poly.length], ax = a[0] - cx, ay = a[1] - cy, ex = b[0] - a[0], ey = b[1] - a[1], D = dx * ey - dy * ex;
+      if(Math.abs(D) < 1e-12) continue;
+      const t = (ax * ey - ay * ex) / D, u = (ax * dy - ay * dx) / D;
+      if(t > 0 && u >= -1e-9 && u <= 1 + 1e-9 && t > mejor) mejor = t;
+    }
+    return [cx + mejor * dx, cy + mejor * dy];
+  });
+}
+// Lleva un punto (M3, M2, P) al cubo [-1, 1]³ en que se ilumina y se mira la superficie.
+function normalizador(Mmax, pmin, pCap){
+  const zc = (pmin + pCap) / 2, zh = (pCap - pmin) / 2 || 1;
+  return p => [p[0] / Mmax, p[1] / Mmax, (p[2] - zc) / zh];
+}
+// Manto 3D: anillos a varios niveles de P y caras con su brillo (no depende de la cámara).
+function construirManto(curvas, pmin, pCap, niveles){
+  const NR = 48, eps = (pCap - pmin) * 2e-3, lv = [];
+  for(let j = 0; j < niveles; j++){
+    const z = j === niveles - 1 ? pCap - eps : pmin + (pCap - pmin) * j / (niveles - 1);
+    lv.push({z, pts: remuestrear(contornoAP(curvas, z), NR).map(p => [p[0], p[1], z])});
+  }
+  let Mmax = 0; curvas.forEach(c => { c.fim3.forEach(m => { Mmax = Math.max(Mmax, Math.abs(m)); }); c.fim2.forEach(m => { Mmax = Math.max(Mmax, Math.abs(m)); }); });
+  Mmax = Mmax || 1;
+  const nrm = normalizador(Mmax, pmin, pCap);
+  const L = [0.35, 0.35, 0.87].map(x => x / Math.hypot(0.35, 0.35, 0.87)), caras = [];
+  for(let j = 0; j < lv.length - 1; j++){
+    const A = lv[j].pts, B = lv[j + 1].pts;
+    for(let k = 0; k < NR; k++){
+      const k2 = (k + 1) % NR, v4 = [A[k], A[k2], B[k2], B[k]], a = nrm(v4[0]), b = nrm(v4[1]), d = nrm(v4[3]);
+      const e1 = [b[0] - a[0], b[1] - a[1], b[2] - a[2]], e2 = [d[0] - a[0], d[1] - a[1], d[2] - a[2]];
+      const n = [e1[1] * e2[2] - e1[2] * e2[1], e1[2] * e2[0] - e1[0] * e2[2], e1[0] * e2[1] - e1[1] * e2[0]], ln = Math.hypot(...n) || 1;
+      caras.push({v: v4, br: 0.4 + 0.6 * Math.abs((n[0] * L[0] + n[1] * L[1] + n[2] * L[2]) / ln)});
+    }
+  }
+  const tope = lv[lv.length - 1].pts;
+  if(tope.length >= 3) caras.push({v: tope, br: 0.95});
+  return {Mmax, caras};
+}
+// Profundidad del eje neutro para un axial P de diseño, interpolada en el barrido.
+function interpProfundidad(pn, fi, en, P){
+  const fp = pn.map((v, i) => fi[i] * v), idx = fp.map((_, i) => i).sort((a, b) => fp[a] - fp[b]), xs = idx.map(i => fp[i]), ys = idx.map(i => en[i]);
+  if(P <= xs[0]) return ys[0];
+  if(P >= xs[xs.length - 1]) return ys[ys.length - 1];
+  for(let i = 1; i < xs.length; i++) if(P <= xs[i]){ const t = (P - xs[i - 1]) / (xs[i] - xs[i - 1] || 1); return ys[i - 1] + t * (ys[i] - ys[i - 1]); }
+  return ys[ys.length - 1];
+}
+function recortarHorizontal(verts, yL, arriba){
+  const dentro = p => arriba ? p[1] >= yL : p[1] <= yL, out = [];
+  for(let i = 0; i < verts.length; i++){
+    const a = verts[i], b = verts[(i + 1) % verts.length];
+    if(dentro(a)) out.push(a);
+    if(dentro(a) !== dentro(b)){ const t = (yL - a[1]) / ((b[1] - a[1]) || 1e-12); out.push([a[0] + t * (b[0] - a[0]), yL]); }
+  }
+  return out;
+}
+// Eje neutro de la flexión M3 para un axial P de diseño: zonas comprimida y traccionada de la sección.
+// sw es el barrido de puntosCurvaInteraccion sin girar, que no depende de P.
+function zonasM3(sw, vertsCerrados, P){
+  const ymax = Math.max(...vertsCerrados.map(p => p[1]));
+  const yNa = ymax - interpProfundidad(sw.pn, sw.fi, sw.en, P), abierto = vertsCerrados.slice(0, -1);
+  const corte = [];
+  for(let i = 0; i < vertsCerrados.length - 1; i++){
+    const a = vertsCerrados[i], b = vertsCerrados[i + 1];
+    if((a[1] - yNa) * (b[1] - yNa) < 0){ const t = (yNa - a[1]) / (b[1] - a[1]); corte.push([a[0] + t * (b[0] - a[0]), yNa]); }
+  }
+  corte.sort((p, q) => p[0] - q[0]);
+  return {comp: recortarHorizontal(abierto, yNa, true), trac: recortarHorizontal(abierto, yNa, false), na: corte.length >= 2 ? [corte[0], corte[corte.length - 1]] : []};
+}
+
+/* =========================================================================
+   SECCIONES TIPO
+   ========================================================================= */
+const fmt = (v, d = 0) => Number(v).toFixed(d).replace('.', ',');
+const largo = (a, b) => Math.hypot(b[0] - a[0], b[1] - a[1]);
+const entre = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+// Tramos iguales que no pasan la separación; el −1e-9 evita uno de más cuando el largo es múltiplo justo de ella.
+const tramos = (L, sep, minimo = 1) => Math.max(minimo, Math.ceil(L / sep - 1e-9));
+// Tope contra medidas escritas en mm: con 400 en vez de 0,40 el cálculo congela la página.
+const MEDIDA_MAX = 20;
+// 32 lados, como la sección circular de curvaw; la elipse lleva más porque en sus puntas la curvatura es mayor.
+const LADOS_CIRCULO = 32, LADOS_ELIPSE = 72;
+function elipse(b, h, n){
+  return Array.from({length: n}, (_, i) => { const t = 2 * Math.PI * i / n; return [b / 2 * (1 + Math.cos(t)), h / 2 * (1 + Math.sin(t))]; });
+}
+const ROTULOS = {b: 'ancho b', h: 'alto h', e: 'espesor e'};
+const REGLA_L_T = {texto: 'e menor que b y que h', cumple: ({b, h, e}) => e < b && e < h};
+const REGLA_C_I = {texto: 'e menor que b y 2e menor que h', cumple: ({b, h, e}) => e < b && 2 * e < h};
+// Cada forma con sus medidas iniciales y su contorno en sentido antihorario, con el origen en la esquina inferior izquierda del
+// rectángulo que la envuelve. Las letras se dibujan como se leen: la H tiene las alas verticales y la I, horizontales.
+const FORMAS = {
+  rectangular: {nombre: 'Rectangular', inicial: {b: 0.4, h: 0.6}, contorno: ({b, h}) => [[0, 0], [b, 0], [b, h], [0, h]]},
+  circular: {nombre: 'Circular', inicial: {b: 0.6}, rotulos: {b: 'diámetro D'}, curva: true, contorno: ({b}) => elipse(b, b, LADOS_CIRCULO)},
+  elipse: {nombre: 'Elipse', inicial: {b: 0.9, h: 0.5}, curva: true, contorno: ({b, h}) => elipse(b, h, LADOS_ELIPSE),
+    // Con un recubrimiento mayor que el radio de curvatura de la punta, el contorno corrido hacia adentro se pliega.
+    regla: {texto: 'un recubrimiento menor que el radio de curvatura de su punta (semieje menor² / semieje mayor)',
+      cumple: ({b, h}, r) => r < Math.min(b, h) ** 2 / (2 * Math.max(b, h))}},
+  L: {nombre: 'L', inicial: {b: 1.2, h: 1.8, e: 0.2}, regla: REGLA_L_T,
+    contorno: ({b, h, e}) => [[0, 0], [b, 0], [b, e], [e, e], [e, h], [0, h]]},
+  C: {nombre: 'C', inicial: {b: 0.8, h: 2, e: 0.2}, regla: REGLA_C_I,
+    contorno: ({b, h, e}) => [[0, 0], [b, 0], [b, e], [e, e], [e, h - e], [b, h - e], [b, h], [0, h]]},
+  H: {nombre: 'H', inicial: {b: 2, h: 1.2, e: 0.2}, regla: {texto: '2e menor que b y e menor que h', cumple: ({b, h, e}) => 2 * e < b && e < h},
+    contorno: ({b, h, e}) => {
+      const y0 = (h - e) / 2, y1 = (h + e) / 2;
+      return [[0, 0], [e, 0], [e, y0], [b - e, y0], [b - e, 0], [b, 0], [b, h], [b - e, h], [b - e, y1], [e, y1], [e, h], [0, h]];
+    }},
+  I: {nombre: 'I', inicial: {b: 1, h: 2, e: 0.2}, regla: REGLA_C_I,
+    contorno: ({b, h, e}) => {
+      const x0 = (b - e) / 2, x1 = (b + e) / 2;
+      return [[0, 0], [b, 0], [b, e], [x1, e], [x1, h - e], [b, h - e], [b, h], [0, h], [0, h - e], [x0, h - e], [x0, e], [0, e]];
+    }},
+  T: {nombre: 'T', inicial: {b: 1.2, h: 2, e: 0.2}, regla: REGLA_L_T,
+    contorno: ({b, h, e}) => {
+      const x0 = (b - e) / 2, x1 = (b + e) / 2;
+      return [[x0, 0], [x1, 0], [x1, h - e], [b, h - e], [b, h], [0, h], [0, h - e], [x0, h - e]];
+    }}
+};
+const rotulo = (f, k) => (f.rotulos && f.rotulos[k]) || ROTULOS[k];
+// ACI 318S-08 7.6.3, elementos a compresión: entre barras queda libre al menos 1,5ø y al menos 40 mm.
+const separacionMinimaACI = d => d + Math.max(1.5 * d, 0.04);
+// Contorno corrido hacia adentro una distancia r (polígono antihorario): cada vértice se mueve por su bisectriz lo justo para que sus
+// dos lados queden a r. En un ángulo recto es r en cada dirección; en una esquina entrante, el vértice entra al material.
+function contornoInterior(v, r){
+  const normal = (a, b) => { const L = largo(a, b); return [-(b[1] - a[1]) / L, (b[0] - a[0]) / L]; };
+  return v.map((p, i) => {
+    const n1 = normal(v[(i + v.length - 1) % v.length], p), n2 = normal(p, v[(i + 1) % v.length]), k = r / (1 + n1[0] * n2[0] + n1[1] * n2[1]);
+    return [p[0] + k * (n1[0] + n2[0]), p[1] + k * (n1[1] + n2[1])];
+  });
+}
+function barrasPorLado(contorno, sep){
+  return contorno.flatMap((a, i) => {
+    const b = contorno[(i + 1) % contorno.length], n = tramos(largo(a, b), sep);
+    return Array.from({length: n}, (_, j) => entre(a, b, j / n));
+  });
+}
+// En un contorno curvo, las barras van a igual distancia medida sobre él; al menos 4, como pide ACI 318S-08 10.9.2 con estribos.
+function barrasPorLargo(contorno, sep){
+  const n = contorno.length, acum = [0];
+  for(let i = 0; i < n; i++) acum.push(acum[i] + largo(contorno[i], contorno[(i + 1) % n]));
+  const total = acum[n], k = tramos(total, sep, 4), barras = [];
+  for(let j = 0, i = 0; j < k; j++){
+    const s = total * j / k; while(acum[i + 1] < s) i++;
+    barras.push(entre(contorno[i], contorno[(i + 1) % n], (s - acum[i]) / (acum[i + 1] - acum[i])));
+  }
+  return barras;
+}
+function separacionReal(barras){
+  let m = Infinity;
+  for(let i = 0; i < barras.length; i++) for(let j = i + 1; j < barras.length; j++) m = Math.min(m, largo(barras[i], barras[j]));
+  return m;
+}
+// Valida las medidas, arma la sección y revisa la armadura que resulta: devuelve {error} o {vertices, barras} con barras [x, y].
+function construirSeccion({f, med, r, sep, d}){
+  const sepMin = separacionMinimaACI(d), claves = Object.keys(f.inicial);
+  if(!(r > 0 && sep > 0)) return {error: 'El recubrimiento y la separación tienen que ser números positivos.'};
+  if(r < d / 2) return {error: `El recubrimiento al eje tiene que ser al menos ø/2 = ${fmt(d / 2, 3)} m; si no, la barra asoma del hormigón.`};
+  if(sep < sepMin) return {error: `La separación tiene que ser de al menos ${fmt(sepMin, 3)} m: ø más el espacio libre de ACI 318S-08 7.6.3 (1,5ø y 40 mm).`};
+  const larga = claves.find(k => med[k] > MEDIDA_MAX);
+  if(larga) return {error: `Las medidas van en metros: el ${rotulo(f, larga)} no puede pasar de ${MEDIDA_MAX} m.`};
+  const minimo = 2 * r + sepMin, corta = claves.find(k => !(med[k] >= minimo));
+  if(corta) return {error: `El ${rotulo(f, corta)} tiene que medir al menos ${fmt(minimo, 3)} m: dos recubrimientos más la separación mínima.`};
+  if(f.regla && !f.regla.cumple(med, r)) return {error: `La sección ${f.nombre} necesita ${f.regla.texto}.`};
+  const vertices = f.contorno(med), interior = contornoInterior(vertices, r);
+  const barras = f.curva ? barrasPorLargo(interior, sep) : barrasPorLado(interior, sep), libre = separacionReal(barras);
+  if(libre < sepMin - 1e-9) return {error: `Con estas medidas quedan barras a ${fmt(libre, 3)} m entre ejes; ACI 318S-08 7.6.3 pide al menos ${fmt(sepMin, 3)} m.`};
+  return {vertices, barras};
+}
+
+/* =========================================================================
+   ESTADO E INTERFAZ
+   ========================================================================= */
+const $ = id => document.getElementById(id);
+// Acepta coma o punto decimal. Lo demás da NaN (no 0), para que la validación lo muestre en vez de calcular con un cero.
+const leer = v => { const s = String(v).trim().replace(',', '.'); return /^[-+]?(\d+\.?\d*|\.\d+)([eE][-+]?\d+)?$/.test(s) ? parseFloat(s) : NaN; };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const COL = {fondo: css('--tarjeta'), tinta: css('--tinta'), tinta2: css('--tinta-2'), iec: css('--iec'), iecHondo: css('--iec-hondo'),
+  m3: css('--m3'), m2: css('--m2'), comp: css('--comp'), trac: css('--trac'), neutro: css('--neutro')};
+const rgb = hex => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16));
+const conAlfa = (hex, a) => `rgba(${rgb(hex).join(',')},${a})`;
+const RELLENO_DIS = conAlfa(COL.iec, .2), RELLENO_NOM = conAlfa(COL.tinta2, .1), GRILLA = conAlfa(COL.tinta, .07);
+const FUENTE = '10px IBM Plex Mono, monospace', FUENTE_EJE = '600 10.5px IBM Plex Mono, monospace';
+// Paleta propia para el fondo claro de esta página: la de curvaw está pensada para fondos oscuros.
+const COLORES_BARRAS = {6: '#5e5e5e', 8: '#d000d0', 10: '#00a8b5', 12: '#808000', 16: '#2e9e2e', 18: '#2040c0', 22: '#d42020', 25: '#008080', 28: '#18a89c', 32: '#643200', 36: '#c86400'};
+const enMm = d => Math.round(d * 1000);
+const colorBarra = d => COLORES_BARRAS[enMm(d)] || '#7a7a7a';
+const NANG = 36, NIVELES_MANTO = 16;
+const MATERIALES = ['fc', 'fy', 'Es', 'eu'], CAMPOS_MEDIDA = [['dimB', 'b'], ['dimH', 'h'], ['dimE', 'e']];
+const ICONO = 32, MARGEN_ICONO = 3;
+
+const G = {azim: 45 * Math.PI / 180, elev: 20 * Math.PI / 180};
+let formaElegida = 'T', fraccionP = $('sliderP').value / 100;
+
+function glifo(f){
+  const v = f.contorno(f.inicial), w = Math.max(...v.map(p => p[0])), h = Math.max(...v.map(p => p[1]));
+  const s = (ICONO - 2 * MARGEN_ICONO) / Math.max(w, h), ox = (ICONO - w * s) / 2, oy = (ICONO - h * s) / 2;
+  return 'M' + v.map(p => (ox + p[0] * s).toFixed(1) + ' ' + (ICONO - oy - p[1] * s).toFixed(1)).join('L') + 'Z';
+}
+function armarFormas(){
+  $('formas').innerHTML = Object.entries(FORMAS).map(([k, f]) =>
+    `<button type="button" data-forma="${k}" aria-pressed="false"><svg viewBox="0 0 ${ICONO} ${ICONO}" aria-hidden="true"><path d="${glifo(f)}"/></svg>${f.nombre}</button>`).join('');
+}
+// Al elegir una forma se cargan sus medidas iniciales; las que la forma no usa quedan vacías y deshabilitadas.
+function elegirForma(k){
+  formaElegida = k;
+  const f = FORMAS[k];
+  for(const [id, clave] of CAMPOS_MEDIDA){
+    const inp = $(id), usa = clave in f.inicial;
+    inp.disabled = !usa; inp.value = usa ? fmt(f.inicial[clave], 2) : '';
+    $('etq-' + id).textContent = rotulo(f, clave) + ' (m)';
+  }
+  document.querySelectorAll('#formas [data-forma]').forEach(b => b.setAttribute('aria-pressed', b.dataset.forma === k));
+  recalcular();
+}
+
+/* ---------- Dibujo ---------- */
+function lienzo(id){
+  const cv = $(id), dpr = window.devicePixelRatio || 1, w = cv.clientWidth || 320, h = cv.clientHeight || 260;
+  cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+  const ctx = cv.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.fillStyle = COL.fondo; ctx.fillRect(0, 0, w, h);
+  return {ctx, w, h};
+}
+// Abre un camino por los puntos, llevados a pantalla con f; quien llama decide si lo cierra, lo rellena o lo traza.
+function trazo(ctx, pts, f = p => p){ ctx.beginPath(); pts.forEach((p, i) => { const [x, y] = f(p); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); }
+const segmento = (ctx, a, b) => { trazo(ctx, [a, b]); ctx.stroke(); };
+function divisiones(lo, hi, n){
+  const span = hi - lo; if(!(span > 0)) return [];
+  const mag = Math.pow(10, Math.floor(Math.log10(span / n))), r = span / n / mag, paso = (r < 1.5 ? 1 : r < 3 ? 2 : r < 7 ? 5 : 10) * mag;
+  if(!(paso > 0)) return [];
+  const t = []; for(let v = Math.ceil(lo / paso) * paso; v <= hi + paso * 1e-6; v += paso) t.push(Math.round(v / paso) * paso);
+  return t;
+}
+function rayado(ctx, pts, f, dir, color){
+  ctx.save(); trazo(ctx, pts, f); ctx.closePath(); ctx.clip();
+  const s = pts.map(f), xs = s.map(p => p[0]), ys = s.map(p => p[1]), x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  ctx.strokeStyle = color; ctx.globalAlpha = .45; ctx.lineWidth = 1;
+  for(let d = -(y1 - y0); d < (x1 - x0) + (y1 - y0); d += 7){
+    if(dir > 0) segmento(ctx, [x0 + d, y0], [x0 + d + (y1 - y0), y1]); else segmento(ctx, [x0 + d, y1], [x0 + d + (y1 - y0), y0]);
+  }
+  ctx.restore();
+}
+function dibujarSeccion(v, barras, zona){
+  const {ctx, w, h} = lienzo('secCanvas');
+  const xs = v.map(p => p[0]), ys = v.map(p => p[1]), minx = Math.min(...xs), maxx = Math.max(...xs), miny = Math.min(...ys), maxy = Math.max(...ys);
+  const pad = 36, sc = Math.min((w - 2 * pad) / ((maxx - minx) || 1), (h - 2 * pad) / ((maxy - miny) || 1));
+  const X = x => w / 2 + (x - (maxx + minx) / 2) * sc, Y = y => h / 2 - (y - (maxy + miny) / 2) * sc, aPantalla = p => [X(p[0]), Y(p[1])];
+  trazo(ctx, v, aPantalla); ctx.closePath(); ctx.fillStyle = conAlfa(COL.tinta2, .08); ctx.fill();
+  if(zona){
+    for(const [pts, col, dir] of [[zona.comp, COL.comp, 1], [zona.trac, COL.trac, -1]]){
+      if(pts.length <= 2) continue;
+      trazo(ctx, pts, aPantalla); ctx.closePath(); ctx.fillStyle = col; ctx.globalAlpha = .16; ctx.fill(); ctx.globalAlpha = 1; rayado(ctx, pts, aPantalla, dir, col);
+    }
+    if(zona.na.length === 2){ ctx.strokeStyle = COL.neutro; ctx.lineWidth = 2; ctx.setLineDash([6, 4]); segmento(ctx, aPantalla(zona.na[0]), aPantalla(zona.na[1])); ctx.setLineDash([]); }
+  }
+  trazo(ctx, v, aPantalla); ctx.closePath(); ctx.strokeStyle = COL.tinta; ctx.lineWidth = 2; ctx.stroke();
+  const [gx, gy] = centroide(v), cx = X(gx), cy = Y(gy);
+  ctx.setLineDash([5, 3]); ctx.lineWidth = 1; ctx.globalAlpha = .75;
+  ctx.strokeStyle = COL.m3; segmento(ctx, [X(minx) - 6, cy], [X(maxx) + 6, cy]);
+  ctx.strokeStyle = COL.m2; segmento(ctx, [cx, Y(maxy) - 6], [cx, Y(miny) + 6]);
+  ctx.globalAlpha = 1; ctx.setLineDash([]);
+  for(const b of barras){
+    ctx.beginPath(); ctx.arc(X(b[0]), Y(b[1]), Math.max(3, b[2] / 2 * sc), 0, 2 * Math.PI);
+    ctx.fillStyle = colorBarra(b[2]); ctx.fill(); ctx.strokeStyle = COL.fondo; ctx.lineWidth = 1; ctx.stroke();
+  }
+  ctx.fillStyle = COL.tinta2; ctx.font = '11px IBM Plex Mono, monospace'; ctx.textAlign = 'center';
+  ctx.fillText(fmt(maxx - minx, 2) + ' m', X((minx + maxx) / 2), Y(miny) + 18);
+  ctx.save(); ctx.translate(X(minx) - 14, Y((miny + maxy) / 2)); ctx.rotate(-Math.PI / 2); ctx.fillText(fmt(maxy - miny, 2) + ' m', 0, 0); ctx.restore();
+  ctx.textAlign = 'left';
+}
+function dibujarCurva(id, eje, color, etiqueta, {lims, pNivel, verNom}){
+  const {ctx, w, h} = lienzo(id), {mnM, mxM, mnP, mxP} = lims, pad = 46, padB = 22, x0 = pad, x1 = w - 12, y0 = 12, y1 = h - padB;
+  const X = m => x0 + (m - mnM) / (mxM - mnM) * (x1 - x0), Y = p => y0 + (mxP - p) / (mxP - mnP) * (y1 - y0);
+  const curva = (mm, pp) => mm.map((m, i) => [X(m), Y(pp[i])]);
+  ctx.font = FUENTE; ctx.strokeStyle = GRILLA; ctx.lineWidth = 1; ctx.fillStyle = COL.tinta2;
+  ctx.textAlign = 'center';
+  for(const m of divisiones(mnM, mxM, 5)){ const gx = X(m); segmento(ctx, [gx, y0], [gx, y1]); if(gx > x0 + 10 && gx < x1 - 10) ctx.fillText(fmt(m), gx, y1 + 14); }
+  ctx.textAlign = 'right';
+  for(const p of divisiones(mnP, mxP, 5)){ const gy = Y(p); segmento(ctx, [x0, gy], [x1, gy]); if(gy > y0 + 6 && gy < y1 - 2) ctx.fillText(fmt(p), x0 - 4, gy + 3); }
+  ctx.strokeStyle = conAlfa(COL.tinta, .35); ctx.setLineDash([4, 3]);
+  segmento(ctx, [X(0), y0], [X(0), y1]); segmento(ctx, [x0, Y(0)], [x1, Y(0)]); ctx.setLineDash([]);
+  ctx.font = FUENTE_EJE; ctx.fillText(etiqueta, x1 - 2, Y(0) - 6); ctx.textAlign = 'left'; ctx.fillText('φP (tonf)', X(0) + 6, y0 + 9);
+  const dis = curva(eje.dis.fimn, eje.dis.fipn);
+  trazo(ctx, dis); ctx.closePath(); ctx.fillStyle = RELLENO_DIS; ctx.fill();
+  if(verNom){ const nom = curva(eje.nom.mn, eje.nom.pn); trazo(ctx, nom); ctx.closePath(); ctx.fillStyle = RELLENO_NOM; ctx.fill(); ctx.strokeStyle = COL.tinta2; ctx.lineWidth = 1.4; ctx.stroke(); }
+  trazo(ctx, dis); ctx.strokeStyle = color; ctx.lineWidth = 2.2; ctx.stroke();
+  if(pNivel > mnP && pNivel < mxP){
+    ctx.strokeStyle = COL.iec; ctx.lineWidth = 1.2; ctx.setLineDash([3, 3]); segmento(ctx, [x0, Y(pNivel)], [x1, Y(pNivel)]); ctx.setLineDash([]);
+    ctx.fillStyle = COL.iec; ctx.font = FUENTE; ctx.fillText('nivel de P', x0 + 4, Y(pNivel) - 4);
+  }
+}
+function dibujarContorno(cont){
+  const {ctx, w, h} = lienzo('contornoCanvas');
+  let R = 1; cont.forEach(p => { R = Math.max(R, Math.abs(p[0]), Math.abs(p[1])); });
+  const sc = Math.min(w - 68, h - 68) / (2 * R * 1.06), X = x => w / 2 + x * sc, Y = y => h / 2 - y * sc;
+  ctx.font = FUENTE; ctx.strokeStyle = GRILLA; ctx.lineWidth = 1; ctx.fillStyle = COL.tinta2; ctx.textAlign = 'center';
+  for(const t of divisiones(-R, R, 4)){ segmento(ctx, [X(t), Y(-R)], [X(t), Y(R)]); segmento(ctx, [X(-R), Y(t)], [X(R), Y(t)]); if(t) ctx.fillText(fmt(t), X(t), Y(0) + 13); }
+  ctx.textAlign = 'left'; ctx.setLineDash([4, 3]);
+  ctx.strokeStyle = COL.m3; segmento(ctx, [X(-R), Y(0)], [X(R), Y(0)]);
+  ctx.strokeStyle = COL.m2; segmento(ctx, [X(0), Y(-R)], [X(0), Y(R)]); ctx.setLineDash([]);
+  ctx.font = FUENTE_EJE; ctx.fillStyle = COL.m3; ctx.fillText('φM3', X(R) - 30, Y(0) - 6); ctx.fillStyle = COL.m2; ctx.fillText('φM2', X(0) + 6, Y(R) + 4);
+  if(cont.length > 2){ trazo(ctx, cont, p => [X(p[0]), Y(p[1])]); ctx.closePath(); ctx.fillStyle = RELLENO_DIS; ctx.fill(); ctx.strokeStyle = COL.iec; ctx.lineWidth = 2.2; ctx.stroke(); }
+}
+function dibujar3D(){
+  const {ctx, w, h} = lienzo('d3Canvas'), L = G.Mmax, zmin = G.pmin, zmax = G.pCap, nrm = normalizador(L, zmin, zmax);
+  const ca = Math.cos(G.azim), sa = Math.sin(G.azim), ce = Math.cos(G.elev), se = Math.sin(G.elev);
+  // Giro en azimut y luego en elevación: [x, y] en pantalla sin escalar y la profundidad para ordenar las caras.
+  const vista = p => { const [x, y, z] = nrm(p), r = x * sa + y * ca; return [x * ca - y * sa, r * se - z * ce, r * ce + z * se]; };
+  const base = [[-L, -L, zmin], [L, -L, zmin], [L, L, zmin], [-L, L, zmin]];
+  const ajuste = [...G.caras.flatMap(c => c.v), ...base, [0, 0, zmax]].map(vista), xs = ajuste.map(p => p[0]), ys = ajuste.map(p => p[1]), pad = 24;
+  const esc = Math.min((w - 2 * pad) / ((Math.max(...xs) - Math.min(...xs)) || 1), (h - 2 * pad) / ((Math.max(...ys) - Math.min(...ys)) || 1));
+  const cx = w / 2 - (Math.max(...xs) + Math.min(...xs)) / 2 * esc, cy = h / 2 - (Math.max(...ys) + Math.min(...ys)) / 2 * esc;
+  const proy = p => { const r = vista(p); return [cx + r[0] * esc, cy + r[1] * esc]; };
+  ctx.strokeStyle = conAlfa(COL.tinta, .18); ctx.lineWidth = 1; trazo(ctx, base, proy); ctx.closePath(); ctx.stroke();
+  const o = proy([0, 0, zmin]);
+  ctx.font = FUENTE_EJE;
+  for(const [et, p, col] of [['φM3', [L * 1.15, 0, zmin], COL.m3], ['φM2', [0, L * 1.15, zmin], COL.m2], ['φP', [0, 0, zmax], COL.iec]]){
+    const s = proy(p); ctx.strokeStyle = conAlfa(COL.tinta, .35); segmento(ctx, o, s);
+    ctx.fillStyle = col; ctx.fillText(et, s[0] + 3, s[1]);
+  }
+  const [r, g, b] = rgb(COL.iec), caras = G.caras.map(c => ({c, d: c.v.reduce((s, p) => s + vista(p)[2], 0) / c.v.length})).sort((p, q) => p.d - q.d);
+  ctx.strokeStyle = conAlfa(COL.iecHondo, .22); ctx.lineWidth = .5;
+  for(const {c} of caras){
+    trazo(ctx, c.v, proy); ctx.closePath();
+    ctx.fillStyle = `rgba(${Math.round(r * c.br)},${Math.round(g * c.br)},${Math.round(b * c.br)},0.40)`; ctx.fill(); ctx.stroke();
+  }
+  ctx.lineWidth = 2;
+  for(const [cv, col] of [[G.curvas[0], COL.m3], [G.curvas[NANG / 2], COL.m2]]){
+    trazo(ctx, cv.fipn.map((p, i) => [cv.fim3[i], cv.fim2[i], p]), proy); ctx.strokeStyle = col; ctx.stroke();
+  }
+  if(G.contorno.length > 2){
+    trazo(ctx, G.contorno.map(p => [p[0], p[1], G.pNivel]), proy); ctx.closePath();
+    ctx.fillStyle = 'rgba(255,255,255,0.35)'; ctx.fill(); ctx.strokeStyle = COL.iec; ctx.stroke();
+  }
+}
+// Con un error, la leyenda queda con la última sección válida pero apagada: así no cambia de alto.
+function pintarLeyenda(){
+  const d = G.barras[0][2];
+  $('secLegend').classList.toggle('apagada', !G.ok);
+  $('secLegend').innerHTML = `<span><i class="punto" style="background:${colorBarra(d)}"></i>${G.barras.length}ø${enMm(d)}</span>`
+    + ($('chkZonas').checked ? `<span><i style="background:${conAlfa(COL.comp, .35)}"></i>comprimida</span><span><i style="background:${conAlfa(COL.trac, .35)}"></i>traccionada</span><span><i style="background:${COL.neutro}"></i>eje neutro</span>` : '');
+}
+
+/* ---------- Cálculo y repintado ---------- */
+function recalcular(){
+  clearTimeout(espera);
+  const [fc, fy, E, eu] = MATERIALES.map(id => leer($(id).value));
+  const datos = {f: FORMAS[formaElegida], med: Object.fromEntries(CAMPOS_MEDIDA.map(([id, k]) => [k, leer($(id).value)])),
+    r: leer($('recub').value), sep: leer($('sep').value), d: $('diam').value / 1000};
+  const materialesOk = fc > 0 && fy > 0 && E > 0 && eu > 0;
+  const sec = materialesOk ? construirSeccion(datos) : {error: 'Los materiales tienen que ser números positivos.'};
+  G.ok = !sec.error;
+  $('secError').textContent = sec.error || '';
+  if(G.ok){
+    const verts = cerrarAnillo(sec.vertices), barras = sec.barras.map(([x, y]) => [x, y, datos.d, fy, E]);
+    const ejeM3 = curvaEje(fc, eu, verts, barras, 0), ejeM2 = curvaEje(fc, eu, verts, barras, Math.PI / 2), curvas = curvas3d(fc, eu, verts, barras, NANG);
+    let pCap = -Infinity, pmin = Infinity;
+    for(const c of curvas) for(const p of c.fipn){ pCap = Math.max(pCap, p); pmin = Math.min(pmin, p); }
+    const {Mmax, caras} = construirManto(curvas, pmin, pCap, NIVELES_MANTO);
+    const todosM = [...ejeM3.dis.fimn, ...ejeM2.dis.fimn, ...ejeM3.nom.mn, ...ejeM2.nom.mn], todosP = [...ejeM3.dis.fipn, ...ejeM2.dis.fipn, ...ejeM3.nom.pn, ...ejeM2.nom.pn];
+    const maxM = Math.max(...todosM), minM = Math.min(...todosM), maxP = Math.max(...todosP), minP = Math.min(...todosP);
+    Object.assign(G, {verts, barras, barridoM3: puntosCurvaInteraccion(fc, eu, verts, barras), ejeM3, ejeM2, curvas, pCap, pmin, Mmax, caras,
+      lims: {mnM: 1.1 * minM, mxM: 1.1 * maxM, mnP: minP - 0.1 * Math.abs(maxP), mxP: 1.1 * maxP}});
+  }
+  pintarLeyenda(); repintar();
+}
+// Al escribir se espera una pausa: un recálculo (36 giros del eje neutro) dura más que el intervalo entre teclas.
+let espera = 0;
+function recalcularLuego(){ clearTimeout(espera); espera = setTimeout(recalcular, 150); }
+function repintar(){
+  if(!G.ok){
+    for(const id of ['secCanvas', 'd3Canvas', 'contornoCanvas', 'm3Canvas', 'm2Canvas']) lienzo(id);
+    $('sliderVal').textContent = '–';
+    return;
+  }
+  G.pNivel = G.pmin + (G.pCap - G.pmin) * fraccionP;
+  G.contorno = contornoAP(G.curvas, G.pNivel);
+  $('sliderVal').textContent = fmt(G.pNivel) + ' tonf';
+  dibujarSeccion(G.verts, G.barras, $('chkZonas').checked ? zonasM3(G.barridoM3, G.verts, G.pNivel) : null);
+  const vista = {lims: G.lims, pNivel: G.pNivel, verNom: $('chkNominal').checked};
+  dibujarCurva('m3Canvas', G.ejeM3, COL.m3, 'φM3 (tonf·m)', vista);
+  dibujarCurva('m2Canvas', G.ejeM2, COL.m2, 'φM2 (tonf·m)', vista);
+  dibujarContorno(G.contorno); dibujar3D();
+}
+
+/* ---------- Eventos ---------- */
+$('formas').addEventListener('click', e => { const b = e.target.closest('[data-forma]'); if(b) elegirForma(b.dataset.forma); });
+[...MATERIALES, ...CAMPOS_MEDIDA.map(([id]) => id), 'sep', 'recub'].forEach(id => $(id).addEventListener('input', recalcularLuego));
+$('diam').addEventListener('change', recalcular);
+$('chkNominal').addEventListener('change', repintar);
+$('chkZonas').addEventListener('change', () => { pintarLeyenda(); repintar(); });
+$('sliderP').addEventListener('input', e => { fraccionP = e.target.value / 100; repintar(); });
+// Se repinta cuando cambia el tamaño en pantalla de algún lienzo: ancho de la ventana, alto de su fila o fuentes que llegan tarde.
+let cuadro = 0;
+const alCambiarTamano = new ResizeObserver(() => { cancelAnimationFrame(cuadro); cuadro = requestAnimationFrame(repintar); });
+document.querySelectorAll('.celda canvas').forEach(c => alCambiarTamano.observe(c));
+(() => {
+  const cv = $('d3Canvas'); let previo = null;
+  cv.addEventListener('pointerdown', e => { previo = [e.clientX, e.clientY]; cv.setPointerCapture(e.pointerId); });
+  cv.addEventListener('pointermove', e => {
+    if(!previo) return;
+    G.azim += (e.clientX - previo[0]) * 0.01; G.elev = Math.max(-1.45, Math.min(1.45, G.elev - (e.clientY - previo[1]) * 0.01));
+    previo = [e.clientX, e.clientY]; if(G.ok) dibujar3D();
+  });
+  const soltar = () => { previo = null; };
+  cv.addEventListener('pointerup', soltar); cv.addEventListener('pointercancel', soltar);
+})();
+
+armarFormas(); elegirForma(formaElegida);
+// El texto de los lienzos usa las fuentes de la página; si llegan después del primer dibujo, se repinta con ellas.
+document.fonts.ready.then(repintar);
+const EMBEBIDA = window.self !== window.top, CON_MOUSE = matchMedia('(hover: hover)').matches;
+const REDUCIDO = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- Globo con la definición de un término ---------- */
+// Con mouse, aparece al pasar sobre el término y un clic lleva al glosario. Al tacto, el primer toque solo muestra el globo,
+// que trae el enlace al glosario.
+const globo = $('globo');
+let terminoAbierto = null;
+function mostrarGlobo(a){
+  const id = a.getAttribute('href').slice(1), entrada = document.getElementById(id);
+  if(!entrada) return;
+  globo.innerHTML = `<b>${entrada.querySelector('dt').innerHTML}</b>${entrada.querySelector('dd').innerHTML}` +
+    (CON_MOUSE ? '' : `<a class="ref" href="#${id}">Ver en el glosario</a>`);
+  globo.hidden = false;
+  a.setAttribute('aria-describedby', 'globo');
+  terminoAbierto = a;
+  const r = a.getBoundingClientRect(), w = globo.offsetWidth, h = globo.offsetHeight;
+  const x = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), document.documentElement.clientWidth - w - 8);
+  const arriba = r.top - h - 10 > 8;   // arriba del término si cabe; si no, abajo
+  globo.style.left = (x + window.scrollX) + 'px';
+  globo.style.top = (window.scrollY + (arriba ? r.top - h - 10 : r.bottom + 10)) + 'px';
+}
+function cerrarGlobo(){
+  if(!terminoAbierto) return;
+  terminoAbierto.removeAttribute('aria-describedby');
+  terminoAbierto = null;
+  globo.hidden = true;
+}
+document.querySelectorAll('a.term').forEach(a => {
+  a.addEventListener('pointerenter', ev => { if(ev.pointerType === 'mouse') mostrarGlobo(a); });
+  a.addEventListener('pointerleave', ev => { if(ev.pointerType === 'mouse') cerrarGlobo(); });
+  // Al tacto, el toque también enfoca el enlace: ese foco no abre el globo, lo abre el clic.
+  a.addEventListener('focus', () => { if(CON_MOUSE || a.matches(':focus-visible')) mostrarGlobo(a); });
+  a.addEventListener('blur', () => { if(CON_MOUSE) cerrarGlobo(); });
+});
+document.addEventListener('keydown', ev => { if(ev.key === 'Escape') cerrarGlobo(); });
+
+/* ---------- Saltos internos y «Volver a donde estaba» ---------- */
+// Figura N y términos: el destino se marca un momento y aparece un botón para volver. Dentro de la documentación
+// la guía no tiene scroll propio: avisa a la página la posición del destino, y el salto y el botón los pone la página (guias.js).
+const volver = $('volver');
+let volverA = null;
+volver.addEventListener('click', () => {
+  window.scrollTo({top: volverA, behavior: REDUCIDO ? 'auto' : 'smooth'});
+  volver.hidden = true;
+});
+document.addEventListener('click', ev => {
+  const a = ev.target.closest('a[href^="#"]');
+  if(!a){ if(!ev.target.closest('#globo')) cerrarGlobo(); return; }
+  if(a.classList.contains('term') && !CON_MOUSE && terminoAbierto !== a){
+    ev.preventDefault();
+    mostrarGlobo(a);
+    return;
+  }
+  cerrarGlobo();
+  const destino = document.getElementById(a.getAttribute('href').slice(1));
+  if(!destino) return;
+  if(destino.classList.contains('fig') || destino.classList.contains('gl')){
+    destino.classList.remove('destacada');
+    void destino.offsetWidth;   // reinicia la animación si se vuelve a citar la misma figura
+    destino.classList.add('destacada');
+  }
+  if(EMBEBIDA){
+    ev.preventDefault();
+    parent.postMessage({irGuia: destino.getBoundingClientRect().top + window.scrollY}, '*');
+  } else {
+    if(volver.hidden) volverA = window.scrollY;   // con saltos encadenados se vuelve al punto de lectura original
+    volver.hidden = false;
+  }
+});
+// Dentro de la documentación (iframe): sin la barra propia, y avisando el alto para que la página tenga un solo scroll.
+if(EMBEBIDA){
+  document.documentElement.classList.add('embebida');
+  // Se mide el body y no el scrollHeight del documento, que nunca baja del alto actual del iframe y no lo dejaría achicarse.
+  const avisar = () => parent.postMessage({altoGuia: Math.ceil(document.body.getBoundingClientRect().height)}, '*');
+  new ResizeObserver(avisar).observe(document.body);
+}
+})();
+</script>
+</body>
+</html>

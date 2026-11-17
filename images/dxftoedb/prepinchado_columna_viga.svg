@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <rect width="800" height="380" fill="#ffffff"/>
+  <defs>
+    <style>
+      .eje { stroke: #c62828; stroke-width: 1.5; stroke-dasharray: 16 4 3 4; fill: none; }
+      .eje-txt { fill: #c62828; font-size: 15px; font-weight: 600; }
+      .cara { stroke: #8d6e00; stroke-width: 2.2; fill: none; }
+      .col { stroke: #1565c0; stroke-width: 2.5; fill: #1565c0; fill-opacity: 0.08; }
+      .col-txt { fill: #1565c0; font-size: 13px; font-weight: 600; stroke: #ffffff; stroke-width: 4px; paint-order: stroke; }
+      .viga-txt { fill: #8d6e00; font-size: 13px; font-weight: 600; }
+      .titulo { font-size: 17px; font-weight: 700; }
+      .nota { fill: #333333; font-size: 14px; }
+      .nudo { fill: #2e7d32; }
+      .corte { fill: #c62828; }
+    </style>
+  </defs>
+
+  <!-- Panel izquierdo: correcto -->
+  <g transform="translate(10,0)">
+    <text x="190" y="28" text-anchor="middle" class="titulo" fill="#2e7d32">Correcto</text>
+    <line x1="20" y1="170" x2="355" y2="170" class="eje"/>
+    <text x="362" y="175" class="eje-txt">A</text>
+    <line x1="190" y1="50" x2="190" y2="300" class="eje"/>
+    <text x="190" y="46" text-anchor="middle" class="eje-txt">1</text>
+    <rect x="145" y="125" width="90" height="90" class="col"/>
+    <text x="190" y="144" text-anchor="middle" class="col-txt">P65/65</text>
+    <line x1="20" y1="153" x2="355" y2="153" class="cara"/>
+    <line x1="20" y1="187" x2="355" y2="187" class="cara"/>
+    <text x="80" y="146" text-anchor="middle" class="viga-txt">V25/60</text>
+    <text x="300" y="146" text-anchor="middle" class="viga-txt">V25/60</text>
+    <circle cx="190" cy="170" r="5" class="nudo"/>
+    <text x="190" y="330" text-anchor="middle" class="nota">Las caras de la viga atraviesan la columna</text>
+    <text x="190" y="349" text-anchor="middle" class="nota">hasta el cruce de ejes: la viga llega al nudo</text>
+    <text x="190" y="368" text-anchor="middle" class="nota">de la columna.</text>
+  </g>
+
+  <!-- Panel derecho: evitar -->
+  <g transform="translate(410,0)">
+    <text x="190" y="28" text-anchor="middle" class="titulo" fill="#c62828">Evitar</text>
+    <line x1="20" y1="170" x2="355" y2="170" class="eje"/>
+    <text x="362" y="175" class="eje-txt">A</text>
+    <line x1="190" y1="50" x2="190" y2="300" class="eje"/>
+    <text x="190" y="46" text-anchor="middle" class="eje-txt">1</text>
+    <rect x="145" y="125" width="90" height="90" class="col"/>
+    <text x="190" y="144" text-anchor="middle" class="col-txt">P65/65</text>
+    <line x1="20" y1="153" x2="145" y2="153" class="cara"/>
+    <line x1="20" y1="187" x2="145" y2="187" class="cara"/>
+    <line x1="235" y1="153" x2="355" y2="153" class="cara"/>
+    <line x1="235" y1="187" x2="355" y2="187" class="cara"/>
+    <text x="80" y="146" text-anchor="middle" class="viga-txt">V25/60</text>
+    <text x="300" y="146" text-anchor="middle" class="viga-txt">V25/60</text>
+    <circle cx="145" cy="170" r="5" class="corte"/>
+    <circle cx="235" cy="170" r="5" class="corte"/>
+    <text x="190" y="330" text-anchor="middle" class="nota">Las caras terminan en la cara de la columna:</text>
+    <text x="190" y="349" text-anchor="middle" class="nota">desde unos 63 cm de lado, la viga queda cortada</text>
+    <text x="190" y="368" text-anchor="middle" class="nota">ahí y no comparte nudo con la columna.</text>
+  </g>
+</svg>
